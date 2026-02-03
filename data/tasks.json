@@ -1,105 +1,6 @@
 {
   "tasks": [
     {
-      "id": "task_001",
-      "title": "Research and summarize best practices for AI agent memory systems",
-      "description": "Find 3-5 authoritative sources on long-term memory for AI agents. Create a summary document with key patterns, approaches, and recommendations.\n\n**Deliverable:** Markdown file with findings and actionable recommendations.",
-      "status": "done",
-      "priority": "high",
-      "subtasks": [
-        {
-          "id": "sub_001",
-          "title": "Search for research papers and articles on AI agent memory",
-          "done": true
-        },
-        {
-          "id": "sub_002",
-          "title": "Read and extract key insights from 3-5 sources",
-          "done": true
-        },
-        {
-          "id": "sub_003",
-          "title": "Create summary document in markdown",
-          "done": true
-        },
-        {
-          "id": "sub_004",
-          "title": "Add actionable recommendations",
-          "done": true
-        }
-      ],
-      "comments": [
-        {
-          "author": "OpenClaw",
-          "text": "\u2705 Heartbeat detected task and moved to In Progress. Starting research on AI agent memory systems.",
-          "timestamp": "2026-02-03T22:21:39.356698+00:00"
-        },
-        {
-          "author": "OpenClaw",
-          "text": "\u2705 Research complete! Created comprehensive summary at docs/ai-memory-best-practices.md\n\nKey findings:\n- 3 memory forms: token-level, parametric, latent\n- 3-stage pipeline: extraction \u2192 consolidation \u2192 retrieval\n- Best practice: semantic understanding > keyword matching\n- AWS AgentCore provides production reference architecture\n- 5 authoritative sources cited (ArXiv, AWS, GitHub)\n\nMoving to Review for approval.",
-          "timestamp": "2026-02-03T22:27:41.439503+00:00"
-        },
-        {
-          "author": "Anthony",
-          "text": "\u2705 Approved - moved to Done",
-          "timestamp": "2026-02-03T23:00:29.433247+00:00"
-        }
-      ],
-      "createdAt": "2026-02-03T20:58:00Z"
-    },
-    {
-      "id": "task_002",
-      "title": "Research top 3 JavaScript testing frameworks",
-      "description": "Compare Jest, Vitest, and Playwright. Create a comparison table with pros/cons, performance, and use cases.\n\n**Deliverable:** Markdown table with recommendations.",
-      "status": "done",
-      "priority": "high",
-      "subtasks": [
-        {
-          "id": "sub_001",
-          "title": "Research Jest features and ecosystem",
-          "done": true
-        },
-        {
-          "id": "sub_002",
-          "title": "Research Vitest features and ecosystem",
-          "done": true
-        },
-        {
-          "id": "sub_003",
-          "title": "Research Playwright features and ecosystem",
-          "done": true
-        },
-        {
-          "id": "sub_004",
-          "title": "Create comparison table",
-          "done": true
-        },
-        {
-          "id": "sub_005",
-          "title": "Add recommendations for different use cases",
-          "done": true
-        }
-      ],
-      "comments": [
-        {
-          "author": "OpenClaw",
-          "text": "\u2705 Heartbeat detected task. Starting research on JavaScript testing frameworks (Jest, Vitest, Playwright).",
-          "timestamp": "2026-02-03T22:46:43.791701+00:00"
-        },
-        {
-          "author": "OpenClaw",
-          "text": "\u2705 Research complete! Created comprehensive comparison at docs/js-testing-frameworks-comparison.md (10,446 bytes)\n\nKey findings:\n- Vitest: 10-100x faster than Jest, Jest-compatible (95%)\n- Playwright: Best for E2E, multi-browser, auto-wait feature\n- Jest: Industry standard, stick with it for existing projects\n\nRecommendation: Vitest for unit tests + Playwright for E2E\n\nMoving to Review.",
-          "timestamp": "2026-02-03T22:52:48.266429+00:00"
-        },
-        {
-          "author": "Anthony",
-          "text": "\u2705 Approved - moved to Done",
-          "timestamp": "2026-02-03T23:00:29.433264+00:00"
-        }
-      ],
-      "createdAt": "2026-02-03T22:46:03.173726+00:00"
-    },
-    {
       "id": "task_003",
       "title": "Fix Telegram voice message handling (prevent token overflow crashes)",
       "description": "Fix the voice message system to prevent gateway crashes from token overflow.\n\n**Requirements (from Anthony):**\n- Transcribe voice \u2192 show transcription \u2192 respond \u2192 send back as TEXT (voice later)\n- Use existing telegram-voice skill (don't rebuild)\n- NO token limit per response (\"hell nah\")\n- Isolated session (prevent context pollution)\n- Priority: HIGH (same as anything else)\n\n**Deliverable:** Working voice message handler that doesn't crash gateway.",
@@ -301,5 +202,5 @@
       "createdAt": "2026-02-03T23:13:49.500711+00:00"
     }
   ],
-  "lastUpdated": "2026-02-03T23:13:49.500713+00:00"
+  "lastUpdated": "2026-02-03T23:14:30.361896+00:00"
 }
