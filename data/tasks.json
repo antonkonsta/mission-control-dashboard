@@ -4,7 +4,7 @@
       "id": "task_001",
       "title": "Research and summarize best practices for AI agent memory systems",
       "description": "Find 3-5 authoritative sources on long-term memory for AI agents. Create a summary document with key patterns, approaches, and recommendations.\n\n**Deliverable:** Markdown file with findings and actionable recommendations.",
-      "status": "review",
+      "status": "done",
       "priority": "high",
       "subtasks": [
         {
@@ -38,6 +38,11 @@
           "author": "OpenClaw",
           "text": "\u2705 Research complete! Created comprehensive summary at docs/ai-memory-best-practices.md\n\nKey findings:\n- 3 memory forms: token-level, parametric, latent\n- 3-stage pipeline: extraction \u2192 consolidation \u2192 retrieval\n- Best practice: semantic understanding > keyword matching\n- AWS AgentCore provides production reference architecture\n- 5 authoritative sources cited (ArXiv, AWS, GitHub)\n\nMoving to Review for approval.",
           "timestamp": "2026-02-03T22:27:41.439503+00:00"
+        },
+        {
+          "author": "Anthony",
+          "text": "\u2705 Approved - moved to Done",
+          "timestamp": "2026-02-03T23:00:29.433247+00:00"
         }
       ],
       "createdAt": "2026-02-03T20:58:00Z"
@@ -46,7 +51,7 @@
       "id": "task_002",
       "title": "Research top 3 JavaScript testing frameworks",
       "description": "Compare Jest, Vitest, and Playwright. Create a comparison table with pros/cons, performance, and use cases.\n\n**Deliverable:** Markdown table with recommendations.",
-      "status": "review",
+      "status": "done",
       "priority": "high",
       "subtasks": [
         {
@@ -85,6 +90,11 @@
           "author": "OpenClaw",
           "text": "\u2705 Research complete! Created comprehensive comparison at docs/js-testing-frameworks-comparison.md (10,446 bytes)\n\nKey findings:\n- Vitest: 10-100x faster than Jest, Jest-compatible (95%)\n- Playwright: Best for E2E, multi-browser, auto-wait feature\n- Jest: Industry standard, stick with it for existing projects\n\nRecommendation: Vitest for unit tests + Playwright for E2E\n\nMoving to Review.",
           "timestamp": "2026-02-03T22:52:48.266429+00:00"
+        },
+        {
+          "author": "Anthony",
+          "text": "\u2705 Approved - moved to Done",
+          "timestamp": "2026-02-03T23:00:29.433264+00:00"
         }
       ],
       "createdAt": "2026-02-03T22:46:03.173726+00:00"
@@ -251,5 +261,5 @@
       "createdAt": "2026-02-03T22:58:48.394652+00:00"
     }
   ],
-  "lastUpdated": "2026-02-03T23:00:13.390261+00:00"
+  "lastUpdated": "2026-02-03T23:00:29.433266+00:00"
 }
