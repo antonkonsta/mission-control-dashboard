@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission Control</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #222;
+        }
+        h1 { font-size: 24px; }
+        .board {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+        .column {
+            background: #151515;
+            border-radius: 8px;
+            padding: 15px;
+            min-height: 500px;
+        }
+        .column-header {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #222;
+        }
+        .task-card {
+            background: #1f1f1f;
+            border-radius: 6px;
+            padding: 12px;
+            margin-bottom: 10px;
+            border-left: 3px solid #3b82f6;
+        }
+        .task-card.high { border-left-color: #ef4444; }
+        .task-card.medium { border-left-color: #f59e0b; }
+        .task-card.low { border-left-color: #10b981; }
+        .task-title { 
+            font-weight: 600; 
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
+        .task-desc {
+            font-size: 12px;
+            color: #999;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        .subtasks {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #2a2a2a;
+        }
+        .subtask-item {
+            display: flex;
+            align-items: start;
+            gap: 6px;
+            font-size: 12px;
+            color: #aaa;
+            margin: 4px 0;
+        }
+        .subtask-item.done {
+            text-decoration: line-through;
+            color: #555;
+        }
+        .comment {
+            background: #161616;
+            padding: 8px;
+            margin-top: 10px;
+            border-radius: 4px;
+            font-size: 11px;
+            border-left: 2px solid #3b82f6;
+        }
+        .comment-author {
+            color: #3b82f6;
+            font-weight: 600;
+        }
+        .btn {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+        }
+        .btn:hover { background: #2563eb; }
+        .empty {
+            color: #555;
+            font-size: 13px;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Mission Control</h1>
+        <button class="btn" onclick="loadTasks()">Refresh</button>
+    </div>
+    
+    <div class="board">
+        <div class="column">
+            <div class="column-header">Backlog <span id="backlog-count"></span></div>
+            <div id="backlog"></div>
+        </div>
+        
+        <div class="column">
+            <div class="column-header">In Progress <span id="in_progress-count"></span></div>
+            <div id="in_progress"></div>
+        </div>
+        
+        <div class="column">
+            <div class="column-header">Review <span id="review-count"></span></div>
+            <div id="review"></div>
+        </div>
+        
+        <div class="column">
+            <div class="column-header">Done <span id="done-count"></span></div>
+            <div id="done"></div>
+        </div>
+    </div>
+
+    <script>
+        async function loadTasks() {
+            try {
+                const response = await fetch('data/tasks.json?' + Date.now());
+                const data = await response.json();
+                renderBoard(data.tasks || []);
+            } catch (error) {
+                console.error('Failed to load tasks:', error);
+            }
+        }
+
+        function renderBoard(tasks) {
+            const statuses = ['backlog', 'in_progress', 'review', 'done'];
+            
+            statuses.forEach(status => {
+                const container = document.getElementById(status);
+                const statusTasks = tasks.filter(t => t.status === status);
+                
+                document.getElementById(`${status}-count`).textContent = 
+                    statusTasks.length > 0 ? `(${statusTasks.length})` : '';
+                
+                if (statusTasks.length === 0) {
+                    container.innerHTML = '<div class="empty">No tasks</div>';
+                    return;
+                }
+                
+                container.innerHTML = statusTasks.map(task => `
+                    <div class="task-card ${task.priority || ''}">
+                        <div class="task-title">${task.title}</div>
+                        ${task.description ? `<div class="task-desc">${task.description.substring(0, 100)}...</div>` : ''}
+                        
+                        ${task.subtasks && task.subtasks.length > 0 ? `
+                            <div class="subtasks">
+                                ${task.subtasks.map(sub => `
+                                    <div class="subtask-item ${sub.done ? 'done' : ''}">
+                                        ${sub.done ? '✓' : '○'} ${sub.title}
+                                    </div>
+                                `).join('')}
+                            </div>
+                        ` : ''}
+                        
+                        ${task.comments && task.comments.length > 0 ? `
+                            <div class="comment">
+                                <span class="comment-author">${task.comments[task.comments.length - 1].author}:</span>
+                                ${task.comments[task.comments.length - 1].text.substring(0, 80)}
+                            </div>
+                        ` : ''}
+                    </div>
+                `).join('');
+            });
+        }
+
+        // Auto-refresh every 30 seconds
+        setInterval(loadTasks, 30000);
+        loadTasks();
+    </script>
+</body>
+</html>
