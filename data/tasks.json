@@ -4,7 +4,7 @@
       "id": "task_001",
       "title": "Research and summarize best practices for AI agent memory systems",
       "description": "Find 3-5 authoritative sources on long-term memory for AI agents. Create a summary document with key patterns, approaches, and recommendations.\n\n**Deliverable:** Markdown file with findings and actionable recommendations.",
-      "status": "in_progress",
+      "status": "review",
       "priority": "high",
       "subtasks": [
         {
@@ -15,17 +15,17 @@
         {
           "id": "sub_002",
           "title": "Read and extract key insights from 3-5 sources",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_003",
           "title": "Create summary document in markdown",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_004",
           "title": "Add actionable recommendations",
-          "done": false
+          "done": true
         }
       ],
       "comments": [
@@ -33,10 +33,15 @@
           "author": "OpenClaw",
           "text": "\u2705 Heartbeat detected task and moved to In Progress. Starting research on AI agent memory systems.",
           "timestamp": "2026-02-03T22:21:39.356698+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "\u2705 Research complete! Created comprehensive summary at docs/ai-memory-best-practices.md\n\nKey findings:\n- 3 memory forms: token-level, parametric, latent\n- 3-stage pipeline: extraction \u2192 consolidation \u2192 retrieval\n- Best practice: semantic understanding > keyword matching\n- AWS AgentCore provides production reference architecture\n- 5 authoritative sources cited (ArXiv, AWS, GitHub)\n\nMoving to Review for approval.",
+          "timestamp": "2026-02-03T22:27:41.439503+00:00"
         }
       ],
       "createdAt": "2026-02-03T20:58:00Z"
     }
   ],
-  "lastUpdated": "2026-02-03T22:21:39.356713+00:00"
+  "lastUpdated": "2026-02-03T22:27:41.439517+00:00"
 }
