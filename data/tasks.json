@@ -1,15 +1,20 @@
 {
   "tasks": [
     {
-      "id": "welcome_001",
-      "title": "Welcome to Mission Control",
-      "description": "This is your task board. Add tasks here and I'll pick them up automatically every 5 minutes.",
+      "id": "task_001",
+      "title": "Research and summarize best practices for AI agent memory systems",
+      "description": "Find 3-5 authoritative sources on long-term memory for AI agents. Create a summary document with key patterns, approaches, and recommendations.\n\n**Deliverable:** Markdown file with findings and actionable recommendations.",
       "status": "backlog",
-      "priority": "medium",
-      "subtasks": [],
+      "priority": "high",
+      "subtasks": [
+        { "id": "sub_001", "title": "Search for research papers and articles on AI agent memory", "done": false },
+        { "id": "sub_002", "title": "Read and extract key insights from 3-5 sources", "done": false },
+        { "id": "sub_003", "title": "Create summary document in markdown", "done": false },
+        { "id": "sub_004", "title": "Add actionable recommendations", "done": false }
+      ],
       "comments": [],
-      "createdAt": "2026-02-03T20:55:00Z"
+      "createdAt": "2026-02-03T20:58:00Z"
     }
   ],
-  "lastUpdated": "2026-02-03T20:55:00Z"
+  "lastUpdated": "2026-02-03T20:58:00Z"
 }
