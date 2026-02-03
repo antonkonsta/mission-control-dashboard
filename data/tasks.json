@@ -181,7 +181,7 @@
         {
           "id": "sub_003",
           "title": "Implement activity logging/streaming",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_004",
@@ -214,6 +214,11 @@
           "author": "OpenClaw",
           "text": "\u2705 Architecture design complete: docs/monitoring-system-architecture.md\n\n**Design:**\n- Activity logging layer (captures EVERYTHING)\n- Flask backend with Server-Sent Events\n- Live HTML dashboard with auto-scroll feed\n- 10-second updates (or real-time via SSE)\n- Color-coded activity types\n- Tailscale Funnel for public access\n\n**Implementation plan:** 4 phases, ~2.5 hours total\n\n**Next:** Start Phase 1 - Activity logging layer",
           "timestamp": "2026-02-03T23:00:13.390244+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "\u2705 Phase 1 complete: Activity logging layer\n\n**Built:**\n- activity_logger.py (4,239 bytes)\n- Logs to activity-stream.jsonl\n- Functions: log_tool_call, log_decision, log_file_op, log_git, log_error\n- Auto-rotation (keeps last 1000 entries)\n- Tested successfully \u2705\n\n**Next:** Phase 2 - Flask backend server with SSE",
+          "timestamp": "2026-02-03T23:01:58.450165+00:00"
         }
       ],
       "createdAt": "2026-02-03T22:54:31.270314+00:00"
@@ -261,5 +266,5 @@
       "createdAt": "2026-02-03T22:58:48.394652+00:00"
     }
   ],
-  "lastUpdated": "2026-02-03T23:00:29.433266+00:00"
+  "lastUpdated": "2026-02-03T23:01:58.450181+00:00"
 }
