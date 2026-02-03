@@ -247,7 +247,59 @@
         }
       ],
       "createdAt": "2026-02-03T22:54:31.270314+00:00"
+    },
+    {
+      "id": "task_005",
+      "title": "Add GitHub Copilot billing balance to heartbeat messages",
+      "description": "Show total GitHub Copilot usage cost in every heartbeat message.\n\n**Requirements:**\n- Show total amount owed/spent on GitHub Copilot\n- Display in every heartbeat message\n- Check if current GitHub auth has billing:read scope (may need new token)\n- Format: Total amount in dollars\n\n**Deliverable:** Heartbeat messages include GitHub Copilot billing balance.",
+      "status": "in_progress",
+      "priority": "medium",
+      "subtasks": [
+        {
+          "id": "sub_001",
+          "title": "Check current GitHub token for billing:read scope",
+          "done": false
+        },
+        {
+          "id": "sub_002",
+          "title": "Get manage_billing:copilot scope added to token",
+          "done": false
+        },
+        {
+          "id": "sub_003",
+          "title": "Test GitHub billing API access",
+          "done": false
+        },
+        {
+          "id": "sub_004",
+          "title": "Add billing check to HEARTBEAT.md",
+          "done": false
+        },
+        {
+          "id": "sub_005",
+          "title": "Format and display total cost in heartbeat",
+          "done": false
+        },
+        {
+          "id": "sub_006",
+          "title": "Test with real heartbeat",
+          "done": false
+        }
+      ],
+      "comments": [
+        {
+          "author": "Anthony",
+          "text": "Show me total GitHub Copilot usage money in every heartbeat so we can see how much we're racking up.",
+          "timestamp": "2026-02-03T23:13:49.500694+00:00"
+        },
+        {
+          "author": "Anthony",
+          "text": "PUT IT THE FUCK BACK IN MISSION CONTROL",
+          "timestamp": "2026-02-03T23:13:49.500709+00:00"
+        }
+      ],
+      "createdAt": "2026-02-03T23:13:49.500711+00:00"
     }
   ],
-  "lastUpdated": "2026-02-03T23:12:18.198496+00:00"
+  "lastUpdated": "2026-02-03T23:13:49.500713+00:00"
 }
