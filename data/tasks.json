@@ -4,17 +4,39 @@
       "id": "task_001",
       "title": "Research and summarize best practices for AI agent memory systems",
       "description": "Find 3-5 authoritative sources on long-term memory for AI agents. Create a summary document with key patterns, approaches, and recommendations.\n\n**Deliverable:** Markdown file with findings and actionable recommendations.",
-      "status": "backlog",
+      "status": "in_progress",
       "priority": "high",
       "subtasks": [
-        { "id": "sub_001", "title": "Search for research papers and articles on AI agent memory", "done": false },
-        { "id": "sub_002", "title": "Read and extract key insights from 3-5 sources", "done": false },
-        { "id": "sub_003", "title": "Create summary document in markdown", "done": false },
-        { "id": "sub_004", "title": "Add actionable recommendations", "done": false }
+        {
+          "id": "sub_001",
+          "title": "Search for research papers and articles on AI agent memory",
+          "done": true
+        },
+        {
+          "id": "sub_002",
+          "title": "Read and extract key insights from 3-5 sources",
+          "done": false
+        },
+        {
+          "id": "sub_003",
+          "title": "Create summary document in markdown",
+          "done": false
+        },
+        {
+          "id": "sub_004",
+          "title": "Add actionable recommendations",
+          "done": false
+        }
       ],
-      "comments": [],
+      "comments": [
+        {
+          "author": "OpenClaw",
+          "text": "\u2705 Heartbeat detected task and moved to In Progress. Starting research on AI agent memory systems.",
+          "timestamp": "2026-02-03T22:21:39.356698+00:00"
+        }
+      ],
       "createdAt": "2026-02-03T20:58:00Z"
     }
   ],
-  "lastUpdated": "2026-02-03T20:58:00Z"
+  "lastUpdated": "2026-02-03T22:21:39.356713+00:00"
 }
