@@ -1,4 +1,15 @@
 {
-  "tasks": [],
-  "lastUpdated": "2026-02-03T20:52:00Z"
+  "tasks": [
+    {
+      "id": "welcome_001",
+      "title": "Welcome to Mission Control",
+      "description": "This is your task board. Add tasks here and I'll pick them up automatically every 5 minutes.",
+      "status": "backlog",
+      "priority": "medium",
+      "subtasks": [],
+      "comments": [],
+      "createdAt": "2026-02-03T20:55:00Z"
+    }
+  ],
+  "lastUpdated": "2026-02-03T20:55:00Z"
 }
