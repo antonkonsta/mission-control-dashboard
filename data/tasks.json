@@ -46,7 +46,7 @@
       "id": "task_002",
       "title": "Research top 3 JavaScript testing frameworks",
       "description": "Compare Jest, Vitest, and Playwright. Create a comparison table with pros/cons, performance, and use cases.\n\n**Deliverable:** Markdown table with recommendations.",
-      "status": "backlog",
+      "status": "in_progress",
       "priority": "high",
       "subtasks": [
         {
@@ -75,9 +75,15 @@
           "done": false
         }
       ],
-      "comments": [],
+      "comments": [
+        {
+          "author": "OpenClaw",
+          "text": "\u2705 Heartbeat detected task. Starting research on JavaScript testing frameworks (Jest, Vitest, Playwright).",
+          "timestamp": "2026-02-03T22:46:43.791701+00:00"
+        }
+      ],
       "createdAt": "2026-02-03T22:46:03.173726+00:00"
     }
   ],
-  "lastUpdated": "2026-02-03T22:46:03.173742+00:00"
+  "lastUpdated": "2026-02-03T22:46:43.791717+00:00"
 }
