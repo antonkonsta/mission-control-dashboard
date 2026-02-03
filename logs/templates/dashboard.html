@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OpenClaw Activity Monitor</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #1a1a1a;
+            color: #e0e0e0;
+            padding: 20px;
+        }
+        .header {
+            background: #2a2a2a;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .header h1 { color: #4CAF50; margin-bottom: 10px; }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .stat {
+            background: #333;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .stat-label { font-size: 0.9em; color: #999; }
+        .stat-value { font-size: 1.3em; font-weight: bold; color: #4CAF50; }
+        
+        .activity-feed {
+            background: #2a2a2a;
+            border-radius: 8px;
+            padding: 20px;
+            height: calc(100vh - 250px);
+            overflow-y: auto;
+        }
+        .activity-item {
+            padding: 12px;
+            margin-bottom: 8px;
+            border-radius: 4px;
+            border-left: 4px solid #666;
+            background: #333;
+        }
+        .activity-item.tool_call { border-left-color: #2196F3; }
+        .activity-item.decision { border-left-color: #FF9800; }
+        .activity-item.file_op { border-left-color: #4CAF50; }
+        .activity-item.git { border-left-color: #9C27B0; }
+        .activity-item.error { border-left-color: #F44336; background: #3d1a1a; }
+        
+        .activity-timestamp {
+            font-size: 0.85em;
+            color: #999;
+            margin-bottom: 4px;
+        }
+        .activity-type {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-size: 0.8em;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        .type-tool_call { background: #2196F3; }
+        .type-decision { background: #FF9800; }
+        .type-file_op { background: #4CAF50; }
+        .type-git { background: #9C27B0; }
+        .type-error { background: #F44336; }
+        
+        .activity-data {
+            margin-top: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #ccc;
+        }
+        .activity-context {
+            margin-top: 8px;
+            font-size: 0.85em;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🦞 OpenClaw Activity Monitor</h1>
+        <div id="current-task"></div>
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-label">Tokens Used</div>
+                <div class="stat-value" id="tokens">Loading...</div>
+            </div>
+            <div class="stat">
+                <div class="stat-label">Active Task</div>
+                <div class="stat-value" id="active-task">Loading...</div>
+            </div>
+            <div class="stat">
+                <div class="stat-label">Last Update</div>
+                <div class="stat-value" id="last-update">--:--:--</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="activity-feed" id="feed">
+        <div style="text-align: center; color: #666; padding: 40px;">
+            Waiting for activity...
+        </div>
+    </div>
+
+    <script>
+        const feed = document.getElementById('feed');
+        const icons = {
+            tool_call: '🔧',
+            decision: '🎯',
+            file_op: '📁',
+            git: '🔀',
+            error: '⚠️'
+        };
+
+        function addActivity(entry) {
+            const item = document.createElement('div');
+            item.className = `activity-item ${entry.type}`;
+            
+            const timestamp = new Date(entry.timestamp).toLocaleTimeString();
+            const icon = icons[entry.type] || '•';
+            
+            let content = `
+                <div class="activity-timestamp">${timestamp}</div>
+                <div>
+                    <span class="activity-type type-${entry.type}">${icon} ${entry.type.toUpperCase().replace('_', ' ')}</span>
+                </div>
+            `;
+            
+            if (entry.data) {
+                content += `<div class="activity-data">${JSON.stringify(entry.data, null, 2)}</div>`;
+            }
+            
+            if (entry.context) {
+                content += `<div class="activity-context">Context: ${JSON.stringify(entry.context)}</div>`;
+            }
+            
+            item.innerHTML = content;
+            
+            // Clear placeholder if exists
+            if (feed.children.length === 1 && feed.children[0].textContent.includes('Waiting')) {
+                feed.innerHTML = '';
+            }
+            
+            feed.insertBefore(item, feed.firstChild);
+            
+            // Keep only last 50 items visible
+            while (feed.children.length > 50) {
+                feed.removeChild(feed.lastChild);
+            }
+            
+            // Update last update time
+            document.getElementById('last-update').textContent = timestamp;
+        }
+
+        // Connect to SSE stream
+        const eventSource = new EventSource('/api/stream');
+        eventSource.onmessage = function(event) {
+            const entry = JSON.parse(event.data);
+            addActivity(entry);
+        };
+
+        // Load initial history
+        fetch('/api/history?limit=20')
+            .then(r => r.json())
+            .then(entries => {
+                entries.reverse().forEach(addActivity);
+            });
+
+        // Update task info
+        function updateTasks() {
+            fetch('/api/tasks')
+                .then(r => r.json())
+                .then(data => {
+                    const inProgress = data.tasks.find(t => t.status === 'in_progress');
+                    if (inProgress) {
+                        document.getElementById('active-task').textContent = inProgress.title.substring(0, 30) + '...';
+                    } else {
+                        document.getElementById('active-task').textContent = 'None';
+                    }
+                });
+        }
+        
+        updateTasks();
+        setInterval(updateTasks, 30000);  // Update every 30s
+    </script>
+</body>
+</html>

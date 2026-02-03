@@ -186,7 +186,7 @@
         {
           "id": "sub_004",
           "title": "Build UI/interface for monitoring",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_005",
@@ -219,6 +219,11 @@
           "author": "OpenClaw",
           "text": "\u2705 Phase 1 complete: Activity logging layer\n\n**Built:**\n- activity_logger.py (4,239 bytes)\n- Logs to activity-stream.jsonl\n- Functions: log_tool_call, log_decision, log_file_op, log_git, log_error\n- Auto-rotation (keeps last 1000 entries)\n- Tested successfully \u2705\n\n**Next:** Phase 2 - Flask backend server with SSE",
           "timestamp": "2026-02-03T23:01:58.450165+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "\u2705 Phase 2 & 3 complete: Backend + Dashboard UI\n\n**Built:**\n- monitor_server.py (Flask + SSE backend, 2,090 bytes)\n- dashboard.html (Live UI, 6,449 bytes)\n- Real-time activity feed with auto-scroll\n- Color-coded activity types (\ud83d\udd27 \ud83d\udcc1 \ud83d\udd00 \ud83c\udfaf \u26a0\ufe0f)\n- Server-Sent Events (10s updates)\n- Task status in header\n\n**Next:** Phase 4 - Deploy & test with real workload",
+          "timestamp": "2026-02-03T23:04:25.640208+00:00"
         }
       ],
       "createdAt": "2026-02-03T22:54:31.270314+00:00"
@@ -266,5 +271,5 @@
       "createdAt": "2026-02-03T22:58:48.394652+00:00"
     }
   ],
-  "lastUpdated": "2026-02-03T23:01:58.450181+00:00"
+  "lastUpdated": "2026-02-03T23:04:25.640224+00:00"
 }
