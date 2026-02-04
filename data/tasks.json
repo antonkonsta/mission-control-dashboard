@@ -497,10 +497,16 @@
           "done": false
         }
       ],
-      "comments": [],
+      "comments": [
+        {
+          "author": "OpenClaw",
+          "text": "RESEARCH PHASE - BACKLOG. Anthony wants to replace GitHub Copilot subscription with local LLM infrastructure on home desktop. Key requirement: Anthropic Opus (or best local equivalent) as main orchestrator. 8 subtasks defined for comprehensive research. Focus on cost efficiency vs current subscription + maintaining full OpenClaw functionality. No implementation until Anthony approves. This task is ready for deep research when Anthony gives go-ahead.",
+          "timestamp": "2026-02-04T20:27:27.041303+00:00"
+        }
+      ],
       "createdAt": "2026-02-04T20:27:12.205259+00:00",
-      "updated": "2026-02-04T20:27:22.502148+00:00"
+      "updated": "2026-02-04T20:27:27.041319+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T20:27:22.502164+00:00"
+  "lastUpdated": "2026-02-04T20:27:27.041321+00:00"
 }
