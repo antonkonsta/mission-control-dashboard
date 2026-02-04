@@ -210,9 +210,15 @@
       "status": "in_progress",
       "priority": "high",
       "subtasks": [],
-      "comments": [],
+      "comments": [
+        {
+          "author": "OpenClaw",
+          "text": "Complete. Added isLive field to API (10-min threshold matching Active Agents). Green pulsing dot for live, red for dead. Status badges. Sorted by most recent first. Service restarted.",
+          "timestamp": "2026-02-04T04:56:13.412682+00:00"
+        }
+      ],
       "createdAt": "2026-02-04T04:54:56.510686+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T04:54:59.015258+00:00"
+  "lastUpdated": "2026-02-04T04:56:13.412700+00:00"
 }
