@@ -289,10 +289,15 @@
           "author": "OpenClaw",
           "text": "Spawned sub-agent 'task-013-brick-pillar-image' with Opus",
           "timestamp": "2026-02-04T05:15:57.058406+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "BLOCKED - No image generation API credentials configured. Need google-antigravity auth profile or OpenAI API key. Moving to backlog until credentials available.",
+          "timestamp": "2026-02-04T05:17:34.209266+00:00"
         }
       ],
       "createdAt": "2026-02-04T05:15:13.340878+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T05:16:34.184617+00:00"
+  "lastUpdated": "2026-02-04T05:17:34.209284+00:00"
 }
