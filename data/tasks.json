@@ -265,10 +265,62 @@
       "id": "task_015",
       "title": "Token Usage Tracking & Cost Visualization",
       "description": "OBJECTIVE: Build a system to track token usage and estimate costs for GitHub Copilot billing\n\nEXPECTATIONS FROM ANTHONY:\n- Track total token usage over time with visual chart\n- Break down token usage PER TASK in Mission Control (beginning to completion)\n- Show live token count for each running agent in Agent Activity Monitor\n- Convert tokens to estimated dollar cost (since direct API billing not available on non-enterprise)\n- Accurate way of predicting costs that match what appears in GitHub billing (~$40 this period)\n- Track efficiency over time\n\nCONSTRAINTS:\n- GitHub Copilot subscription only (no direct Anthropic/OpenAI billing API access)\n- Enterprise billing API not available - need alternative approach\n- Must work with existing Agent Activity Monitor dashboard\n\nDELIVERABLES:\n1. Token tracking system that logs usage per task and per agent\n2. Dashboard visualization showing:\n   - Line chart: Total token usage over time\n   - Bar chart: Token usage breakdown by task (what's eating most tokens)\n   - Per-agent live token count\n   - Heartbeat vs task usage breakdown\n3. Cost estimation formula (tokens \u2192 dollars) based on GitHub Copilot pricing\n4. Integration with Mission Control tasks\n\nSUCCESS CRITERIA:\n- Anthony can see at a glance how much each task costs\n- Anthony can predict monthly billing from dashboard\n- Clear breakdown of where tokens are going (heartbeat, tasks, agents)",
-      "status": "in_progress",
-      "priority": "backlog",
-      "subtasks": [],
-      "comments": [],
+      "status": "backlog",
+      "priority": "medium",
+      "subtasks": [
+        {
+          "id": "sub_001",
+          "title": "Research GitHub Copilot token pricing model",
+          "done": false
+        },
+        {
+          "id": "sub_002",
+          "title": "Design token logging schema (per task, per agent, timestamps)",
+          "done": false
+        },
+        {
+          "id": "sub_003",
+          "title": "Implement token tracking hooks in OpenClaw",
+          "done": false
+        },
+        {
+          "id": "sub_004",
+          "title": "Build cost estimation formula (tokens to dollars)",
+          "done": false
+        },
+        {
+          "id": "sub_005",
+          "title": "Create line chart - total usage over time",
+          "done": false
+        },
+        {
+          "id": "sub_006",
+          "title": "Create bar chart - usage breakdown by task",
+          "done": false
+        },
+        {
+          "id": "sub_007",
+          "title": "Add live token counter to Agent Activity Monitor",
+          "done": false
+        },
+        {
+          "id": "sub_008",
+          "title": "Add heartbeat vs task usage breakdown",
+          "done": false
+        },
+        {
+          "id": "sub_009",
+          "title": "Integrate with Mission Control task completion tracking",
+          "done": false
+        }
+      ],
+      "comments": [
+        {
+          "author": "OpenClaw",
+          "text": "Task created with 9 subtasks. Status: backlog pending research on GitHub Copilot pricing.",
+          "timestamp": "2026-02-04T18:38:00.000000+00:00"
+        }
+      ],
       "createdAt": "2026-02-04T18:37:44.067755+00:00"
     }
   ],
