@@ -492,7 +492,7 @@
           "id": "sub_007"
         },
         {
-          "done": false,
+          "done": true,
           "title": "Test end-to-end: user request \u2192 MC task \u2192 commit \u2192 push \u2192 dashboard update",
           "id": "sub_008"
         },
@@ -536,5 +536,5 @@
       ]
     }
   ],
-  "lastUpdated": "2026-02-04T01:28:16.907199+00:00"
+  "lastUpdated": "2026-02-04T01:29:18.008119+00:00"
 }
