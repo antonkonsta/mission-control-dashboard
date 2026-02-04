@@ -693,7 +693,7 @@
         {
           "id": "sub_006",
           "title": "Design: Baseline reset mechanism - clear old usage when balance entered",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_007",
@@ -739,8 +739,8 @@
         }
       ],
       "createdAt": "2026-02-04T19:37:38.669159+00:00",
-      "updated": "2026-02-04T19:43:40.624704+00:00"
+      "updated": "2026-02-04T19:44:13.365156+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:43:40.624706+00:00"
+  "lastUpdated": "2026-02-04T19:44:13.365173+00:00"
 }
