@@ -511,7 +511,17 @@
       "subtasks": [],
       "comments": [],
       "createdAt": "2026-02-04T17:28:03.970802+00:00"
+    },
+    {
+      "id": "task_020",
+      "title": "Comprehensive topology comparison writeup with DCOP design methodology",
+      "description": "Process 600 sources + DCOP equations to create detailed writeups: 1) Topology comparison (5T OTA vs Miller vs FDOTA vs Chopper), 2) DCOP-based metric prediction methodology, 3) Design procedures using Cadence Spectre parameters, 4) Tradeoff analysis with equations",
+      "status": "in_progress",
+      "priority": "high",
+      "subtasks": [],
+      "comments": [],
+      "createdAt": "2026-02-04T17:41:57.142127+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T17:35:08.161898+00:00"
+  "lastUpdated": "2026-02-04T17:41:57.142143+00:00"
 }
