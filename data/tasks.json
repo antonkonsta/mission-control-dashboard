@@ -688,7 +688,7 @@
         {
           "id": "sub_005",
           "title": "Analyze: Why current tracking shows $100+ for Opus (inaccurate)",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_006",
@@ -734,8 +734,8 @@
         }
       ],
       "createdAt": "2026-02-04T19:37:38.669159+00:00",
-      "updated": "2026-02-04T19:43:34.280518+00:00"
+      "updated": "2026-02-04T19:43:34.988258+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:43:34.280536+00:00"
+  "lastUpdated": "2026-02-04T19:43:34.988279+00:00"
 }
