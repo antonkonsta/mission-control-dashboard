@@ -825,7 +825,7 @@
         {
           "id": "sub_006",
           "title": "Update Dashboard page: show Actual GitHub Cost | Tracked Cost | Variance % | Last Sync",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_007",
@@ -896,8 +896,8 @@
         }
       ],
       "createdAt": "2026-02-04T19:56:54.236493+00:00",
-      "updated": "2026-02-04T20:01:25.303758+00:00"
+      "updated": "2026-02-04T20:01:32.985316+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T20:01:25.303761+00:00"
+  "lastUpdated": "2026-02-04T20:01:32.985332+00:00"
 }
