@@ -587,11 +587,16 @@
           "author": "OpenClaw",
           "text": "RESEARCH SCOPE COMPLETE: 23 subtasks defined covering every aspect of OS selection, LLM deployment, OpenClaw setup, data migration, and implementation planning. All primary documentation must be reviewed: Ollama, vLLM, LocalAI, LM Studio docs; Ubuntu Linux docs; OpenClaw deployment guides; GPU framework docs (CUDA/ROCm/OneAPI). Deliverables: comprehensive implementation guide with step-by-step procedures from OS installation through full migration. Task ready in backlog for Anthony approval to begin research.",
           "timestamp": "2026-02-04T20:31:26.895304+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "CRITICAL UPDATE: Anthony's existing hardware spec provided. Gaming PC: GTX 1050 Ti, 8-16GB RAM, 256-500GB storage, Windows 10/11. Need complete research on: (1) Wiping Windows & installing Linux on gaming hardware, (2) GPU driver compatibility (NVIDIA 1050 Ti with CUDA/drivers), (3) RAM/storage implications for different local LLM models, (4) Step-by-step installation guides for ALL options, (5) Complete OpenClaw docs review for Linux deployment, (6) Local LLM docs (Ollama, vLLM, LocalAI) - installation on consumer hardware, (7) VPS migration procedures with existing data. ALL documentation must be reviewed: OpenClaw docs, Linux installation guides, LLM provider docs, NVIDIA driver docs, hardware compatibility. Deliverable: Clear instruction manual for beginner (Anthony knows nothing about Linux/LLM setup) - step-by-step for all options with comparisons.",
+          "timestamp": "2026-02-04T20:40:40.543571+00:00"
         }
       ],
       "createdAt": "2026-02-04T20:27:12.205259+00:00",
       "updated": "2026-02-04T20:31:26.895320+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T20:31:26.895322+00:00"
+  "lastUpdated": "2026-02-04T20:40:40.543589+00:00"
 }
