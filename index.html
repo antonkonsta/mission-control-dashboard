@@ -23,7 +23,7 @@
         h1 { font-size: 24px; }
         .board {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 15px;
         }
         .column {
@@ -128,11 +128,6 @@
             <div class="column-header">Review <span id="review-count"></span></div>
             <div id="review"></div>
         </div>
-        
-        <div class="column">
-            <div class="column-header">Done <span id="done-count"></span></div>
-            <div id="done"></div>
-        </div>
     </div>
 
     <script>
@@ -147,7 +142,7 @@
         }
 
         function renderBoard(tasks) {
-            const statuses = ['backlog', 'in_progress', 'review', 'done'];
+            const statuses = ['backlog', 'in_progress', 'review'];
             
             statuses.forEach(status => {
                 const container = document.getElementById(status);
