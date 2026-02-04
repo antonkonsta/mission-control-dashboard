@@ -704,12 +704,17 @@
           "id": "sub_008",
           "title": "Deliverable: Write comprehensive PDF research report",
           "done": false
+        },
+        {
+          "id": "sub_009",
+          "title": "Deliverable: Implementation plan for Activity Monitor fixes",
+          "done": false
         }
       ],
       "comments": [],
       "createdAt": "2026-02-04T19:37:38.669159+00:00",
-      "updated": "2026-02-04T19:37:50.032798+00:00"
+      "updated": "2026-02-04T19:37:50.710455+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:37:50.032814+00:00"
+  "lastUpdated": "2026-02-04T19:37:50.710471+00:00"
 }
