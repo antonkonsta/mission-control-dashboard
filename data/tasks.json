@@ -426,7 +426,17 @@
         }
       ],
       "createdAt": "2026-02-04T02:08:08.574844+00:00"
+    },
+    {
+      "id": "task_019",
+      "title": "Research DoorDash automation possibilities before building skill",
+      "description": "Deep research before building doordash-research skill:\n1. Search ClawHub for existing skills\n2. Search DoorDash official site for APIs\n3. Web search blogs/forums/posts on DoorDash automation\n4. Test what can be accessed from DoorDash website directly\n5. Find 10-20 sources\n6. Deliver report answering: Is there an API? Can you search the site? How did the previous research actually work?\n7. Recommend 3 implementation approaches based on findings",
+      "status": "in_progress",
+      "priority": "high",
+      "subtasks": [],
+      "comments": [],
+      "createdAt": "2026-02-04T02:17:24.141386+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T02:09:51.828309+00:00"
+  "lastUpdated": "2026-02-04T02:17:24.141403+00:00"
 }
