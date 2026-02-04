@@ -71,6 +71,14 @@
             color: #666;
             display: flex;
             gap: 10px;
+            flex-wrap: wrap;
+        }
+        .task-updated {
+            font-size: 10px;
+            color: #888;
+            margin-top: 6px;
+            padding-top: 6px;
+            border-top: 1px solid #333;
         }
         .btn {
             background: #3b82f6;
@@ -157,6 +165,7 @@
             font-size: 14px;
             line-height: 1.6;
             color: #ccc;
+            white-space: pre-wrap;
         }
         .priority-badge {
             display: inline-block;
@@ -341,12 +350,55 @@
             }
         }
 
+        // Get the most recent timestamp for a task (updated, last comment, or created)
+        function getLastUpdated(task) {
+            let latest = task.createdAt ? new Date(task.createdAt) : new Date(0);
+            
+            // Check updated field
+            if (task.updated) {
+                const updated = new Date(task.updated);
+                if (updated > latest) latest = updated;
+            }
+            
+            // Check last comment timestamp
+            if (task.comments && task.comments.length > 0) {
+                for (const comment of task.comments) {
+                    if (comment.timestamp) {
+                        const commentTime = new Date(comment.timestamp);
+                        if (commentTime > latest) latest = commentTime;
+                    }
+                }
+            }
+            
+            return latest;
+        }
+
+        // Format relative time
+        function formatRelativeTime(date) {
+            const now = new Date();
+            const diffMs = now - date;
+            const diffMins = Math.floor(diffMs / 60000);
+            const diffHours = Math.floor(diffMs / 3600000);
+            const diffDays = Math.floor(diffMs / 86400000);
+            
+            if (diffMins < 1) return 'just now';
+            if (diffMins < 60) return `${diffMins}m ago`;
+            if (diffHours < 24) return `${diffHours}h ago`;
+            if (diffDays < 7) return `${diffDays}d ago`;
+            return date.toLocaleDateString();
+        }
+
         function renderBoard(tasks) {
             const statuses = ['backlog', 'in_progress', 'review'];
             
             statuses.forEach(status => {
                 const container = document.getElementById(status);
-                const statusTasks = tasks.filter(t => t.status === status);
+                let statusTasks = tasks.filter(t => t.status === status);
+                
+                // Sort by last updated (most recent first)
+                statusTasks.sort((a, b) => {
+                    return getLastUpdated(b) - getLastUpdated(a);
+                });
                 
                 document.getElementById(`${status}-count`).textContent = 
                     statusTasks.length > 0 ? `(${statusTasks.length})` : '';
@@ -360,6 +412,8 @@
                     const subtaskCount = task.subtasks?.length || 0;
                     const subtaskDone = task.subtasks?.filter(s => s.done).length || 0;
                     const commentCount = task.comments?.length || 0;
+                    const lastUpdated = getLastUpdated(task);
+                    const relativeTime = formatRelativeTime(lastUpdated);
                     
                     return `
                         <div class="task-card ${task.priority || ''}" onclick="openTask('${task.id}')">
@@ -369,6 +423,7 @@
                                 ${subtaskCount > 0 ? `<span>✓ ${subtaskDone}/${subtaskCount}</span>` : ''}
                                 ${commentCount > 0 ? `<span>💬 ${commentCount}</span>` : ''}
                             </div>
+                            <div class="task-updated">Updated: ${relativeTime}</div>
                         </div>
                     `;
                 }).join('');
@@ -391,7 +446,8 @@
             // Description
             document.getElementById('modal-description').textContent = task.description || 'No description provided.';
             
-            // Meta
+            // Meta - use getLastUpdated for accurate time
+            const lastUpdated = getLastUpdated(task);
             document.getElementById('modal-meta').innerHTML = `
                 <div class="meta-item">
                     <div class="meta-label">Task ID</div>
@@ -399,11 +455,11 @@
                 </div>
                 <div class="meta-item">
                     <div class="meta-label">Created</div>
-                    <div class="meta-value">${task.created ? new Date(task.created).toLocaleString() : 'Unknown'}</div>
+                    <div class="meta-value">${task.createdAt ? new Date(task.createdAt).toLocaleString() : 'Unknown'}</div>
                 </div>
                 <div class="meta-item">
-                    <div class="meta-label">Updated</div>
-                    <div class="meta-value">${task.updated ? new Date(task.updated).toLocaleString() : 'Unknown'}</div>
+                    <div class="meta-label">Last Updated</div>
+                    <div class="meta-value">${lastUpdated.toLocaleString()}</div>
                 </div>
                 <div class="meta-item">
                     <div class="meta-label">Priority</div>
