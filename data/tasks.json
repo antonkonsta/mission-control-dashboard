@@ -490,10 +490,15 @@
           "author": "OpenClaw",
           "text": "sub_008 done. Treemap visualization added - shows hierarchical cost breakdown by model with proportionally sized boxes.",
           "timestamp": "2026-02-04T19:26:02.254572+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "sub_020 line-chart sub-agent appears stuck (0 tokens, timeout on status check). Killing and respawning.",
+          "timestamp": "2026-02-04T19:27:02.764551+00:00"
         }
       ],
       "createdAt": "2026-02-04T18:37:44.067755+00:00",
-      "updated": "2026-02-04T19:26:02.254588+00:00"
+      "updated": "2026-02-04T19:27:02.764569+00:00"
     },
     {
       "id": "task_016",
@@ -644,5 +649,5 @@
       "updated": "2026-02-04T19:26:16.477989+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:26:16.477992+00:00"
+  "lastUpdated": "2026-02-04T19:27:02.764572+00:00"
 }
