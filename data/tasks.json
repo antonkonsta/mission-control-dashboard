@@ -468,12 +468,12 @@
       "id": "task_021",
       "title": "Add menu scraping to restaurant-research",
       "description": "Enhance restaurant-research skill to scrape menu items from restaurant websites. Google Places API doesn't provide menus, so need web scraping fallback. Get 3 menu items per restaurant.",
-      "status": "in_progress",
+      "status": "review",
       "priority": "high",
       "subtasks": [],
       "comments": [],
       "createdAt": "2026-02-04T02:51:37.704972+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T02:51:40.961238+00:00"
+  "lastUpdated": "2026-02-04T02:57:10.125260+00:00"
 }
