@@ -123,9 +123,15 @@
       "status": "in_progress",
       "priority": "medium",
       "subtasks": [],
-      "comments": [],
+      "comments": [
+        {
+          "author": "OpenClaw",
+          "text": "Spawned sub-agent 'task-007-agent-comms' with Opus to implement agent communication view",
+          "timestamp": "2026-02-04T04:31:46.435597+00:00"
+        }
+      ],
       "createdAt": "2026-02-04T04:26:50.481849+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T04:31:45.875031+00:00"
+  "lastUpdated": "2026-02-04T04:31:46.435615+00:00"
 }
