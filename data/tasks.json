@@ -400,6 +400,11 @@
           "id": "sub_008",
           "title": "Test: verify subtask changes trigger comments and timestamp updates",
           "done": false
+        },
+        {
+          "id": "sub_009",
+          "title": "Test: mc CLI now updates lastUpdated on every operation",
+          "done": false
         }
       ],
       "comments": [
@@ -420,8 +425,8 @@
         }
       ],
       "createdAt": "2026-02-04T18:46:11.827090+00:00",
-      "updated": "2026-02-04T18:49:00.397595+00:00"
+      "updated": "2026-02-04T18:50:16.106284+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T18:49:00.397614+00:00"
+  "lastUpdated": "2026-02-04T18:50:16.106306+00:00"
 }
