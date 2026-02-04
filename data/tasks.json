@@ -194,10 +194,15 @@
           "author": "OpenClaw",
           "text": "Anthony feedback: Needs redesign. Current layout not right. Requirements: (1) Main session on RIGHT, sub-agent on LEFT like text messages (2) Vertical rectangular cards like the Active Agents view - one card per sub-agent conversation (3) Newest messages at BOTTOM, scrollable history (4) Show main\u2194sub-agent dialogue, not user\u2194assistant. Spawning sub-agent to fix.",
           "timestamp": "2026-02-04T04:49:11.741198+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "Redesign complete. Card-based grid layout matching Active Agents. iMessage-style bubbles (main=right/purple, sub-agent=left/gray). Newest at bottom with scroll. API now returns sender: main/sub-agent. Service restarted.",
+          "timestamp": "2026-02-04T04:51:16.214755+00:00"
         }
       ],
       "createdAt": "2026-02-04T04:34:22.756982+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T04:49:11.741216+00:00"
+  "lastUpdated": "2026-02-04T04:51:16.214772+00:00"
 }
