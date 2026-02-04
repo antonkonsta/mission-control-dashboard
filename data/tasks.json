@@ -353,6 +353,11 @@
           "id": "sub_017",
           "title": "Add 'Reset for New Billing Cycle' button/endpoint",
           "done": true
+        },
+        {
+          "id": "sub_018",
+          "title": "Show model rate ($/M tokens) on agent cards in Dashboard and History pages",
+          "done": false
         }
       ],
       "comments": [
@@ -448,7 +453,7 @@
         }
       ],
       "createdAt": "2026-02-04T18:37:44.067755+00:00",
-      "updated": "2026-02-04T19:14:27.812040+00:00"
+      "updated": "2026-02-04T19:15:25.407491+00:00"
     },
     {
       "id": "task_016",
@@ -556,5 +561,5 @@
       "updated": "2026-02-04T19:05:15.913723+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:14:27.812042+00:00"
+  "lastUpdated": "2026-02-04T19:15:25.407508+00:00"
 }
