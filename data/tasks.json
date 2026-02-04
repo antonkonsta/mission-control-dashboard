@@ -841,12 +841,17 @@
           "id": "sub_009",
           "title": "Build monthly calibration report: reconciliation history, adjustments made, confidence trend",
           "done": false
+        },
+        {
+          "id": "sub_010",
+          "title": "Add cost attribution by session/model/task: drill-down from total to individual request",
+          "done": false
         }
       ],
       "comments": [],
       "createdAt": "2026-02-04T19:56:54.236493+00:00",
-      "updated": "2026-02-04T19:57:08.268785+00:00"
+      "updated": "2026-02-04T19:57:08.928067+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:57:08.268801+00:00"
+  "lastUpdated": "2026-02-04T19:57:08.928089+00:00"
 }
