@@ -404,7 +404,7 @@
         {
           "id": "sub_009",
           "title": "Test: mc CLI now updates lastUpdated on every operation",
-          "done": false
+          "done": true
         }
       ],
       "comments": [
@@ -425,8 +425,8 @@
         }
       ],
       "createdAt": "2026-02-04T18:46:11.827090+00:00",
-      "updated": "2026-02-04T18:50:19.555981+00:00"
+      "updated": "2026-02-04T18:50:20.255160+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T18:50:19.555997+00:00"
+  "lastUpdated": "2026-02-04T18:50:20.255178+00:00"
 }
