@@ -846,12 +846,17 @@
           "id": "sub_010",
           "title": "Add cost attribution by session/model/task: drill-down from total to individual request",
           "done": false
+        },
+        {
+          "id": "sub_011",
+          "title": "Test: validate tracked costs match GitHub billing within 2% for current cycle",
+          "done": false
         }
       ],
       "comments": [],
       "createdAt": "2026-02-04T19:56:54.236493+00:00",
-      "updated": "2026-02-04T19:57:08.928067+00:00"
+      "updated": "2026-02-04T19:57:09.590855+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:57:08.928089+00:00"
+  "lastUpdated": "2026-02-04T19:57:09.590872+00:00"
 }
