@@ -1,5 +1,14 @@
 # HEARTBEAT.md - Proactive Work Loop
 
+## 🚨 HEARTBEAT MESSAGE FORMAT
+**When sending ANY message triggered by heartbeat, PREFIX it with:**
+```
+🔄 [HEARTBEAT]
+```
+This tells Anthony the message is automated, not a direct response to him.
+
+Example: "🔄 [HEARTBEAT] Sub-agent task-naming-fix completed task_008."
+
 ## MONITORING DASHBOARDS (BURN THIS IN)
 - **Mission Control:** https://antonkonsta.github.io/mission-control-dashboard/
   - Shows tasks.json - THIS IS WHERE ALL WORK MUST BE TRACKED
@@ -95,8 +104,6 @@ Verify failures are being logged.
 Check ALL running sub-agents:
 - List sub-agent sessions
 - **MATCH each sub-agent to its Mission Control task** (by label or sessionKey)
-- **EVERY sub-agent MUST be spawned with label=<task-name>** (e.g., "doordash-research", "voice-fix")
-- **If you see "Unknown task" in Task Monitor = YOU FAILED TO NAME IT**
 - Check last update time (if >2 min, demand status update from sub-agent)
 - Review last message (if stuck/silent, prompt or kill+respawn)
 - **Monitor until TRULY complete** - don't move to review until deliverable is done
@@ -105,6 +112,35 @@ Check ALL running sub-agents:
 - Then ping Anthony
 - Be STRICT - no excuses, demand results
 - Kill and respawn failures immediately
+
+### 5. ⚠️ MANDATORY SUB-AGENT NAMING RULE
+**EVERY sub-agent MUST be spawned with a `label` parameter. NO EXCEPTIONS.**
+
+When spawning a sub-agent via `sessions_spawn`:
+```
+label="task-name-here"  ← MANDATORY
+```
+
+**Good examples:**
+- `label="doordash-research"` 
+- `label="voice-fix"`
+- `label="dashboard-upgrade"`
+- `label="task-008-naming-fix"`
+
+**Bad (FORBIDDEN):**
+- Spawning without `label` parameter
+- Using generic labels like `label="sub-agent"` or `label="task"`
+
+**FAILURE CONDITIONS:**
+- ❌ If Task Monitor shows **"⚠️ UNNAMED"** = YOU FAILED TO NAME IT
+- ❌ If Task Monitor shows **"Unknown task"** = SESSION NOT MAPPED  
+- ❌ Anthony sees unnamed agents = IMMEDIATE FAILURE
+
+**Why this matters:**
+- Anthony monitors via Task Monitor dashboard
+- Unnamed agents are invisible/confusing
+- Makes debugging and supervision impossible
+- Shows lack of attention to detail
 
 ## ACTIVE WORK CHECK (After enforcement)
 
