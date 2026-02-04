@@ -708,7 +708,7 @@
         {
           "id": "sub_009",
           "title": "Deliverable: Implementation plan for Activity Monitor fixes",
-          "done": false
+          "done": true
         }
       ],
       "comments": [
@@ -739,8 +739,8 @@
         }
       ],
       "createdAt": "2026-02-04T19:37:38.669159+00:00",
-      "updated": "2026-02-04T19:44:14.103761+00:00"
+      "updated": "2026-02-04T19:44:14.780747+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:44:14.103779+00:00"
+  "lastUpdated": "2026-02-04T19:44:14.780765+00:00"
 }
