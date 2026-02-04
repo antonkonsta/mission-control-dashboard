@@ -117,6 +117,11 @@
           "author": "OpenClaw",
           "text": "Sub-agent completed. Added model display: blue badges in card headers showing model name, plus brain emoji tags (\ud83e\udde0 claude-opus-4.5) under task items. CSS styled and fallback to 'unknown' if missing.",
           "timestamp": "2026-02-04T04:32:37.456533+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "Anthony reports model display not visible on Activity Monitor. Investigating...",
+          "timestamp": "2026-02-04T04:39:07.724783+00:00"
         }
       ],
       "createdAt": "2026-02-04T04:26:46.079773+00:00"
@@ -159,5 +164,5 @@
       "createdAt": "2026-02-04T04:34:22.756982+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T04:39:07.083198+00:00"
+  "lastUpdated": "2026-02-04T04:39:07.724801+00:00"
 }
