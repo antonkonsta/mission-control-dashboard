@@ -758,11 +758,16 @@
           "author": "OpenClaw",
           "text": "Task created and added to backlog. Will add Issues & Ideas page to Mission Control when prioritized.",
           "timestamp": "2026-02-04T19:46:35.037265+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "Moved back to backlog per Anthony's instruction - do not start yet.",
+          "timestamp": "2026-02-04T19:46:49.078156+00:00"
         }
       ],
       "createdAt": "2026-02-04T19:46:08.828856+00:00",
-      "updated": "2026-02-04T19:46:48.329964+00:00"
+      "updated": "2026-02-04T19:46:49.078174+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:46:48.329981+00:00"
+  "lastUpdated": "2026-02-04T19:46:49.078176+00:00"
 }
