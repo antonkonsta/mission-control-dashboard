@@ -420,7 +420,71 @@
         }
       ],
       "createdAt": "2026-02-04T00:47:06.732759+00:00"
+    },
+    {
+      "id": "task_012",
+      "title": "Build Mission Control Auto-Sync Skill (CRITICAL - ALL OTHER WORK PAUSED)",
+      "description": "Create skill that GUARANTEES every user request is tracked in Mission Control + auto-commits/pushes to dashboard remote. This is THE TOP PRIORITY - the fundamental accountability system.",
+      "status": "in_progress",
+      "priority": "critical",
+      "created": "2026-02-04T01:11:55.306521+00:00",
+      "updated": "2026-02-04T01:11:55.306541+00:00",
+      "tags": [
+        "mission-control",
+        "critical",
+        "accountability",
+        "automation"
+      ],
+      "subtasks": [
+        {
+          "text": "Analyze current Mission Control workflow failures",
+          "done": false
+        },
+        {
+          "text": "Design skill architecture for auto-tracking + auto-sync",
+          "done": false
+        },
+        {
+          "text": "Implement task creation interceptor (catches ALL user requests)",
+          "done": false
+        },
+        {
+          "text": "Implement auto-commit to git (mission-control repo)",
+          "done": false
+        },
+        {
+          "text": "Implement auto-push to dashboard remote (GitHub Pages)",
+          "done": false
+        },
+        {
+          "text": "Add validation checks (verify task exists before working)",
+          "done": false
+        },
+        {
+          "text": "Update HEARTBEAT.md with Mission Control enforcement",
+          "done": false
+        },
+        {
+          "text": "Test end-to-end: user request \u2192 MC task \u2192 commit \u2192 push \u2192 dashboard update",
+          "done": false
+        },
+        {
+          "text": "Document skill in SKILL.md with git workflow",
+          "done": false
+        },
+        {
+          "text": "Burn Mission Control workflow into agent identity files",
+          "done": false
+        }
+      ],
+      "comments": [
+        {
+          "author": "Anthony",
+          "text": "NUMBER 1 PRIORITY. You've been messing up the dashboard sync. Build a skill to make this automatic and foolproof. ALL OTHER WORK PAUSED.",
+          "timestamp": "2026-02-04T01:11:55.306547+00:00"
+        }
+      ]
     }
   ],
-  "lastUpdated": "2026-02-04T00:47:27.378651+00:00"
+  "lastUpdated": "2026-02-04T01:11:55.306551+00:00"
 }
