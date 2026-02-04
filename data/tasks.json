@@ -527,7 +527,17 @@
         }
       ],
       "createdAt": "2026-02-04T17:41:57.142127+00:00"
+    },
+    {
+      "id": "task_021",
+      "title": "Create full IC Amplifiers knowledge base structure",
+      "description": "Build the complete directory structure with 30+ detailed files covering all topologies, building blocks, metrics, equations, design methodology, and references. Each file 100-300 lines with equations, Cadence DCOP parameters, design procedures.",
+      "status": "in_progress",
+      "priority": "high",
+      "subtasks": [],
+      "comments": [],
+      "createdAt": "2026-02-04T17:44:11.171419+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T17:43:39.589247+00:00"
+  "lastUpdated": "2026-02-04T17:44:11.171440+00:00"
 }
