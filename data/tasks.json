@@ -601,11 +601,17 @@
       "description": "OBJECTIVE: Make model rate display clearer and more intuitive\n\nEXPECTATIONS FROM ANTHONY:\n- Current format '$5/$25' is confusing\n- Need clearer labeling that explains what the numbers mean\n- Should be immediately understandable at a glance\n\nCONSTRAINTS:\n- Keep it compact (fits in agent card)\n\nDELIVERABLES:\n- Updated format that clearly shows input/output cost per million tokens\n- Example: '$5 in / $25 out per M' or similar\n\nSUCCESS CRITERIA:\n- Anthony can understand the pricing at a glance without explanation",
       "status": "in_progress",
       "priority": "high",
-      "subtasks": [],
+      "subtasks": [
+        {
+          "id": "sub_001",
+          "title": "Update dashboard.html rate display format",
+          "done": false
+        }
+      ],
       "comments": [],
       "createdAt": "2026-02-04T19:25:25.813437+00:00",
-      "updated": "2026-02-04T19:25:30.603925+00:00"
+      "updated": "2026-02-04T19:25:31.412030+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:25:30.603941+00:00"
+  "lastUpdated": "2026-02-04T19:25:31.412046+00:00"
 }
