@@ -703,7 +703,7 @@
         {
           "id": "sub_008",
           "title": "Deliverable: Write comprehensive PDF research report",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_009",
@@ -739,8 +739,8 @@
         }
       ],
       "createdAt": "2026-02-04T19:37:38.669159+00:00",
-      "updated": "2026-02-04T19:44:14.780747+00:00"
+      "updated": "2026-02-04T19:45:09.933764+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:44:14.780765+00:00"
+  "lastUpdated": "2026-02-04T19:45:09.933782+00:00"
 }
