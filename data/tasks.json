@@ -410,10 +410,15 @@
           "author": "OpenClaw",
           "text": "sub_005, sub_015, sub_017 done. Backend complete: /tokens route, /api/tokens endpoint (returns 37 sessions, 27.15 tracked), /api/set-baseline endpoint. Now spawning sub-agent for tokens.html frontend with charts. 8/17 subtasks done.",
           "timestamp": "2026-02-04T19:04:19.731240+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "tokens.html complete! 13/17 subtasks done. Created: summary cards (5), baseline setter, bar chart (top 10 by cost), sessions table, 30s auto-refresh, nav links. Remaining: sub_008 (treemap), sub_009 (active agents tokens), sub_010 (history tokens), sub_013 (calibration test).",
+          "timestamp": "2026-02-04T19:06:05.957395+00:00"
         }
       ],
       "createdAt": "2026-02-04T18:37:44.067755+00:00",
-      "updated": "2026-02-04T19:06:00.773734+00:00"
+      "updated": "2026-02-04T19:06:05.957419+00:00"
     },
     {
       "id": "task_016",
@@ -521,5 +526,5 @@
       "updated": "2026-02-04T19:05:15.913723+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:06:00.773751+00:00"
+  "lastUpdated": "2026-02-04T19:06:05.957422+00:00"
 }
