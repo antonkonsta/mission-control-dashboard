@@ -369,7 +369,7 @@
       "id": "task_016",
       "title": "DCOP Equations V2 - 100 Sources, Constrained Parameters",
       "description": "Deep research with 100 sources for DCOP equations. MUST use only Cadence Spectre parameters from Anthony's file. Top 10 metrics: Gain, BW, GBW, Noise, CMRR, PSRR, Input Range, Output Range, Input Impedance, Output Impedance. For both 5T OTA and Miller op-amp. Deliverable: PDF with summary table at top (metric + topology + equation), then massive appendix with sources, derivations, explanations.",
-      "status": "in_progress",
+      "status": "review",
       "priority": "high",
       "subtasks": [],
       "comments": [
@@ -392,5 +392,5 @@
       "createdAt": "2026-02-04T16:25:05.692800+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T16:42:34.294684+00:00"
+  "lastUpdated": "2026-02-04T16:42:34.887823+00:00"
 }
