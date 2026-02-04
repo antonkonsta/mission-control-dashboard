@@ -545,6 +545,11 @@
           "id": "sub_018",
           "title": "Review OpenClaw Linux installation & configuration requirements",
           "done": false
+        },
+        {
+          "id": "sub_019",
+          "title": "Research OpenClaw local LLM backend integration options",
+          "done": false
         }
       ],
       "comments": [
@@ -560,8 +565,8 @@
         }
       ],
       "createdAt": "2026-02-04T20:27:12.205259+00:00",
-      "updated": "2026-02-04T20:31:17.010245+00:00"
+      "updated": "2026-02-04T20:31:17.863398+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T20:31:17.010262+00:00"
+  "lastUpdated": "2026-02-04T20:31:17.863414+00:00"
 }
