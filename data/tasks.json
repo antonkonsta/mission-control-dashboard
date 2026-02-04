@@ -378,7 +378,44 @@
         }
       ],
       "createdAt": "2026-02-04T00:46:02.276546+00:00"
+    },
+    {
+      "id": "task_011",
+      "title": "Change heartbeat interval from 2 minutes to 3 minutes",
+      "description": "Update gateway config to change heartbeat interval from 2 minutes to 3 minutes.\n\n**Current:** 2 minutes\n**Target:** 3 minutes\n**Priority:** Medium\n\n**Deliverable:** Heartbeat runs every 3 minutes instead of 2.",
+      "status": "in_progress",
+      "priority": "medium",
+      "subtasks": [
+        {
+          "id": "sub_001",
+          "title": "Get current gateway config",
+          "done": false
+        },
+        {
+          "id": "sub_002",
+          "title": "Update heartbeat interval to 3 minutes (180000ms)",
+          "done": false
+        },
+        {
+          "id": "sub_003",
+          "title": "Apply config and restart gateway",
+          "done": false
+        },
+        {
+          "id": "sub_004",
+          "title": "Verify new interval is active",
+          "done": false
+        }
+      ],
+      "comments": [
+        {
+          "author": "Anthony",
+          "text": "change the heartbeat to every 3 mins instead of every two please (19:46)",
+          "timestamp": "2026-02-04T00:47:06.732741+00:00"
+        }
+      ],
+      "createdAt": "2026-02-04T00:47:06.732759+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T00:46:02.276549+00:00"
+  "lastUpdated": "2026-02-04T00:47:06.732762+00:00"
 }
