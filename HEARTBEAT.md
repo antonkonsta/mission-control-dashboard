@@ -11,11 +11,24 @@
 **EVERYTHING Anthony asks you to do MUST be tracked in Mission Control.**
 - **EVERYTHING = even small tasks, brief requests, "can you check X", "look into Y" - ALL OF IT**
 - Create task in `/root/.openclaw/workspace/data/tasks.json` FIRST
-- Commit to git IMMEDIATELY
+- Commit to git IMMEDIATELY: `git add data/tasks.json && git commit -m "Mission Control: <msg>"`
+- **PUSH TO DASHBOARD REMOTE**: `git push dashboard main` (REQUIRED for GitHub Pages update)
 - THEN delegate to sub-agent or work on it
 - NO EXCEPTIONS
 - **If Anthony asks for something and you don't add it to Mission Control = FAILURE**
 - **Anthony monitors via Mission Control dashboard - if it's not there, he can't see what you're doing**
+
+### Git Workflow (CRITICAL - DO NOT SKIP)
+1. Modify `/root/.openclaw/workspace/data/tasks.json`
+2. `cd /root/.openclaw/workspace`
+3. `git add data/tasks.json`
+4. `git commit -m "Mission Control: <description>"`
+5. **`git push dashboard main`** ← THIS IS REQUIRED FOR DASHBOARD UPDATE
+6. Verify push succeeded before continuing work
+
+**Two remotes:**
+- `origin`: mission-control repo (optional)
+- `dashboard`: antonkonsta/mission-control-dashboard (REQUIRED - this is what GitHub Pages uses)
 
 ## MANDATORY ENFORCEMENT CHECKS (EVERY heartbeat - do these FIRST)
 
