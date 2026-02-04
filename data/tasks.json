@@ -506,12 +506,12 @@
       "id": "task_019",
       "title": "Meeting notes - Brent disconnect algorithm discussion",
       "description": "Discuss: 1) Stock/order sheet for inventory tracking, 2) Josh Brax clips (pending response), 3) App stuck in linking stage - can't test, 4) Algorithm fixes: LPF only for AC amplitude (not DC level), 60Hz notch for AC criteria to handle power line noise changes, 5) New boards testing - getting signals",
-      "status": "in_progress",
+      "status": "review",
       "priority": "high",
       "subtasks": [],
       "comments": [],
       "createdAt": "2026-02-04T17:28:03.970802+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T17:35:07.543687+00:00"
+  "lastUpdated": "2026-02-04T17:35:08.161898+00:00"
 }
