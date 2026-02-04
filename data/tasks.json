@@ -336,7 +336,7 @@
       "id": "task_013",
       "title": "Add heartbeat label to Telegram messages",
       "description": "When heartbeat triggers and sends a message to Anthony, prefix it with [HEARTBEAT] or similar indicator so he knows it's automated, not a direct response.",
-      "status": "review",
+      "status": "done",
       "priority": "medium",
       "subtasks": [],
       "comments": [
@@ -412,5 +412,5 @@
       "createdAt": "2026-02-04T02:01:10.230768+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T02:06:25.977945+00:00"
+  "lastUpdated": "2026-02-04T02:06:26.554782+00:00"
 }
