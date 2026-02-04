@@ -455,10 +455,15 @@
           "author": "OpenClaw",
           "text": "Added sub_018: Show model rate on agent cards. Will display $/M input and output rates next to model name so Anthony can see at a glance how expensive each model is.",
           "timestamp": "2026-02-04T19:15:29.184056+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "sub_018 done. Model rates display added to dashboard.html and history.html. Shows format like 'claude-opus-4.5 ($5/$25)' next to model badge. 16/18 subtasks complete.",
+          "timestamp": "2026-02-04T19:16:18.399274+00:00"
         }
       ],
       "createdAt": "2026-02-04T18:37:44.067755+00:00",
-      "updated": "2026-02-04T19:16:17.615965+00:00"
+      "updated": "2026-02-04T19:16:18.399290+00:00"
     },
     {
       "id": "task_016",
@@ -566,5 +571,5 @@
       "updated": "2026-02-04T19:05:15.913723+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:16:17.615981+00:00"
+  "lastUpdated": "2026-02-04T19:16:18.399292+00:00"
 }
