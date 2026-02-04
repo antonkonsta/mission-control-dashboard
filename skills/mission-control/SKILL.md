@@ -41,10 +41,9 @@ mc subtask task_XXX sub_001 undone  # To reopen
 # Add a comment to a task
 mc comment task_XXX "Author" "Comment text"
 
-# Update task status
+# Update task status (NEVER use "done" - only Anthony can!)
 mc status task_XXX in_progress
-mc status task_XXX review
-mc status task_XXX done
+mc status task_XXX review    # ← Use this when work complete!
 mc status task_XXX backlog
 
 # List all tasks
@@ -55,6 +54,17 @@ mc list backlog
 # Manual sync (rarely needed - all commands auto-sync)
 mc sync "message"
 ```
+
+## 🚨 CRITICAL: NEVER MOVE TASKS TO "DONE"
+
+**ONLY ANTHONY CAN MARK TASKS AS DONE.**
+
+- When you complete work → `mc status task_XXX review`
+- NEVER use `mc status task_XXX done`
+- Wait for Anthony's explicit approval
+- This applies to ALL tasks, no exceptions
+
+**If you move to "done" without Anthony's approval = IMMEDIATE FAILURE**
 
 ## Workflow
 
@@ -68,7 +78,7 @@ User Request → mc create → mc validate → Work → mc subtask/comment → m
 2. **Before working** → `mc validate task_XXX` (REQUIRED!)
 3. **While working** → `mc subtask task_XXX sub_001 done`
 4. **Add updates** → `mc comment task_XXX "OpenClaw" "Progress update"`
-5. **Complete** → `mc status task_XXX done`
+5. **Complete** → `mc status task_XXX review` (NEVER done! Only Anthony can approve)
 
 ### Automatic Git Sync
 

@@ -161,6 +161,22 @@ label="task-name-here"  ← MANDATORY
    - Sort by priority: high → medium → low
    - If found → move to 'in_progress', start working
 
+## 🚨 CRITICAL: NEVER MOVE TASKS TO "DONE"
+
+**ONLY ANTHONY CAN MARK TASKS AS DONE.**
+
+- When you complete work → move to `review`
+- NEVER move to `done` yourself
+- Wait for Anthony's explicit approval
+- This applies to ALL tasks, no exceptions
+
+**Workflow:**
+1. `backlog` → `in_progress` (you can do this)
+2. `in_progress` → `review` (you can do this when work complete)
+3. `review` → `done` (ONLY ANTHONY - NEVER YOU)
+
+**If you move a task to "done" without Anthony's approval = IMMEDIATE FAILURE**
+
 ## EXECUTE OR REQUEST
 
 - **If work found:** Start highest priority task, report what you're working on
