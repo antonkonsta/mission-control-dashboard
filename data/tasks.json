@@ -470,12 +470,17 @@
           "id": "sub_003",
           "title": "Hardware requirements analysis: VRAM, CPU, GPU, storage for different model sizes",
           "done": false
+        },
+        {
+          "id": "sub_004",
+          "title": "Cost analysis: hardware amortization + electricity vs GitHub Copilot subscription",
+          "done": false
         }
       ],
       "comments": [],
       "createdAt": "2026-02-04T20:27:12.205259+00:00",
-      "updated": "2026-02-04T20:27:19.136478+00:00"
+      "updated": "2026-02-04T20:27:19.798617+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T20:27:19.136493+00:00"
+  "lastUpdated": "2026-02-04T20:27:19.798631+00:00"
 }
