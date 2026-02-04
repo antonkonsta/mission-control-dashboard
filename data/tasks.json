@@ -440,10 +440,15 @@
           "author": "OpenClaw",
           "text": "Discovered model spawn issue: aliases like 'sonnet' don't work, need full name 'claude-sonnet-4.5'. Earlier sub-agents defaulted to Opus because alias wasn't recognized. Fixed for future spawns. Still waiting on Anthony's GitHub billing value for sub_013 calibration.",
           "timestamp": "2026-02-04T19:12:54.008265+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "Hardcoded MODEL NAME RULE in HEARTBEAT.md and AGENTS.md: Must use full model names (claude-sonnet-4.5) not aliases (sonnet). Aliases silently default to main session model. Default for sub-agents is now claude-sonnet-4.5.",
+          "timestamp": "2026-02-04T19:14:27.812019+00:00"
         }
       ],
       "createdAt": "2026-02-04T18:37:44.067755+00:00",
-      "updated": "2026-02-04T19:12:54.008284+00:00"
+      "updated": "2026-02-04T19:14:27.812040+00:00"
     },
     {
       "id": "task_016",
@@ -551,5 +556,5 @@
       "updated": "2026-02-04T19:05:15.913723+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:12:54.008287+00:00"
+  "lastUpdated": "2026-02-04T19:14:27.812042+00:00"
 }
