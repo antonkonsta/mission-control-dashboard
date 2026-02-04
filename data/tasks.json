@@ -611,12 +611,17 @@
           "id": "sub_002",
           "title": "Update history.html rate display format",
           "done": false
+        },
+        {
+          "id": "sub_003",
+          "title": "Update tokens.html rate display if applicable",
+          "done": false
         }
       ],
       "comments": [],
       "createdAt": "2026-02-04T19:25:25.813437+00:00",
-      "updated": "2026-02-04T19:25:32.148922+00:00"
+      "updated": "2026-02-04T19:25:32.847947+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:25:32.148936+00:00"
+  "lastUpdated": "2026-02-04T19:25:32.847962+00:00"
 }
