@@ -274,9 +274,15 @@
       "status": "in_progress",
       "priority": "high",
       "subtasks": [],
-      "comments": [],
+      "comments": [
+        {
+          "author": "OpenClaw",
+          "text": "Spawned sub-agent 'task-013-brick-pillar-image' with Opus",
+          "timestamp": "2026-02-04T05:15:57.058406+00:00"
+        }
+      ],
       "createdAt": "2026-02-04T05:15:13.340878+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T05:15:56.538443+00:00"
+  "lastUpdated": "2026-02-04T05:15:57.058425+00:00"
 }
