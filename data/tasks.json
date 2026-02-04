@@ -485,12 +485,17 @@
           "id": "sub_006",
           "title": "Design OpenClaw local deployment architecture",
           "done": false
+        },
+        {
+          "id": "sub_007",
+          "title": "Data migration strategy: VPS to desktop transition plan",
+          "done": false
         }
       ],
       "comments": [],
       "createdAt": "2026-02-04T20:27:12.205259+00:00",
-      "updated": "2026-02-04T20:27:21.148895+00:00"
+      "updated": "2026-02-04T20:27:21.807007+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T20:27:21.148909+00:00"
+  "lastUpdated": "2026-02-04T20:27:21.807023+00:00"
 }
