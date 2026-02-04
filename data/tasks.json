@@ -831,12 +831,17 @@
           "id": "sub_007",
           "title": "Update all 3 visualizations (bar, treemap, line) to use request-level actual costs",
           "done": false
+        },
+        {
+          "id": "sub_008",
+          "title": "Implement automatic rate updater: monitor GitHub pricing, update rates config on change",
+          "done": false
         }
       ],
       "comments": [],
       "createdAt": "2026-02-04T19:56:54.236493+00:00",
-      "updated": "2026-02-04T19:57:06.856443+00:00"
+      "updated": "2026-02-04T19:57:07.592049+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:57:06.856458+00:00"
+  "lastUpdated": "2026-02-04T19:57:07.592064+00:00"
 }
