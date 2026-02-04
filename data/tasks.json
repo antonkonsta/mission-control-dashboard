@@ -520,6 +520,11 @@
           "id": "sub_013",
           "title": "Compare local LLM platforms: create side-by-side matrix with all key specs",
           "done": false
+        },
+        {
+          "id": "sub_014",
+          "title": "Research Ubuntu Linux versions: 20.04 vs 22.04 vs 24.04 for server workloads",
+          "done": false
         }
       ],
       "comments": [
@@ -535,8 +540,8 @@
         }
       ],
       "createdAt": "2026-02-04T20:27:12.205259+00:00",
-      "updated": "2026-02-04T20:31:13.420552+00:00"
+      "updated": "2026-02-04T20:31:14.118416+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T20:31:13.420567+00:00"
+  "lastUpdated": "2026-02-04T20:31:14.118434+00:00"
 }
