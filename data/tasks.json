@@ -620,7 +620,7 @@
         {
           "id": "sub_003",
           "title": "Update tokens.html rate display if applicable",
-          "done": false
+          "done": true
         }
       ],
       "comments": [
@@ -636,8 +636,8 @@
         }
       ],
       "createdAt": "2026-02-04T19:25:25.813437+00:00",
-      "updated": "2026-02-04T19:26:11.223988+00:00"
+      "updated": "2026-02-04T19:26:14.983429+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:26:11.223990+00:00"
+  "lastUpdated": "2026-02-04T19:26:14.983444+00:00"
 }
