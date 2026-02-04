@@ -86,7 +86,7 @@
       "id": "task_006",
       "title": "Fix Todoist CLI integration",
       "description": "Todoist CLI is broken - returns error 'too many arguments for today'. Fix the CLI so we can retrieve tasks programmatically.",
-      "status": "review",
+      "status": "done",
       "priority": "high",
       "subtasks": [
         {
@@ -412,5 +412,5 @@
       "createdAt": "2026-02-04T02:01:10.230768+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T02:05:04.107062+00:00"
+  "lastUpdated": "2026-02-04T02:06:24.398002+00:00"
 }
