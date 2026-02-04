@@ -1,4 +1,15 @@
 {
-  "tasks": [],
-  "lastUpdated": "2026-02-04T02:58:00Z"
+  "tasks": [
+    {
+      "id": "task_001",
+      "title": "Fix Telegram voice messaging",
+      "description": "Voice messages currently crash OpenClaw. Need to investigate and fix the crash issue to make voice messaging stable and reliable.",
+      "status": "in_progress",
+      "priority": "high",
+      "subtasks": [],
+      "comments": [],
+      "createdAt": "2026-02-04T03:14:05.765266+00:00"
+    }
+  ],
+  "lastUpdated": "2026-02-04T03:14:05.765283+00:00"
 }
