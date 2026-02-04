@@ -33,10 +33,15 @@
           "author": "OpenClaw",
           "text": "Updated OpenClaw from 2026.1.30 to 2026.2.2-3. This version includes fix #7475 'Media understanding: skip binary media from file text extraction' which should address the voice message context overflow issue.",
           "timestamp": "2026-02-04T03:32:18.518439+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "Stability test in progress: 6/10 voice messages processed successfully with no crashes. Update to 2026.2.2-3 appears to have fixed the issue.",
+          "timestamp": "2026-02-04T03:44:49.970849+00:00"
         }
       ],
       "createdAt": "2026-02-04T03:28:24.538565+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T03:32:18.518459+00:00"
+  "lastUpdated": "2026-02-04T03:44:49.970865+00:00"
 }
