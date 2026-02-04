@@ -25,7 +25,7 @@
       "id": "task_002",
       "title": "Fix Voice Message Gateway Crashes",
       "description": "After 2-3 voice messages, gateway becomes unresponsive and requires restart. Investigate memory/context issues with voice message processing. CRITICAL PRIORITY.",
-      "status": "in_progress",
+      "status": "review",
       "priority": "high",
       "subtasks": [],
       "comments": [
@@ -43,5 +43,5 @@
       "createdAt": "2026-02-04T03:28:24.538565+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T03:44:49.970865+00:00"
+  "lastUpdated": "2026-02-04T03:44:50.496875+00:00"
 }
