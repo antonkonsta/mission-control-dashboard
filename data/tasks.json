@@ -796,11 +796,17 @@
       "description": "OBJECTIVE: Update Activity Monitor token tracker to achieve 100% accuracy with GitHub Copilot Pro+ billing by implementing real-time cost sync, model rate verification, session-level cost attribution, and continuous calibration.\n\nEXPECTATIONS FROM ANTHONY:\n- Track every token (in/out) with precise cost calculation using GitHub Copilot Pro+ rates\n- Sync tracked costs with GitHub billing dashboard monthly for verification\n- Show cost breakdown by model, session, task with confidence metrics\n- Flag cost discrepancies >5% with investigation recommendations\n- Implement automatic rate updates when GitHub changes Pro+ pricing\n- Support multiple billing cycles with baseline reset capability\n- Dashboard must show: actual cost, tracked cost, variance, calibration status\n\nCONSTRAINTS:\n- Use ONLY GitHub Copilot Pro+ pricing (no fallback to estimates)\n- Track at request level (not session level) for precision\n- GitHub billing data updates on schedule - sync accordingly\n- Handle incomplete billing data gracefully (transactions pending)\n- Maintain backward compatibility with existing 20 subtasks\n\nDELIVERABLES:\n- Request-level cost tracking schema (capture rate_per_token at request time)\n- GitHub billing API integration for cost verification\n- Enhanced Dashboard page: actual vs tracked cost comparison\n- Cost variance report (monthly reconciliation)\n- Automatic rate update mechanism for GitHub Pro+ pricing changes\n- Calibration history log (when baseline adjusted, by how much)\n\nSUCCESS CRITERIA:\n- Tracked costs match GitHub billing within 2% (not 5%)\n- Dashboard shows live variance alerts\n- Monthly sync process automated or one-click\n- All 3 visualizations updated to use precise rates\n- Cost attribution 100% to originating session/model/task",
       "status": "in_progress",
       "priority": "high",
-      "subtasks": [],
+      "subtasks": [
+        {
+          "id": "sub_001",
+          "title": "Extract GitHub Pro+ rates from report: confirm $/M input vs output per model",
+          "done": false
+        }
+      ],
       "comments": [],
       "createdAt": "2026-02-04T19:56:54.236493+00:00",
-      "updated": "2026-02-04T19:56:54.236493+00:00"
+      "updated": "2026-02-04T19:57:02.033265+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:56:54.236511+00:00"
+  "lastUpdated": "2026-02-04T19:57:02.033281+00:00"
 }
