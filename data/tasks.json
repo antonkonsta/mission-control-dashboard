@@ -750,7 +750,7 @@
       "id": "task_020",
       "title": "Mission Control: Add Issues & Ideas Page",
       "description": "OBJECTIVE: Create a separate page in Mission Control dashboard for tracking issues and ideas\n\nEXPECTATIONS FROM ANTHONY:\n- New page separate from main task board\n- Two columns: Issues and Ideas\n- Issues = problems noticed but not yet turned into tasks\n- Ideas = general concepts to track and develop\n- Should integrate with existing Mission Control UI\n\nCONSTRAINTS:\n- Backlog only - do not start yet\n- Design should match existing Mission Control styling\n\nDELIVERABLES:\n- New HTML page for issues/ideas\n- Data structure for storing issues/ideas\n- Navigation link from main dashboard\n\nSUCCESS CRITERIA:\n- Anthony can quickly log issues and ideas without creating full tasks\n- Separate page accessible from Mission Control",
-      "status": "in_progress",
+      "status": "backlog",
       "priority": "medium",
       "subtasks": [],
       "comments": [
@@ -761,8 +761,8 @@
         }
       ],
       "createdAt": "2026-02-04T19:46:08.828856+00:00",
-      "updated": "2026-02-04T19:46:35.037284+00:00"
+      "updated": "2026-02-04T19:46:48.329964+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:46:35.037286+00:00"
+  "lastUpdated": "2026-02-04T19:46:48.329981+00:00"
 }
