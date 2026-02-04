@@ -363,6 +363,11 @@
           "id": "sub_019",
           "title": "Add Token Tracking button to Activity Monitor navigation (\ud83d\udcca \ud83d\udcb0 style)",
           "done": true
+        },
+        {
+          "id": "sub_020",
+          "title": "Implement line chart showing cost over time",
+          "done": false
         }
       ],
       "comments": [
@@ -478,7 +483,7 @@
         }
       ],
       "createdAt": "2026-02-04T18:37:44.067755+00:00",
-      "updated": "2026-02-04T19:24:16.488220+00:00"
+      "updated": "2026-02-04T19:24:39.816545+00:00"
     },
     {
       "id": "task_016",
@@ -586,5 +591,5 @@
       "updated": "2026-02-04T19:05:15.913723+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:24:16.488222+00:00"
+  "lastUpdated": "2026-02-04T19:24:39.816561+00:00"
 }
