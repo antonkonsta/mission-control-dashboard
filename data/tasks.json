@@ -342,7 +342,64 @@
         }
       ],
       "createdAt": "2026-02-04T18:37:44.067755+00:00"
+    },
+    {
+      "id": "task_016",
+      "title": "Mission Control: Last Updated Timestamps + Auto-Sort by Recent",
+      "description": "OBJECTIVE: Show last updated time on task cards and sort by most recently updated\n\nEXPECTATIONS FROM ANTHONY:\n- Every task card on dashboard shows \"Updated: X time ago\" or \"Updated: 1:45 PM\" BEFORE opening\n- When ANY change happens to a task (subtask added/crossed off, comment added, status change), timestamp updates\n- Tasks within each column (backlog, in_progress, review) sorted by MOST RECENTLY UPDATED at top\n- I can see at a glance which tasks are being actively worked on\n- Agent MUST add a comment whenever crossing off subtasks, adding subtasks, or making any change\n- This behavior must be HARDCODED into identity files (HEARTBEAT.md, AGENTS.md, SOUL.md)\n- Must create a SKILL that enforces this behavior for future reference\n\nCONSTRAINTS:\n- Must work with existing Mission Control dashboard\n- Must update in real-time with auto-refresh\n- Sorting must be per-column (not global)\n\nDELIVERABLES:\n1. Dashboard update: Show \"Updated: [timestamp]\" on each task card (visible without clicking)\n2. Dashboard update: Sort tasks within each column by lastUpdated descending (newest first)\n3. mc CLI update: Ensure every operation updates the lastUpdated field\n4. Identity file updates: HEARTBEAT.md, AGENTS.md, SOUL.md - hardcode the rule to always add comments on changes\n5. Create skill or script that documents/enforces this behavior\n6. Auto-comment on subtask changes (when crossing off, adding, or modifying subtasks)\n\nSUCCESS CRITERIA:\n- Anthony can see which tasks were updated most recently without opening them\n- Most recently updated tasks float to top of each column\n- Every subtask change triggers a comment explaining what changed\n- Agent behavior is hardcoded - never forgets to update timestamps and add comments",
+      "status": "backlog",
+      "priority": "high",
+      "subtasks": [
+        {
+          "id": "sub_001",
+          "title": "Add lastUpdated display to task cards in dashboard HTML",
+          "done": false
+        },
+        {
+          "id": "sub_002",
+          "title": "Implement per-column sorting by lastUpdated (newest first)",
+          "done": false
+        },
+        {
+          "id": "sub_003",
+          "title": "Update mc CLI to set lastUpdated on every operation",
+          "done": false
+        },
+        {
+          "id": "sub_004",
+          "title": "Update HEARTBEAT.md - add rule to always comment on changes",
+          "done": false
+        },
+        {
+          "id": "sub_005",
+          "title": "Update AGENTS.md - add rule to always comment on changes",
+          "done": false
+        },
+        {
+          "id": "sub_006",
+          "title": "Update SOUL.md - add rule to always comment on changes",
+          "done": false
+        },
+        {
+          "id": "sub_007",
+          "title": "Create skill/script documenting this behavior",
+          "done": false
+        },
+        {
+          "id": "sub_008",
+          "title": "Test: verify subtask changes trigger comments and timestamp updates",
+          "done": false
+        }
+      ],
+      "comments": [
+        {
+          "author": "OpenClaw",
+          "text": "Task created with 8 subtasks. Core requirement: show last updated time on cards, sort by recent, hardcode comment-on-change behavior into identity files.",
+          "timestamp": "2026-02-04T18:46:11.827061+00:00"
+        }
+      ],
+      "createdAt": "2026-02-04T18:46:11.827090+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T18:37:44.067772+00:00"
+  "lastUpdated": "2026-02-04T18:46:11.827100+00:00"
 }
