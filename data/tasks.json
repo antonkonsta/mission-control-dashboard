@@ -678,7 +678,7 @@
         {
           "id": "sub_003",
           "title": "Research: Billing cycle mechanics - when charges start, how calculated",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_004",
@@ -734,8 +734,8 @@
         }
       ],
       "createdAt": "2026-02-04T19:37:38.669159+00:00",
-      "updated": "2026-02-04T19:43:32.925569+00:00"
+      "updated": "2026-02-04T19:43:33.608343+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:43:32.925588+00:00"
+  "lastUpdated": "2026-02-04T19:43:33.608385+00:00"
 }
