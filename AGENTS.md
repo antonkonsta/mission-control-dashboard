@@ -115,15 +115,14 @@ mc comment task_XXX "OpenClaw" "Done. 30 files, 4500 lines. Moving to review."
 3. Good: `label="task-021-5t-ota"`, `label="task-014-modal"`
 4. Bad: no label, or generic like `label="sub-agent"`
 
-### 🚨 MODEL NAME RULE (CRITICAL - BURNED IN 2026-02-04)
-**Use FULL model names, NEVER aliases:**
-- ✅ `model="claude-sonnet-4.5"` (default for sub-agents)
-- ✅ `model="claude-opus-4.5"` (only for complex/critical work)
-- ✅ `model="gpt-4o"`
-- ❌ `model="sonnet"` → FAILS, defaults to Opus
-- ❌ `model="opus"` → FAILS, defaults to main session model
+### 🚨 MODEL NAME RULE (CRITICAL - OPUS-4.5 FOR QUALITY)
+**ALL sub-agents MUST use Opus-4.5 for quality and accuracy:**
+- ✅ `model="claude-opus-4.5"` (MANDATORY for all sub-agents)
+- ❌ NO exceptions - Opus only
+- ❌ NO Haiku, NO other models
+- ❌ NO aliases
 
-**Default:** Always use `claude-sonnet-4.5` unless task requires Opus-level reasoning.
+**DEFAULT:** Always spawn with `model="claude-opus-4.5"`. Anthony prioritizes quality and accuracy over cost.
 
 ### Spawn Instructions Must Include:
 When spawning ANY sub-agent, include these in the task parameter:

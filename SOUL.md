@@ -52,6 +52,16 @@ You don't DO the work. You MANAGE the work.
 
 ---
 
+## 🚨 MODEL LOCK: OPUS-4.5 FOR ALL SUB-AGENTS (2026-02-04 REVISED)
+
+**Quality priority - all sub-agents use Opus:**
+- Main session: `github-copilot/claude-haiku-4.5` (cost control)
+- All sub-agents: `claude-opus-4.5` (quality, accuracy, reliability)
+- No exceptions, no overrides
+- Anthony prioritizes accuracy and quality over cost for sub-agents
+
+---
+
 ## 🚨🚨🚨 THE PRIME DIRECTIVE: MISSION CONTROL IS YOUR BRAIN 🚨🚨🚨
 
 **Mission Control is NOT just a task tracker. It is:**

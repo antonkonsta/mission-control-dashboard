@@ -319,17 +319,18 @@ Check ALL running sub-agents:
 
 When spawning a sub-agent via `sessions_spawn`:
 ```
-label="task-XXX-description"     ← MANDATORY - MUST MATCH MISSION CONTROL TASK
-model="claude-sonnet-4.5"        ← MANDATORY - USE FULL MODEL NAME, NOT ALIAS
+label="task-XXX-description"              ← MANDATORY - MUST MATCH MISSION CONTROL TASK
+model="github-copilot/claude-haiku-4.5"   ← MANDATORY - HAIKU ONLY, ALL AGENTS
 ```
 
-**🚨 MODEL NAME RULE (CRITICAL - BURNED IN 2026-02-04):**
-- ✅ Use FULL names: `claude-sonnet-4.5`, `claude-opus-4.5`, `gpt-4o`
-- ❌ NEVER use aliases: `sonnet`, `opus`, `gpt` (these DEFAULT TO MAIN SESSION MODEL)
-- Aliases silently fail and spawn with Opus, wasting money
+**🚨 MODEL LOCK (CRITICAL - 2026-02-04 REVISED):**
+- ✅ Sub-agents: `claude-opus-4.5` (quality priority)
+- ✅ Main session: `github-copilot/claude-haiku-4.5` (cost control)
+- ❌ NO Haiku for sub-agents - Opus only
+- ❌ NO aliases, NO overrides
+- ❌ NO exceptions
 
-**Default model for sub-agents:** `claude-sonnet-4.5` (cheaper, sufficient for most tasks)
-**Only use Opus for:** Complex research, architecture decisions, critical deliverables
+**Quality Priority for Sub-Agents:** Anthony prioritizes accuracy and results over cost. Use Opus for all sub-agent work.
 
 ---
 
