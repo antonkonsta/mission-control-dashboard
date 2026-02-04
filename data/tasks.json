@@ -806,12 +806,17 @@
           "id": "sub_002",
           "title": "Design request-level cost tracking: capture rate_per_token at request time (not retroactive)",
           "done": false
+        },
+        {
+          "id": "sub_003",
+          "title": "Update token logging schema: add request_id, actual_cost_usd, cost_calculated_at_timestamp",
+          "done": false
         }
       ],
       "comments": [],
       "createdAt": "2026-02-04T19:56:54.236493+00:00",
-      "updated": "2026-02-04T19:57:03.093893+00:00"
+      "updated": "2026-02-04T19:57:03.885254+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:57:03.093909+00:00"
+  "lastUpdated": "2026-02-04T19:57:03.885274+00:00"
 }
