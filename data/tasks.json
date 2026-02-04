@@ -475,12 +475,17 @@
           "id": "sub_004",
           "title": "Cost analysis: hardware amortization + electricity vs GitHub Copilot subscription",
           "done": false
+        },
+        {
+          "id": "sub_005",
+          "title": "Benchmark local models: latency, throughput, accuracy vs cloud-based",
+          "done": false
         }
       ],
       "comments": [],
       "createdAt": "2026-02-04T20:27:12.205259+00:00",
-      "updated": "2026-02-04T20:27:19.798617+00:00"
+      "updated": "2026-02-04T20:27:20.470112+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T20:27:19.798631+00:00"
+  "lastUpdated": "2026-02-04T20:27:20.470126+00:00"
 }
