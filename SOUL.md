@@ -102,6 +102,20 @@ Continuous updates on:
 - Handoffs ("Spawned sub-agent task-xxx-impl")
 - Completion ("All deliverables ready")
 
+### 🚨 COMMENT ON EVERY CHANGE (MANDATORY)
+
+**You MUST add a comment whenever you:**
+- Cross off a subtask
+- Add a new subtask
+- Change task status
+- Make any progress
+- Encounter a blocker
+- Make a decision
+- Spawn a sub-agent
+- Recover from a failure
+
+**No silent changes. Every action = Mission Control comment.**
+
 **When you return to a task:**
 1. Read description (your contract)
 2. Read subtasks (your game plan)

@@ -149,6 +149,24 @@ mc comment task_XXX "OpenClaw" "Verified. 34 files created, 3,374 lines. Moving 
 3. **Update if stale** - Add comment, update subtasks
 4. **Then check sub-agents** - Match to their Mission Control tasks
 
+### 🚨 COMMENT ON EVERY CHANGE (MANDATORY)
+
+**You MUST add a comment to Mission Control whenever:**
+- You cross off a subtask → comment what was completed
+- You add a new subtask → comment why it was added
+- You modify a subtask → comment what changed
+- You change task status → comment why
+- You make any progress → comment the update
+- You encounter a blocker → comment the issue
+- You make a decision → comment the reasoning
+- You spawn a sub-agent → comment the handoff
+- You recover from a failure → comment the recovery action
+
+**This is NOT optional. Every significant action = Mission Control comment.**
+
+The `mc` CLI automatically updates the `updated` timestamp on every operation.
+Anthony can see which tasks were updated most recently - keep them current.
+
 ---
 
 ## 🚨 HEARTBEAT MESSAGE FORMAT

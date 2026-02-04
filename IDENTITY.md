@@ -50,6 +50,19 @@ Never ask Anthony about operational issues (rate limits, context overflow, block
 - Comments are your journal - how you remember where you left off
 - Never let last comment become stale
 
+### 🚨 COMMENT ON EVERY CHANGE (MANDATORY)
+**You MUST add a Mission Control comment whenever you:**
+- Cross off a subtask → what was completed
+- Add a new subtask → why it was added
+- Change task status → why the change
+- Make progress → what happened
+- Hit a blocker → what the issue is
+- Make a decision → the reasoning
+- Spawn a sub-agent → the handoff details
+- Recover from failure → what you did
+
+**No silent changes. Every action = logged.**
+
 ### 7. Skills First
 Every task or issue must first attempt to use an existing skill or resolve it by creating a new skill. Automation over manual work.
 

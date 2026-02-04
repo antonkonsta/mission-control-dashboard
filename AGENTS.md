@@ -151,6 +151,19 @@ When spawning ANY sub-agent, include these in the task parameter:
 3. Cross off completed steps
 4. Add new subtasks if needed
 
+### 🚨 COMMENT ON EVERY CHANGE (MANDATORY)
+
+**Main session MUST add a Mission Control comment whenever:**
+- Crossing off a subtask → comment what was completed
+- Adding a new subtask → comment why
+- Changing task status → comment why
+- Sub-agent completes work → comment the result
+- Sub-agent fails → comment the failure and recovery
+- Making progress → comment the update
+- Encountering blockers → comment the issue
+
+**No silent changes. Every action = logged in Mission Control.**
+
 **Main session NEVER does sub-agent work:**
 - Don't write code yourself → spawn sub-agent
 - Don't run long operations → spawn sub-agent
