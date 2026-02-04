@@ -266,7 +266,7 @@
       "id": "task_015",
       "title": "Token Usage Tracking & Cost Visualization",
       "description": "OBJECTIVE: Build a LIVE token usage tracking system with cost visualization for GitHub Copilot billing\n\nEXPECTATIONS FROM ANTHONY:\n- Track total token usage over time with visual chart - LIVE updates\n- Show cost per task/agent breakdown (which work consumes most tokens)\n- Hierarchical breakdown: Heartbeat vs Tasks vs Ad-hoc conversations\n- Display BOTH tokens AND estimated cost\n- All visualizations must auto-refresh (within 30 seconds)\n- Token Tracking is a NEW dedicated page in Agent Activity Monitor\n- Update ACTIVE AGENTS page to show tokens + cost per agent\n- Update HISTORY page to show tokens + cost for historical agents\n- THREE visualization types: Line chart (over time), Stacked bar (per-task), Treemap (hierarchical)\n- **BASELINE TRACKING**: Store a \"starting balance\" value provided by Anthony from GitHub billing\n- **CUMULATIVE COST**: Add tracked costs to the baseline, so total shown matches GitHub billing\n- **PREDICTION ACCURACY**: When Anthony checks GitHub billing, the value should match what's displayed\n- **BILLING CYCLE RESET**: Support monthly reset when billing cycle completes (Anthony will notify)\n\nCONSTRAINTS:\n- Use GitHub Copilot billing rates (must research exact per-model costs)\n- Must handle multiple models: Opus ($15/$75), Sonnet ($3/$15), GPT-4o ($2.50/$10), GPT-4o-mini ($0.15/$0.60), Gemini Pro ($1.25/$5)\n- Integrate with existing Agent Activity Monitor (monitor_server.py)\n\nDELIVERABLES:\n1. Token logging infrastructure capturing per-request usage\n2. NEW dedicated Token Tracking page in Activity Monitor with 3 visualizations\n3. Updated Active Agents page with tokens + cost per agent\n4. Updated History page with tokens + cost for historical agents\n5. Live auto-refresh (30 second intervals)\n6. **Baseline cost storage** - ability to set starting balance from GitHub billing\n7. **Cumulative total display** - baseline + tracked usage = total shown\n8. Cost prediction that matches GitHub billing\n\nSUCCESS CRITERIA:\n- Can see at a glance: total spend, per-agent breakdown, per-task costs\n- Refresh within 30 seconds shows updated data\n- Anthony provides baseline, tracks for days, checks GitHub - values match\n- Monthly reset capability when Anthony notifies of new billing cycle",
-      "status": "in_progress",
+      "status": "review",
       "priority": "medium",
       "subtasks": [
         {
@@ -513,7 +513,7 @@
         }
       ],
       "createdAt": "2026-02-04T18:37:44.067755+00:00",
-      "updated": "2026-02-04T19:56:30.814017+00:00"
+      "updated": "2026-02-04T19:56:31.477093+00:00"
     },
     {
       "id": "task_016",
@@ -791,5 +791,5 @@
       "updated": "2026-02-04T19:54:23.124206+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:56:30.814019+00:00"
+  "lastUpdated": "2026-02-04T19:56:31.477107+00:00"
 }
