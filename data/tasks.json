@@ -801,12 +801,17 @@
           "id": "sub_001",
           "title": "Extract GitHub Pro+ rates from report: confirm $/M input vs output per model",
           "done": false
+        },
+        {
+          "id": "sub_002",
+          "title": "Design request-level cost tracking: capture rate_per_token at request time (not retroactive)",
+          "done": false
         }
       ],
       "comments": [],
       "createdAt": "2026-02-04T19:56:54.236493+00:00",
-      "updated": "2026-02-04T19:57:02.033265+00:00"
+      "updated": "2026-02-04T19:57:03.093893+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:57:02.033281+00:00"
+  "lastUpdated": "2026-02-04T19:57:03.093909+00:00"
 }
