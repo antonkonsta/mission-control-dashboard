@@ -565,6 +565,11 @@
           "id": "sub_022",
           "title": "Design complete step-by-step implementation guide",
           "done": false
+        },
+        {
+          "id": "sub_023",
+          "title": "Document all risks and mitigation strategies",
+          "done": false
         }
       ],
       "comments": [
@@ -580,8 +585,8 @@
         }
       ],
       "createdAt": "2026-02-04T20:27:12.205259+00:00",
-      "updated": "2026-02-04T20:31:20.044706+00:00"
+      "updated": "2026-02-04T20:31:20.724998+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T20:31:20.044724+00:00"
+  "lastUpdated": "2026-02-04T20:31:20.725015+00:00"
 }
