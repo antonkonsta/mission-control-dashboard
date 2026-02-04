@@ -351,10 +351,15 @@
           "author": "OpenClaw",
           "text": "Spawned sub-agent 'task-015-dcop-equations' with Opus. Session: agent:main:subagent:335638a8-f84a-4f6f-b07e-81683df6f918. Researching 25+ sources for DCOP equations.",
           "timestamp": "2026-02-04T16:07:03.244753+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "Sub-agent completed too quickly (44s) and didn't produce PDF. Rate limits hit on web search. Respawning with adjusted approach.",
+          "timestamp": "2026-02-04T16:08:26.241162+00:00"
         }
       ],
       "createdAt": "2026-02-04T16:06:36.513210+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T16:07:03.244769+00:00"
+  "lastUpdated": "2026-02-04T16:08:26.241179+00:00"
 }
