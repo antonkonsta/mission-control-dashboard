@@ -244,7 +244,7 @@
       "id": "task_014",
       "title": "Add task detail view modal to Mission Control dashboard",
       "description": "Add click-to-expand functionality showing: full description, all subtasks with status, all comments with timestamps, created/updated dates. Modal or slide-out panel.",
-      "status": "review",
+      "status": "done",
       "priority": "high",
       "subtasks": [],
       "comments": [
@@ -259,7 +259,8 @@
           "timestamp": "2026-02-04T18:02:22.103191+00:00"
         }
       ],
-      "createdAt": "2026-02-04T17:52:43.351124+00:00"
+      "createdAt": "2026-02-04T17:52:43.351124+00:00",
+      "updated": "2026-02-04T18:53:55.419220+00:00"
     },
     {
       "id": "task_015",
@@ -468,5 +469,5 @@
       "updated": "2026-02-04T18:52:01.179072+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T18:53:35.934525+00:00"
+  "lastUpdated": "2026-02-04T18:53:55.419236+00:00"
 }
