@@ -434,9 +434,15 @@
       "status": "review",
       "priority": "high",
       "subtasks": [],
-      "comments": [],
+      "comments": [
+        {
+          "author": "OpenClaw",
+          "text": "Research complete. Found 15 sources. Key findings: No official consumer API exists. Direct access blocked (403). Options: A) Use Yelp/Google APIs (recommended), B) Browser automation (risky), C) Pay third-party scraper. Previous research was NOT from DoorDash - just general restaurant data. PDF report delivered.",
+          "timestamp": "2026-02-04T02:19:53.948541+00:00"
+        }
+      ],
       "createdAt": "2026-02-04T02:17:24.141386+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T02:19:53.413810+00:00"
+  "lastUpdated": "2026-02-04T02:19:53.948558+00:00"
 }
