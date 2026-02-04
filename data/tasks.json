@@ -287,7 +287,7 @@
         {
           "id": "sub_004",
           "title": "Build cost calculation engine - apply correct rate per model",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_005",
@@ -393,7 +393,7 @@
         }
       ],
       "createdAt": "2026-02-04T18:37:44.067755+00:00",
-      "updated": "2026-02-04T19:01:35.604778+00:00"
+      "updated": "2026-02-04T19:01:36.286029+00:00"
     },
     {
       "id": "task_016",
@@ -484,5 +484,5 @@
       "updated": "2026-02-04T18:52:01.179072+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:01:35.604794+00:00"
+  "lastUpdated": "2026-02-04T19:01:36.286047+00:00"
 }
