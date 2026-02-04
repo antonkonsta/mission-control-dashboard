@@ -86,9 +86,15 @@
       "status": "in_progress",
       "priority": "high",
       "subtasks": [],
-      "comments": [],
+      "comments": [
+        {
+          "author": "OpenClaw",
+          "text": "Spawned sub-agent with label 'activity-monitor-research' using github-copilot/claude-opus-4.5. Session: agent:main:subagent:0f85b57b-c943-43b1-808d-e0b3122cd1df",
+          "timestamp": "2026-02-04T04:25:10.033953+00:00"
+        }
+      ],
       "createdAt": "2026-02-04T04:24:44.832013+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T04:24:48.486998+00:00"
+  "lastUpdated": "2026-02-04T04:25:10.033970+00:00"
 }
