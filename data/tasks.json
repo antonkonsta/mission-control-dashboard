@@ -487,7 +487,7 @@
           "id": "sub_006"
         },
         {
-          "done": false,
+          "done": true,
           "title": "Update HEARTBEAT.md with Mission Control enforcement",
           "id": "sub_007"
         },
@@ -531,5 +531,5 @@
       ]
     }
   ],
-  "lastUpdated": "2026-02-04T01:28:12.574642+00:00"
+  "lastUpdated": "2026-02-04T01:28:16.308383+00:00"
 }
