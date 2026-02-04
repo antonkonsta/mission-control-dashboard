@@ -202,7 +202,17 @@
         }
       ],
       "createdAt": "2026-02-04T04:34:22.756982+00:00"
+    },
+    {
+      "id": "task_009",
+      "title": "Agent Chats: Live Status Indicators",
+      "description": "Add live/dead status indicators to Agent Chats page: (1) Green indicator for live agents (still active, not expired) (2) Red indicator for dead/expired agents (3) Sort conversations by most recent message - newest at top/left (4) Match active status with Active Agents view threshold timer",
+      "status": "in_progress",
+      "priority": "high",
+      "subtasks": [],
+      "comments": [],
+      "createdAt": "2026-02-04T04:54:56.510686+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T04:54:51.114885+00:00"
+  "lastUpdated": "2026-02-04T04:54:56.510703+00:00"
 }
