@@ -610,7 +610,7 @@
         {
           "id": "sub_001",
           "title": "Update dashboard.html rate display format",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_002",
@@ -631,8 +631,8 @@
         }
       ],
       "createdAt": "2026-02-04T19:25:25.813437+00:00",
-      "updated": "2026-02-04T19:25:45.477478+00:00"
+      "updated": "2026-02-04T19:26:09.661644+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:26:02.254590+00:00"
+  "lastUpdated": "2026-02-04T19:26:09.661660+00:00"
 }
