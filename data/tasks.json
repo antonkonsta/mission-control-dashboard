@@ -364,12 +364,12 @@
         {
           "id": "sub_001",
           "title": "Add lastUpdated display to task cards in dashboard HTML",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_002",
           "title": "Implement per-column sorting by lastUpdated (newest first)",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_003",
@@ -412,11 +412,16 @@
           "author": "OpenClaw",
           "text": "Moving to in_progress. Starting work on dashboard updates for lastUpdated display and sorting.",
           "timestamp": "2026-02-04T18:47:47.963219+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "Completed sub_001 and sub_002: Dashboard now shows \"Updated: X ago\" on each task card and sorts by most recently updated first within each column. Uses getLastUpdated() to check updated field, last comment timestamp, or createdAt.",
+          "timestamp": "2026-02-04T18:49:00.397611+00:00"
         }
       ],
       "createdAt": "2026-02-04T18:46:11.827090+00:00",
-      "updated": "2026-02-04T18:47:47.963203+00:00"
+      "updated": "2026-02-04T18:49:00.397595+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T18:47:47.963221+00:00"
+  "lastUpdated": "2026-02-04T18:49:00.397614+00:00"
 }
