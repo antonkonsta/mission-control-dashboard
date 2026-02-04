@@ -377,10 +377,15 @@
           "author": "OpenClaw",
           "text": "Spawned sub-agent 'task-016-dcop-100-sources' with Opus. 30-min timeout. Researching 100 sources, constrained to exact Cadence parameters Anthony provided.",
           "timestamp": "2026-02-04T16:25:34.158309+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "Sub-agent failed - GitHub Copilot token expired mid-research (96 entries in transcript). Respawning...",
+          "timestamp": "2026-02-04T16:36:20.731915+00:00"
         }
       ],
       "createdAt": "2026-02-04T16:25:05.692800+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T16:25:34.158324+00:00"
+  "lastUpdated": "2026-02-04T16:36:20.731931+00:00"
 }
