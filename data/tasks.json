@@ -149,10 +149,15 @@
           "author": "OpenClaw",
           "text": "Spawned sub-agent 'task-008-agent-chats' with Opus. Creating new /chats route with clean conversation view between main session and sub-agents.",
           "timestamp": "2026-02-04T04:34:46.345409+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "Sub-agent completed. Created /chats route with chat bubble UI, /api/chats endpoint filtering to text-only messages, collapsible conversation cards, auto-refresh. Added Agent Chats tab to main dashboard.",
+          "timestamp": "2026-02-04T04:37:33.946442+00:00"
         }
       ],
       "createdAt": "2026-02-04T04:34:22.756982+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T04:34:46.345425+00:00"
+  "lastUpdated": "2026-02-04T04:37:33.946458+00:00"
 }
