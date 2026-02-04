@@ -810,7 +810,7 @@
         {
           "id": "sub_003",
           "title": "Update token logging schema: add request_id, actual_cost_usd, cost_calculated_at_timestamp",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_004",
@@ -891,8 +891,8 @@
         }
       ],
       "createdAt": "2026-02-04T19:56:54.236493+00:00",
-      "updated": "2026-02-04T20:01:23.905067+00:00"
+      "updated": "2026-02-04T20:01:24.577028+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T20:01:23.905086+00:00"
+  "lastUpdated": "2026-02-04T20:01:24.577044+00:00"
 }
