@@ -264,53 +264,68 @@
     {
       "id": "task_015",
       "title": "Token Usage Tracking & Cost Visualization",
-      "description": "OBJECTIVE: Build a system to track token usage and estimate costs for GitHub Copilot billing\n\nEXPECTATIONS FROM ANTHONY:\n- Track total token usage over time with visual chart\n- Break down token usage PER TASK in Mission Control (beginning to completion)\n- Show live token count for each running agent in Agent Activity Monitor\n- Convert tokens to estimated dollar cost (since direct API billing not available on non-enterprise)\n- Accurate way of predicting costs that match what appears in GitHub billing (~$40 this period)\n- Track efficiency over time\n\nCONSTRAINTS:\n- GitHub Copilot subscription only (no direct Anthropic/OpenAI billing API access)\n- Enterprise billing API not available - need alternative approach\n- Must work with existing Agent Activity Monitor dashboard\n\nDELIVERABLES:\n1. Token tracking system that logs usage per task and per agent\n2. Dashboard visualization showing:\n   - Line chart: Total token usage over time\n   - Bar chart: Token usage breakdown by task (what's eating most tokens)\n   - Per-agent live token count\n   - Heartbeat vs task usage breakdown\n3. Cost estimation formula (tokens \u2192 dollars) based on GitHub Copilot pricing\n4. Integration with Mission Control tasks\n\nSUCCESS CRITERIA:\n- Anthony can see at a glance how much each task costs\n- Anthony can predict monthly billing from dashboard\n- Clear breakdown of where tokens are going (heartbeat, tasks, agents)",
+      "description": "OBJECTIVE: Build a LIVE token usage tracking system with cost visualization for GitHub Copilot billing\n\nEXPECTATIONS FROM ANTHONY:\n- Track total token usage over time with visual chart - LIVE updates (within 30 seconds)\n- Break down token usage PER TASK in Mission Control (beginning to completion)\n- Show live token count for each running agent in Agent Activity Monitor\n- Convert tokens to estimated dollar cost using known model rates\n- Show BOTH literal token amounts AND estimated cost everywhere\n- Track which agent uses which model, and apply correct rate per model\n- Accurate cost prediction that matches GitHub billing (~$40 this period)\n- Track efficiency over time\n- ALL THREE visualization types required (line chart, bar chart, treemap)\n\nMODEL RATE TRACKING (CRITICAL):\n- Must track: model name + input tokens + output tokens per request\n- Apply correct rates per model:\n  * Claude Opus 4.5: $15/1M input, $75/1M output\n  * Claude Sonnet 4.5: $3/1M input, $15/1M output  \n  * GPT-4o: $2.50/1M input, $10/1M output\n  * GPT-4o-mini: $0.15/1M input, $0.60/1M output\n  * Gemini Pro: ~$1.25/1M input, $5/1M output\n- Never mix up which tokens came from which model\n- Per-agent model tracking (each agent may use different model)\n\nCONSTRAINTS:\n- GitHub Copilot subscription only (no direct billing API)\n- Must be LIVE - auto-refresh within 30 seconds\n- Must work with existing Agent Activity Monitor dashboard\n\nDELIVERABLES:\n1. Token tracking system that logs: task_id, agent_id, model, input_tokens, output_tokens, timestamp\n2. THREE dashboard visualizations:\n   a) LINE CHART: Total token usage over time (hourly/daily), with cost overlay\n   b) STACKED BAR CHART: Per-task breakdown, segments for input/output, shows cost per task\n   c) TREEMAP/SUNBURST: Hierarchical view - Total \u2192 Categories (Heartbeat/Tasks/Ad-hoc) \u2192 Individual items\n3. Live token counter on each agent card in Activity Monitor\n4. Cost estimation showing tokens + dollars side by side\n5. Model-aware tracking (correct rates per model per agent)\n\nSUCCESS CRITERIA:\n- Anthony can see at a glance how much each task costs (tokens + dollars)\n- Anthony can predict monthly billing from dashboard\n- Clear breakdown of where tokens are going (heartbeat vs tasks vs agents)\n- All visualizations update LIVE (within 30 seconds of token usage)\n- Cost estimates match actual GitHub billing within reasonable margin",
       "status": "backlog",
       "priority": "medium",
       "subtasks": [
         {
           "id": "sub_001",
-          "title": "Research GitHub Copilot token pricing model",
+          "title": "Research GitHub Copilot token pricing - confirm rates per model",
           "done": false
         },
         {
           "id": "sub_002",
-          "title": "Design token logging schema (per task, per agent, timestamps)",
+          "title": "Design token logging schema: task_id, agent_id, model, input_tokens, output_tokens, timestamp",
           "done": false
         },
         {
           "id": "sub_003",
-          "title": "Implement token tracking hooks in OpenClaw",
+          "title": "Implement token tracking hooks in OpenClaw (capture per-request)",
           "done": false
         },
         {
           "id": "sub_004",
-          "title": "Build cost estimation formula (tokens to dollars)",
+          "title": "Build cost calculation engine - apply correct rate per model",
           "done": false
         },
         {
           "id": "sub_005",
-          "title": "Create line chart - total usage over time",
+          "title": "Create LINE CHART - total usage over time with cost overlay",
           "done": false
         },
         {
           "id": "sub_006",
-          "title": "Create bar chart - usage breakdown by task",
+          "title": "Create STACKED BAR CHART - per-task breakdown with cost labels",
           "done": false
         },
         {
           "id": "sub_007",
-          "title": "Add live token counter to Agent Activity Monitor",
+          "title": "Create TREEMAP/SUNBURST - hierarchical breakdown (Heartbeat/Tasks/Ad-hoc)",
           "done": false
         },
         {
           "id": "sub_008",
-          "title": "Add heartbeat vs task usage breakdown",
+          "title": "Add live token counter to each agent card in Activity Monitor",
           "done": false
         },
         {
           "id": "sub_009",
-          "title": "Integrate with Mission Control task completion tracking",
+          "title": "Implement auto-refresh (30 second intervals) for all visualizations",
+          "done": false
+        },
+        {
+          "id": "sub_010",
+          "title": "Add dual display everywhere: tokens + estimated cost",
+          "done": false
+        },
+        {
+          "id": "sub_011",
+          "title": "Integrate with Mission Control - link token usage to task lifecycle",
+          "done": false
+        },
+        {
+          "id": "sub_012",
+          "title": "Test and calibrate cost estimates against actual GitHub billing",
           "done": false
         }
       ],
@@ -319,6 +334,11 @@
           "author": "OpenClaw",
           "text": "Task created with 9 subtasks. Status: backlog pending research on GitHub Copilot pricing.",
           "timestamp": "2026-02-04T18:38:00.000000+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "Updated per Anthony feedback: All 3 visualizations required (line, bar, treemap). LIVE updates mandatory (<30s). Must show both tokens AND cost everywhere. Model-aware rate tracking critical - each agent/model tracked separately with correct rates applied. 12 subtasks defined.",
+          "timestamp": "2026-02-04T18:43:09.523777+00:00"
         }
       ],
       "createdAt": "2026-02-04T18:37:44.067755+00:00"
