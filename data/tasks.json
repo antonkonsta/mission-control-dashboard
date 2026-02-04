@@ -527,9 +527,14 @@
           "author": "OpenClaw",
           "text": "\u2705 SKILL BUILT (Subtasks 2-5/10):\n\n**Created:**\n- SKILL.md: Complete documentation with schema, workflow, validation rules\n- mc.py: CLI tool with auto-sync (create, comment, subtask, status, list, sync)\n- Installed as `mc` command globally\n\n**Features:**\n- Auto-commit after every task operation\n- Auto-push to dashboard remote (git push dashboard main)\n- Proper schema validation (title vs text)\n- Task creation with subtasks\n- Comment/status/subtask updates\n- List tasks with status filtering\n\n**Next:** Add validation checks + update HEARTBEAT.md + test end-to-end",
           "timestamp": "2026-02-04T01:25:41.796438+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "Updated HEARTBEAT.md with mc CLI commands, validation enforcement, and workflow documentation",
+          "timestamp": "2026-02-04T01:28:16.907183+00:00"
         }
       ]
     }
   ],
-  "lastUpdated": "2026-02-04T01:28:16.308383+00:00"
+  "lastUpdated": "2026-02-04T01:28:16.907199+00:00"
 }
