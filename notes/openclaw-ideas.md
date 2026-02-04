@@ -32,6 +32,27 @@
 - Listening comprehension exercises
 - Cultural context notes for songs
 
+### 3. Main Session as Sub-Agent Manager
+**Status:** Idea - not started
+
+**Description:**
+Work through HEARTBEAT.md, identity files (AGENTS.md, SOUL.md), skills, and scripts to ensure the main session properly delegates to sub-agents and acts as an effective manager.
+
+**Key Behaviors to Enforce:**
+- Main session delegates work instead of doing everything itself
+- Regular check-ins on sub-agent progress
+- Hard enforcement - demand results, no excuses
+- Kill and respawn failed/stuck sub-agents immediately
+- Track sub-agent tasks in Mission Control
+- Main session as intermediary between user (Anthony) and sub-agents
+- Teach sub-agents proper work habits through strict oversight
+
+**Files to Review/Update:**
+- `HEARTBEAT.md` - sub-agent supervision rules
+- `AGENTS.md` - sub-agent spawning and naming rules  
+- `SOUL.md` - manager mindset and accountability
+- Mission Control scripts - task tracking integration
+
 ---
 
 *Last updated: 2026-02-03*
