@@ -560,6 +560,11 @@
           "id": "sub_021",
           "title": "Create cost analysis: hardware + electricity vs GitHub Copilot subscription",
           "done": false
+        },
+        {
+          "id": "sub_022",
+          "title": "Design complete step-by-step implementation guide",
+          "done": false
         }
       ],
       "comments": [
@@ -575,8 +580,8 @@
         }
       ],
       "createdAt": "2026-02-04T20:27:12.205259+00:00",
-      "updated": "2026-02-04T20:31:19.250995+00:00"
+      "updated": "2026-02-04T20:31:20.044706+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T20:31:19.251021+00:00"
+  "lastUpdated": "2026-02-04T20:31:20.044724+00:00"
 }
