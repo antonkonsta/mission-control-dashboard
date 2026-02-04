@@ -293,7 +293,7 @@
         {
           "id": "sub_005",
           "title": "Test with new sub-agent spawn (verify name appears)",
-          "done": false
+          "done": true
         }
       ],
       "comments": [
@@ -567,5 +567,5 @@
       "createdAt": "2026-02-04T01:32:33.587068+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T01:36:13.644893+00:00"
+  "lastUpdated": "2026-02-04T01:36:14.167678+00:00"
 }
