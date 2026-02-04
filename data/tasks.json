@@ -683,7 +683,7 @@
         {
           "id": "sub_004",
           "title": "Research: What counts as a premium request vs free request",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_005",
@@ -734,8 +734,8 @@
         }
       ],
       "createdAt": "2026-02-04T19:37:38.669159+00:00",
-      "updated": "2026-02-04T19:43:33.608343+00:00"
+      "updated": "2026-02-04T19:43:34.280518+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:43:33.608385+00:00"
+  "lastUpdated": "2026-02-04T19:43:34.280536+00:00"
 }
