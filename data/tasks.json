@@ -540,6 +540,11 @@
           "id": "sub_017",
           "title": "Research GPU support: NVIDIA CUDA, AMD ROCm, Intel OneAPI options",
           "done": false
+        },
+        {
+          "id": "sub_018",
+          "title": "Review OpenClaw Linux installation & configuration requirements",
+          "done": false
         }
       ],
       "comments": [
@@ -555,8 +560,8 @@
         }
       ],
       "createdAt": "2026-02-04T20:27:12.205259+00:00",
-      "updated": "2026-02-04T20:31:16.224458+00:00"
+      "updated": "2026-02-04T20:31:17.010245+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T20:31:16.224474+00:00"
+  "lastUpdated": "2026-02-04T20:31:17.010262+00:00"
 }
