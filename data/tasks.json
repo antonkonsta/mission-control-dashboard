@@ -311,6 +311,11 @@
           "author": "OpenClaw",
           "text": "Fixed directly: Updated monitor_server.py to filter out main session (agent:main:main) from sub-agent display. Main session was showing as UNNAMED because it has no label (correctly - it's not a sub-agent). Now only actual sub-agents appear in Task Monitor.",
           "timestamp": "2026-02-04T01:36:14.728391+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "Completed - Unknown task issue fixed. Monitor now reads labels from sessions.json. HEARTBEAT.md updated with mandatory naming rules.",
+          "timestamp": "2026-02-04T01:37:17.180750+00:00"
         }
       ],
       "createdAt": "2026-02-04T00:14:17.000000+00:00"
@@ -572,5 +577,5 @@
       "createdAt": "2026-02-04T01:32:33.587068+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T01:37:16.616782+00:00"
+  "lastUpdated": "2026-02-04T01:37:17.180766+00:00"
 }
