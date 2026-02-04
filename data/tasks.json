@@ -684,12 +684,17 @@
           "id": "sub_004",
           "title": "Research: What counts as a premium request vs free request",
           "done": false
+        },
+        {
+          "id": "sub_005",
+          "title": "Analyze: Why current tracking shows $100+ for Opus (inaccurate)",
+          "done": false
         }
       ],
       "comments": [],
       "createdAt": "2026-02-04T19:37:38.669159+00:00",
-      "updated": "2026-02-04T19:37:47.195672+00:00"
+      "updated": "2026-02-04T19:37:47.899427+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:37:47.195688+00:00"
+  "lastUpdated": "2026-02-04T19:37:47.899445+00:00"
 }
