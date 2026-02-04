@@ -115,6 +115,16 @@ mc comment task_XXX "OpenClaw" "Done. 30 files, 4500 lines. Moving to review."
 3. Good: `label="task-021-5t-ota"`, `label="task-014-modal"`
 4. Bad: no label, or generic like `label="sub-agent"`
 
+### 🚨 MODEL NAME RULE (CRITICAL - BURNED IN 2026-02-04)
+**Use FULL model names, NEVER aliases:**
+- ✅ `model="claude-sonnet-4.5"` (default for sub-agents)
+- ✅ `model="claude-opus-4.5"` (only for complex/critical work)
+- ✅ `model="gpt-4o"`
+- ❌ `model="sonnet"` → FAILS, defaults to Opus
+- ❌ `model="opus"` → FAILS, defaults to main session model
+
+**Default:** Always use `claude-sonnet-4.5` unless task requires Opus-level reasoning.
+
 ### Spawn Instructions Must Include:
 When spawning ANY sub-agent, include these in the task parameter:
 1. Reference to Mission Control task ID

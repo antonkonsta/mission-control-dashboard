@@ -314,13 +314,22 @@ Check ALL running sub-agents:
 - If sub-agent finished but task not moved → update subtasks, add comment, move to review
 - **Mission Control is the source of truth** - keep it accurate
 
-### 7. ⚠️ MANDATORY SUB-AGENT NAMING RULE
-**EVERY sub-agent MUST be spawned with a `label` parameter. NO EXCEPTIONS.**
+### 7. ⚠️ MANDATORY SUB-AGENT SPAWN RULES
+**EVERY sub-agent MUST follow these rules. NO EXCEPTIONS.**
 
 When spawning a sub-agent via `sessions_spawn`:
 ```
-label="task-XXX-description"  ← MANDATORY - MUST MATCH MISSION CONTROL TASK
+label="task-XXX-description"     ← MANDATORY - MUST MATCH MISSION CONTROL TASK
+model="claude-sonnet-4.5"        ← MANDATORY - USE FULL MODEL NAME, NOT ALIAS
 ```
+
+**🚨 MODEL NAME RULE (CRITICAL - BURNED IN 2026-02-04):**
+- ✅ Use FULL names: `claude-sonnet-4.5`, `claude-opus-4.5`, `gpt-4o`
+- ❌ NEVER use aliases: `sonnet`, `opus`, `gpt` (these DEFAULT TO MAIN SESSION MODEL)
+- Aliases silently fail and spawn with Opus, wasting money
+
+**Default model for sub-agents:** `claude-sonnet-4.5` (cheaper, sufficient for most tasks)
+**Only use Opus for:** Complex research, architecture decisions, critical deliverables
 
 ---
 
