@@ -908,11 +908,16 @@
           "author": "OpenClaw",
           "text": "\ud83d\udd04 RECOVERY COMPLETE: Respawned 3 new agents (v2). task-022-billing-api-v2, task-022-rates-calibration-v2, task-022-attribution-test-deploy-v2 now executing subtasks 4-5, 8-9, 10-12. All have full context and upstream dependencies. Monitoring for completion.",
           "timestamp": "2026-02-04T20:02:51.603051+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "\ud83d\udea8 task-022-rates-calibration FAILED: All providers exhausted (Haiku timeout, missing Bedrock/Anthropic/OpenAI keys, GitHub Copilot rate-limited). Sub-agent could not start. Immediate action: simplifying subtasks 8-9 scope to leverage existing deliverables. Respawning with reduced complexity.",
+          "timestamp": "2026-02-04T20:03:09.144841+00:00"
         }
       ],
       "createdAt": "2026-02-04T19:56:54.236493+00:00",
-      "updated": "2026-02-04T20:02:51.603068+00:00"
+      "updated": "2026-02-04T20:03:09.144858+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T20:02:51.603070+00:00"
+  "lastUpdated": "2026-02-04T20:03:09.144860+00:00"
 }
