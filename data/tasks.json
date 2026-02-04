@@ -282,7 +282,7 @@
         {
           "id": "sub_003",
           "title": "Implement token tracking hooks in OpenClaw (capture per-request)",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_004",
@@ -403,7 +403,7 @@
         }
       ],
       "createdAt": "2026-02-04T18:37:44.067755+00:00",
-      "updated": "2026-02-04T19:02:24.512854+00:00"
+      "updated": "2026-02-04T19:02:25.237087+00:00"
     },
     {
       "id": "task_016",
@@ -494,5 +494,5 @@
       "updated": "2026-02-04T18:52:01.179072+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:02:24.512869+00:00"
+  "lastUpdated": "2026-02-04T19:02:25.237102+00:00"
 }
