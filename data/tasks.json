@@ -278,7 +278,7 @@
         {
           "id": "sub_002",
           "title": "Add validation to sessions_spawn wrapper (require task name)",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_003",
@@ -567,5 +567,5 @@
       "createdAt": "2026-02-04T01:32:33.587068+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T01:36:12.025890+00:00"
+  "lastUpdated": "2026-02-04T01:36:12.562802+00:00"
 }
