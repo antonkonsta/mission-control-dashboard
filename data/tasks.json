@@ -423,10 +423,15 @@
           "author": "OpenClaw",
           "text": "Analyzing sub-agent failures: 1) GPT-4o hit 64k token limit accumulating fetched content 2) 403 blocks on MDPI/ResearchGate 3) Strategy shift needed - will break into smaller incremental tasks (one file per sub-agent) to avoid context overflow and accumulate knowledge incrementally.",
           "timestamp": "2026-02-04T16:59:24.901535+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "Recovery strategy: Breaking into incremental sub-tasks. Will spawn focused sub-agents to expand ONE file at a time (target: 150-200 lines each). Starting with FDOTA.md using PMC/arXiv sources (accessible). Goal: accumulate knowledge incrementally instead of one massive research dump.",
+          "timestamp": "2026-02-04T17:00:18.799811+00:00"
         }
       ],
       "createdAt": "2026-02-04T16:50:39.038589+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T16:59:24.901551+00:00"
+  "lastUpdated": "2026-02-04T17:00:18.799829+00:00"
 }
