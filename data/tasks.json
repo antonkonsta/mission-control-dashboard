@@ -242,7 +242,13 @@
       "status": "in_progress",
       "priority": "high",
       "subtasks": [],
-      "comments": [],
+      "comments": [
+        {
+          "author": "OpenClaw",
+          "text": "Spawned sub-agent 'task-011-valentines-family' with Opus",
+          "timestamp": "2026-02-04T05:15:56.006455+00:00"
+        }
+      ],
       "createdAt": "2026-02-04T05:15:04.193502+00:00"
     },
     {
@@ -266,5 +272,5 @@
       "createdAt": "2026-02-04T05:15:13.340878+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T05:15:17.456208+00:00"
+  "lastUpdated": "2026-02-04T05:15:56.006473+00:00"
 }
