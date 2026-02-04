@@ -669,12 +669,17 @@
           "id": "sub_001",
           "title": "Research: GitHub Copilot Pro+ plan details - included allowance, pricing tiers",
           "done": false
+        },
+        {
+          "id": "sub_002",
+          "title": "Research: Premium request multipliers - what models cost what",
+          "done": false
         }
       ],
       "comments": [],
       "createdAt": "2026-02-04T19:37:38.669159+00:00",
-      "updated": "2026-02-04T19:37:45.053905+00:00"
+      "updated": "2026-02-04T19:37:45.793844+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:37:45.053922+00:00"
+  "lastUpdated": "2026-02-04T19:37:45.793860+00:00"
 }
