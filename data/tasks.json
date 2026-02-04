@@ -664,11 +664,17 @@
       "description": "OBJECTIVE: Deep research into GitHub Copilot Pro+ plan billing mechanics and fix token tracking to accurately predict costs\n\nEXPECTATIONS FROM ANTHONY:\n1. RESEARCH DELIVERABLES:\n   - How many tokens/premium requests included in Pro+ plan ($40/month)?\n   - When do additional charges start?\n   - How is token usage cost calculated?\n   - When does billing cycle start/end?\n   - How do premium request multipliers work (Opus 3x, Sonnet 1x, GPT-4o free)?\n   - What counts as a 'premium request'?\n   - Full understanding of the billing model\n\n2. FIX CURRENT ISSUES:\n   - Current tracking shows Opus at $100+ which is INACCURATE\n   - When user enters GitHub balance, RESET all prior usage tracking\n   - Only count usage FROM that point forward\n   - Clear explanation of discrepancy between our estimates and actual billing\n\n3. IMPLEMENTATION PLAN:\n   - How to accurately predict costs based on our token tracking\n   - How to align our tracking with GitHub's billing model\n   - Account for included allowance before extra charges kick in\n\nCONSTRAINTS:\n- Research must be thorough and accurate\n- Must understand the ACTUAL billing model, not assumptions\n- PDF report required\n\nDELIVERABLES:\n1. PDF research report answering ALL questions above\n2. Explanation of current tracking inaccuracy\n3. Implementation plan for accurate cost prediction\n4. Clear baseline reset mechanism design\n\nSUCCESS CRITERIA:\n- Anthony fully understands how Pro+ billing works\n- Token tracking accurately predicts actual GitHub charges\n- Baseline reset clears old data and counts fresh",
       "status": "in_progress",
       "priority": "high",
-      "subtasks": [],
+      "subtasks": [
+        {
+          "id": "sub_001",
+          "title": "Research: GitHub Copilot Pro+ plan details - included allowance, pricing tiers",
+          "done": false
+        }
+      ],
       "comments": [],
       "createdAt": "2026-02-04T19:37:38.669159+00:00",
-      "updated": "2026-02-04T19:37:38.669159+00:00"
+      "updated": "2026-02-04T19:37:45.053905+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:37:38.669175+00:00"
+  "lastUpdated": "2026-02-04T19:37:45.053922+00:00"
 }
