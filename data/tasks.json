@@ -389,7 +389,7 @@
         {
           "id": "sub_006",
           "title": "Update SOUL.md - add rule to always comment on changes",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_007",
@@ -430,8 +430,8 @@
         }
       ],
       "createdAt": "2026-02-04T18:46:11.827090+00:00",
-      "updated": "2026-02-04T18:51:11.274977+00:00"
+      "updated": "2026-02-04T18:51:12.107264+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T18:51:11.274995+00:00"
+  "lastUpdated": "2026-02-04T18:51:12.107280+00:00"
 }
