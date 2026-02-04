@@ -1,185 +1,119 @@
-# Mission Control Auto-Sync Skill
+---
+name: mission-control
+description: Task management discipline for Mission Control dashboard. Tracks work with verbose descriptions, subtasks (game plan), and comments (live journal). Every change requires a comment.
+---
 
-**CRITICAL SKILL - Ensures ALL user requests are tracked in Mission Control**
+# Mission Control Skill
 
-## Purpose
+Mission Control is the source of truth for all work. Every task must have:
+1. **Verbose Description** - Full expectations as if Anthony is speaking
+2. **Subtasks** - Your step-by-step game plan
+3. **Comments** - Your live journal of what's happening
 
-This skill GUARANTEES that every user request is:
-1. Added to Mission Control (tasks.json) BEFORE work begins
-2. Automatically committed to git
-3. Automatically pushed to dashboard remote (GitHub Pages)
-4. Visible at https://antonkonsta.github.io/mission-control-dashboard/
-
-## The `mc` CLI
-
-The Mission Control CLI (`mc`) is the primary interface for task management. All commands automatically sync to the dashboard.
-
-### Installation
-
-Already installed globally as `mc`. If needed:
-```bash
-ln -sf /root/.openclaw/workspace/skills/mission-control/scripts/mc.py /usr/local/bin/mc
-chmod +x /usr/local/bin/mc
-```
-
-### Commands
+## CLI Commands
 
 ```bash
-# Create a new task (auto-commits and pushes to dashboard)
-mc create "Task title" "Description" priority
+# Create a task with verbose description
+mc create "Title" "OBJECTIVE: ...
+EXPECTATIONS FROM ANTHONY:
+- Requirement 1
+- Requirement 2
+DELIVERABLES:
+- Output 1
+SUCCESS CRITERIA:
+- How to judge complete" priority
 
-# Validate task exists before working (REQUIRED check)
+# Add subtasks (your game plan)
+mc subtask task_XXX add "Step 1: Research"
+mc subtask task_XXX add "Step 2: Implement"
+mc subtask task_XXX add "Step 3: Test"
+
+# Cross off completed subtasks
+mc subtask task_XXX sub_001 done
+
+# Add comments (your live journal)
+mc comment task_XXX "OpenClaw" "What's happening right now"
+
+# Update status
+mc status task_XXX in_progress|review|backlog
+
+# Validate before working
 mc validate task_XXX
 
-# Show full task details
+# Show task details
 mc show task_XXX
 
-# Update subtask status
-mc subtask task_XXX sub_001 done
-mc subtask task_XXX sub_001 undone  # To reopen
-
-# Add a comment to a task
-mc comment task_XXX "Author" "Comment text"
-
-# Update task status (NEVER use "done" - only Anthony can!)
-mc status task_XXX in_progress
-mc status task_XXX review    # ← Use this when work complete!
-mc status task_XXX backlog
-
-# List all tasks
-mc list
-mc list in_progress
-mc list backlog
-
-# Manual sync (rarely needed - all commands auto-sync)
-mc sync "message"
+# List tasks
+mc list [status]
 ```
 
-## 🚨 CRITICAL: NEVER MOVE TASKS TO "DONE"
+## 🚨 MANDATORY RULES
 
-**ONLY ANTHONY CAN MARK TASKS AS DONE.**
+### 1. Comment on Every Change
 
-- When you complete work → `mc status task_XXX review`
-- NEVER use `mc status task_XXX done`
+**You MUST add a Mission Control comment whenever you:**
+- Cross off a subtask → what was completed
+- Add a new subtask → why it was added
+- Change task status → why the change
+- Make progress → what happened
+- Hit a blocker → what the issue is
+- Make a decision → the reasoning
+- Spawn a sub-agent → the handoff details
+- Recover from failure → what you did
+
+**No silent changes. Every action = logged.**
+
+### 2. Subtasks Are Your Game Plan
+
+- Add subtasks BEFORE starting work
+- Cross them off AS YOU COMPLETE THEM
+- Add new subtasks if scope expands
+- Anthony can see your plan at any time
+
+### 3. Last Updated Matters
+
+- Dashboard shows "Updated: X ago" on every task card
+- Tasks are sorted by most recently updated (newest first)
+- The `mc` CLI automatically updates timestamps on every operation
+- Stale tasks = you're not updating
+
+### 4. Never Move to "Done"
+
+- ONLY Anthony can mark tasks as done
+- When complete → `mc status task_XXX review`
+- NEVER `mc status task_XXX done`
 - Wait for Anthony's explicit approval
-- This applies to ALL tasks, no exceptions
-
-**If you move to "done" without Anthony's approval = IMMEDIATE FAILURE**
 
 ## Workflow
 
-### User Request → Task → Work
-
-```
-User Request → mc create → mc validate → Work → mc subtask/comment → mc status done
-```
-
-1. **User makes request** → `mc create "title" "description" priority`
-2. **Before working** → `mc validate task_XXX` (REQUIRED!)
-3. **While working** → `mc subtask task_XXX sub_001 done`
-4. **Add updates** → `mc comment task_XXX "OpenClaw" "Progress update"`
-5. **Complete** → `mc status task_XXX review` (NEVER done! Only Anthony can approve)
-
-### Automatic Git Sync
-
-Every `mc` command automatically:
-- Updates `/root/.openclaw/workspace/data/tasks.json`
-- Commits to git with `Mission Control:` prefix
-- Pushes to `dashboard` remote (GitHub Pages)
-
-**No manual git commands needed!**
-
-## Validation
-
-### Before Starting Work
-
 ```bash
-mc validate task_XXX
+# 1. Create task with full expectations
+mc create "Task Title" "OBJECTIVE: ..." high
+
+# 2. Add your game plan
+mc subtask task_XXX add "Step 1"
+mc subtask task_XXX add "Step 2"
+
+# 3. Start work
+mc comment task_XXX "OpenClaw" "Starting work..."
+
+# 4. Update as you go
+mc subtask task_XXX sub_001 done
+mc comment task_XXX "OpenClaw" "Completed step 1, moving to step 2"
+
+# 5. Complete
+mc comment task_XXX "OpenClaw" "All deliverables ready"
+mc status task_XXX review
 ```
-
-Returns:
-- ✅ if task exists (shows title, status, progress)
-- ❌ if task doesn't exist (exit code 1)
-
-**Rule: If validation fails, DO NOT WORK. Create the task first.**
-
-### Example Output
-
-```
-✅ VALIDATED: task_012 - Build Mission Control Auto-Sync Skill
-   Status: in_progress | Priority: critical | Progress: 7/10
-```
-
-```
-❌ VALIDATION FAILED: Task task_999 does not exist in Mission Control!
-   Create it first with: mc create "<title>"
-   OR check existing tasks with: mc list
-```
-
-## Task Schema
-
-```json
-{
-  "id": "task_XXX",
-  "title": "Short descriptive title",
-  "description": "Full description with requirements",
-  "status": "backlog|in_progress|review|done",
-  "priority": "low|medium|high|critical",
-  "subtasks": [
-    {
-      "id": "sub_001",
-      "title": "Subtask description",
-      "done": false
-    }
-  ],
-  "comments": [
-    {
-      "author": "Name",
-      "text": "Comment text",
-      "timestamp": "ISO8601"
-    }
-  ],
-  "createdAt": "ISO8601"
-}
-```
-
-**Important:** Use `title` for subtasks, NOT `text`.
-
-## Git Remotes
-
-Two remotes are configured:
-- `origin`: mission-control repo (optional)
-- `dashboard`: antonkonsta/mission-control-dashboard (REQUIRED)
-
-The `mc` CLI always pushes to `dashboard`.
-
-## Manual Fallback
-
-If the `mc` CLI is unavailable:
-
-```bash
-cd /root/.openclaw/workspace
-# Edit data/tasks.json
-git add data/tasks.json
-git commit -m "Mission Control: <description>"
-git push dashboard main
-```
-
-## Files
-
-- **CLI Script:** `/root/.openclaw/workspace/skills/mission-control/scripts/mc.py`
-- **Tasks Database:** `/root/.openclaw/workspace/data/tasks.json`
-- **Dashboard URL:** https://antonkonsta.github.io/mission-control-dashboard/
-
-## Enforcement
-
-This skill is enforced via:
-- **HEARTBEAT.md**: Mission Control is mandatory for all work
-- **SOUL.md**: THE PRIME DIRECTIVE - all requests must be tracked
-- **IDENTITY.md**: Core Principle #1 - Mission Control is mandatory
 
 ## Dashboard
 
-- URL: https://antonkonsta.github.io/mission-control-dashboard/
-- Updates after GitHub Pages build (~1-2 min after push)
-- Shows all tasks from `data/tasks.json`
+**Mission Control Dashboard:** https://antonkonsta.github.io/mission-control-dashboard/
+
+Anthony can click any task and see:
+- Full description with all expectations
+- Your step-by-step plan (subtasks)
+- Your progress and current status (comments)
+- When it was last updated
+
+**If Anthony opens a task and can't understand the full picture = YOU FAILED**
