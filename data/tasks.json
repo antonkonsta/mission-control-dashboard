@@ -83,7 +83,7 @@
       "id": "task_005",
       "title": "Activity Monitor Research & Improvement",
       "description": "Deep research on improving the Agent Activity Monitor. Tasks: 1) Search ClawHub for existing monitoring skills, 2) Web search for activity monitors used with OpenClaw/Clawdbot/Moltbot, 3) Analyze internal logs and system structure, 4) Research tool execution and skill usage visibility, 5) Design visual interface for multi-agent activity with real-time updates, 6) Consider agent communication visualization. Deliverables: Comprehensive PDF report + voice summary under 2 min.",
-      "status": "review",
+      "status": "done",
       "priority": "high",
       "subtasks": [],
       "comments": [
@@ -121,5 +121,5 @@
       "createdAt": "2026-02-04T04:26:50.481849+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T04:28:47.813769+00:00"
+  "lastUpdated": "2026-02-04T04:31:15.026833+00:00"
 }
