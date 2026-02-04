@@ -54,9 +54,15 @@
       "status": "in_progress",
       "priority": "high",
       "subtasks": [],
-      "comments": [],
+      "comments": [
+        {
+          "author": "OpenClaw",
+          "text": "Sent voice note explaining Obsidian basics. Installed obsidian skill from ClawHub to /root/.openclaw/workspace/skills/obsidian",
+          "timestamp": "2026-02-04T04:08:45.385664+00:00"
+        }
+      ],
       "createdAt": "2026-02-04T04:08:10.258477+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T04:08:13.214956+00:00"
+  "lastUpdated": "2026-02-04T04:08:45.385682+00:00"
 }
