@@ -9,11 +9,13 @@
 
 ## CRITICAL RULE: MISSION CONTROL IS MANDATORY
 **EVERYTHING Anthony asks you to do MUST be tracked in Mission Control.**
+- **EVERYTHING = even small tasks, brief requests, "can you check X", "look into Y" - ALL OF IT**
 - Create task in `/root/.openclaw/workspace/data/tasks.json` FIRST
 - Commit to git IMMEDIATELY
 - THEN delegate to sub-agent or work on it
 - NO EXCEPTIONS
 - **If Anthony asks for something and you don't add it to Mission Control = FAILURE**
+- **Anthony monitors via Mission Control dashboard - if it's not there, he can't see what you're doing**
 
 ## MANDATORY ENFORCEMENT CHECKS (EVERY heartbeat - do these FIRST)
 
