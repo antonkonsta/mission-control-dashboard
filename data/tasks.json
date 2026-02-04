@@ -399,7 +399,7 @@
       "id": "task_017",
       "title": "Add Main Session to Activity Monitor",
       "description": "Anthony wants to see the main chat session in the Activity Monitor dashboard, not just sub-agents. Currently main sessions are filtered out - need to add them back with clear labeling.",
-      "status": "review",
+      "status": "done",
       "priority": "high",
       "subtasks": [],
       "comments": [
@@ -412,5 +412,5 @@
       "createdAt": "2026-02-04T02:01:10.230768+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T02:06:28.211763+00:00"
+  "lastUpdated": "2026-02-04T02:06:28.750923+00:00"
 }
