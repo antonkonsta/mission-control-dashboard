@@ -816,12 +816,17 @@
           "id": "sub_004",
           "title": "Implement GitHub billing API integration: fetch monthly spend from Copilot dashboard",
           "done": false
+        },
+        {
+          "id": "sub_005",
+          "title": "Create cost reconciliation engine: compare tracked vs GitHub billing, flag variance >2%",
+          "done": false
         }
       ],
       "comments": [],
       "createdAt": "2026-02-04T19:56:54.236493+00:00",
-      "updated": "2026-02-04T19:57:04.705977+00:00"
+      "updated": "2026-02-04T19:57:05.394131+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:57:04.705996+00:00"
+  "lastUpdated": "2026-02-04T19:57:05.394146+00:00"
 }
