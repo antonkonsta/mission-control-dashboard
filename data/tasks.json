@@ -402,9 +402,15 @@
       "status": "review",
       "priority": "high",
       "subtasks": [],
-      "comments": [],
+      "comments": [
+        {
+          "author": "OpenClaw",
+          "text": "Added main session to Activity Monitor. Now shows '\ud83e\udd9e Main Session: Telegram chat with Anthony' with full activity feed.",
+          "timestamp": "2026-02-04T02:01:47.464375+00:00"
+        }
+      ],
       "createdAt": "2026-02-04T02:01:10.230768+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T02:01:46.935428+00:00"
+  "lastUpdated": "2026-02-04T02:01:47.464391+00:00"
 }
