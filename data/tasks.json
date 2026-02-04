@@ -515,6 +515,11 @@
           "id": "sub_012",
           "title": "Research LM Studio and alternatives: capabilities, ease of use, model support",
           "done": false
+        },
+        {
+          "id": "sub_013",
+          "title": "Compare local LLM platforms: create side-by-side matrix with all key specs",
+          "done": false
         }
       ],
       "comments": [
@@ -530,8 +535,8 @@
         }
       ],
       "createdAt": "2026-02-04T20:27:12.205259+00:00",
-      "updated": "2026-02-04T20:31:12.727789+00:00"
+      "updated": "2026-02-04T20:31:13.420552+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T20:31:12.727806+00:00"
+  "lastUpdated": "2026-02-04T20:31:13.420567+00:00"
 }
