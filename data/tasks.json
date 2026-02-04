@@ -772,7 +772,7 @@
       "id": "task_021",
       "title": "Lock All Sessions to Haiku Model",
       "description": "OBJECTIVE: Update all configuration and identity files to enforce github-copilot/claude-haiku-4.5 for main session and all sub-agents\n\nEXPECTATIONS FROM ANTHONY:\n- Main session: always use haiku\n- All sub-agents: always spawn with haiku\n- Gateway config: default model set to haiku\n- No overrides, no exceptions\n- Cost control priority\n\nCONSTRAINTS:\n- Use FULL model name: github-copilot/claude-haiku-4.5 (never alias)\n- Update: HEARTBEAT.md, SOUL.md, AGENTS.md, gateway config, session defaults\n\nDELIVERABLES:\n- All identity files updated with haiku as mandatory default\n- Gateway config patched with haiku as default_model\n- Sub-agent spawn rules updated to force haiku model\n\nSUCCESS CRITERIA:\n- Every new sub-agent spawns with haiku automatically\n- Main session locked to haiku\n- No manual override possible",
-      "status": "in_progress",
+      "status": "review",
       "priority": "high",
       "subtasks": [],
       "comments": [
@@ -783,8 +783,8 @@
         }
       ],
       "createdAt": "2026-02-04T19:53:44.042424+00:00",
-      "updated": "2026-02-04T19:54:20.529842+00:00"
+      "updated": "2026-02-04T19:54:23.124206+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:54:20.529845+00:00"
+  "lastUpdated": "2026-02-04T19:54:23.124221+00:00"
 }
