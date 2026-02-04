@@ -606,12 +606,17 @@
           "id": "sub_001",
           "title": "Update dashboard.html rate display format",
           "done": false
+        },
+        {
+          "id": "sub_002",
+          "title": "Update history.html rate display format",
+          "done": false
         }
       ],
       "comments": [],
       "createdAt": "2026-02-04T19:25:25.813437+00:00",
-      "updated": "2026-02-04T19:25:31.412030+00:00"
+      "updated": "2026-02-04T19:25:32.148922+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:25:31.412046+00:00"
+  "lastUpdated": "2026-02-04T19:25:32.148936+00:00"
 }
