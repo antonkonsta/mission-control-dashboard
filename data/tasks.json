@@ -826,12 +826,17 @@
           "id": "sub_006",
           "title": "Update Dashboard page: show Actual GitHub Cost | Tracked Cost | Variance % | Last Sync",
           "done": false
+        },
+        {
+          "id": "sub_007",
+          "title": "Update all 3 visualizations (bar, treemap, line) to use request-level actual costs",
+          "done": false
         }
       ],
       "comments": [],
       "createdAt": "2026-02-04T19:56:54.236493+00:00",
-      "updated": "2026-02-04T19:57:06.131534+00:00"
+      "updated": "2026-02-04T19:57:06.856443+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:57:06.131549+00:00"
+  "lastUpdated": "2026-02-04T19:57:06.856458+00:00"
 }
