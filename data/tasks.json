@@ -471,9 +471,15 @@
       "status": "review",
       "priority": "high",
       "subtasks": [],
-      "comments": [],
+      "comments": [
+        {
+          "author": "OpenClaw",
+          "text": "Menu scraping implemented. Uses trafilatura for clean text extraction, tries base domain /menu page first. Works for chain restaurants with standard menu pages (Piada example: Veggie, Diavolo Pasta, Basil Pesto Pasta). Buffets/dining halls without structured menus show fallback message.",
+          "timestamp": "2026-02-04T02:57:10.662292+00:00"
+        }
+      ],
       "createdAt": "2026-02-04T02:51:37.704972+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T02:57:10.125260+00:00"
+  "lastUpdated": "2026-02-04T02:57:10.662309+00:00"
 }
