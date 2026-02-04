@@ -383,12 +383,12 @@
       "id": "task_016",
       "title": "Fix Activity Monitor Dashboard Regression",
       "description": "Dashboard reverted to broken version after git reset --hard. Restored column-based layout with agent activity feeds, tool usage, messages, and auto-refresh.",
-      "status": "in_progress",
+      "status": "review",
       "priority": "high",
       "subtasks": [],
       "comments": [],
       "createdAt": "2026-02-04T01:58:49.298553+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T01:58:49.298572+00:00"
+  "lastUpdated": "2026-02-04T01:58:53.298430+00:00"
 }
