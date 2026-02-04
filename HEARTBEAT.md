@@ -1,11 +1,19 @@
 # HEARTBEAT.md - Proactive Work Loop
 
+## MONITORING DASHBOARDS (BURN THIS IN)
+- **Mission Control:** https://antonkonsta.github.io/mission-control-dashboard/
+  - Shows tasks.json - THIS IS WHERE ALL WORK MUST BE TRACKED
+- **Task Monitor:** https://ubuntu-s-2vcpu-4gb-120gb-intel-atl1-01.tailb52a5a.ts.net/
+  - Shows running sub-agents and activity in real-time
+  - Anthony uses these to monitor everything you do
+
 ## CRITICAL RULE: MISSION CONTROL IS MANDATORY
 **EVERYTHING Anthony asks you to do MUST be tracked in Mission Control.**
 - Create task in `/root/.openclaw/workspace/data/tasks.json` FIRST
 - Commit to git IMMEDIATELY
 - THEN delegate to sub-agent or work on it
 - NO EXCEPTIONS
+- **If Anthony asks for something and you don't add it to Mission Control = FAILURE**
 
 ## MANDATORY ENFORCEMENT CHECKS (EVERY heartbeat - do these FIRST)
 
@@ -22,6 +30,8 @@ Verify failures are being logged.
 Check ALL running sub-agents:
 - List sub-agent sessions
 - **MATCH each sub-agent to its Mission Control task** (by label or sessionKey)
+- **EVERY sub-agent MUST be spawned with label=<task-name>** (e.g., "doordash-research", "voice-fix")
+- **If you see "Unknown task" in Task Monitor = YOU FAILED TO NAME IT**
 - Check last update time (if >2 min, demand status update from sub-agent)
 - Review last message (if stuck/silent, prompt or kill+respawn)
 - **Monitor until TRULY complete** - don't move to review until deliverable is done
