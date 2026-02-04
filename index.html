@@ -473,9 +473,9 @@
             if (task.subtasks && task.subtasks.length > 0) {
                 subtasksSection.style.display = 'block';
                 subtasksContainer.innerHTML = task.subtasks.map(sub => `
-                    <div class="subtask-row ${sub.done ? 'done' : ''}">
-                        <div class="subtask-icon">${sub.done ? '✓' : ''}</div>
-                        <div class="subtask-text">${sub.title}</div>
+                    <div class="subtask-row ${sub.completed ? 'done' : ''}">
+                        <div class="subtask-icon">${sub.completed ? '✓' : ''}</div>
+                        <div class="subtask-text">${sub.description || sub.title || 'No description'}</div>
                     </div>
                 `).join('');
             } else {
