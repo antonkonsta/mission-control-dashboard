@@ -450,10 +450,15 @@
           "author": "OpenClaw",
           "text": "Hardcoded MODEL NAME RULE in HEARTBEAT.md and AGENTS.md: Must use full model names (claude-sonnet-4.5) not aliases (sonnet). Aliases silently default to main session model. Default for sub-agents is now claude-sonnet-4.5.",
           "timestamp": "2026-02-04T19:14:27.812019+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "Added sub_018: Show model rate on agent cards. Will display $/M input and output rates next to model name so Anthony can see at a glance how expensive each model is.",
+          "timestamp": "2026-02-04T19:15:29.184056+00:00"
         }
       ],
       "createdAt": "2026-02-04T18:37:44.067755+00:00",
-      "updated": "2026-02-04T19:15:25.407491+00:00"
+      "updated": "2026-02-04T19:15:29.184073+00:00"
     },
     {
       "id": "task_016",
@@ -561,5 +566,5 @@
       "updated": "2026-02-04T19:05:15.913723+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:15:25.407508+00:00"
+  "lastUpdated": "2026-02-04T19:15:29.184075+00:00"
 }
