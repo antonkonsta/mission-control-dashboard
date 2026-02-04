@@ -317,7 +317,17 @@
         }
       ],
       "createdAt": "2026-02-04T05:15:13.340878+00:00"
+    },
+    {
+      "id": "task_014",
+      "title": "Image Generation Options Research",
+      "description": "Research free/low-cost image generation options: 1) Check ClawHub for image gen skills, 2) Check if GitHub Copilot Pro+ includes image gen, 3) Find best free/cheap APIs. Deliver PDF report with recommendations.",
+      "status": "in_progress",
+      "priority": "high",
+      "subtasks": [],
+      "comments": [],
+      "createdAt": "2026-02-04T05:29:19.785699+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T05:23:35.105772+00:00"
+  "lastUpdated": "2026-02-04T05:29:19.785718+00:00"
 }
