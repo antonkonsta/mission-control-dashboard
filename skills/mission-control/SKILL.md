@@ -10,27 +10,101 @@ This skill GUARANTEES that every user request is:
 3. Automatically pushed to dashboard remote (GitHub Pages)
 4. Visible at https://antonkonsta.github.io/mission-control-dashboard/
 
-## Trigger Conditions
+## The `mc` CLI
 
-Use this skill for EVERY user request - no exceptions. Including:
-- "Can you check X"
-- "Look into Y"
-- "Research Z"
-- Any task, question, or request
+The Mission Control CLI (`mc`) is the primary interface for task management. All commands automatically sync to the dashboard.
 
-## Git Workflow (CRITICAL)
+### Installation
 
+Already installed globally as `mc`. If needed:
 ```bash
-# After modifying tasks.json:
-cd /root/.openclaw/workspace
-git add data/tasks.json
-git commit -m "Mission Control: <description>"
-git push dashboard main  # ← REQUIRED for GitHub Pages update
+ln -sf /root/.openclaw/workspace/skills/mission-control/scripts/mc.py /usr/local/bin/mc
+chmod +x /usr/local/bin/mc
 ```
 
-**Two remotes:**
-- `origin`: mission-control repo (optional)
-- `dashboard`: antonkonsta/mission-control-dashboard (REQUIRED)
+### Commands
+
+```bash
+# Create a new task (auto-commits and pushes to dashboard)
+mc create "Task title" "Description" priority
+
+# Validate task exists before working (REQUIRED check)
+mc validate task_XXX
+
+# Show full task details
+mc show task_XXX
+
+# Update subtask status
+mc subtask task_XXX sub_001 done
+mc subtask task_XXX sub_001 undone  # To reopen
+
+# Add a comment to a task
+mc comment task_XXX "Author" "Comment text"
+
+# Update task status
+mc status task_XXX in_progress
+mc status task_XXX review
+mc status task_XXX done
+mc status task_XXX backlog
+
+# List all tasks
+mc list
+mc list in_progress
+mc list backlog
+
+# Manual sync (rarely needed - all commands auto-sync)
+mc sync "message"
+```
+
+## Workflow
+
+### User Request → Task → Work
+
+```
+User Request → mc create → mc validate → Work → mc subtask/comment → mc status done
+```
+
+1. **User makes request** → `mc create "title" "description" priority`
+2. **Before working** → `mc validate task_XXX` (REQUIRED!)
+3. **While working** → `mc subtask task_XXX sub_001 done`
+4. **Add updates** → `mc comment task_XXX "OpenClaw" "Progress update"`
+5. **Complete** → `mc status task_XXX done`
+
+### Automatic Git Sync
+
+Every `mc` command automatically:
+- Updates `/root/.openclaw/workspace/data/tasks.json`
+- Commits to git with `Mission Control:` prefix
+- Pushes to `dashboard` remote (GitHub Pages)
+
+**No manual git commands needed!**
+
+## Validation
+
+### Before Starting Work
+
+```bash
+mc validate task_XXX
+```
+
+Returns:
+- ✅ if task exists (shows title, status, progress)
+- ❌ if task doesn't exist (exit code 1)
+
+**Rule: If validation fails, DO NOT WORK. Create the task first.**
+
+### Example Output
+
+```
+✅ VALIDATED: task_012 - Build Mission Control Auto-Sync Skill
+   Status: in_progress | Priority: critical | Progress: 7/10
+```
+
+```
+❌ VALIDATION FAILED: Task task_999 does not exist in Mission Control!
+   Create it first with: mc create "<title>"
+   OR check existing tasks with: mc list
+```
 
 ## Task Schema
 
@@ -44,7 +118,7 @@ git push dashboard main  # ← REQUIRED for GitHub Pages update
   "subtasks": [
     {
       "id": "sub_001",
-      "title": "Subtask description",  // Use "title" NOT "text"
+      "title": "Subtask description",
       "done": false
     }
   ],
@@ -59,95 +133,40 @@ git push dashboard main  # ← REQUIRED for GitHub Pages update
 }
 ```
 
-## Usage
+**Important:** Use `title` for subtasks, NOT `text`.
 
-### Python Helper (use this for task operations)
+## Git Remotes
 
-```python
-import json
-from datetime import datetime, timezone
+Two remotes are configured:
+- `origin`: mission-control repo (optional)
+- `dashboard`: antonkonsta/mission-control-dashboard (REQUIRED)
 
-TASKS_FILE = '/root/.openclaw/workspace/data/tasks.json'
+The `mc` CLI always pushes to `dashboard`.
 
-def load_tasks():
-    with open(TASKS_FILE, 'r') as f:
-        return json.load(f)
+## Manual Fallback
 
-def save_tasks(data):
-    data['lastUpdated'] = datetime.now(timezone.utc).isoformat()
-    with open(TASKS_FILE, 'w') as f:
-        json.dump(data, f, indent=2)
-
-def get_next_task_id(data):
-    existing_ids = [int(t['id'].replace('task_', '')) for t in data['tasks'] if t['id'].startswith('task_')]
-    return f"task_{max(existing_ids, default=0) + 1:03d}"
-
-def create_task(title, description, priority='medium', subtasks=None):
-    data = load_tasks()
-    task_id = get_next_task_id(data)
-    
-    task = {
-        "id": task_id,
-        "title": title,
-        "description": description,
-        "status": "in_progress",
-        "priority": priority,
-        "subtasks": subtasks or [],
-        "comments": [],
-        "createdAt": datetime.now(timezone.utc).isoformat()
-    }
-    
-    data['tasks'].append(task)
-    save_tasks(data)
-    return task_id
-
-def add_comment(task_id, author, text):
-    data = load_tasks()
-    for task in data['tasks']:
-        if task['id'] == task_id:
-            task['comments'].append({
-                "author": author,
-                "text": text,
-                "timestamp": datetime.now(timezone.utc).isoformat()
-            })
-            break
-    save_tasks(data)
-
-def update_subtask(task_id, subtask_id, done=True):
-    data = load_tasks()
-    for task in data['tasks']:
-        if task['id'] == task_id:
-            for subtask in task['subtasks']:
-                if subtask['id'] == subtask_id:
-                    subtask['done'] = done
-                    break
-            break
-    save_tasks(data)
-
-def update_status(task_id, status):
-    data = load_tasks()
-    for task in data['tasks']:
-        if task['id'] == task_id:
-            task['status'] = status
-            break
-    save_tasks(data)
-```
-
-### Git Sync (run after EVERY task modification)
+If the `mc` CLI is unavailable:
 
 ```bash
-cd /root/.openclaw/workspace && \
-git add data/tasks.json && \
-git commit -m "Mission Control: <description>" && \
+cd /root/.openclaw/workspace
+# Edit data/tasks.json
+git add data/tasks.json
+git commit -m "Mission Control: <description>"
 git push dashboard main
 ```
 
-## Validation Rules
+## Files
 
-1. **NEVER work on a request without creating a Mission Control task first**
-2. **ALWAYS use `title` field for subtasks, NOT `text`**
-3. **ALWAYS push to `dashboard` remote after commits**
-4. **ALWAYS verify push succeeded before continuing work**
+- **CLI Script:** `/root/.openclaw/workspace/skills/mission-control/scripts/mc.py`
+- **Tasks Database:** `/root/.openclaw/workspace/data/tasks.json`
+- **Dashboard URL:** https://antonkonsta.github.io/mission-control-dashboard/
+
+## Enforcement
+
+This skill is enforced via:
+- **HEARTBEAT.md**: Mission Control is mandatory for all work
+- **SOUL.md**: THE PRIME DIRECTIVE - all requests must be tracked
+- **IDENTITY.md**: Core Principle #1 - Mission Control is mandatory
 
 ## Dashboard
 

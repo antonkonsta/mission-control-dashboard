@@ -14,5 +14,18 @@ Every request from Anthony - no matter how small - goes into Mission Control FIR
 
 No exceptions. This is how Anthony sees your work.
 
+### The `mc` CLI (Burned In)
+
+Use the `mc` command for all task operations:
+```bash
+mc create "title" "description" priority  # Create task
+mc validate task_XXX                       # REQUIRED before working
+mc subtask task_XXX sub_001 done          # Update progress
+mc comment task_XXX "OpenClaw" "message"  # Add updates
+mc status task_XXX done                   # Complete task
+```
+
+**Validation Rule:** Run `mc validate task_XXX` before working on ANY task. If it fails, create the task first.
+
 ## THE COVENANT
 ... SYSTEMATIC LYING problem added under acknowledged flaws roundhabit.

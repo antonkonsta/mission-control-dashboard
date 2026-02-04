@@ -209,16 +209,111 @@ def list_tasks(status_filter: str = None):
             print(f"   └─ Subtasks: {done_subtasks}/{total_subtasks}")
 
 
+def task_exists(task_id: str) -> bool:
+    """Check if a task exists in Mission Control"""
+    data = load_tasks()
+    for task in data['tasks']:
+        if task['id'] == task_id:
+            return True
+    return False
+
+
+def validate_task(task_id: str) -> dict:
+    """Validate a task exists and return it with status info. Returns None if not found."""
+    data = load_tasks()
+    for task in data['tasks']:
+        if task['id'] == task_id:
+            done_subtasks = sum(1 for st in task.get('subtasks', []) if st.get('done'))
+            total_subtasks = len(task.get('subtasks', []))
+            return {
+                "exists": True,
+                "id": task['id'],
+                "title": task['title'],
+                "status": task['status'],
+                "priority": task.get('priority', 'medium'),
+                "subtasks_done": done_subtasks,
+                "subtasks_total": total_subtasks,
+                "progress": f"{done_subtasks}/{total_subtasks}" if total_subtasks > 0 else "N/A"
+            }
+    return {"exists": False, "id": task_id}
+
+
+def validate_before_work(task_id: str) -> bool:
+    """
+    Validation check: Verify task exists before working on it.
+    Returns True if valid, False with error message if not.
+    """
+    result = validate_task(task_id)
+    if not result['exists']:
+        print(f"❌ VALIDATION FAILED: Task {task_id} does not exist in Mission Control!")
+        print(f"   Create it first with: mc create \"<title>\"")
+        print(f"   OR check existing tasks with: mc list")
+        return False
+    
+    print(f"✅ VALIDATED: {result['id']} - {result['title']}")
+    print(f"   Status: {result['status']} | Priority: {result['priority']} | Progress: {result['progress']}")
+    return True
+
+
+def show_task(task_id: str):
+    """Show detailed info for a specific task"""
+    data = load_tasks()
+    for task in data['tasks']:
+        if task['id'] == task_id:
+            status_emoji = {
+                'backlog': '📋',
+                'in_progress': '🔄',
+                'review': '👀',
+                'done': '✅'
+            }.get(task['status'], '❓')
+            
+            priority_emoji = {
+                'critical': '🔴',
+                'high': '🟠',
+                'medium': '🟡',
+                'low': '🟢'
+            }.get(task.get('priority', 'medium'), '⚪')
+            
+            print(f"\n{status_emoji} {priority_emoji} {task['id']}: {task['title']}")
+            print(f"   Status: {task['status']}")
+            print(f"   Priority: {task.get('priority', 'medium')}")
+            print(f"   Created: {task.get('createdAt', 'unknown')}")
+            
+            if task.get('description'):
+                print(f"\n   Description: {task['description'][:200]}...")
+            
+            if task.get('subtasks'):
+                print(f"\n   Subtasks:")
+                for st in task['subtasks']:
+                    done = "✅" if st.get('done') else "⬜"
+                    print(f"      {done} {st['id']}: {st.get('title', st.get('text', ''))}")
+            
+            if task.get('comments'):
+                print(f"\n   Recent Comments ({len(task['comments'])} total):")
+                for c in task['comments'][-3:]:
+                    print(f"      [{c.get('author', 'unknown')}]: {c['text'][:80]}...")
+            
+            return
+    
+    print(f"❌ Task {task_id} not found")
+
+
 def main():
     if len(sys.argv) < 2:
         print("Mission Control CLI")
         print("Usage:")
-        print("  mc.py create <title> [description] [priority]")
-        print("  mc.py comment <task_id> <author> <text>")
-        print("  mc.py subtask <task_id> <subtask_id> [done|undone]")
-        print("  mc.py status <task_id> <status>")
-        print("  mc.py list [status]")
-        print("  mc.py sync <message>")
+        print("  mc create <title> [description] [priority]  - Create new task")
+        print("  mc comment <task_id> <author> <text>        - Add comment to task")
+        print("  mc subtask <task_id> <subtask_id> [done|undone] - Update subtask")
+        print("  mc status <task_id> <status>                - Update task status")
+        print("  mc list [status]                            - List all tasks")
+        print("  mc show <task_id>                           - Show task details")
+        print("  mc validate <task_id>                       - Validate task exists")
+        print("  mc sync <message>                           - Manual git sync")
+        print("")
+        print("Validation Commands (use before working):")
+        print("  mc validate <task_id>  - Check task exists before working")
+        print("  mc show <task_id>      - Get full task details")
         return
     
     cmd = sys.argv[1]
@@ -231,26 +326,39 @@ def main():
     
     elif cmd == 'comment':
         if len(sys.argv) < 5:
-            print("Usage: mc.py comment <task_id> <author> <text>")
+            print("Usage: mc comment <task_id> <author> <text>")
             return
         add_comment(sys.argv[2], sys.argv[3], sys.argv[4])
     
     elif cmd == 'subtask':
         if len(sys.argv) < 4:
-            print("Usage: mc.py subtask <task_id> <subtask_id> [done|undone]")
+            print("Usage: mc subtask <task_id> <subtask_id> [done|undone]")
             return
         done = sys.argv[4] != 'undone' if len(sys.argv) > 4 else True
         update_subtask(sys.argv[2], sys.argv[3], done)
     
     elif cmd == 'status':
         if len(sys.argv) < 4:
-            print("Usage: mc.py status <task_id> <status>")
+            print("Usage: mc status <task_id> <status>")
             return
         update_status(sys.argv[2], sys.argv[3])
     
     elif cmd == 'list':
         status_filter = sys.argv[2] if len(sys.argv) > 2 else None
         list_tasks(status_filter)
+    
+    elif cmd == 'show':
+        if len(sys.argv) < 3:
+            print("Usage: mc show <task_id>")
+            return
+        show_task(sys.argv[2])
+    
+    elif cmd == 'validate':
+        if len(sys.argv) < 3:
+            print("Usage: mc validate <task_id>")
+            return
+        valid = validate_before_work(sys.argv[2])
+        sys.exit(0 if valid else 1)
     
     elif cmd == 'sync':
         message = sys.argv[2] if len(sys.argv) > 2 else "Manual sync"

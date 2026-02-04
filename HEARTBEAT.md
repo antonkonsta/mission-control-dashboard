@@ -10,25 +10,75 @@
 ## CRITICAL RULE: MISSION CONTROL IS MANDATORY
 **EVERYTHING Anthony asks you to do MUST be tracked in Mission Control.**
 - **EVERYTHING = even small tasks, brief requests, "can you check X", "look into Y" - ALL OF IT**
-- Create task in `/root/.openclaw/workspace/data/tasks.json` FIRST
-- Commit to git IMMEDIATELY: `git add data/tasks.json && git commit -m "Mission Control: <msg>"`
-- **PUSH TO DASHBOARD REMOTE**: `git push dashboard main` (REQUIRED for GitHub Pages update)
+- Create task FIRST using the `mc` CLI
+- Git commit + push is AUTOMATIC via `mc` CLI
 - THEN delegate to sub-agent or work on it
 - NO EXCEPTIONS
 - **If Anthony asks for something and you don't add it to Mission Control = FAILURE**
 - **Anthony monitors via Mission Control dashboard - if it's not there, he can't see what you're doing**
 
-### Git Workflow (CRITICAL - DO NOT SKIP)
+### Mission Control CLI (`mc`) Commands
+```bash
+# Create a new task (auto-commits and pushes to dashboard)
+mc create "Task title" "Description" priority
+
+# Validate task exists before working (REQUIRED check)
+mc validate task_XXX
+
+# Show full task details
+mc show task_XXX
+
+# Update subtask status
+mc subtask task_XXX sub_001 done
+
+# Add a comment to a task
+mc comment task_XXX "Author" "Comment text"
+
+# Update task status
+mc status task_XXX in_progress|review|done|backlog
+
+# List all tasks
+mc list [status]
+
+# Manual sync (rarely needed - all commands auto-sync)
+mc sync "message"
+```
+
+### Workflow (USE THE CLI)
+1. **User makes request** → Run `mc create "title" "description" priority`
+2. **Before working** → Run `mc validate task_XXX` (REQUIRED!)
+3. **While working** → Run `mc subtask task_XXX sub_001 done` to update progress
+4. **Add updates** → Run `mc comment task_XXX "OpenClaw" "Progress update"`
+5. **Complete** → Run `mc status task_XXX done`
+
+All `mc` commands automatically:
+- Update `/root/.openclaw/workspace/data/tasks.json`
+- Commit to git with `Mission Control:` prefix
+- Push to `dashboard` remote (GitHub Pages)
+
+### Manual Git Workflow (backup - prefer CLI)
+If `mc` CLI is unavailable:
 1. Modify `/root/.openclaw/workspace/data/tasks.json`
 2. `cd /root/.openclaw/workspace`
 3. `git add data/tasks.json`
 4. `git commit -m "Mission Control: <description>"`
-5. **`git push dashboard main`** ← THIS IS REQUIRED FOR DASHBOARD UPDATE
+5. **`git push dashboard main`** ← REQUIRED FOR DASHBOARD UPDATE
 6. Verify push succeeded before continuing work
 
 **Two remotes:**
 - `origin`: mission-control repo (optional)
 - `dashboard`: antonkonsta/mission-control-dashboard (REQUIRED - this is what GitHub Pages uses)
+
+### VALIDATION ENFORCEMENT
+**BEFORE starting any work on a task:**
+```bash
+mc validate task_XXX
+```
+This returns:
+- ✅ if task exists (shows title, status, progress)
+- ❌ if task doesn't exist (blocks work, tells you to create it)
+
+**If validation fails, DO NOT WORK ON IT. Create the task first.**
 
 ## MANDATORY ENFORCEMENT CHECKS (EVERY heartbeat - do these FIRST)
 
