@@ -379,7 +379,7 @@
         {
           "id": "sub_004",
           "title": "Update HEARTBEAT.md - add rule to always comment on changes",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_005",
@@ -430,8 +430,8 @@
         }
       ],
       "createdAt": "2026-02-04T18:46:11.827090+00:00",
-      "updated": "2026-02-04T18:50:26.034815+00:00"
+      "updated": "2026-02-04T18:51:10.414748+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T18:50:26.034818+00:00"
+  "lastUpdated": "2026-02-04T18:51:10.414765+00:00"
 }
