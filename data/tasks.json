@@ -302,7 +302,7 @@
         {
           "id": "sub_007",
           "title": "Add STACKED BAR CHART - per-task breakdown with cost labels",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_008",
@@ -413,7 +413,7 @@
         }
       ],
       "createdAt": "2026-02-04T18:37:44.067755+00:00",
-      "updated": "2026-02-04T19:05:57.992280+00:00"
+      "updated": "2026-02-04T19:05:58.695126+00:00"
     },
     {
       "id": "task_016",
@@ -521,5 +521,5 @@
       "updated": "2026-02-04T19:05:15.913723+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:05:57.992297+00:00"
+  "lastUpdated": "2026-02-04T19:05:58.695149+00:00"
 }
