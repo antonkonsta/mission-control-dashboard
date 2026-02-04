@@ -104,7 +104,17 @@
       "subtasks": [],
       "comments": [],
       "createdAt": "2026-02-04T04:26:46.079773+00:00"
+    },
+    {
+      "id": "task_007",
+      "title": "Activity Monitor: Agent Communication View",
+      "description": "Research and implement a view to watch main agent \u2194 sub-agent communication in real-time. Like 'stalking their text messages' - see the actual chat/instructions flowing between agents.",
+      "status": "in_progress",
+      "priority": "medium",
+      "subtasks": [],
+      "comments": [],
+      "createdAt": "2026-02-04T04:26:50.481849+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T04:26:46.079791+00:00"
+  "lastUpdated": "2026-02-04T04:26:50.481866+00:00"
 }
