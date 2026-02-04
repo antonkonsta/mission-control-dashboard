@@ -679,12 +679,17 @@
           "id": "sub_003",
           "title": "Research: Billing cycle mechanics - when charges start, how calculated",
           "done": false
+        },
+        {
+          "id": "sub_004",
+          "title": "Research: What counts as a premium request vs free request",
+          "done": false
         }
       ],
       "comments": [],
       "createdAt": "2026-02-04T19:37:38.669159+00:00",
-      "updated": "2026-02-04T19:37:46.506591+00:00"
+      "updated": "2026-02-04T19:37:47.195672+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:37:46.506607+00:00"
+  "lastUpdated": "2026-02-04T19:37:47.195688+00:00"
 }
