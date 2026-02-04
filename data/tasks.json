@@ -452,124 +452,135 @@
     {
       "id": "task_022",
       "title": "Local LLM + OpenClaw Migration: Self-Hosted Infrastructure",
-      "description": "OBJECTIVE: Comprehensive research and planning for complete migration from GitHub Copilot VPS to self-hosted OpenClaw on home desktop with local LLMs. Produce detailed step-by-step implementation guide covering OS installation through full operational system.\n\nEXPECTATIONS FROM ANTHONY:\n- FULL END-TO-END research: OS selection, Linux setup, LLM installation, OpenClaw deployment, data migration\n- Research all local LLM options (docs, benchmarks, hardware requirements)\n- Anthropic Opus or best local equivalent as primary orchestrator\n- Complete OS installation guide (likely Ubuntu Linux - all options researched)\n- Linux system optimization for LLM inference\n- Detailed LLM setup instructions (Ollama, vLLM, LocalAI, or alternatives)\n- OpenClaw installation & configuration on Linux\n- Complete data migration procedure from VPS to desktop\n- Hardware specs for different OS/model combinations\n- Integration testing & troubleshooting guide\n- ALL documentation reviewed: LLM provider docs, Linux guides, OpenClaw docs\n\nRESEARCH COVERAGE:\n1. LLM Landscape:\n   - Ollama documentation & setup guides\n   - vLLM documentation & deployment\n   - LocalAI documentation & guides\n   - LM Studio & other alternatives\n   - Hugging Face local inference options\n   - Which models available locally (focus on Anthropic-equivalent capability)\n   - Model sizes, VRAM requirements, performance characteristics\n\n2. Operating System:\n   - Ubuntu Linux versions (20.04, 22.04, 24.04 - pros/cons)\n   - Other Linux distributions considered\n   - Desktop optimization for server workloads\n   - Hardware compatibility checklist\n   - Installation media & guides\n\n3. Hardware Requirements:\n   - GPU vs CPU inference (NVIDIA/AMD/Intel options)\n   - VRAM needed for Opus-class models (7B, 13B, 70B parameter variants)\n   - CPU specifications (cores, clock speed, memory bandwidth)\n   - Storage space (SSD requirements for models + data)\n   - Network considerations (100Mbps vs 1Gbps)\n   - Power supply & cooling requirements\n   - Estimated costs for different configurations\n\n4. Local LLM Deployment:\n   - Installation procedures for each candidate platform\n   - Model downloading & quantization options (GGUF, GPTQ, etc.)\n   - Performance tuning (batch size, context length, etc.)\n   - Multi-model support on single hardware\n   - API endpoint configuration (REST, gRPC)\n   - Monitoring & health checks\n\n5. OpenClaw Setup:\n   - OpenClaw Linux installation requirements\n   - Configuration for local LLM backends\n   - Model switching strategies\n   - Session management on local hardware\n   - Skills & tool compatibility\n   - Memory management (finite resources)\n\n6. Data Migration:\n   - What data exists on VPS (logs, tasks, configs, skills)\n   - Migration strategy (backup, transfer, verification)\n   - Database consolidation\n   - Skill preservation\n   - Configuration transfer\n   - Validation procedures\n\n7. Integration & Testing:\n   - End-to-end connectivity testing\n   - Performance baseline establishment\n   - Fallback/rollback procedures\n   - Gradual cutover strategy\n   - Monitoring setup\n\nCONSTRAINTS:\n- Desktop computer at home (finite hardware)\n- Research phase ONLY - no implementation\n- All documentation must be primary sources (official docs)\n- Options must be compared side-by-side\n- Cost efficiency primary driver\n\nDELIVERABLES:\n1. Comprehensive LLM Research Report\n   - All candidate platforms analyzed\n   - Model availability & capability matrix\n   - Benchmarks & performance data\n\n2. OS Selection Guide\n   - Top 2-3 Linux distributions recommended\n   - Installation procedures for each\n   - Optimization tips for LLM workloads\n\n3. Hardware Specification Matrix\n   - Minimum specs for each model size\n   - Recommended specs for different use cases\n   - Cost breakdown for different configurations\n\n4. Step-by-Step Implementation Guide\n   - OS installation & configuration\n   - Linux system optimization\n   - LLM platform setup (detailed for top 2 candidates)\n   - OpenClaw installation & configuration\n   - Data migration procedure\n   - Integration testing checklist\n\n5. Architecture Document\n   - System design for local deployment\n   - Data flow diagrams\n   - API interfaces\n   - Resource allocation strategy\n\n6. Risk & Mitigation Document\n   - Local vs cloud trade-offs\n   - Performance considerations\n   - Hardware failure scenarios\n   - Backup/recovery procedures\n\n7. Cost Analysis\n   - Hardware amortization (3-5 year lifecycle)\n   - Electricity costs (24/7 operation estimate)\n   - Comparison vs GitHub Copilot subscription\n   - ROI projection\n\nSUCCESS CRITERIA:\n- Anthony has complete understanding of entire migration process\n- Step-by-step guide is so detailed that implementation can begin immediately\n- All major LLM options thoroughly researched & compared\n- Hardware specifications clearly defined\n- Cost savings quantified\n- Ready to move to implementation phase when Anthony approves",
+      "description": "OBJECTIVE: Comprehensive research, planning, and instruction manual for complete migration from GitHub Copilot VPS to self-hosted OpenClaw on existing gaming PC with local LLMs. Produce step-by-step beginner-friendly implementation guide covering OS installation through fully operational system on consumer hardware.\n\nANTHONY'S HARDWARE SPECS:\n- Gaming PC (Windows 10 or 11)\n- GPU: NVIDIA GTX 1050 Ti\n- RAM: 8-16GB (need to determine minimum for different LLM models)\n- Storage: 256-500GB (need to assess model storage requirements)\n- Currently: No Linux experience, no LLM setup experience, no local deployment experience\n\nEXPECTATIONS FROM ANTHONY:\n- COMPLETE end-to-end beginner's guide (Anthony has zero Linux/LLM experience)\n- ALL local LLM options researched and compared\n- Hardware compatibility analysis for GTX 1050 Ti (NVIDIA driver/CUDA support)\n- Step-by-step instructions for EVERY option (not just best - all viable paths)\n- Complete research of all primary documentation:\n  * OpenClaw Linux installation & deployment docs\n  * Linux installation guides (Ubuntu 20.04, 22.04, 24.04)\n  * NVIDIA CUDA/driver documentation for 1050 Ti\n  * Ollama documentation & setup guides\n  * vLLM documentation & deployment guides\n  * LocalAI documentation & guides\n  * LM Studio & alternatives\n- Clear instruction manual for absolute beginner\n- All options compared with pros/cons\n- Hardware implications analyzed for Anthony's specs\n- Cost analysis: hardware ownership vs GitHub Copilot subscription\n\nCONSTRAINTS:\n- Consumer-grade hardware (not enterprise)\n- Anthony is complete beginner (needs very detailed instructions)\n- Must preserve all existing VPS data & skills\n- Step-by-step must be so detailed a beginner can follow\n- Research phase ONLY - no implementation yet\n\nDELIVERABLES:\n\n1. Hardware Analysis Report\n   - GTX 1050 Ti capabilities & CUDA support\n   - NVIDIA driver installation guide for Linux\n   - RAM implications for different LLM model sizes (7B, 13B, 30B, 70B)\n   - Storage requirements analysis\n   - Whether 8GB vs 16GB changes what's possible\n   - Whether 256GB vs 500GB storage affects model options\n   - Cooling/power supply considerations for 1050 Ti\n\n2. Linux Installation Guide (Beginner-Friendly)\n   - Step-by-step Windows \u2192 Linux migration\n   - Creating USB boot media (detailed for Windows user)\n   - BIOS/UEFI settings for boot\n   - Ubuntu 20.04 vs 22.04 vs 24.04 comparison for gaming PC\n   - Installation walkthrough with screenshots/references\n   - Post-install system optimization for LLM workloads\n   - Desktop environment recommendations (lightweight vs full)\n\n3. NVIDIA Driver & CUDA Setup Guide\n   - Driver version compatibility for 1050 Ti\n   - CUDA toolkit installation on Linux\n   - Verification procedures\n   - Troubleshooting common issues\n   - Performance tuning for inference\n\n4. Local LLM Platform Research Report\n   - Ollama: setup, model availability, beginner-friendliness, performance on 1050 Ti\n   - vLLM: deployment options, advantages, learning curve, hardware requirements\n   - LocalAI: capabilities, setup difficulty, model support\n   - LM Studio: GUI vs CLI, ease of use, performance\n   - Hugging Face local inference options\n   - Which models available locally vs cloud-only\n   - Performance benchmarks (latency, throughput)\n   - Recommended models for Anthropic Opus-equivalent capability\n   - Model quantization options (GGUF, GPTQ, etc.) and their trade-offs\n\n5. Anthropic Opus Equivalent Analysis\n   - Can true Opus run locally? (License check)\n   - Best open-source alternatives:\n     * Llama 2 (70B, 13B, 7B variants)\n     * Mistral models (7B, 8x7B MoE)\n     * Dolphin series\n     * Other strong alternatives\n   - Performance/capability comparison matrix\n   - Which work on 1050 Ti with 8GB/16GB RAM\n   - Quantization impact on quality\n\n6. OpenClaw Linux Deployment Guide\n   - OpenClaw installation on Ubuntu\n   - Configuration for local LLM backends\n   - Model switching strategies\n   - Session management on consumer hardware\n   - Memory optimization for finite resources\n   - Testing & verification procedures\n\n7. Complete Step-by-Step Installation Manuals (for each option)\n   Option A: Ollama + OpenClaw\n   Option B: vLLM + OpenClaw\n   Option C: LocalAI + OpenClaw\n   Option D: LM Studio + OpenClaw\n   \n   Each manual includes:\n   - Prerequisite checks\n   - Exact commands to run\n   - Expected output examples\n   - Common errors & solutions\n   - Testing procedures\n   - Performance optimization tips\n\n8. VPS \u2192 Desktop Migration Guide\n   - What data exists on current VPS\n   - Backup procedures\n   - Transfer methods (SCP, rsync, etc.)\n   - Database migration strategy\n   - Skill preservation & transfer\n   - Configuration migration\n   - Testing & validation on new system\n\n9. Hardware Optimization Guide\n   - Linux kernel tuning for LLM inference\n   - GPU memory management\n   - CPU affinity settings\n   - Thermal management (cooling)\n   - Power consumption optimization\n   - 24/7 operation considerations\n\n10. Troubleshooting & Recovery Guide\n    - Common issues during OS installation\n    - Driver problems & solutions\n    - LLM model loading errors\n    - OpenClaw startup issues\n    - Data loss prevention\n    - Rollback procedures\n\n11. Cost Analysis & ROI\n    - Hardware ownership cost (5-year lifecycle)\n    - Electricity costs (24/7 operation estimate)\n    - Comparison vs GitHub Copilot subscription (annual cost)\n    - Break-even analysis\n\n12. Final Comparison Matrix\n    - All options compared side-by-side\n    - Pros/cons of each approach\n    - Recommendation for Anthony's hardware\n    - Alternative approaches if primary fails\n    - Timeline estimates for each step\n\nSUCCESS CRITERIA:\n- Anthony understands complete process from Windows \u2192 working OpenClaw with local LLM\n- Step-by-step guides are so detailed beginner can follow without Linux experience\n- All primary documentation has been reviewed (OpenClaw, Linux, LLM, driver docs)\n- Hardware compatibility fully understood for GTX 1050 Ti + 8/16GB RAM\n- All viable options clearly compared with recommendations\n- Anthony ready to begin implementation phase with clear roadmap",
       "status": "in_progress",
       "priority": "high",
       "subtasks": [
         {
           "id": "sub_001",
-          "title": "Research local LLM landscape: Ollama, vLLM, LocalAI, LM Studio, Hugging Face capabilities",
-          "done": false
+          "description": "Analyze GTX 1050 Ti: CUDA support, driver compatibility, performance for LLM inference",
+          "completed": false,
+          "createdAt": "2026-02-04T15:41:14.276203"
         },
         {
           "id": "sub_002",
-          "title": "Identify Anthropic Opus equivalent: can Opus run locally? What are best alternatives?",
-          "done": false
+          "description": "Research NVIDIA driver installation on Linux for consumer GPUs",
+          "completed": false,
+          "createdAt": "2026-02-04T15:41:14.276222"
         },
         {
           "id": "sub_003",
-          "title": "Hardware requirements analysis: VRAM, CPU, GPU, storage for different model sizes",
-          "done": false
+          "description": "Determine model viability: which LLM sizes fit in 8GB vs 16GB RAM",
+          "completed": false,
+          "createdAt": "2026-02-04T15:41:14.276224"
         },
         {
           "id": "sub_004",
-          "title": "Cost analysis: hardware amortization + electricity vs GitHub Copilot subscription",
-          "done": false
+          "description": "Assess storage requirements: 256GB vs 500GB for models + OpenClaw + data",
+          "completed": false,
+          "createdAt": "2026-02-04T15:41:14.276225"
         },
         {
           "id": "sub_005",
-          "title": "Benchmark local models: latency, throughput, accuracy vs cloud-based",
-          "done": false
+          "description": "Create beginner-friendly Windows \u2192 Linux migration guide",
+          "completed": false,
+          "createdAt": "2026-02-04T15:41:14.276227"
         },
         {
           "id": "sub_006",
-          "title": "Design OpenClaw local deployment architecture",
-          "done": false
+          "description": "Compare Ubuntu 20.04 vs 22.04 vs 24.04 for gaming PC hardware",
+          "completed": false,
+          "createdAt": "2026-02-04T15:41:14.276228"
         },
         {
           "id": "sub_007",
-          "title": "Data migration strategy: VPS to desktop transition plan",
-          "done": false
+          "description": "Create step-by-step NVIDIA CUDA setup guide for Linux",
+          "completed": false,
+          "createdAt": "2026-02-04T15:41:14.276229"
         },
         {
           "id": "sub_008",
-          "title": "Risk assessment and mitigation strategies",
-          "done": false
+          "description": "Detailed Ollama setup guide for consumer hardware",
+          "completed": false,
+          "createdAt": "2026-02-04T15:41:14.276230"
         },
         {
           "id": "sub_009",
-          "title": "Research Ollama: docs, setup guides, model availability, performance",
-          "done": false
+          "description": "Detailed vLLM setup guide for consumer hardware",
+          "completed": false,
+          "createdAt": "2026-02-04T15:41:14.276231"
         },
         {
           "id": "sub_010",
-          "title": "Research vLLM: docs, deployment options, benchmarks, hardware requirements",
-          "done": false
+          "description": "Detailed LocalAI setup guide for consumer hardware",
+          "completed": false,
+          "createdAt": "2026-02-04T15:41:14.276232"
         },
         {
           "id": "sub_011",
-          "title": "Research LocalAI: docs, configuration, model support, use cases",
-          "done": false
+          "description": "Detailed LM Studio setup (if applicable on Linux)",
+          "completed": false,
+          "createdAt": "2026-02-04T15:41:14.276234"
         },
         {
           "id": "sub_012",
-          "title": "Research LM Studio and alternatives: capabilities, ease of use, model support",
-          "done": false
+          "description": "OpenClaw Linux installation & local LLM integration guide",
+          "completed": false,
+          "createdAt": "2026-02-04T15:41:14.276235"
         },
         {
           "id": "sub_013",
-          "title": "Compare local LLM platforms: create side-by-side matrix with all key specs",
-          "done": false
+          "description": "Anthropic Opus alternative analysis: Llama, Mistral, Dolphin comparison",
+          "completed": false,
+          "createdAt": "2026-02-04T15:41:14.276236"
         },
         {
           "id": "sub_014",
-          "title": "Research Ubuntu Linux versions: 20.04 vs 22.04 vs 24.04 for server workloads",
-          "done": false
+          "description": "Model quantization research: GGUF, GPTQ, trade-offs",
+          "completed": false,
+          "createdAt": "2026-02-04T15:41:14.276237"
         },
         {
           "id": "sub_015",
-          "title": "Research Linux optimization: kernel tuning, scheduler, memory management for LLM inference",
-          "done": false
+          "description": "Create VPS \u2192 desktop migration & backup procedures",
+          "completed": false,
+          "createdAt": "2026-02-04T15:41:14.276238"
         },
         {
           "id": "sub_016",
-          "title": "Determine hardware matrix: VRAM/CPU/storage for different model sizes (7B, 13B, 70B)",
-          "done": false
+          "description": "Linux kernel optimization for LLM inference on consumer hardware",
+          "completed": false,
+          "createdAt": "2026-02-04T15:41:14.276239"
         },
         {
           "id": "sub_017",
-          "title": "Research GPU support: NVIDIA CUDA, AMD ROCm, Intel OneAPI options",
-          "done": false
+          "description": "GPU memory management & thermal optimization guide",
+          "completed": false,
+          "createdAt": "2026-02-04T15:41:14.276240"
         },
         {
           "id": "sub_018",
-          "title": "Review OpenClaw Linux installation & configuration requirements",
-          "done": false
+          "description": "Troubleshooting guide: common errors & solutions for each step",
+          "completed": false,
+          "createdAt": "2026-02-04T15:41:14.276241"
         },
         {
           "id": "sub_019",
-          "title": "Research OpenClaw local LLM backend integration options",
-          "done": false
+          "description": "Create 4 complete installation manuals (Ollama, vLLM, LocalAI, LM Studio options)",
+          "completed": false,
+          "createdAt": "2026-02-04T15:41:14.276242"
         },
         {
           "id": "sub_020",
-          "title": "Plan VPS to desktop data migration: what transfers, what stays, backup procedures",
-          "done": false
+          "description": "Hardware ROI analysis: 5-year ownership vs GitHub Copilot costs",
+          "completed": false,
+          "createdAt": "2026-02-04T15:41:14.276243"
         },
         {
           "id": "sub_021",
-          "title": "Create cost analysis: hardware + electricity vs GitHub Copilot subscription",
-          "done": false
-        },
-        {
-          "id": "sub_022",
-          "title": "Design complete step-by-step implementation guide",
-          "done": false
-        },
-        {
-          "id": "sub_023",
-          "title": "Document all risks and mitigation strategies",
-          "done": false
+          "description": "Final comparison matrix with recommendation",
+          "completed": false,
+          "createdAt": "2026-02-04T15:41:14.276245"
         }
       ],
       "comments": [
@@ -592,11 +603,16 @@
           "author": "OpenClaw",
           "text": "CRITICAL UPDATE: Anthony's existing hardware spec provided. Gaming PC: GTX 1050 Ti, 8-16GB RAM, 256-500GB storage, Windows 10/11. Need complete research on: (1) Wiping Windows & installing Linux on gaming hardware, (2) GPU driver compatibility (NVIDIA 1050 Ti with CUDA/drivers), (3) RAM/storage implications for different local LLM models, (4) Step-by-step installation guides for ALL options, (5) Complete OpenClaw docs review for Linux deployment, (6) Local LLM docs (Ollama, vLLM, LocalAI) - installation on consumer hardware, (7) VPS migration procedures with existing data. ALL documentation must be reviewed: OpenClaw docs, Linux installation guides, LLM provider docs, NVIDIA driver docs, hardware compatibility. Deliverable: Clear instruction manual for beginner (Anthony knows nothing about Linux/LLM setup) - step-by-step for all options with comparisons.",
           "timestamp": "2026-02-04T20:40:40.543571+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "FULLY EXPANDED FOR ANTHONY'S HARDWARE (FINAL UPDATE). Task now includes: (1) GTX 1050 Ti GPU analysis with CUDA compatibility, (2) 8GB vs 16GB RAM implications for different LLM model sizes, (3) 256GB vs 500GB storage assessment, (4) Complete Windows \u2192 Linux beginner guide, (5) Ubuntu version comparison for gaming PC, (6) NVIDIA driver setup guide, (7) Detailed setup guides for Ollama, vLLM, LocalAI, LM Studio on consumer hardware, (8) OpenClaw Linux deployment, (9) Anthropic Opus alternatives (Llama, Mistral, Dolphin), (10) Quantization strategies, (11) VPS data migration, (12) Kernel optimization for LLM workloads, (13) Thermal/GPU management, (14) Troubleshooting guide, (15) 4 complete installation manuals (one per LLM platform), (16) ROI analysis. 21 subtasks covering all research areas. Ready for Anthony's approval to begin deep research of ALL documentation (OpenClaw docs, Linux docs, NVIDIA docs, LLM provider docs).",
+          "timestamp": "2026-02-04T20:41:19.725124+00:00"
         }
       ],
       "createdAt": "2026-02-04T20:27:12.205259+00:00",
       "updated": "2026-02-04T20:31:26.895320+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T20:40:40.543589+00:00"
+  "lastUpdated": "2026-02-04T20:41:19.725142+00:00"
 }
