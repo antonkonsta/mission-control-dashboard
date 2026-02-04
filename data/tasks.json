@@ -270,7 +270,7 @@
       "id": "task_012",
       "title": "Valentine's Day Ideas for Online Friend",
       "description": "Come up with thoughtful, funny, friendly (slightly romantic) Valentine's ideas for Anthony's online friend. Can't give physical items. Should be: humorous, thoughtful, friendly with slight romance, digital/online delivery.",
-      "status": "in_progress",
+      "status": "review",
       "priority": "high",
       "subtasks": [],
       "comments": [
@@ -319,5 +319,5 @@
       "createdAt": "2026-02-04T05:15:13.340878+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T05:23:34.570295+00:00"
+  "lastUpdated": "2026-02-04T05:23:35.105772+00:00"
 }
