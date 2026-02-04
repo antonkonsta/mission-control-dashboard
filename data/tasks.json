@@ -460,12 +460,17 @@
           "id": "sub_001",
           "title": "Research local LLM landscape: Ollama, vLLM, LocalAI, LM Studio, Hugging Face capabilities",
           "done": false
+        },
+        {
+          "id": "sub_002",
+          "title": "Identify Anthropic Opus equivalent: can Opus run locally? What are best alternatives?",
+          "done": false
         }
       ],
       "comments": [],
       "createdAt": "2026-02-04T20:27:12.205259+00:00",
-      "updated": "2026-02-04T20:27:17.698021+00:00"
+      "updated": "2026-02-04T20:27:18.423824+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T20:27:17.698037+00:00"
+  "lastUpdated": "2026-02-04T20:27:18.423841+00:00"
 }
