@@ -260,7 +260,17 @@
         }
       ],
       "createdAt": "2026-02-04T17:52:43.351124+00:00"
+    },
+    {
+      "id": "task_015",
+      "title": "Token Usage Tracking & Cost Visualization",
+      "description": "OBJECTIVE: Build a system to track token usage and estimate costs for GitHub Copilot billing\n\nEXPECTATIONS FROM ANTHONY:\n- Track total token usage over time with visual chart\n- Break down token usage PER TASK in Mission Control (beginning to completion)\n- Show live token count for each running agent in Agent Activity Monitor\n- Convert tokens to estimated dollar cost (since direct API billing not available on non-enterprise)\n- Accurate way of predicting costs that match what appears in GitHub billing (~$40 this period)\n- Track efficiency over time\n\nCONSTRAINTS:\n- GitHub Copilot subscription only (no direct Anthropic/OpenAI billing API access)\n- Enterprise billing API not available - need alternative approach\n- Must work with existing Agent Activity Monitor dashboard\n\nDELIVERABLES:\n1. Token tracking system that logs usage per task and per agent\n2. Dashboard visualization showing:\n   - Line chart: Total token usage over time\n   - Bar chart: Token usage breakdown by task (what's eating most tokens)\n   - Per-agent live token count\n   - Heartbeat vs task usage breakdown\n3. Cost estimation formula (tokens \u2192 dollars) based on GitHub Copilot pricing\n4. Integration with Mission Control tasks\n\nSUCCESS CRITERIA:\n- Anthony can see at a glance how much each task costs\n- Anthony can predict monthly billing from dashboard\n- Clear breakdown of where tokens are going (heartbeat, tasks, agents)",
+      "status": "in_progress",
+      "priority": "backlog",
+      "subtasks": [],
+      "comments": [],
+      "createdAt": "2026-02-04T18:37:44.067755+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T18:02:22.103207+00:00"
+  "lastUpdated": "2026-02-04T18:37:44.067772+00:00"
 }
