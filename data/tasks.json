@@ -459,128 +459,107 @@
         {
           "id": "sub_001",
           "description": "Analyze GTX 1050 Ti: CUDA support, driver compatibility, performance for LLM inference",
-          "completed": false,
-          "createdAt": "2026-02-04T15:41:14.276203"
+          "completed": false
         },
         {
           "id": "sub_002",
           "description": "Research NVIDIA driver installation on Linux for consumer GPUs",
-          "completed": false,
-          "createdAt": "2026-02-04T15:41:14.276222"
+          "completed": false
         },
         {
           "id": "sub_003",
           "description": "Determine model viability: which LLM sizes fit in 8GB vs 16GB RAM",
-          "completed": false,
-          "createdAt": "2026-02-04T15:41:14.276224"
+          "completed": false
         },
         {
           "id": "sub_004",
           "description": "Assess storage requirements: 256GB vs 500GB for models + OpenClaw + data",
-          "completed": false,
-          "createdAt": "2026-02-04T15:41:14.276225"
+          "completed": false
         },
         {
           "id": "sub_005",
           "description": "Create beginner-friendly Windows \u2192 Linux migration guide",
-          "completed": false,
-          "createdAt": "2026-02-04T15:41:14.276227"
+          "completed": false
         },
         {
           "id": "sub_006",
           "description": "Compare Ubuntu 20.04 vs 22.04 vs 24.04 for gaming PC hardware",
-          "completed": false,
-          "createdAt": "2026-02-04T15:41:14.276228"
+          "completed": false
         },
         {
           "id": "sub_007",
           "description": "Create step-by-step NVIDIA CUDA setup guide for Linux",
-          "completed": false,
-          "createdAt": "2026-02-04T15:41:14.276229"
+          "completed": false
         },
         {
           "id": "sub_008",
           "description": "Detailed Ollama setup guide for consumer hardware",
-          "completed": false,
-          "createdAt": "2026-02-04T15:41:14.276230"
+          "completed": false
         },
         {
           "id": "sub_009",
           "description": "Detailed vLLM setup guide for consumer hardware",
-          "completed": false,
-          "createdAt": "2026-02-04T15:41:14.276231"
+          "completed": false
         },
         {
           "id": "sub_010",
           "description": "Detailed LocalAI setup guide for consumer hardware",
-          "completed": false,
-          "createdAt": "2026-02-04T15:41:14.276232"
+          "completed": false
         },
         {
           "id": "sub_011",
           "description": "Detailed LM Studio setup (if applicable on Linux)",
-          "completed": false,
-          "createdAt": "2026-02-04T15:41:14.276234"
+          "completed": false
         },
         {
           "id": "sub_012",
           "description": "OpenClaw Linux installation & local LLM integration guide",
-          "completed": false,
-          "createdAt": "2026-02-04T15:41:14.276235"
+          "completed": false
         },
         {
           "id": "sub_013",
           "description": "Anthropic Opus alternative analysis: Llama, Mistral, Dolphin comparison",
-          "completed": false,
-          "createdAt": "2026-02-04T15:41:14.276236"
+          "completed": false
         },
         {
           "id": "sub_014",
           "description": "Model quantization research: GGUF, GPTQ, trade-offs",
-          "completed": false,
-          "createdAt": "2026-02-04T15:41:14.276237"
+          "completed": false
         },
         {
           "id": "sub_015",
           "description": "Create VPS \u2192 desktop migration & backup procedures",
-          "completed": false,
-          "createdAt": "2026-02-04T15:41:14.276238"
+          "completed": false
         },
         {
           "id": "sub_016",
           "description": "Linux kernel optimization for LLM inference on consumer hardware",
-          "completed": false,
-          "createdAt": "2026-02-04T15:41:14.276239"
+          "completed": false
         },
         {
           "id": "sub_017",
           "description": "GPU memory management & thermal optimization guide",
-          "completed": false,
-          "createdAt": "2026-02-04T15:41:14.276240"
+          "completed": false
         },
         {
           "id": "sub_018",
           "description": "Troubleshooting guide: common errors & solutions for each step",
-          "completed": false,
-          "createdAt": "2026-02-04T15:41:14.276241"
+          "completed": false
         },
         {
           "id": "sub_019",
           "description": "Create 4 complete installation manuals (Ollama, vLLM, LocalAI, LM Studio options)",
-          "completed": false,
-          "createdAt": "2026-02-04T15:41:14.276242"
+          "completed": false
         },
         {
           "id": "sub_020",
           "description": "Hardware ROI analysis: 5-year ownership vs GitHub Copilot costs",
-          "completed": false,
-          "createdAt": "2026-02-04T15:41:14.276243"
+          "completed": false
         },
         {
           "id": "sub_021",
           "description": "Final comparison matrix with recommendation",
-          "completed": false,
-          "createdAt": "2026-02-04T15:41:14.276245"
+          "completed": false
         }
       ],
       "comments": [
