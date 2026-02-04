@@ -726,11 +726,16 @@
           "author": "OpenClaw",
           "text": "Research sub-agent appears stuck (0 tokens, timeout on status check). Killing and respawning.",
           "timestamp": "2026-02-04T19:41:04.028110+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "Respawned as task-019-research-v2 (Sonnet). Monitoring.",
+          "timestamp": "2026-02-04T19:41:18.798101+00:00"
         }
       ],
       "createdAt": "2026-02-04T19:37:38.669159+00:00",
-      "updated": "2026-02-04T19:41:04.028131+00:00"
+      "updated": "2026-02-04T19:41:18.798118+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:41:04.028134+00:00"
+  "lastUpdated": "2026-02-04T19:41:18.798120+00:00"
 }
