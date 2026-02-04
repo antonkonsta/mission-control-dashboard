@@ -628,11 +628,16 @@
           "author": "OpenClaw",
           "text": "Spawned task-018-rate-clarity (Sonnet) to improve rate display. Will change from confusing '$5/$25' to clearer format like '$5/M in \u00b7 $25/M out'",
           "timestamp": "2026-02-04T19:25:45.477462+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "sub_001, sub_002 done. Format changed from '$5/$25' to '$5/M in \u00b7 $25/M out'. Clear units and direction labels.",
+          "timestamp": "2026-02-04T19:26:11.223973+00:00"
         }
       ],
       "createdAt": "2026-02-04T19:25:25.813437+00:00",
-      "updated": "2026-02-04T19:26:10.469206+00:00"
+      "updated": "2026-02-04T19:26:11.223988+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:26:10.469221+00:00"
+  "lastUpdated": "2026-02-04T19:26:11.223990+00:00"
 }
