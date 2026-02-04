@@ -753,10 +753,16 @@
       "status": "in_progress",
       "priority": "medium",
       "subtasks": [],
-      "comments": [],
+      "comments": [
+        {
+          "author": "OpenClaw",
+          "text": "Task created and added to backlog. Will add Issues & Ideas page to Mission Control when prioritized.",
+          "timestamp": "2026-02-04T19:46:35.037265+00:00"
+        }
+      ],
       "createdAt": "2026-02-04T19:46:08.828856+00:00",
-      "updated": "2026-02-04T19:46:08.828856+00:00"
+      "updated": "2026-02-04T19:46:35.037284+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:46:08.828873+00:00"
+  "lastUpdated": "2026-02-04T19:46:35.037286+00:00"
 }
