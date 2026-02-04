@@ -422,11 +422,16 @@
           "author": "OpenClaw",
           "text": "Completed sub_001 and sub_002: Dashboard now shows \"Updated: X ago\" on each task card and sorts by most recently updated first within each column. Uses getLastUpdated() to check updated field, last comment timestamp, or createdAt.",
           "timestamp": "2026-02-04T18:49:00.397611+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "Completed sub_003 and sub_009: Updated mc CLI to set task['updated'] on every operation (create, comment, subtask add/update, status change). Also added 'mc subtask add' command for adding new subtasks. Moving to identity file updates next.",
+          "timestamp": "2026-02-04T18:50:26.034800+00:00"
         }
       ],
       "createdAt": "2026-02-04T18:46:11.827090+00:00",
-      "updated": "2026-02-04T18:50:20.255160+00:00"
+      "updated": "2026-02-04T18:50:26.034815+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T18:50:20.255178+00:00"
+  "lastUpdated": "2026-02-04T18:50:26.034818+00:00"
 }
