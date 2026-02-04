@@ -128,7 +128,7 @@
       "id": "task_007",
       "title": "DoorDash research near UNCC campus",
       "description": "Find 10 nearby DoorDash restaurants near UNCC Charlotte campus. High protein, budget-friendly. For each: distance, 3 food recommendations with prices. Deliver as PDF.",
-      "status": "review",
+      "status": "done",
       "priority": "high",
       "subtasks": [
         {
@@ -412,5 +412,5 @@
       "createdAt": "2026-02-04T02:01:10.230768+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T02:06:24.398002+00:00"
+  "lastUpdated": "2026-02-04T02:06:24.934145+00:00"
 }
