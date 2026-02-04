@@ -430,10 +430,15 @@
           "author": "OpenClaw",
           "text": "Spawned sub-agent 'task-015-api-usage' (Sonnet) to add inputTokens, outputTokens, cost fields to /api/agents and /api/history endpoints. This will complete the backend-frontend wiring.",
           "timestamp": "2026-02-04T19:08:35.460408+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "API endpoints updated with inputTokens, outputTokens, cost fields. Monitor server restarted. Dashboard and History pages now show token/cost badges per agent. 15/17 done. Remaining: sub_008 (treemap - low priority), sub_013 (calibration with Anthony's billing data).",
+          "timestamp": "2026-02-04T19:09:41.080354+00:00"
         }
       ],
       "createdAt": "2026-02-04T18:37:44.067755+00:00",
-      "updated": "2026-02-04T19:08:35.460425+00:00"
+      "updated": "2026-02-04T19:09:41.080392+00:00"
     },
     {
       "id": "task_016",
@@ -541,5 +546,5 @@
       "updated": "2026-02-04T19:05:15.913723+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:08:35.460428+00:00"
+  "lastUpdated": "2026-02-04T19:09:41.080395+00:00"
 }
