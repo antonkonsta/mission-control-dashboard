@@ -775,10 +775,16 @@
       "status": "in_progress",
       "priority": "high",
       "subtasks": [],
-      "comments": [],
+      "comments": [
+        {
+          "author": "OpenClaw",
+          "text": "COMPLETE: All identity files and gateway config locked to haiku-4.5. SOUL.md updated, AGENTS.md spawning rules locked, HEARTBEAT.md sub-agent spawn rules locked, gateway primary model set to github-copilot/claude-haiku-4.5, heartbeat model set to haiku. Gateway restarted (SIGUSR1). All future sessions will default to Haiku.",
+          "timestamp": "2026-02-04T19:54:20.529826+00:00"
+        }
+      ],
       "createdAt": "2026-02-04T19:53:44.042424+00:00",
-      "updated": "2026-02-04T19:53:44.042424+00:00"
+      "updated": "2026-02-04T19:54:20.529842+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:53:44.042441+00:00"
+  "lastUpdated": "2026-02-04T19:54:20.529845+00:00"
 }
