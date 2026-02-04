@@ -1,5 +1,12 @@
 # HEARTBEAT.md - Proactive Work Loop
 
+## CRITICAL RULE: MISSION CONTROL IS MANDATORY
+**EVERYTHING Anthony asks you to do MUST be tracked in Mission Control.**
+- Create task in `/root/.openclaw/workspace/data/tasks.json` FIRST
+- Commit to git IMMEDIATELY
+- THEN delegate to sub-agent or work on it
+- NO EXCEPTIONS
+
 ## MANDATORY ENFORCEMENT CHECKS (EVERY heartbeat - do these FIRST)
 
 ### 1. Memory Health Check
@@ -14,9 +21,13 @@ Verify failures are being logged.
 ### 4. Sub-Agent Supervision (CRITICAL)
 Check ALL running sub-agents:
 - List sub-agent sessions
-- Check last update time (if >2 min, demand status)
+- **MATCH each sub-agent to its Mission Control task** (by label or sessionKey)
+- Check last update time (if >2 min, demand status update from sub-agent)
 - Review last message (if stuck/silent, prompt or kill+respawn)
-- Report progress to Anthony
+- **Monitor until TRULY complete** - don't move to review until deliverable is done
+- Update Mission Control task with sub-agent progress comments
+- **ONLY move to 'review' when agent shows clear completion** (deliverable ready)
+- Then ping Anthony
 - Be STRICT - no excuses, demand results
 - Kill and respawn failures immediately
 
@@ -26,8 +37,10 @@ Check ALL running sub-agents:
 1. **Mission Control tasks in 'in_progress':**
    - Read `/root/.openclaw/workspace/data/tasks.json`
    - Find tasks with `"status": "in_progress"`
+   - **JUDGE PROGRESS:** If all subtasks done OR deliverable complete → move to 'review' AUTOMATICALLY
    - Continue working on them, update subtasks, add comments
-   - Move to 'review' when complete
+   - **NEVER wait for Anthony to tell you to move tasks to review**
+   - Move to 'review' when complete, commit to git
 
 ## WORK QUEUE CHECK (Priority Order)
 
