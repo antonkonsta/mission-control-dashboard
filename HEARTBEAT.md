@@ -320,13 +320,13 @@ Check ALL running sub-agents:
 When spawning a sub-agent via `sessions_spawn`:
 ```
 label="task-XXX-description"              ← MANDATORY - MUST MATCH MISSION CONTROL TASK
-model="github-copilot/claude-haiku-4.5"   ← MANDATORY - HAIKU ONLY, ALL AGENTS
+model="claude-opus-4.5"   ← MANDATORY - OPUS ONLY, ALL AGENTS
 ```
 
 **🚨 MODEL LOCK (CRITICAL - 2026-02-04 REVISED):**
 - ✅ Sub-agents: `claude-opus-4.5` (quality priority)
-- ✅ Main session: `github-copilot/claude-haiku-4.5` (cost control)
-- ❌ NO Haiku for sub-agents - Opus only
+- ✅ Main session: `claude-opus-4.5` (quality priority)
+- ❌ NO Haiku EVER - Opus only for ALL sessions
 - ❌ NO aliases, NO overrides
 - ❌ NO exceptions
 

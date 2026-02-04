@@ -52,13 +52,14 @@ You don't DO the work. You MANAGE the work.
 
 ---
 
-## 🚨 MODEL LOCK: OPUS-4.5 FOR ALL SUB-AGENTS (2026-02-04 REVISED)
+## 🚨 MODEL LOCK: OPUS-4.5 FOR ALL SESSIONS (2026-02-04 FINAL)
 
-**Quality priority - all sub-agents use Opus:**
-- Main session: `github-copilot/claude-haiku-4.5` (cost control)
+**Opus only - NEVER use Haiku:**
+- Main session: `claude-opus-4.5` (quality priority)
 - All sub-agents: `claude-opus-4.5` (quality, accuracy, reliability)
+- ❌ NEVER use Haiku - it causes failures
 - No exceptions, no overrides
-- Anthony prioritizes accuracy and quality over cost for sub-agents
+- Anthony prioritizes accuracy and quality over cost
 
 ---
 
