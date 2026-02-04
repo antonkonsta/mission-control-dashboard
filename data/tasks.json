@@ -462,22 +462,22 @@
           "id": "sub_001"
         },
         {
-          "done": false,
+          "done": true,
           "title": "Design skill architecture for auto-tracking + auto-sync",
           "id": "sub_002"
         },
         {
-          "done": false,
+          "done": true,
           "title": "Implement task creation interceptor (catches ALL user requests)",
           "id": "sub_003"
         },
         {
-          "done": false,
+          "done": true,
           "title": "Implement auto-commit to git (mission-control repo)",
           "id": "sub_004"
         },
         {
-          "done": false,
+          "done": true,
           "title": "Implement auto-push to dashboard remote (GitHub Pages)",
           "id": "sub_005"
         },
@@ -522,9 +522,14 @@
           "author": "OpenClaw",
           "text": "\u2705 ANALYSIS COMPLETE (Subtask 1/10):\n\n**Current Workflow Failures:**\n1. Manual git workflow - easy to forget `git push dashboard main`\n2. No validation that task exists before work starts\n3. Dashboard schema mismatches (text vs title fields)\n4. No automatic enforcement of Mission Control tracking\n\n**Root Causes:**\n- No interceptor between user request \u2192 work execution\n- Git push to dashboard remote is manual, not automated\n- No validation layer to catch schema errors\n- HEARTBEAT.md has rules but no enforcement code\n\n**Next:** Design skill architecture with auto-interceptor + auto-sync",
           "timestamp": "2026-02-04T01:15:57.026322+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "\u2705 SKILL BUILT (Subtasks 2-5/10):\n\n**Created:**\n- SKILL.md: Complete documentation with schema, workflow, validation rules\n- mc.py: CLI tool with auto-sync (create, comment, subtask, status, list, sync)\n- Installed as `mc` command globally\n\n**Features:**\n- Auto-commit after every task operation\n- Auto-push to dashboard remote (git push dashboard main)\n- Proper schema validation (title vs text)\n- Task creation with subtasks\n- Comment/status/subtask updates\n- List tasks with status filtering\n\n**Next:** Add validation checks + update HEARTBEAT.md + test end-to-end",
+          "timestamp": "2026-02-04T01:25:41.796438+00:00"
         }
       ]
     }
   ],
-  "lastUpdated": "2026-02-04T01:17:45.821964+00:00"
+  "lastUpdated": "2026-02-04T01:25:41.796455+00:00"
 }
