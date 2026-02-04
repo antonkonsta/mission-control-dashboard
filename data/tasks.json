@@ -239,7 +239,7 @@
       "id": "task_011",
       "title": "Valentine's Day Ideas for Mom & Grandma",
       "description": "Research calm, peaceful Valentine's ideas for Anthony's mom and grandmother. Requirements: flowers order, something classy, NOT crowded restaurants, can be done at home, easy for older woman (not too much walking), peaceful and simple, handwritten card.",
-      "status": "review",
+      "status": "in_progress",
       "priority": "high",
       "subtasks": [],
       "comments": [
@@ -299,5 +299,5 @@
       "createdAt": "2026-02-04T05:15:13.340878+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T05:17:34.858917+00:00"
+  "lastUpdated": "2026-02-04T05:18:53.378801+00:00"
 }
