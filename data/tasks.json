@@ -4,7 +4,7 @@
       "id": "task_003",
       "title": "Fix Telegram voice message handling (prevent token overflow crashes)",
       "description": "Fix the voice message system to prevent gateway crashes from token overflow.\n\n**Requirements (from Anthony):**\n- Transcribe voice \u2192 show transcription \u2192 respond \u2192 send back as TEXT (voice later)\n- Use existing telegram-voice skill (don't rebuild)\n- NO token limit per response (\"hell nah\")\n- Isolated session (prevent context pollution)\n- Priority: HIGH (same as anything else)\n\n**Deliverable:** Working voice message handler that doesn't crash gateway.",
-      "status": "in_progress",
+      "status": "backlog",
       "priority": "high",
       "subtasks": [
         {
@@ -73,6 +73,11 @@
           "author": "OpenClaw",
           "text": "\u274c Sub-agent v3 failed (claimed \"system constraints\" despite Whisper already working). Taking over myself - need Anthony to send test voice message to complete integration.",
           "timestamp": "2026-02-03T23:28:06.150750+00:00"
+        },
+        {
+          "author": "Anthony",
+          "text": "Moved to backlog - task_012 (Mission Control Auto-Sync Skill) is the ONLY priority",
+          "timestamp": "2026-02-04T01:17:45.821938+00:00"
         }
       ],
       "createdAt": "2026-02-03T22:54:31.270310+00:00"
@@ -81,7 +86,7 @@
       "id": "task_004",
       "title": "Build real-time activity monitoring system (micromanagement dashboard)",
       "description": "Build a system that lets Anthony see everything the agent is doing in real-time.\n\n**Requirements (from Anthony):**\n- **Detail level:** EVERYTHING (every tool call, file read, decision)\n- **Interface:** Live web dashboard\n- **Mode:** Real-time (as live as possible, watch it happen)\n- **Update frequency:** Every 10 seconds\n- **Priority:** HIGH (MORE IMPORTANT than voice fix)\n\n**Deliverable:** Real-time activity monitoring dashboard.",
-      "status": "in_progress",
+      "status": "backlog",
       "priority": "high",
       "subtasks": [
         {
@@ -155,6 +160,11 @@
           "author": "OpenClaw",
           "text": "\u2705 Understood. Reopening task. Will integrate activity logging into actual agent workflow so dashboard shows real tool calls, decisions, file ops.",
           "timestamp": "2026-02-03T23:12:18.198494+00:00"
+        },
+        {
+          "author": "Anthony",
+          "text": "Moved to backlog - task_012 (Mission Control Auto-Sync Skill) is the ONLY priority",
+          "timestamp": "2026-02-04T01:17:45.821957+00:00"
         }
       ],
       "createdAt": "2026-02-03T22:54:31.270314+00:00"
@@ -205,7 +215,7 @@
       "id": "task_007",
       "title": "DoorDash research near UNCC campus",
       "description": "Find 10 nearby DoorDash restaurants near UNCC Charlotte campus. High protein, budget-friendly. For each: distance, 3 food recommendations with prices. Deliver as PDF.",
-      "status": "in_progress",
+      "status": "backlog",
       "priority": "high",
       "subtasks": [
         {
@@ -244,6 +254,11 @@
           "author": "sub-agent-93e396e7",
           "text": "\ud83d\udcca PROGRESS UPDATE:\n- 2/10 restaurants researched (Chick-fil-A, King Fish Poke)\n- Blocked by API rate limits (429 errors)\n- Partial data: Chick-fil-A ($3-$12 range), King Fish Poke bowls ($13.99-$15.99)\n- ETA: 45-60 min\n- Adapting to use alternative search routes",
           "timestamp": "2026-02-04T00:16:00.000000+00:00"
+        },
+        {
+          "author": "Anthony",
+          "text": "Moved to backlog - task_012 (Mission Control Auto-Sync Skill) is the ONLY priority",
+          "timestamp": "2026-02-04T01:17:45.821960+00:00"
         }
       ],
       "createdAt": "2026-02-04T00:05:15.123128+00:00"
@@ -341,7 +356,7 @@
       "id": "task_010",
       "title": "Fix Mission Control GitHub Pages dashboard sync",
       "description": "Mission Control dashboard at https://antonkonsta.github.io/mission-control-dashboard/ is not showing updated tasks. Tasks are being added to /root/.openclaw/workspace/data/tasks.json but not appearing on the GitHub Pages site.\n\n**Problem:** Dashboard not syncing with tasks.json updates\n**Impact:** Anthony can't see new tasks being created\n**Priority:** CRITICAL - stop everything else\n\n**Deliverable:** Dashboard shows all tasks in real-time when tasks.json is updated.",
-      "status": "in_progress",
+      "status": "backlog",
       "priority": "critical",
       "subtasks": [
         {
@@ -375,6 +390,11 @@
           "author": "Anthony",
           "text": "you aren't adding tasks to the github mission control page anymore - don't see them! stop everything else and work only on this now (19:45)",
           "timestamp": "2026-02-04T00:46:02.276526+00:00"
+        },
+        {
+          "author": "Anthony",
+          "text": "Moved to backlog - task_012 (Mission Control Auto-Sync Skill) is the ONLY priority",
+          "timestamp": "2026-02-04T01:17:45.821962+00:00"
         }
       ],
       "createdAt": "2026-02-04T00:46:02.276546+00:00"
@@ -506,5 +526,5 @@
       ]
     }
   ],
-  "lastUpdated": "2026-02-04T01:15:57.026338+00:00"
+  "lastUpdated": "2026-02-04T01:17:45.821964+00:00"
 }
