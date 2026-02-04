@@ -483,6 +483,11 @@
           "author": "OpenClaw",
           "text": "Low-Noise-EEG-Chopper.md now has synthesized content from Harrison 2003, Wattanapanitch 2007, Denison 2007, Makinwa 2011 papers - includes equations, specs, Cadence params. OTA synthesis in progress.",
           "timestamp": "2026-02-04T17:32:01.791757+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "Miller-OTA-Compensation.md updated with pole analysis, phase margin equations, nulling resistor design. Total KB: 2,494 lines + 600 sources. Content now includes synthesized info from Razavi, Gray/Meyer, Sansen textbooks.",
+          "timestamp": "2026-02-04T17:32:25.480794+00:00"
         }
       ],
       "createdAt": "2026-02-04T16:50:39.038589+00:00"
@@ -508,5 +513,5 @@
       "createdAt": "2026-02-04T17:28:03.970802+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T17:32:01.791775+00:00"
+  "lastUpdated": "2026-02-04T17:32:25.480814+00:00"
 }
