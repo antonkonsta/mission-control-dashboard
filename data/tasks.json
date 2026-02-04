@@ -343,7 +343,7 @@
       "id": "task_015",
       "title": "DCOP Equations Research - 5T OTA & Miller Op Amp",
       "description": "Research DC operating point steady-state equations for CMOS op-amp design. Focus on 5T OTA and Miller op-amp topologies. Find equations using Cadence ADE DCOP parameters (gm, rout, Cgs, etc.) to accurately predict: Gain, Bandwidth, GBW, CMRR, PSRR, Noise, Input/Output Range, Input/Output Impedance, Power, and other key metrics. Must gather 25+ sources (textbooks, papers, journals, blogs). Deliverable: Comprehensive list of equations for each topology with sources cited.",
-      "status": "in_progress",
+      "status": "review",
       "priority": "high",
       "subtasks": [],
       "comments": [
@@ -366,5 +366,5 @@
       "createdAt": "2026-02-04T16:06:36.513210+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T16:12:27.060340+00:00"
+  "lastUpdated": "2026-02-04T16:12:27.664388+00:00"
 }
