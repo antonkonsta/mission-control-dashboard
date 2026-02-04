@@ -2329,16 +2329,7 @@
                 <div class="column-tasks" id="tasks-review" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)" ondrop="handleDrop(event, 'review')"></div>
             </div>
 
-            <div class="column">
-                <div class="column-header">
-                    <div class="column-dot done"></div>
-                    <span class="column-title">Done</span>
-                    <span class="column-count" id="count-done">0</span>
-                    <button class="archive-all-btn" onclick="showArchiveView()" title="View archived tasks" style="background: transparent;">📂 View</button>
-                    <button class="archive-all-btn" onclick="archiveAllDone()" title="Archive all done tasks">📦 Archive All</button>
-                </div>
-                <div class="column-tasks" id="tasks-done" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)" ondrop="handleDrop(event, 'done')"></div>
-            </div>
+            <!-- Done column removed per Anthony's request - tasks go from review to archived -->
         </div>
 
         <aside class="activity" id="activity-sidebar">
@@ -2402,8 +2393,7 @@
                     <li><strong>🔄 Permanent</strong> - Repeating tasks (daily, weekly checks)</li>
                     <li><strong>📋 Backlog</strong> - Tasks waiting to be started</li>
                     <li><strong>🚀 In Progress</strong> - Currently being worked on</li>
-                    <li><strong>👀 Review</strong> - Done, awaiting approval</li>
-                    <li><strong>✅ Done</strong> - Completed tasks</li>
+                    <li><strong>👀 Review</strong> - Done, awaiting approval → Archive when complete</li>
                 </ul>
             </div>
 
@@ -2691,7 +2681,6 @@
                             <option value="backlog">Backlog</option>
                             <option value="in_progress">In Progress</option>
                             <option value="review">Review</option>
-                            <option value="done">Done</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -3517,7 +3506,7 @@
 
         // === RENDER FUNCTIONS ===
         function renderTasks(animate = false) {
-            const columns = ['permanent', 'backlog', 'in_progress', 'review', 'done'];
+            const columns = ['permanent', 'backlog', 'in_progress', 'review'];
             const data = STATE.data || FALLBACK_DATA;
             const priorityOrder = { high: 0, medium: 1, low: 2 };
 
@@ -3610,20 +3599,16 @@
             const commentsCount = (task.comments || []).length;
             const isArchived = task.archived === true;
 
-            // Review actions
+            // Review actions - archive directly instead of moving to done
             const reviewActions = task.status === 'review' ? `
                 <div class="task-actions" onclick="event.stopPropagation()">
-                    <button class="task-action-btn done" onclick="quickMoveTask('${task.id}', 'done')" title="Mark as Done">✓ Done</button>
+                    <button class="task-action-btn archive" onclick="archiveTask('${task.id}')" title="Archive (Complete)">📦 Archive</button>
                     <button class="task-action-btn backlog" onclick="quickMoveTask('${task.id}', 'backlog')" title="Move to Backlog">↩ Backlog</button>
                 </div>
             ` : '';
 
-            // Archive/Unarchive actions for done tasks
-            const archiveActions = task.status === 'done' && !isArchived ? `
-                <div class="task-actions" onclick="event.stopPropagation()">
-                    <button class="task-action-btn archive" onclick="archiveTask('${task.id}')" title="Archive this task">📦 Archive</button>
-                </div>
-            ` : '';
+            // Archive actions removed - done column no longer exists
+            const archiveActions = '';
 
             // Unarchive button for archived tasks
             const unarchiveActions = isArchived ? `
