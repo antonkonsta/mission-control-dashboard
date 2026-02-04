@@ -415,10 +415,15 @@
           "author": "OpenClaw",
           "text": "tokens.html complete! 13/17 subtasks done. Created: summary cards (5), baseline setter, bar chart (top 10 by cost), sessions table, 30s auto-refresh, nav links. Remaining: sub_008 (treemap), sub_009 (active agents tokens), sub_010 (history tokens), sub_013 (calibration test).",
           "timestamp": "2026-02-04T19:06:05.957395+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "Spawned sub-agent 'task-015-update-agents' (Sonnet) to add tokens/cost to dashboard.html and history.html (sub_009, sub_010).",
+          "timestamp": "2026-02-04T19:06:57.556072+00:00"
         }
       ],
       "createdAt": "2026-02-04T18:37:44.067755+00:00",
-      "updated": "2026-02-04T19:06:05.957419+00:00"
+      "updated": "2026-02-04T19:06:57.556092+00:00"
     },
     {
       "id": "task_016",
@@ -526,5 +531,5 @@
       "updated": "2026-02-04T19:05:15.913723+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:06:05.957422+00:00"
+  "lastUpdated": "2026-02-04T19:06:57.556094+00:00"
 }
