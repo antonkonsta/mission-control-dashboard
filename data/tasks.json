@@ -267,7 +267,7 @@
       "id": "task_008",
       "title": "Force task names in monitoring system (fix \"Unknown task\" issue)",
       "description": "Fix the monitoring dashboard to REQUIRE task names for all sub-agents. Never allow \"Unknown task\" to appear.\n\n**Requirements (from Anthony):**\n- Hard-coded enforcement: Every sub-agent MUST have a task name\n- Update HEARTBEAT.md to require task names when spawning sub-agents\n- Update monitoring system to reject/warn on missing task names\n- Update sessions_spawn calls to always include task name\n- Deliverable: No more \"Unknown task\" entries in dashboard\n\n**Root Cause:** Sub-agents spawned without proper labels/task tracking",
-      "status": "in_progress",
+      "status": "done",
       "priority": "high",
       "subtasks": [
         {
@@ -572,5 +572,5 @@
       "createdAt": "2026-02-04T01:32:33.587068+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T01:36:14.728408+00:00"
+  "lastUpdated": "2026-02-04T01:36:15.334087+00:00"
 }
