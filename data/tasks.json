@@ -418,9 +418,15 @@
       "status": "review",
       "priority": "high",
       "subtasks": [],
-      "comments": [],
+      "comments": [
+        {
+          "author": "OpenClaw",
+          "text": "Completed with 10 off-campus restaurants near UNCC. All on DoorDash, high-protein options, budget-friendly (-15). Includes Chipotle, Zaxby's, Culver's, CAVA, Blaze Pizza, City BBQ, Piada, Mezeh, Sabor, Boardwalk Billy's.",
+          "timestamp": "2026-02-04T02:09:51.828292+00:00"
+        }
+      ],
       "createdAt": "2026-02-04T02:08:08.574844+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T02:09:51.288871+00:00"
+  "lastUpdated": "2026-02-04T02:09:51.828309+00:00"
 }
