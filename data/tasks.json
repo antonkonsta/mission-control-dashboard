@@ -465,12 +465,17 @@
           "id": "sub_002",
           "title": "Identify Anthropic Opus equivalent: can Opus run locally? What are best alternatives?",
           "done": false
+        },
+        {
+          "id": "sub_003",
+          "title": "Hardware requirements analysis: VRAM, CPU, GPU, storage for different model sizes",
+          "done": false
         }
       ],
       "comments": [],
       "createdAt": "2026-02-04T20:27:12.205259+00:00",
-      "updated": "2026-02-04T20:27:18.423824+00:00"
+      "updated": "2026-02-04T20:27:19.136478+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T20:27:18.423841+00:00"
+  "lastUpdated": "2026-02-04T20:27:19.136493+00:00"
 }
