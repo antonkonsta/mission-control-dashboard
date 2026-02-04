@@ -67,7 +67,7 @@
       "id": "task_004",
       "title": "Remove Done Panel from Mission Control",
       "description": "Remove the 'done' column from Mission Control dashboard - only need backlog, in_progress, and review",
-      "status": "in_progress",
+      "status": "review",
       "priority": "high",
       "subtasks": [],
       "comments": [
@@ -80,5 +80,5 @@
       "createdAt": "2026-02-04T04:11:45.197212+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T04:13:12.571350+00:00"
+  "lastUpdated": "2026-02-04T04:13:13.085310+00:00"
 }
