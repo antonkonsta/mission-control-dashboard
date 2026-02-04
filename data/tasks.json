@@ -618,10 +618,16 @@
           "done": false
         }
       ],
-      "comments": [],
+      "comments": [
+        {
+          "author": "OpenClaw",
+          "text": "Spawned task-018-rate-clarity (Sonnet) to improve rate display. Will change from confusing '$5/$25' to clearer format like '$5/M in \u00b7 $25/M out'",
+          "timestamp": "2026-02-04T19:25:45.477462+00:00"
+        }
+      ],
       "createdAt": "2026-02-04T19:25:25.813437+00:00",
-      "updated": "2026-02-04T19:25:32.847947+00:00"
+      "updated": "2026-02-04T19:25:45.477478+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:25:32.847962+00:00"
+  "lastUpdated": "2026-02-04T19:25:45.477480+00:00"
 }
