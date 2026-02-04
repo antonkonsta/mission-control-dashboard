@@ -582,11 +582,16 @@
           "author": "OpenClaw",
           "text": "EXPANDED SCOPE: Full end-to-end research required. Anthony wants COMPLETE step-by-step guide from scratch including: (1) OS selection & installation (Ubuntu Linux likely), (2) Linux system setup & optimization, (3) Local LLM installation & configuration (detailed docs review), (4) OpenClaw installation on Linux, (5) VPS data migration to desktop, (6) LLM-OpenClaw integration & testing. Must research: LLM provider docs, Linux optimization guides, OpenClaw Linux deployment docs, hardware specs for different OS choices, all options compared with detailed instructions.",
           "timestamp": "2026-02-04T20:30:44.448001+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "RESEARCH SCOPE COMPLETE: 23 subtasks defined covering every aspect of OS selection, LLM deployment, OpenClaw setup, data migration, and implementation planning. All primary documentation must be reviewed: Ollama, vLLM, LocalAI, LM Studio docs; Ubuntu Linux docs; OpenClaw deployment guides; GPU framework docs (CUDA/ROCm/OneAPI). Deliverables: comprehensive implementation guide with step-by-step procedures from OS installation through full migration. Task ready in backlog for Anthony approval to begin research.",
+          "timestamp": "2026-02-04T20:31:26.895304+00:00"
         }
       ],
       "createdAt": "2026-02-04T20:27:12.205259+00:00",
-      "updated": "2026-02-04T20:31:20.724998+00:00"
+      "updated": "2026-02-04T20:31:26.895320+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T20:31:20.725015+00:00"
+  "lastUpdated": "2026-02-04T20:31:26.895322+00:00"
 }
