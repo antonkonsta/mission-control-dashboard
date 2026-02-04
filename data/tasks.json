@@ -247,9 +247,15 @@
       "status": "review",
       "priority": "high",
       "subtasks": [],
-      "comments": [],
+      "comments": [
+        {
+          "author": "OpenClaw",
+          "text": "Added click-to-open task detail modal showing: full description, priority badge, status, created/updated timestamps, all subtasks with completion status, all comments with authors and timestamps. Escape key or click outside to close.",
+          "timestamp": "2026-02-04T17:53:47.515050+00:00"
+        }
+      ],
       "createdAt": "2026-02-04T17:52:43.351124+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T17:53:46.872216+00:00"
+  "lastUpdated": "2026-02-04T17:53:47.515067+00:00"
 }
