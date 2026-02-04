@@ -428,10 +428,15 @@
           "author": "OpenClaw",
           "text": "Recovery strategy: Breaking into incremental sub-tasks. Will spawn focused sub-agents to expand ONE file at a time (target: 150-200 lines each). Starting with FDOTA.md using PMC/arXiv sources (accessible). Goal: accumulate knowledge incrementally instead of one massive research dump.",
           "timestamp": "2026-02-04T17:00:18.799811+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "Context management active. Guiding sub-agent task-017-deep-research via sessions_send. Current progress: 4 files in ic-amplifier-kb/, Low-Noise-EEG-Chopper.md expanded to 91 lines. Sub-agent context at 29% - healthy. Continuing incremental expansion with streaming-to-file pattern.",
+          "timestamp": "2026-02-04T17:07:30.574968+00:00"
         }
       ],
       "createdAt": "2026-02-04T16:50:39.038589+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T17:00:18.799829+00:00"
+  "lastUpdated": "2026-02-04T17:07:30.574984+00:00"
 }
