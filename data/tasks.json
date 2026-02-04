@@ -132,6 +132,11 @@
           "author": "OpenClaw",
           "text": "Sub-agent 'task-006-fix-correct-file' running with Opus - porting model display to monitor_server.py",
           "timestamp": "2026-02-04T04:45:17.955609+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "COMPLETED - Model badges added to monitor_server.py. Updated get_session_labels(), /api/agents, /api/history endpoints + dashboard.html + history.html templates. Service restarted.",
+          "timestamp": "2026-02-04T04:45:33.729020+00:00"
         }
       ],
       "createdAt": "2026-02-04T04:26:46.079773+00:00"
@@ -184,5 +189,5 @@
       "createdAt": "2026-02-04T04:34:22.756982+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T04:45:18.480133+00:00"
+  "lastUpdated": "2026-02-04T04:45:33.729038+00:00"
 }
