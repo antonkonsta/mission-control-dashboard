@@ -7,9 +7,15 @@
       "status": "in_progress",
       "priority": "high",
       "subtasks": [],
-      "comments": [],
+      "comments": [
+        {
+          "author": "OpenClaw",
+          "text": "Root cause: OOM killer terminating gateway when whisper loads model. Server has 3.8GB RAM, no swap. Fix: switched to tiny model (73MB vs 139MB base). Config updated and gateway restarted.",
+          "timestamp": "2026-02-04T03:14:55.508118+00:00"
+        }
+      ],
       "createdAt": "2026-02-04T03:14:05.765266+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T03:14:09.683641+00:00"
+  "lastUpdated": "2026-02-04T03:14:55.508135+00:00"
 }
