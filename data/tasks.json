@@ -281,7 +281,7 @@
       "id": "task_013",
       "title": "AI Image: Brick Pillar Driveway Structure",
       "description": "Generate AI image of brick pillar driveway entrance. Specs: Two brick column posts ~7-10 feet apart. One pillar is 25-33% TALLER than the other. Curved brick wall connects them - curve faces outward toward viewer. Wall slopes DOWN from taller pillar to shorter pillar.",
-      "status": "in_progress",
+      "status": "backlog",
       "priority": "high",
       "subtasks": [],
       "comments": [
@@ -299,5 +299,5 @@
       "createdAt": "2026-02-04T05:15:13.340878+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T05:17:34.209284+00:00"
+  "lastUpdated": "2026-02-04T05:17:34.858917+00:00"
 }
