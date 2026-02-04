@@ -94,7 +94,17 @@
         }
       ],
       "createdAt": "2026-02-04T04:24:44.832013+00:00"
+    },
+    {
+      "id": "task_006",
+      "title": "Activity Monitor: Show Model per Agent",
+      "description": "Add model name display to each agent pane in the Activity Monitor. Should show: agent name, task, AND the model being used (e.g., claude-opus-4.5, gpt-5.2)",
+      "status": "in_progress",
+      "priority": "medium",
+      "subtasks": [],
+      "comments": [],
+      "createdAt": "2026-02-04T04:26:46.079773+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T04:25:10.033970+00:00"
+  "lastUpdated": "2026-02-04T04:26:46.079791+00:00"
 }
