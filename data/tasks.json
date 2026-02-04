@@ -505,6 +505,11 @@
           "id": "sub_010",
           "title": "Research vLLM: docs, deployment options, benchmarks, hardware requirements",
           "done": false
+        },
+        {
+          "id": "sub_011",
+          "title": "Research LocalAI: docs, configuration, model support, use cases",
+          "done": false
         }
       ],
       "comments": [
@@ -520,8 +525,8 @@
         }
       ],
       "createdAt": "2026-02-04T20:27:12.205259+00:00",
-      "updated": "2026-02-04T20:31:11.256103+00:00"
+      "updated": "2026-02-04T20:31:11.988598+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T20:31:11.256119+00:00"
+  "lastUpdated": "2026-02-04T20:31:11.988620+00:00"
 }
