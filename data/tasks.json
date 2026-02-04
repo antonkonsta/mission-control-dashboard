@@ -836,12 +836,17 @@
           "id": "sub_008",
           "title": "Implement automatic rate updater: monitor GitHub pricing, update rates config on change",
           "done": false
+        },
+        {
+          "id": "sub_009",
+          "title": "Build monthly calibration report: reconciliation history, adjustments made, confidence trend",
+          "done": false
         }
       ],
       "comments": [],
       "createdAt": "2026-02-04T19:56:54.236493+00:00",
-      "updated": "2026-02-04T19:57:07.592049+00:00"
+      "updated": "2026-02-04T19:57:08.268785+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:57:07.592064+00:00"
+  "lastUpdated": "2026-02-04T19:57:08.268801+00:00"
 }
