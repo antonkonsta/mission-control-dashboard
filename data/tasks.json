@@ -437,44 +437,54 @@
       ],
       "subtasks": [
         {
-          "text": "Analyze current Mission Control workflow failures",
-          "done": false
+          "done": false,
+          "title": "Analyze current Mission Control workflow failures",
+          "id": "sub_001"
         },
         {
-          "text": "Design skill architecture for auto-tracking + auto-sync",
-          "done": false
+          "done": false,
+          "title": "Design skill architecture for auto-tracking + auto-sync",
+          "id": "sub_002"
         },
         {
-          "text": "Implement task creation interceptor (catches ALL user requests)",
-          "done": false
+          "done": false,
+          "title": "Implement task creation interceptor (catches ALL user requests)",
+          "id": "sub_003"
         },
         {
-          "text": "Implement auto-commit to git (mission-control repo)",
-          "done": false
+          "done": false,
+          "title": "Implement auto-commit to git (mission-control repo)",
+          "id": "sub_004"
         },
         {
-          "text": "Implement auto-push to dashboard remote (GitHub Pages)",
-          "done": false
+          "done": false,
+          "title": "Implement auto-push to dashboard remote (GitHub Pages)",
+          "id": "sub_005"
         },
         {
-          "text": "Add validation checks (verify task exists before working)",
-          "done": false
+          "done": false,
+          "title": "Add validation checks (verify task exists before working)",
+          "id": "sub_006"
         },
         {
-          "text": "Update HEARTBEAT.md with Mission Control enforcement",
-          "done": false
+          "done": false,
+          "title": "Update HEARTBEAT.md with Mission Control enforcement",
+          "id": "sub_007"
         },
         {
-          "text": "Test end-to-end: user request \u2192 MC task \u2192 commit \u2192 push \u2192 dashboard update",
-          "done": false
+          "done": false,
+          "title": "Test end-to-end: user request \u2192 MC task \u2192 commit \u2192 push \u2192 dashboard update",
+          "id": "sub_008"
         },
         {
-          "text": "Document skill in SKILL.md with git workflow",
-          "done": false
+          "done": false,
+          "title": "Document skill in SKILL.md with git workflow",
+          "id": "sub_009"
         },
         {
-          "text": "Burn Mission Control workflow into agent identity files",
-          "done": false
+          "done": false,
+          "title": "Burn Mission Control workflow into agent identity files",
+          "id": "sub_010"
         }
       ],
       "comments": [
@@ -482,9 +492,14 @@
           "author": "Anthony",
           "text": "NUMBER 1 PRIORITY. You've been messing up the dashboard sync. Build a skill to make this automatic and foolproof. ALL OTHER WORK PAUSED.",
           "timestamp": "2026-02-04T01:11:55.306547+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "\ud83d\udd27 Fixed subtask field names (text \u2192 title) for dashboard compatibility",
+          "timestamp": "2026-02-04T01:15:02.132271+00:00"
         }
       ]
     }
   ],
-  "lastUpdated": "2026-02-04T01:11:55.306551+00:00"
+  "lastUpdated": "2026-02-04T01:15:02.132296+00:00"
 }
