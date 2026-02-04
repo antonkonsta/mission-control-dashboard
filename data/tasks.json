@@ -502,7 +502,7 @@
           "id": "sub_009"
         },
         {
-          "done": false,
+          "done": true,
           "title": "Burn Mission Control workflow into agent identity files",
           "id": "sub_010"
         }
@@ -536,5 +536,5 @@
       ]
     }
   ],
-  "lastUpdated": "2026-02-04T01:29:18.649507+00:00"
+  "lastUpdated": "2026-02-04T01:29:19.320642+00:00"
 }
