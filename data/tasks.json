@@ -362,7 +362,7 @@
         {
           "id": "sub_019",
           "title": "Add Token Tracking button to Activity Monitor navigation (\ud83d\udcca \ud83d\udcb0 style)",
-          "done": false
+          "done": true
         }
       ],
       "comments": [
@@ -468,7 +468,7 @@
         }
       ],
       "createdAt": "2026-02-04T18:37:44.067755+00:00",
-      "updated": "2026-02-04T19:17:23.051008+00:00"
+      "updated": "2026-02-04T19:18:07.033867+00:00"
     },
     {
       "id": "task_016",
@@ -576,5 +576,5 @@
       "updated": "2026-02-04T19:05:15.913723+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:17:23.051024+00:00"
+  "lastUpdated": "2026-02-04T19:18:07.033884+00:00"
 }
