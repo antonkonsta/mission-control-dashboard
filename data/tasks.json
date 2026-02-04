@@ -151,7 +151,7 @@
       "id": "task_008",
       "title": "Activity Monitor: Agent Chats Tab",
       "description": "Add new 'Agent Chats' tab/page to Activity Monitor. Separate from main agents view. Shows clean text conversations between main session and sub-agents - no commands or background stuff, just the dialogue. Visual text chat format showing how agents talk to each other.",
-      "status": "review",
+      "status": "in_progress",
       "priority": "high",
       "subtasks": [],
       "comments": [
@@ -174,5 +174,5 @@
       "createdAt": "2026-02-04T04:34:22.756982+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T04:44:16.634607+00:00"
+  "lastUpdated": "2026-02-04T04:44:17.191722+00:00"
 }
