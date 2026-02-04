@@ -264,7 +264,7 @@
     {
       "id": "task_015",
       "title": "Token Usage Tracking & Cost Visualization",
-      "description": "OBJECTIVE: Build a LIVE token usage tracking system with cost visualization for GitHub Copilot billing\n\nEXPECTATIONS FROM ANTHONY:\n- Track total token usage over time with visual chart - LIVE updates (within 30 seconds)\n- Break down token usage PER TASK in Mission Control (beginning to completion)\n- Show live token count for each running agent in Agent Activity Monitor\n- Convert tokens to estimated dollar cost using known model rates\n- Show BOTH literal token amounts AND estimated cost everywhere\n- Track which agent uses which model, and apply correct rate per model\n- Accurate cost prediction that matches GitHub billing (~$40 this period)\n- Track efficiency over time\n- ALL THREE visualization types required (line chart, bar chart, treemap)\n\nINTEGRATION REQUIREMENTS:\n- NEW PAGE in Agent Activity Monitor: \"Token Tracking\" tab\n  * All 3 visualizations live here (line chart, bar chart, treemap)\n  * Dedicated page for token/cost analysis\n- ACTIVE AGENTS page: Show per-agent token count + estimated cost (based on model rate)\n- AGENT HISTORY page: Show total tokens used + cost for each historical agent\n  * Future agents will have this data\n  * Past agents before implementation won't have data (acceptable)\n\nMODEL RATE TRACKING (CRITICAL):\n- Must track: model name + input tokens + output tokens per request\n- Apply correct rates per model:\n  * Claude Opus 4.5: $15/1M input, $75/1M output\n  * Claude Sonnet 4.5: $3/1M input, $15/1M output  \n  * GPT-4o: $2.50/1M input, $10/1M output\n  * GPT-4o-mini: $0.15/1M input, $0.60/1M output\n  * Gemini Pro: ~$1.25/1M input, $5/1M output\n- Never mix up which tokens came from which model\n- Per-agent model tracking (each agent may use different model)\n\nCONSTRAINTS:\n- GitHub Copilot subscription only (no direct billing API)\n- Must be LIVE - auto-refresh within 30 seconds\n- Must integrate with existing Agent Activity Monitor (monitor_server.py)\n\nDELIVERABLES:\n1. Token tracking system that logs: task_id, agent_id, model, input_tokens, output_tokens, timestamp\n2. NEW \"Token Tracking\" page in Agent Activity Monitor with THREE visualizations:\n   a) LINE CHART: Total token usage over time (hourly/daily), with cost overlay\n   b) STACKED BAR CHART: Per-task breakdown, segments for input/output, shows cost per task\n   c) TREEMAP/SUNBURST: Hierarchical view - Total \u2192 Categories (Heartbeat/Tasks/Ad-hoc) \u2192 Individual items\n3. ACTIVE AGENTS page update: Show tokens used + cost per agent card\n4. AGENT HISTORY page update: Show total tokens + cost for each historical agent\n5. Cost estimation showing tokens + dollars side by side everywhere\n6. Model-aware tracking (correct rates per model per agent)\n\nSUCCESS CRITERIA:\n- Anthony can see at a glance how much each task costs (tokens + dollars)\n- Anthony can predict monthly billing from dashboard\n- Clear breakdown of where tokens are going (heartbeat vs tasks vs agents)\n- All visualizations update LIVE (within 30 seconds of token usage)\n- Cost estimates match actual GitHub billing within reasonable margin\n- Token Tracking is a dedicated tab in Agent Activity Monitor",
+      "description": "OBJECTIVE: Build a LIVE token usage tracking system with cost visualization for GitHub Copilot billing\n\nEXPECTATIONS FROM ANTHONY:\n- Track total token usage over time with visual chart - LIVE updates\n- Show cost per task/agent breakdown (which work consumes most tokens)\n- Hierarchical breakdown: Heartbeat vs Tasks vs Ad-hoc conversations\n- Display BOTH tokens AND estimated cost\n- All visualizations must auto-refresh (within 30 seconds)\n- Token Tracking is a NEW dedicated page in Agent Activity Monitor\n- Update ACTIVE AGENTS page to show tokens + cost per agent\n- Update HISTORY page to show tokens + cost for historical agents\n- THREE visualization types: Line chart (over time), Stacked bar (per-task), Treemap (hierarchical)\n- **BASELINE TRACKING**: Store a \"starting balance\" value provided by Anthony from GitHub billing\n- **CUMULATIVE COST**: Add tracked costs to the baseline, so total shown matches GitHub billing\n- **PREDICTION ACCURACY**: When Anthony checks GitHub billing, the value should match what's displayed\n- **BILLING CYCLE RESET**: Support monthly reset when billing cycle completes (Anthony will notify)\n\nCONSTRAINTS:\n- Use GitHub Copilot billing rates (must research exact per-model costs)\n- Must handle multiple models: Opus ($15/$75), Sonnet ($3/$15), GPT-4o ($2.50/$10), GPT-4o-mini ($0.15/$0.60), Gemini Pro ($1.25/$5)\n- Integrate with existing Agent Activity Monitor (monitor_server.py)\n\nDELIVERABLES:\n1. Token logging infrastructure capturing per-request usage\n2. NEW dedicated Token Tracking page in Activity Monitor with 3 visualizations\n3. Updated Active Agents page with tokens + cost per agent\n4. Updated History page with tokens + cost for historical agents\n5. Live auto-refresh (30 second intervals)\n6. **Baseline cost storage** - ability to set starting balance from GitHub billing\n7. **Cumulative total display** - baseline + tracked usage = total shown\n8. Cost prediction that matches GitHub billing\n\nSUCCESS CRITERIA:\n- Can see at a glance: total spend, per-agent breakdown, per-task costs\n- Refresh within 30 seconds shows updated data\n- Anthony provides baseline, tracks for days, checks GitHub - values match\n- Monthly reset capability when Anthony notifies of new billing cycle",
       "status": "backlog",
       "priority": "medium",
       "subtasks": [
@@ -332,6 +332,26 @@
           "id": "sub_013",
           "title": "Test and calibrate cost estimates against actual GitHub billing",
           "done": false
+        },
+        {
+          "id": "sub_014",
+          "title": "Add baseline cost storage (JSON file with starting_balance, date_set, cycle_start)",
+          "done": false
+        },
+        {
+          "id": "sub_015",
+          "title": "Create /set-baseline endpoint to accept Anthony's GitHub billing value",
+          "done": false
+        },
+        {
+          "id": "sub_016",
+          "title": "Update Token Tracking page: show baseline + tracked = total",
+          "done": false
+        },
+        {
+          "id": "sub_017",
+          "title": "Add 'Reset for New Billing Cycle' button/endpoint",
+          "done": false
         }
       ],
       "comments": [
@@ -349,10 +369,15 @@
           "author": "OpenClaw",
           "text": "Updated per Anthony: Token Tracking is NEW dedicated page in Agent Activity Monitor. Also update Active Agents (show tokens+cost per agent) and Agent History (show tokens+cost for historical agents). Past agents won't have data, future ones will. 13 subtasks defined.",
           "timestamp": "2026-02-04T18:47:28.895227+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "Updated per Anthony voice message: Added BASELINE TRACKING requirement. Will store starting balance from GitHub billing, add tracked costs cumulatively, so displayed total matches actual GitHub billing. Added 4 new subtasks: sub_014-017 for baseline storage, set-baseline endpoint, cumulative display, and billing cycle reset.",
+          "timestamp": "2026-02-04T18:53:35.934523+00:00"
         }
       ],
       "createdAt": "2026-02-04T18:37:44.067755+00:00",
-      "updated": "2026-02-04T18:47:28.895253+00:00"
+      "updated": "2026-02-04T18:53:35.934509+00:00"
     },
     {
       "id": "task_016",
@@ -443,5 +468,5 @@
       "updated": "2026-02-04T18:52:01.179072+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T18:52:01.179088+00:00"
+  "lastUpdated": "2026-02-04T18:53:35.934525+00:00"
 }
