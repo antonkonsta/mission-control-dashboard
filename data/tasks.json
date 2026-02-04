@@ -507,13 +507,13 @@
       "id": "task_017",
       "title": "Google Calendar Integration via gcalcli",
       "description": "OBJECTIVE: Set up Google Calendar integration using gcalcli OAuth\n\nEXPECTATIONS FROM ANTHONY:\n- Be able to view all events, meetings, tasks from university Google Calendar\n- Help with scheduling and reminders\n- Check conflicts before scheduling\n\nCONSTRAINTS:\n- University Google Workspace account (may have IT restrictions)\n- Use gcalcli OAuth flow (Option 1 - simplest)\n\nDELIVERABLES:\n1. gcalcli installed and authenticated\n2. Verify read access to calendar events\n3. Document any limitations from university IT\n\nSUCCESS CRITERIA:\n- Can list upcoming events\n- Can create/modify events\n- Calendar data accessible to OpenClaw",
-      "status": "in_progress",
+      "status": "backlog",
       "priority": "medium",
       "subtasks": [],
       "comments": [],
       "createdAt": "2026-02-04T19:05:10.585695+00:00",
-      "updated": "2026-02-04T19:05:10.585695+00:00"
+      "updated": "2026-02-04T19:05:15.216948+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:05:10.585712+00:00"
+  "lastUpdated": "2026-02-04T19:05:15.216964+00:00"
 }
