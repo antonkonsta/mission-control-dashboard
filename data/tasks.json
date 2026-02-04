@@ -510,10 +510,16 @@
       "status": "backlog",
       "priority": "medium",
       "subtasks": [],
-      "comments": [],
+      "comments": [
+        {
+          "author": "OpenClaw",
+          "text": "Created task. Anthony will run gcalcli init himself. Waiting for him to complete OAuth flow.",
+          "timestamp": "2026-02-04T19:05:15.913707+00:00"
+        }
+      ],
       "createdAt": "2026-02-04T19:05:10.585695+00:00",
-      "updated": "2026-02-04T19:05:15.216948+00:00"
+      "updated": "2026-02-04T19:05:15.913723+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:05:15.216964+00:00"
+  "lastUpdated": "2026-02-04T19:05:15.913725+00:00"
 }
