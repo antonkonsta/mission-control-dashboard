@@ -448,7 +448,18 @@
       ],
       "createdAt": "2026-02-04T19:53:44.042424+00:00",
       "updated": "2026-02-04T19:54:23.124206+00:00"
+    },
+    {
+      "id": "task_022",
+      "title": "Local LLM + OpenClaw Migration: Self-Hosted Infrastructure",
+      "description": "OBJECTIVE: Research and plan migration from GitHub Copilot VPS subscription to self-hosted OpenClaw running local LLMs on home desktop. Establish cost-efficient, high-performance local infrastructure with Anthropic Opus as primary orchestrator.\n\nEXPECTATIONS FROM ANTHONY:\n- Research cost-efficient local LLM options (most capable models like Opus equivalent)\n- Identify best self-hosted LLM providers (Ollama, vLLM, LocalAI, etc.)\n- Determine hardware requirements for desktop (VRAM, CPU, storage)\n- Calculate total cost of ownership vs current GitHub Copilot subscription\n- Plan data migration strategy from VPS to local desktop\n- Design OpenClaw deployment architecture for local hardware\n- Identify any limitations or trade-offs vs cloud-based approach\n- Provide step-by-step migration plan with rollback strategy\n- Ensure Anthropic Opus (or equivalent local model) runs efficiently as main orchestrator\n\nCONSTRAINTS:\n- Desktop computer at home (finite hardware resources)\n- Must maintain all current OpenClaw functionality\n- Local-only deployment (no cloud dependencies except where unavoidable)\n- Cost efficiency is primary driver (cheaper than GitHub Copilot subscription)\n- Research phase ONLY - no implementation yet\n\nDELIVERABLES:\n1. Comprehensive research report on local LLM landscape (2026)\n   - Top 3-5 candidates ranked by capability/cost/local support\n   - Specific focus on Anthropic Opus alternatives for local deployment\n   \n2. Hardware requirements analysis\n   - VRAM needed for different model sizes\n   - CPU/GPU recommendations\n   - Storage requirements for models + OpenClaw\n   - Network bandwidth considerations\n   \n3. Cost analysis\n   - Total hardware cost amortized over useful life\n   - Electricity costs for 24/7 operation\n   - Annual cost vs GitHub Copilot (savings projection)\n   \n4. Architecture design document\n   - How OpenClaw interfaces with local LLM\n   - Model switching strategy (multiple models on same hardware)\n   - API layer design (ollama/vLLM REST endpoints)\n   - Cache and optimization strategy\n   \n5. Data migration plan\n   - What data moves from VPS to desktop\n   - What stays cloud-based (if anything)\n   - Backup and recovery strategy\n   - Timeline estimate for cutover\n   \n6. Deployment guide (draft)\n   - Step-by-step setup for local LLM inference\n   - OpenClaw configuration for local models\n   - Testing and validation procedures\n   - Rollback procedures if issues arise\n\n7. Risk assessment\n   - Limitations of local vs cloud\n   - Uptime/reliability considerations\n   - Performance degradation scenarios\n   - Mitigation strategies\n\nSUCCESS CRITERIA:\n- Anthony has clear understanding of feasibility and costs\n- Top local LLM option identified with evidence\n- Hardware specs clearly defined for desktop\n- Cost savings quantified (vs GitHub Copilot)\n- Step-by-step migration path documented\n- Ready for Anthony approval to begin implementation",
+      "status": "in_progress",
+      "priority": "high",
+      "subtasks": [],
+      "comments": [],
+      "createdAt": "2026-02-04T20:27:12.205259+00:00",
+      "updated": "2026-02-04T20:27:12.205259+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T20:08:13.478355+00:00"
+  "lastUpdated": "2026-02-04T20:27:12.205275+00:00"
 }
