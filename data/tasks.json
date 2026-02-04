@@ -200,7 +200,49 @@
         }
       ],
       "createdAt": "2026-02-03T23:46:05.411834+00:00"
+    },
+    {
+      "id": "task_007",
+      "title": "DoorDash research near UNCC campus",
+      "description": "Find 10 nearby DoorDash restaurants near UNCC Charlotte campus. High protein, budget-friendly. For each: distance, 3 food recommendations with prices. Deliver as PDF.",
+      "status": "in_progress",
+      "priority": "high",
+      "subtasks": [
+        {
+          "id": "sub_001",
+          "title": "Research DoorDash restaurants near UNCC",
+          "done": false
+        },
+        {
+          "id": "sub_002",
+          "title": "Filter for high-protein, budget options",
+          "done": false
+        },
+        {
+          "id": "sub_003",
+          "title": "Get 3 menu items + prices for each",
+          "done": false
+        },
+        {
+          "id": "sub_004",
+          "title": "Calculate distances from campus",
+          "done": false
+        },
+        {
+          "id": "sub_005",
+          "title": "Generate PDF report",
+          "done": false
+        }
+      ],
+      "comments": [
+        {
+          "author": "Anthony",
+          "text": "Need this quick - I'm on campus now. High protein, budget-friendly, fast delivery.",
+          "timestamp": "2026-02-04T00:05:15.123112+00:00"
+        }
+      ],
+      "createdAt": "2026-02-04T00:05:15.123128+00:00"
     }
   ],
-  "lastUpdated": "2026-02-03T23:52:10.835830+00:00"
+  "lastUpdated": "2026-02-04T00:05:15.123131+00:00"
 }
