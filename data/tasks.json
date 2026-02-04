@@ -283,7 +283,7 @@
         {
           "id": "sub_003",
           "title": "Update HEARTBEAT.md with mandatory task naming rules",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_004",
@@ -567,5 +567,5 @@
       "createdAt": "2026-02-04T01:32:33.587068+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T01:36:12.562802+00:00"
+  "lastUpdated": "2026-02-04T01:36:13.117350+00:00"
 }
