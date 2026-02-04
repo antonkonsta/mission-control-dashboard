@@ -673,7 +673,7 @@
         {
           "id": "sub_002",
           "title": "Research: Premium request multipliers - what models cost what",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_003",
@@ -734,8 +734,8 @@
         }
       ],
       "createdAt": "2026-02-04T19:37:38.669159+00:00",
-      "updated": "2026-02-04T19:43:32.182840+00:00"
+      "updated": "2026-02-04T19:43:32.925569+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:43:32.182860+00:00"
+  "lastUpdated": "2026-02-04T19:43:32.925588+00:00"
 }
