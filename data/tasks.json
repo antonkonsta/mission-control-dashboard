@@ -288,7 +288,7 @@
         {
           "id": "sub_004",
           "title": "Update monitoring backend to flag/reject unnamed tasks",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_005",
@@ -567,5 +567,5 @@
       "createdAt": "2026-02-04T01:32:33.587068+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T01:36:13.117350+00:00"
+  "lastUpdated": "2026-02-04T01:36:13.644893+00:00"
 }
