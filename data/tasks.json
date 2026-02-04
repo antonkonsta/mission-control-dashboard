@@ -73,7 +73,7 @@
       "comments": [
         {
           "author": "OpenClaw",
-          "text": "Removed Done column from Mission Control dashboard. Workflow is now: backlog → in_progress → review → archive. Tasks in Review now have an Archive button instead of Done.",
+          "text": "Removed Done column from Mission Control dashboard. Workflow is now: backlog \u2192 in_progress \u2192 review \u2192 archive. Tasks in Review now have an Archive button instead of Done.",
           "timestamp": "2026-02-04T04:13:12.571334+00:00"
         }
       ],
@@ -115,7 +115,7 @@
         },
         {
           "author": "OpenClaw",
-          "text": "Sub-agent completed. Added model display: blue badges in card headers showing model name, plus brain emoji tags (🧠 claude-opus-4.5) under task items. CSS styled and fallback to 'unknown' if missing.",
+          "text": "Sub-agent completed. Added model display: blue badges in card headers showing model name, plus brain emoji tags (\ud83e\udde0 claude-opus-4.5) under task items. CSS styled and fallback to 'unknown' if missing.",
           "timestamp": "2026-02-04T04:32:37.456533+00:00"
         },
         {
@@ -144,7 +144,7 @@
     {
       "id": "task_007",
       "title": "Activity Monitor: Agent Communication View",
-      "description": "Research and implement a view to watch main agent ↔ sub-agent communication in real-time. Like 'stalking their text messages' - see the actual chat/instructions flowing between agents.",
+      "description": "Research and implement a view to watch main agent \u2194 sub-agent communication in real-time. Like 'stalking their text messages' - see the actual chat/instructions flowing between agents.",
       "status": "done",
       "priority": "medium",
       "subtasks": [],
@@ -192,7 +192,7 @@
         },
         {
           "author": "OpenClaw",
-          "text": "Anthony feedback: Needs redesign. Current layout not right. Requirements: (1) Main session on RIGHT, sub-agent on LEFT like text messages (2) Vertical rectangular cards like the Active Agents view - one card per sub-agent conversation (3) Newest messages at BOTTOM, scrollable history (4) Show main↔sub-agent dialogue, not user↔assistant. Spawning sub-agent to fix.",
+          "text": "Anthony feedback: Needs redesign. Current layout not right. Requirements: (1) Main session on RIGHT, sub-agent on LEFT like text messages (2) Vertical rectangular cards like the Active Agents view - one card per sub-agent conversation (3) Newest messages at BOTTOM, scrollable history (4) Show main\u2194sub-agent dialogue, not user\u2194assistant. Spawning sub-agent to fix.",
           "timestamp": "2026-02-04T04:49:11.741198+00:00"
         },
         {
@@ -239,7 +239,17 @@
         }
       ],
       "createdAt": "2026-02-04T05:15:13.340878+00:00"
+    },
+    {
+      "id": "task_014",
+      "title": "Add task detail view modal to Mission Control dashboard",
+      "description": "Add click-to-expand functionality showing: full description, all subtasks with status, all comments with timestamps, created/updated dates. Modal or slide-out panel.",
+      "status": "in_progress",
+      "priority": "high",
+      "subtasks": [],
+      "comments": [],
+      "createdAt": "2026-02-04T17:52:43.351124+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T17:50:59.720564+00:00"
+  "lastUpdated": "2026-02-04T17:52:43.351142+00:00"
 }
