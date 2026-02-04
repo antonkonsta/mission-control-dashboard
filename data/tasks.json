@@ -394,7 +394,7 @@
         {
           "id": "sub_007",
           "title": "Create skill/script documenting this behavior",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_008",
@@ -435,8 +435,8 @@
         }
       ],
       "createdAt": "2026-02-04T18:46:11.827090+00:00",
-      "updated": "2026-02-04T18:51:17.663143+00:00"
+      "updated": "2026-02-04T18:51:50.750324+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T18:51:17.663146+00:00"
+  "lastUpdated": "2026-02-04T18:51:50.750339+00:00"
 }
