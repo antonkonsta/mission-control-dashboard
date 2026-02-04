@@ -800,7 +800,7 @@
         {
           "id": "sub_001",
           "title": "Extract GitHub Pro+ rates from report: confirm $/M input vs output per model",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_002",
@@ -891,8 +891,8 @@
         }
       ],
       "createdAt": "2026-02-04T19:56:54.236493+00:00",
-      "updated": "2026-02-04T19:59:16.900164+00:00"
+      "updated": "2026-02-04T20:01:23.159631+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:59:16.900167+00:00"
+  "lastUpdated": "2026-02-04T20:01:23.159646+00:00"
 }
