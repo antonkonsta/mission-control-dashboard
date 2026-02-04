@@ -386,9 +386,15 @@
       "status": "review",
       "priority": "high",
       "subtasks": [],
-      "comments": [],
+      "comments": [
+        {
+          "author": "OpenClaw",
+          "text": "Restored dashboard.html with column layout. Each agent gets own column showing name, task, age, and activity feed with all messages/tools/executions. Server restarted and confirmed working.",
+          "timestamp": "2026-02-04T01:58:53.841079+00:00"
+        }
+      ],
       "createdAt": "2026-02-04T01:58:49.298553+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T01:58:53.298430+00:00"
+  "lastUpdated": "2026-02-04T01:58:53.841094+00:00"
 }
