@@ -46,7 +46,17 @@
         }
       ],
       "createdAt": "2026-02-04T03:28:24.538565+00:00"
+    },
+    {
+      "id": "task_003",
+      "title": "Obsidian Integration Setup",
+      "description": "Install Obsidian skill from ClawHub and send voice note explaining Obsidian basics to Anthony",
+      "status": "in_progress",
+      "priority": "high",
+      "subtasks": [],
+      "comments": [],
+      "createdAt": "2026-02-04T04:08:10.258477+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T03:54:35.698555+00:00"
+  "lastUpdated": "2026-02-04T04:08:10.258494+00:00"
 }
