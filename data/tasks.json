@@ -374,7 +374,7 @@
         {
           "id": "sub_003",
           "title": "Update mc CLI to set lastUpdated on every operation",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_004",
@@ -425,8 +425,8 @@
         }
       ],
       "createdAt": "2026-02-04T18:46:11.827090+00:00",
-      "updated": "2026-02-04T18:50:16.106284+00:00"
+      "updated": "2026-02-04T18:50:19.555981+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T18:50:16.106306+00:00"
+  "lastUpdated": "2026-02-04T18:50:19.555997+00:00"
 }
