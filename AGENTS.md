@@ -81,6 +81,44 @@ SUB-AGENTS (Workers)
 
 **When sub-agents fail, main session MUST take recovery action. Failures are NOT excuses.**
 
+### 🚨 CONTEXT OVERFLOW MANAGEMENT (CRITICAL - BURNED IN)
+
+**Main session is SOLELY RESPONSIBLE for preventing context overflow errors from reaching Anthony.**
+
+**Monitoring Protocol (EVERY HEARTBEAT):**
+1. Run `sessions_list` to check all sub-agent `totalTokens` vs `contextTokens`
+2. Calculate usage: `totalTokens / contextTokens * 100`
+3. At 70%: Send warning via `sessions_send`
+4. At 90%: Send URGENT dump-to-file instruction
+5. **NEVER let overflow happen** - intervene early
+
+**Guidance Templates:**
+
+**70% Warning:**
+```
+sessions_send: "Context at 70%. Write current findings to file NOW.
+Use write() to dump everything collected so far.
+Then continue with remaining sources. Don't accumulate."
+```
+
+**90% Emergency:**
+```
+sessions_send: "STOP. Context critical at 90%.
+1. Write EVERYTHING to file immediately
+2. Summarize what's done vs remaining
+3. I will spawn a continuation agent if needed
+DO NOT attempt more fetches."
+```
+
+**Prevention in Spawn Instructions:**
+Always include when spawning:
+- "Stream to files immediately - never hold content in memory"
+- "After EACH web_fetch, write to file, then clear from response"
+- "Max 3 sources before checkpoint write"
+- "If you hit 50% context, write progress and notify main"
+
+**Key Principle:** Guide sub-agents through their problems. Don't take over their work - send them instructions via sessions_send. They do the work, you provide oversight and course correction.
+
 ### Common Failure Modes & Fixes
 
 | Failure | Symptoms | Recovery |

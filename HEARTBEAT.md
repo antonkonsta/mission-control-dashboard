@@ -168,13 +168,30 @@ Check ALL running sub-agents:
 - Silence >5 minutes without progress
 - Errors in last message of session
 
+**🚨 CONTEXT OVERFLOW MANAGEMENT (BURNED IN):**
+**YOU MUST TRACK YOUR OWN CONTEXT AND SUB-AGENT CONTEXTS.**
+- Check `totalTokens` vs `contextTokens` in sessions_list
+- If any agent >70% context usage → send guidance message via sessions_send
+- If any agent >90% → INTERVENE IMMEDIATELY with instructions
+- **NEVER let overflow errors reach Anthony** - handle them yourself
+- **Guide sub-agents through issues via messages** - don't take over their work
+
+**Context Recovery Actions:**
+1. **Detect early** - monitor totalTokens in sessions_list every heartbeat
+2. **Guide via sessions_send** - tell sub-agent: "You're at X% context. Write current findings to file NOW, then continue with fresh context"
+3. **Instruct streaming** - sub-agents must write to files immediately, not accumulate
+4. **Smaller chunks** - max 3 sources per sub-agent, one file expansion per spawn
+5. **Model limits** - GPT-4o=64k input, Opus=200k. Match task size to model.
+
 **Recovery Strategy by Failure Type:**
 
 1. **Context Overflow (token limit exceeded):**
    - Sub-agent accumulated too much content
+   - **FIX:** Send message via sessions_send: "Write everything to file NOW, summarize, clear context"
    - **FIX:** Break task into smaller chunks (one deliverable per sub-agent)
    - **FIX:** Spawn new sub-agent with explicit "stream to files, don't accumulate" instruction
-   - **FIX:** Use GPT-4o for smaller tasks, Opus for synthesis
+   - **FIX:** Use Opus for large context tasks, GPT-4o for small focused tasks
+   - **NEVER respawn without guidance** - send sessions_send first to save work
 
 2. **Rate Limits (401/429):**
    - API throttling or token expiration
@@ -184,23 +201,25 @@ Check ALL running sub-agents:
 
 3. **Source Access Blocks (403/404):**
    - Academic sources blocking (MDPI, ResearchGate, IEEE paywalls)
-   - **FIX:** Prioritize open-access sources (PMC, arXiv, university notes)
+   - **FIX:** Send sessions_send with alternative sources: PMC, arXiv, university notes
    - **FIX:** Use web_search to find alternative URLs
    - **FIX:** Accept partial results, note blocked sources for Anthony
 
 4. **Stuck/Silent Agents:**
    - No progress for >5 minutes
-   - **FIX:** Check session history (sessions_history)
-   - **FIX:** If truly stuck, kill and respawn with clearer instructions
+   - **FIX:** Send sessions_send asking for status
+   - **FIX:** If truly stuck after guidance, kill and respawn with clearer instructions
    - **FIX:** Log what failed for future skill creation
 
 **Recovery Workflow:**
 1. Detect failure (via sessions_list or error messages)
-2. Diagnose root cause (check last message/error)
-3. Update Mission Control with diagnosis (`mc comment`)
-4. Apply appropriate fix strategy
-5. Respawn with adjusted approach if needed
-6. **NEVER leave a task stuck** - always take recovery action
+2. **GUIDE FIRST** - send sessions_send with specific instructions to save work
+3. Diagnose root cause (check last message/error)
+4. Update Mission Control with diagnosis (`mc comment`)
+5. Apply appropriate fix strategy
+6. Respawn only after guidance attempt fails
+7. **NEVER leave a task stuck** - always take recovery action
+8. **NEVER let errors reach Anthony** - handle them yourself
 
 **Key Principle:** Inherent restrictions (rate limits, source blocks, context limits) are **your problem to work around**, not excuses. Adjust approach, break tasks smaller, use alternative sources, wait and retry. Deliver results.
 

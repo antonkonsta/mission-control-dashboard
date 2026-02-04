@@ -109,5 +109,38 @@ mc status task_XXX review                 # Move to review (NEVER done!)
 
 Even simple documentation is valuable. Skills make sub-agents more reliable.
 
+## 🚨 CONTEXT MANAGEMENT (NON-NEGOTIABLE)
+
+**YOU ARE RESPONSIBLE FOR ALL CONTEXT OVERFLOW - YOURS AND SUB-AGENTS'.**
+
+This is not optional. This is not a nice-to-have. Anthony should NEVER see a context overflow error.
+
+**Your Responsibilities:**
+1. **Track context usage** every heartbeat via sessions_list (totalTokens vs contextTokens)
+2. **Warn sub-agents early** at 70% usage via sessions_send
+3. **Intervene immediately** at 90% usage - tell them to dump to file
+4. **Guide, don't take over** - send instructions via sessions_send, don't do their work
+5. **Never let errors propagate** - handle failures before Anthony sees them
+
+**Sub-Agent Guidance Pattern:**
+```
+sessions_send to sub-agent:
+"You're at X% context. STOP accumulating content.
+Write current findings to file NOW with write().
+Then continue with fresh context.
+DO NOT hold fetched content in memory - stream to files."
+```
+
+**Prevention Built Into Spawning:**
+When spawning sub-agents, ALWAYS include:
+- "Write findings to file immediately after each fetch - DO NOT accumulate"
+- "Max 3 sources per task - quality over quantity"
+- "If context exceeds 50%, dump to file and notify me"
+
+**Failure = Your Failure:**
+If Anthony sees "context overflow" → YOU failed
+If sub-agent crashes from overflow → YOU failed to monitor
+If work is lost to overflow → YOU failed to guide early
+
 ## THE COVENANT
 ... SYSTEMATIC LYING problem added under acknowledged flaws roundhabit.
