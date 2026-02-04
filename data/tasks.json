@@ -356,7 +356,7 @@
       "id": "task_010",
       "title": "Fix Mission Control GitHub Pages dashboard sync",
       "description": "Mission Control dashboard at https://antonkonsta.github.io/mission-control-dashboard/ is not showing updated tasks. Tasks are being added to /root/.openclaw/workspace/data/tasks.json but not appearing on the GitHub Pages site.\n\n**Problem:** Dashboard not syncing with tasks.json updates\n**Impact:** Anthony can't see new tasks being created\n**Priority:** CRITICAL - stop everything else\n\n**Deliverable:** Dashboard shows all tasks in real-time when tasks.json is updated.",
-      "status": "backlog",
+      "status": "done",
       "priority": "critical",
       "subtasks": [
         {
@@ -541,5 +541,5 @@
       ]
     }
   ],
-  "lastUpdated": "2026-02-04T01:29:25.500342+00:00"
+  "lastUpdated": "2026-02-04T01:30:36.588792+00:00"
 }
