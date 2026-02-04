@@ -375,10 +375,15 @@
           "author": "OpenClaw",
           "text": "Updated per Anthony voice message: Added BASELINE TRACKING requirement. Will store starting balance from GitHub billing, add tracked costs cumulatively, so displayed total matches actual GitHub billing. Added 4 new subtasks: sub_014-017 for baseline storage, set-baseline endpoint, cumulative display, and billing cycle reset.",
           "timestamp": "2026-02-04T18:53:35.934523+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "Starting work. Moving to in_progress per Anthony's instruction. Will focus on this task exclusively.",
+          "timestamp": "2026-02-04T18:55:20.324924+00:00"
         }
       ],
       "createdAt": "2026-02-04T18:37:44.067755+00:00",
-      "updated": "2026-02-04T18:55:19.592489+00:00"
+      "updated": "2026-02-04T18:55:20.324941+00:00"
     },
     {
       "id": "task_016",
@@ -469,5 +474,5 @@
       "updated": "2026-02-04T18:52:01.179072+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T18:55:19.592505+00:00"
+  "lastUpdated": "2026-02-04T18:55:20.324943+00:00"
 }
