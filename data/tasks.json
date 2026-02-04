@@ -615,7 +615,7 @@
         {
           "id": "sub_002",
           "title": "Update history.html rate display format",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_003",
@@ -631,8 +631,8 @@
         }
       ],
       "createdAt": "2026-02-04T19:25:25.813437+00:00",
-      "updated": "2026-02-04T19:26:09.661644+00:00"
+      "updated": "2026-02-04T19:26:10.469206+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:26:09.661660+00:00"
+  "lastUpdated": "2026-02-04T19:26:10.469221+00:00"
 }
