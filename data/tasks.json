@@ -307,7 +307,7 @@
         {
           "id": "sub_008",
           "title": "Add TREEMAP/SUNBURST - hierarchical breakdown (Heartbeat/Tasks/Ad-hoc)",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_009",
@@ -488,7 +488,7 @@
         }
       ],
       "createdAt": "2026-02-04T18:37:44.067755+00:00",
-      "updated": "2026-02-04T19:24:59.132142+00:00"
+      "updated": "2026-02-04T19:26:01.411513+00:00"
     },
     {
       "id": "task_016",
@@ -629,5 +629,5 @@
       "updated": "2026-02-04T19:25:45.477478+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:25:45.477480+00:00"
+  "lastUpdated": "2026-02-04T19:26:01.411529+00:00"
 }
