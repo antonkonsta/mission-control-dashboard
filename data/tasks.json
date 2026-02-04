@@ -427,11 +427,16 @@
           "author": "OpenClaw",
           "text": "Completed sub_003 and sub_009: Updated mc CLI to set task['updated'] on every operation (create, comment, subtask add/update, status change). Also added 'mc subtask add' command for adding new subtasks. Moving to identity file updates next.",
           "timestamp": "2026-02-04T18:50:26.034800+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "Completed sub_004, sub_005, sub_006: Updated HEARTBEAT.md, AGENTS.md, SOUL.md, IDENTITY.md with COMMENT ON EVERY CHANGE mandatory rule. All identity files now enforce: every subtask change, status change, progress, blocker, or decision requires a Mission Control comment. Creating skill documentation next.",
+          "timestamp": "2026-02-04T18:51:17.663125+00:00"
         }
       ],
       "createdAt": "2026-02-04T18:46:11.827090+00:00",
-      "updated": "2026-02-04T18:51:12.107264+00:00"
+      "updated": "2026-02-04T18:51:17.663143+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T18:51:12.107280+00:00"
+  "lastUpdated": "2026-02-04T18:51:17.663146+00:00"
 }
