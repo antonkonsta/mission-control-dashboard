@@ -731,11 +731,16 @@
           "author": "OpenClaw",
           "text": "Respawned as task-019-research-v2 (Sonnet). Monitoring.",
           "timestamp": "2026-02-04T19:41:18.798101+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "Research complete (sub_001-sub_005). KEY FINDING: GitHub does NOT bill per-token! It bills per PREMIUM REQUEST with model multipliers. Opus 4.5 = 3x, Sonnet = 1x, GPT-4o = FREE. Pro+ includes 1,500 premium requests/month. Overages = $0.04/request. Our current $100+ estimate was using wrong methodology (per-token instead of per-request). Now working on baseline reset design and implementation plan.",
+          "timestamp": "2026-02-04T19:43:40.624686+00:00"
         }
       ],
       "createdAt": "2026-02-04T19:37:38.669159+00:00",
-      "updated": "2026-02-04T19:43:34.988258+00:00"
+      "updated": "2026-02-04T19:43:40.624704+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:43:34.988279+00:00"
+  "lastUpdated": "2026-02-04T19:43:40.624706+00:00"
 }
