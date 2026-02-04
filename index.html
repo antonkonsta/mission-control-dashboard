@@ -45,6 +45,12 @@
             padding: 12px;
             margin-bottom: 10px;
             border-left: 3px solid #3b82f6;
+            cursor: pointer;
+            transition: transform 0.1s, box-shadow 0.1s;
+        }
+        .task-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
         }
         .task-card.high { border-left-color: #ef4444; }
         .task-card.medium { border-left-color: #f59e0b; }
@@ -60,34 +66,11 @@
             margin-bottom: 8px;
             line-height: 1.4;
         }
-        .subtasks {
-            margin-top: 10px;
-            padding-top: 10px;
-            border-top: 1px solid #2a2a2a;
-        }
-        .subtask-item {
-            display: flex;
-            align-items: start;
-            gap: 6px;
-            font-size: 12px;
-            color: #aaa;
-            margin: 4px 0;
-        }
-        .subtask-item.done {
-            text-decoration: line-through;
-            color: #555;
-        }
-        .comment {
-            background: #161616;
-            padding: 8px;
-            margin-top: 10px;
-            border-radius: 4px;
+        .task-meta {
             font-size: 11px;
-            border-left: 2px solid #3b82f6;
-        }
-        .comment-author {
-            color: #3b82f6;
-            font-weight: 600;
+            color: #666;
+            display: flex;
+            gap: 10px;
         }
         .btn {
             background: #3b82f6;
@@ -104,6 +87,186 @@
             font-size: 13px;
             text-align: center;
             margin-top: 20px;
+        }
+
+        /* Modal Styles */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-overlay.active {
+            display: flex;
+        }
+        .modal {
+            background: #1a1a1a;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 700px;
+            max-height: 85vh;
+            overflow-y: auto;
+            border: 1px solid #333;
+        }
+        .modal-header {
+            padding: 20px;
+            border-bottom: 1px solid #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            position: sticky;
+            top: 0;
+            background: #1a1a1a;
+        }
+        .modal-header h2 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+        .modal-close {
+            background: none;
+            border: none;
+            color: #666;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 0 8px;
+        }
+        .modal-close:hover { color: #fff; }
+        .modal-body {
+            padding: 20px;
+        }
+        .modal-section {
+            margin-bottom: 24px;
+        }
+        .modal-section-title {
+            font-size: 12px;
+            text-transform: uppercase;
+            color: #666;
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+        }
+        .modal-description {
+            background: #222;
+            padding: 15px;
+            border-radius: 6px;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #ccc;
+        }
+        .priority-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .priority-badge.high { background: #ef4444; }
+        .priority-badge.medium { background: #f59e0b; }
+        .priority-badge.low { background: #10b981; }
+        .status-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            background: #3b82f6;
+            margin-left: 8px;
+        }
+        .subtask-list {
+            background: #222;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        .subtask-row {
+            padding: 12px 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid #2a2a2a;
+        }
+        .subtask-row:last-child { border-bottom: none; }
+        .subtask-row.done {
+            opacity: 0.5;
+        }
+        .subtask-row.done .subtask-text {
+            text-decoration: line-through;
+        }
+        .subtask-icon {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid #444;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+        .subtask-row.done .subtask-icon {
+            background: #10b981;
+            border-color: #10b981;
+        }
+        .subtask-text {
+            flex: 1;
+            font-size: 14px;
+        }
+        .comment-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .comment-item {
+            background: #222;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 3px solid #3b82f6;
+        }
+        .comment-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        .comment-author {
+            color: #3b82f6;
+            font-weight: 600;
+            font-size: 13px;
+        }
+        .comment-time {
+            color: #666;
+            font-size: 12px;
+        }
+        .comment-text {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #ccc;
+        }
+        .meta-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        .meta-item {
+            background: #222;
+            padding: 12px;
+            border-radius: 6px;
+        }
+        .meta-label {
+            font-size: 11px;
+            color: #666;
+            margin-bottom: 4px;
+        }
+        .meta-value {
+            font-size: 14px;
+        }
+        .no-data {
+            color: #555;
+            font-size: 13px;
+            text-align: center;
+            padding: 20px;
         }
     </style>
 </head>
@@ -130,12 +293,49 @@
         </div>
     </div>
 
+    <!-- Task Detail Modal -->
+    <div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
+        <div class="modal" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <div>
+                    <h2 id="modal-title"></h2>
+                    <div id="modal-badges"></div>
+                </div>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <div class="modal-section-title">Description</div>
+                    <div class="modal-description" id="modal-description"></div>
+                </div>
+
+                <div class="modal-section">
+                    <div class="modal-section-title">Details</div>
+                    <div class="meta-grid" id="modal-meta"></div>
+                </div>
+
+                <div class="modal-section" id="subtasks-section">
+                    <div class="modal-section-title">Subtasks</div>
+                    <div class="subtask-list" id="modal-subtasks"></div>
+                </div>
+
+                <div class="modal-section" id="comments-section">
+                    <div class="modal-section-title">Comments</div>
+                    <div class="comment-list" id="modal-comments"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
+        let allTasks = [];
+
         async function loadTasks() {
             try {
                 const response = await fetch('data/tasks.json?' + Date.now());
                 const data = await response.json();
-                renderBoard(data.tasks || []);
+                allTasks = data.tasks || [];
+                renderBoard(allTasks);
             } catch (error) {
                 console.error('Failed to load tasks:', error);
             }
@@ -156,31 +356,109 @@
                     return;
                 }
                 
-                container.innerHTML = statusTasks.map(task => `
-                    <div class="task-card ${task.priority || ''}">
-                        <div class="task-title">${task.title}</div>
-                        ${task.description ? `<div class="task-desc">${task.description.substring(0, 100)}...</div>` : ''}
-                        
-                        ${task.subtasks && task.subtasks.length > 0 ? `
-                            <div class="subtasks">
-                                ${task.subtasks.map(sub => `
-                                    <div class="subtask-item ${sub.done ? 'done' : ''}">
-                                        ${sub.done ? '✓' : '○'} ${sub.title}
-                                    </div>
-                                `).join('')}
+                container.innerHTML = statusTasks.map(task => {
+                    const subtaskCount = task.subtasks?.length || 0;
+                    const subtaskDone = task.subtasks?.filter(s => s.done).length || 0;
+                    const commentCount = task.comments?.length || 0;
+                    
+                    return `
+                        <div class="task-card ${task.priority || ''}" onclick="openTask('${task.id}')">
+                            <div class="task-title">${task.title}</div>
+                            ${task.description ? `<div class="task-desc">${task.description.substring(0, 80)}${task.description.length > 80 ? '...' : ''}</div>` : ''}
+                            <div class="task-meta">
+                                ${subtaskCount > 0 ? `<span>✓ ${subtaskDone}/${subtaskCount}</span>` : ''}
+                                ${commentCount > 0 ? `<span>💬 ${commentCount}</span>` : ''}
                             </div>
-                        ` : ''}
-                        
-                        ${task.comments && task.comments.length > 0 ? `
-                            <div class="comment">
-                                <span class="comment-author">${task.comments[task.comments.length - 1].author}:</span>
-                                ${task.comments[task.comments.length - 1].text.substring(0, 80)}
-                            </div>
-                        ` : ''}
-                    </div>
-                `).join('');
+                        </div>
+                    `;
+                }).join('');
             });
         }
+
+        function openTask(taskId) {
+            const task = allTasks.find(t => t.id === taskId);
+            if (!task) return;
+
+            // Title
+            document.getElementById('modal-title').textContent = task.title;
+            
+            // Badges
+            document.getElementById('modal-badges').innerHTML = `
+                <span class="priority-badge ${task.priority || 'medium'}">${task.priority || 'medium'}</span>
+                <span class="status-badge">${task.status.replace('_', ' ')}</span>
+            `;
+            
+            // Description
+            document.getElementById('modal-description').textContent = task.description || 'No description provided.';
+            
+            // Meta
+            document.getElementById('modal-meta').innerHTML = `
+                <div class="meta-item">
+                    <div class="meta-label">Task ID</div>
+                    <div class="meta-value">${task.id}</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Created</div>
+                    <div class="meta-value">${task.created ? new Date(task.created).toLocaleString() : 'Unknown'}</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Updated</div>
+                    <div class="meta-value">${task.updated ? new Date(task.updated).toLocaleString() : 'Unknown'}</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Priority</div>
+                    <div class="meta-value" style="text-transform: capitalize">${task.priority || 'Medium'}</div>
+                </div>
+            `;
+            
+            // Subtasks
+            const subtasksSection = document.getElementById('subtasks-section');
+            const subtasksContainer = document.getElementById('modal-subtasks');
+            if (task.subtasks && task.subtasks.length > 0) {
+                subtasksSection.style.display = 'block';
+                subtasksContainer.innerHTML = task.subtasks.map(sub => `
+                    <div class="subtask-row ${sub.done ? 'done' : ''}">
+                        <div class="subtask-icon">${sub.done ? '✓' : ''}</div>
+                        <div class="subtask-text">${sub.title}</div>
+                    </div>
+                `).join('');
+            } else {
+                subtasksSection.style.display = 'none';
+            }
+            
+            // Comments
+            const commentsSection = document.getElementById('comments-section');
+            const commentsContainer = document.getElementById('modal-comments');
+            if (task.comments && task.comments.length > 0) {
+                commentsSection.style.display = 'block';
+                commentsContainer.innerHTML = task.comments.map(comment => `
+                    <div class="comment-item">
+                        <div class="comment-header">
+                            <span class="comment-author">${comment.author}</span>
+                            <span class="comment-time">${comment.timestamp ? new Date(comment.timestamp).toLocaleString() : ''}</span>
+                        </div>
+                        <div class="comment-text">${comment.text}</div>
+                    </div>
+                `).join('');
+            } else {
+                commentsSection.style.display = 'none';
+            }
+            
+            // Show modal
+            document.getElementById('modal-overlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(event) {
+            if (event && event.target !== event.currentTarget) return;
+            document.getElementById('modal-overlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
 
         // Auto-refresh every 30 seconds
         setInterval(loadTasks, 30000);
