@@ -399,7 +399,7 @@
         {
           "id": "sub_008",
           "title": "Test: verify subtask changes trigger comments and timestamp updates",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_009",
@@ -435,8 +435,8 @@
         }
       ],
       "createdAt": "2026-02-04T18:46:11.827090+00:00",
-      "updated": "2026-02-04T18:51:50.750324+00:00"
+      "updated": "2026-02-04T18:51:51.447199+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T18:51:50.750339+00:00"
+  "lastUpdated": "2026-02-04T18:51:51.447228+00:00"
 }
