@@ -689,12 +689,17 @@
           "id": "sub_005",
           "title": "Analyze: Why current tracking shows $100+ for Opus (inaccurate)",
           "done": false
+        },
+        {
+          "id": "sub_006",
+          "title": "Design: Baseline reset mechanism - clear old usage when balance entered",
+          "done": false
         }
       ],
       "comments": [],
       "createdAt": "2026-02-04T19:37:38.669159+00:00",
-      "updated": "2026-02-04T19:37:47.899427+00:00"
+      "updated": "2026-02-04T19:37:48.612421+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:37:47.899445+00:00"
+  "lastUpdated": "2026-02-04T19:37:48.612438+00:00"
 }
