@@ -442,7 +442,17 @@
         }
       ],
       "createdAt": "2026-02-04T02:17:24.141386+00:00"
+    },
+    {
+      "id": "task_020",
+      "title": "Restaurant Research Skill",
+      "description": "Build restaurant-research skill using Yelp Fusion API. Features: flexible input (location required, optional cuisine/diet/price/radius filters), AI prompts for missing critical info or assumes reasonable defaults, PDF output with all available data (name, address, distance, phone, hours, rating, reviews, price level, menu items if available, delivery platforms if available). Use skill-creator. Yelp API key needed from Anthony.",
+      "status": "in_progress",
+      "priority": "high",
+      "subtasks": [],
+      "comments": [],
+      "createdAt": "2026-02-04T02:28:11.859034+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T02:19:53.948558+00:00"
+  "lastUpdated": "2026-02-04T02:28:11.859050+00:00"
 }
