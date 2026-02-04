@@ -70,9 +70,15 @@
       "status": "in_progress",
       "priority": "high",
       "subtasks": [],
-      "comments": [],
+      "comments": [
+        {
+          "author": "OpenClaw",
+          "text": "Removed Done column from Mission Control dashboard. Workflow is now: backlog \u2192 in_progress \u2192 review \u2192 archive. Tasks in Review now have an Archive button instead of Done.",
+          "timestamp": "2026-02-04T04:13:12.571334+00:00"
+        }
+      ],
       "createdAt": "2026-02-04T04:11:45.197212+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T04:11:48.597460+00:00"
+  "lastUpdated": "2026-02-04T04:13:12.571350+00:00"
 }
