@@ -496,7 +496,7 @@
       "id": "task_018",
       "title": "Ask plumbers about 4 inch pipe addition",
       "description": "Dad's question - ask about 4 inch pipe addition once plumbers show up tomorrow",
-      "status": "in_progress",
+      "status": "review",
       "priority": "high",
       "subtasks": [],
       "comments": [],
@@ -513,5 +513,5 @@
       "createdAt": "2026-02-04T17:28:03.970802+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T17:32:25.480814+00:00"
+  "lastUpdated": "2026-02-04T17:35:07.543687+00:00"
 }
