@@ -362,7 +362,7 @@
       "id": "task_015",
       "title": "Investigate stale agent sessions in Task Monitor",
       "description": "Anthony found main agent (57b40b1f) showing as FAILED in agent history with 274m runtime. Also task-naming-fix showing 6m stale. Need to: 1) Understand why main agent appears in history as failed, 2) Fix monitor to properly track current session vs old sessions, 3) Clean up stale sessions",
-      "status": "in_progress",
+      "status": "review",
       "priority": "high",
       "subtasks": [],
       "comments": [
@@ -375,5 +375,5 @@
       "createdAt": "2026-02-04T01:45:59.425156+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T01:48:12.686155+00:00"
+  "lastUpdated": "2026-02-04T01:48:15.162771+00:00"
 }
