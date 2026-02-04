@@ -694,12 +694,17 @@
           "id": "sub_006",
           "title": "Design: Baseline reset mechanism - clear old usage when balance entered",
           "done": false
+        },
+        {
+          "id": "sub_007",
+          "title": "Design: Accurate cost prediction algorithm aligned with GitHub billing",
+          "done": false
         }
       ],
       "comments": [],
       "createdAt": "2026-02-04T19:37:38.669159+00:00",
-      "updated": "2026-02-04T19:37:48.612421+00:00"
+      "updated": "2026-02-04T19:37:49.341104+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:37:48.612438+00:00"
+  "lastUpdated": "2026-02-04T19:37:49.341121+00:00"
 }
