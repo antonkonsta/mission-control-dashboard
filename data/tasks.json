@@ -835,7 +835,7 @@
         {
           "id": "sub_008",
           "title": "Implement automatic rate updater: monitor GitHub pricing, update rates config on change",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_009",
@@ -926,8 +926,8 @@
         }
       ],
       "createdAt": "2026-02-04T19:56:54.236493+00:00",
-      "updated": "2026-02-04T20:06:15.993809+00:00"
+      "updated": "2026-02-04T20:06:39.079252+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T20:06:15.993811+00:00"
+  "lastUpdated": "2026-02-04T20:06:39.079269+00:00"
 }
