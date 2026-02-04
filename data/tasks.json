@@ -485,10 +485,15 @@
           "author": "OpenClaw",
           "text": "Spawned 2 sub-agents to complete remaining visualizations: task-015-line-chart (Sonnet) for cumulative cost over time, task-015-treemap (Sonnet) for hierarchical model breakdown. Will not stop until all complete.",
           "timestamp": "2026-02-04T19:24:59.132125+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "sub_008 done. Treemap visualization added - shows hierarchical cost breakdown by model with proportionally sized boxes.",
+          "timestamp": "2026-02-04T19:26:02.254572+00:00"
         }
       ],
       "createdAt": "2026-02-04T18:37:44.067755+00:00",
-      "updated": "2026-02-04T19:26:01.411513+00:00"
+      "updated": "2026-02-04T19:26:02.254588+00:00"
     },
     {
       "id": "task_016",
@@ -629,5 +634,5 @@
       "updated": "2026-02-04T19:25:45.477478+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:26:01.411529+00:00"
+  "lastUpdated": "2026-02-04T19:26:02.254590+00:00"
 }
