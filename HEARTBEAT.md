@@ -158,7 +158,53 @@ Check ALL running sub-agents:
 - Kill and respawn failures immediately
 - **YOU ARE THE BOSS** - sub-agents work for you, not the other way around
 
-### 5. Mission Control Sync Check (EVERY HEARTBEAT)
+### 5. Failing Agent Recovery (CRITICAL - YOUR RESPONSIBILITY)
+**When sub-agents fail, YOU are responsible for recovering the work. No excuses.**
+
+**Detect Failures:**
+- Token/context overflow errors (e.g., "prompt token count exceeds limit")
+- Rate limit errors (401 unauthorized, 429 too many requests)
+- 403/404 on web fetches (blocked sources)
+- Silence >5 minutes without progress
+- Errors in last message of session
+
+**Recovery Strategy by Failure Type:**
+
+1. **Context Overflow (token limit exceeded):**
+   - Sub-agent accumulated too much content
+   - **FIX:** Break task into smaller chunks (one deliverable per sub-agent)
+   - **FIX:** Spawn new sub-agent with explicit "stream to files, don't accumulate" instruction
+   - **FIX:** Use GPT-4o for smaller tasks, Opus for synthesis
+
+2. **Rate Limits (401/429):**
+   - API throttling or token expiration
+   - **FIX:** Wait 2-5 minutes, then respawn
+   - **FIX:** Use different model (fallback from Opus to GPT-4o or vice versa)
+   - **FIX:** Break task into smaller subtasks to reduce per-agent load
+
+3. **Source Access Blocks (403/404):**
+   - Academic sources blocking (MDPI, ResearchGate, IEEE paywalls)
+   - **FIX:** Prioritize open-access sources (PMC, arXiv, university notes)
+   - **FIX:** Use web_search to find alternative URLs
+   - **FIX:** Accept partial results, note blocked sources for Anthony
+
+4. **Stuck/Silent Agents:**
+   - No progress for >5 minutes
+   - **FIX:** Check session history (sessions_history)
+   - **FIX:** If truly stuck, kill and respawn with clearer instructions
+   - **FIX:** Log what failed for future skill creation
+
+**Recovery Workflow:**
+1. Detect failure (via sessions_list or error messages)
+2. Diagnose root cause (check last message/error)
+3. Update Mission Control with diagnosis (`mc comment`)
+4. Apply appropriate fix strategy
+5. Respawn with adjusted approach if needed
+6. **NEVER leave a task stuck** - always take recovery action
+
+**Key Principle:** Inherent restrictions (rate limits, source blocks, context limits) are **your problem to work around**, not excuses. Adjust approach, break tasks smaller, use alternative sources, wait and retry. Deliver results.
+
+### 6. Mission Control Sync Check (EVERY HEARTBEAT)
 - Verify tasks.json matches reality:
   - `backlog` items → should NOT have sub-agents running
   - `in_progress` items → MUST have sub-agents actively working OR be ready for review

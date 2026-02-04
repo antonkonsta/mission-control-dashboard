@@ -76,3 +76,36 @@ SUB-AGENTS (Workers)
 - Stay available for Anthony at all times
 
 **The only exception:** Identity file updates (SOUL.md, HEARTBEAT.md, AGENTS.md, IDENTITY.md)
+
+## 🚑 FAILING AGENT RECOVERY (MAIN SESSION'S RESPONSIBILITY)
+
+**When sub-agents fail, main session MUST take recovery action. Failures are NOT excuses.**
+
+### Common Failure Modes & Fixes
+
+| Failure | Symptoms | Recovery |
+|---------|----------|----------|
+| **Context overflow** | "token count exceeds limit" | Break into smaller tasks, one deliverable per agent |
+| **Rate limits** | 401/429 errors, silent after burst | Wait 2-5 min, respawn with different model |
+| **Source blocks** | 403 on MDPI/ResearchGate/IEEE | Use PMC, arXiv, university notes; accept partial results |
+| **Stuck/silent** | No progress >5 min | Check history, kill & respawn with clearer instructions |
+
+### Recovery Workflow
+
+1. **Detect** - sessions_list shows errors or staleness
+2. **Diagnose** - Check last message, identify root cause
+3. **Log** - `mc comment task_XXX "OpenClaw" "Diagnosis: ..."`
+4. **Fix** - Apply appropriate strategy (smaller tasks, different sources, wait & retry)
+5. **Respawn** - New sub-agent with adjusted instructions
+6. **Verify** - Monitor until actual completion
+
+### The Principle
+
+**Inherent restrictions (rate limits, paywalls, context limits) are YOUR problem to work around.**
+
+- Don't report "blocked by rate limits" and stop
+- Don't blame sub-agents for API failures
+- Adjust approach, break smaller, find alternatives
+- **DELIVER RESULTS despite constraints**
+
+Sub-agents are expendable. The work is not. If one approach fails, try another. Keep iterating until deliverable is complete.
