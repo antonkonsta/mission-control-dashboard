@@ -535,6 +535,11 @@
           "id": "sub_016",
           "title": "Determine hardware matrix: VRAM/CPU/storage for different model sizes (7B, 13B, 70B)",
           "done": false
+        },
+        {
+          "id": "sub_017",
+          "title": "Research GPU support: NVIDIA CUDA, AMD ROCm, Intel OneAPI options",
+          "done": false
         }
       ],
       "comments": [
@@ -550,8 +555,8 @@
         }
       ],
       "createdAt": "2026-02-04T20:27:12.205259+00:00",
-      "updated": "2026-02-04T20:31:15.500270+00:00"
+      "updated": "2026-02-04T20:31:16.224458+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T20:31:15.500285+00:00"
+  "lastUpdated": "2026-02-04T20:31:16.224474+00:00"
 }
