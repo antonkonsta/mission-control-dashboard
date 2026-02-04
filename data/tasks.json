@@ -840,7 +840,7 @@
         {
           "id": "sub_009",
           "title": "Build monthly calibration report: reconciliation history, adjustments made, confidence trend",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_010",
@@ -926,8 +926,8 @@
         }
       ],
       "createdAt": "2026-02-04T19:56:54.236493+00:00",
-      "updated": "2026-02-04T20:06:39.079252+00:00"
+      "updated": "2026-02-04T20:06:39.904253+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T20:06:39.079269+00:00"
+  "lastUpdated": "2026-02-04T20:06:39.904271+00:00"
 }
