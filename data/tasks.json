@@ -410,7 +410,17 @@
         }
       ],
       "createdAt": "2026-02-04T02:01:10.230768+00:00"
+    },
+    {
+      "id": "task_018",
+      "title": "DoorDash research v2 - OFF campus restaurants",
+      "description": "Redo DoorDash research. Find 10 restaurants NEAR UNCC (not on campus) that deliver via DoorDash. High protein, budget-friendly. For each: name, distance, 3 menu items with prices, delivery time. Output as proper PDF.",
+      "status": "in_progress",
+      "priority": "high",
+      "subtasks": [],
+      "comments": [],
+      "createdAt": "2026-02-04T02:08:08.574844+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T02:06:28.750923+00:00"
+  "lastUpdated": "2026-02-04T02:08:08.574861+00:00"
 }
