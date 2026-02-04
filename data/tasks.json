@@ -811,12 +811,17 @@
           "id": "sub_003",
           "title": "Update token logging schema: add request_id, actual_cost_usd, cost_calculated_at_timestamp",
           "done": false
+        },
+        {
+          "id": "sub_004",
+          "title": "Implement GitHub billing API integration: fetch monthly spend from Copilot dashboard",
+          "done": false
         }
       ],
       "comments": [],
       "createdAt": "2026-02-04T19:56:54.236493+00:00",
-      "updated": "2026-02-04T19:57:03.885254+00:00"
+      "updated": "2026-02-04T19:57:04.705977+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:57:03.885274+00:00"
+  "lastUpdated": "2026-02-04T19:57:04.705996+00:00"
 }
