@@ -711,10 +711,16 @@
           "done": false
         }
       ],
-      "comments": [],
+      "comments": [
+        {
+          "author": "OpenClaw",
+          "text": "Starting research task. 9 subtasks created. Will research GitHub Copilot Pro+ billing thoroughly, identify why current tracking is inaccurate, and design fixes. Spawning research sub-agent.",
+          "timestamp": "2026-02-04T19:37:56.650218+00:00"
+        }
+      ],
       "createdAt": "2026-02-04T19:37:38.669159+00:00",
-      "updated": "2026-02-04T19:37:55.916638+00:00"
+      "updated": "2026-02-04T19:37:56.650235+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:37:55.916653+00:00"
+  "lastUpdated": "2026-02-04T19:37:56.650237+00:00"
 }
