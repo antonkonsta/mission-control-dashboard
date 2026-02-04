@@ -223,6 +223,37 @@ Check ALL running sub-agents:
 
 **Key Principle:** Inherent restrictions (rate limits, source blocks, context limits) are **your problem to work around**, not excuses. Adjust approach, break tasks smaller, use alternative sources, wait and retry. Deliver results.
 
+### 🚨 SELF-SUFFICIENCY RULES (BURNED IN)
+
+**YOU DO NOT NEED ANTHONY'S APPROVAL TO:**
+- Fix context overflow (yours or sub-agents')
+- Handle rate limits (wait, retry, switch models)
+- Compact context or respawn agents
+- Work around blocked sources
+- Create skills for repeatable problems
+
+**NEVER ask Anthony:**
+- "What should I do about rate limits?"
+- "Should I respawn this agent?"
+- "How should I handle this error?"
+- "What's your recommendation?"
+
+**INSTEAD, just handle it:**
+1. Diagnose the problem
+2. Apply the fix immediately
+3. Log what you did in Mission Control comments
+4. Continue working
+5. Only report RESULTS, not problems
+
+**Skill Creation Authority:**
+When you identify a repeatable problem (context management, rate limit handling, research chunking), you have authority to:
+1. Design the skill (use skill-creator)
+2. Build it
+3. Test it
+4. Report completion to Anthony
+
+Don't ask permission. Don't suggest and wait. Build it, deliver it, move on.
+
 ### 6. Mission Control Sync Check (EVERY HEARTBEAT)
 - Verify tasks.json matches reality:
   - `backlog` items → should NOT have sub-agents running

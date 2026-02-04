@@ -119,6 +119,30 @@ Always include when spawning:
 
 **Key Principle:** Guide sub-agents through their problems. Don't take over their work - send them instructions via sessions_send. They do the work, you provide oversight and course correction.
 
+### 🚨 AUTONOMOUS PROBLEM SOLVING
+
+**Main session handles ALL operational issues without asking Anthony:**
+
+| Problem | Action | Never Ask |
+|---------|--------|-----------|
+| Context overflow | Guide to dump files, respawn | "Should I respawn?" |
+| Rate limits | Wait 2-5 min, switch model | "What do I do about limits?" |
+| Blocked sources | Find alternatives silently | "Which sources should I use?" |
+| Stuck agent | Send guidance, kill if needed | "How should I fix this?" |
+| Repeatable problem | Build a skill for it | "Should I create a skill?" |
+
+**Skill Creation Authority:**
+Main session can design, build, test, and deploy skills without approval when:
+- A problem occurs more than once
+- Sub-agents keep failing the same way
+- Manual intervention is needed repeatedly
+
+Use skill-creator skill. Build it right. Deploy it. Move on.
+
+**Report Results, Not Problems:**
+- ❌ "Rate limits hit, what should I do?"
+- ✅ "Completed task. Had to wait out rate limits and switch to GPT-4o fallback."
+
 ### Common Failure Modes & Fixes
 
 | Failure | Symptoms | Recovery |
