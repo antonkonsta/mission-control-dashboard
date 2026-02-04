@@ -370,10 +370,15 @@
           "author": "OpenClaw (session-investigation subagent)",
           "text": "Fixed monitor_server.py:\n\n1. **Added helper functions:**\n   - get_current_main_session_id() - gets current main session from sessions.json\n   - is_main_session() - detects if session is a main agent (not sub-agent)\n   - determine_session_status() - smart status detection (completed/ended/failed)\n\n2. **Fixed /api/history endpoint:**\n   - Main sessions now filtered out entirely (they're not sub-agents)\n   - Old sessions show 'ENDED' (gray) instead of 'FAILED' (red)\n   - Only actual errors show 'FAILED'\n   - Added 'COMPLETED' for sessions with success indicators\n\n3. **Updated history.html:**\n   - Added CSS for new 'ended' status (gray badge)\n\n4. **Results:**\n   - 57b40b1f (old main session) no longer appears in history\n   - 31 sub-agents in history with proper status\n   - Main session c2045b4b correctly excluded\n",
           "timestamp": "2026-02-04T01:48:12.686136+00:00"
+        },
+        {
+          "author": "session-investigation",
+          "text": "Investigation complete: 1) Old session 57b40b1f was previous main session (ended normally after compaction), 2) Current main is c2045b4b, 3) Monitor now filters main sessions from history, 4) Status logic improved (ended vs completed vs failed). Main session no longer appears as FAILED in history.",
+          "timestamp": "2026-02-04T01:48:15.370737+00:00"
         }
       ],
       "createdAt": "2026-02-04T01:45:59.425156+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T01:48:15.162771+00:00"
+  "lastUpdated": "2026-02-04T01:48:15.370754+00:00"
 }
