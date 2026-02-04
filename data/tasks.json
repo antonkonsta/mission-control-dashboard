@@ -530,6 +530,11 @@
           "id": "sub_015",
           "title": "Research Linux optimization: kernel tuning, scheduler, memory management for LLM inference",
           "done": false
+        },
+        {
+          "id": "sub_016",
+          "title": "Determine hardware matrix: VRAM/CPU/storage for different model sizes (7B, 13B, 70B)",
+          "done": false
         }
       ],
       "comments": [
@@ -545,8 +550,8 @@
         }
       ],
       "createdAt": "2026-02-04T20:27:12.205259+00:00",
-      "updated": "2026-02-04T20:31:14.823255+00:00"
+      "updated": "2026-02-04T20:31:15.500270+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T20:31:14.823272+00:00"
+  "lastUpdated": "2026-02-04T20:31:15.500285+00:00"
 }
