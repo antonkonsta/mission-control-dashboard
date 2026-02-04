@@ -372,9 +372,15 @@
       "status": "in_progress",
       "priority": "high",
       "subtasks": [],
-      "comments": [],
+      "comments": [
+        {
+          "author": "OpenClaw",
+          "text": "Spawned sub-agent 'task-016-dcop-100-sources' with Opus. 30-min timeout. Researching 100 sources, constrained to exact Cadence parameters Anthony provided.",
+          "timestamp": "2026-02-04T16:25:34.158309+00:00"
+        }
+      ],
       "createdAt": "2026-02-04T16:25:05.692800+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T16:25:29.020117+00:00"
+  "lastUpdated": "2026-02-04T16:25:34.158324+00:00"
 }
