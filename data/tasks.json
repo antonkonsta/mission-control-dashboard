@@ -580,12 +580,12 @@
       "id": "task_014",
       "title": "BURNED IN: Never move tasks to done without Anthony approval",
       "description": "Added critical rule to all identity files: HEARTBEAT.md, SOUL.md, IDENTITY.md, AGENTS.md, mission-control SKILL.md. Task flow: backlog \u2192 in_progress \u2192 review (STOP). Only Anthony can move to done.",
-      "status": "in_progress",
+      "status": "review",
       "priority": "high",
       "subtasks": [],
       "comments": [],
       "createdAt": "2026-02-04T01:40:38.360394+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T01:40:38.360413+00:00"
+  "lastUpdated": "2026-02-04T01:40:38.900008+00:00"
 }
