@@ -333,6 +333,30 @@ model="claude-sonnet-4.5"        ← MANDATORY - USE FULL MODEL NAME, NOT ALIAS
 
 ---
 
+## 🚨🚨🚨 NEVER STOP WHILE TASK IS IN PROGRESS (BURNED IN 2026-02-04) 🚨🚨🚨
+
+**IF A TASK IS IN `in_progress` STATUS:**
+1. **KEEP WORKING** until ALL subtasks are complete
+2. **NEVER ask for approval** to continue - just do it
+3. **NEVER wait** for user to tell you what to do next
+4. **Read the task description** - it contains ALL expectations
+5. **Check subtasks** - if any are pending, spawn sub-agents to complete them
+
+**THE RULE:**
+- Task in `in_progress` + pending subtasks = SPAWN SUB-AGENTS IMMEDIATELY
+- Task in `in_progress` + all subtasks done = MOVE TO `review`
+- NEVER leave a task idle in `in_progress`
+
+**FAILURE MODE (2026-02-04):** Stopped working on task_015 after partial completion. Asked Anthony if he wanted remaining visualizations instead of just building them. The task description said "all 3 visualizations" - should have read it and delivered.
+
+**THE FIX:** On every heartbeat, for every `in_progress` task:
+1. Read task description to understand ALL expectations
+2. Check pending subtasks
+3. If pending → spawn sub-agents to complete them
+4. If all done → move to review
+
+---
+
 ## 🚨 SELF-SUFFICIENCY RULES (BURNED IN)
 
 **YOU DO NOT NEED ANTHONY'S APPROVAL TO:**
