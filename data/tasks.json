@@ -390,7 +390,17 @@
         }
       ],
       "createdAt": "2026-02-04T16:25:05.692800+00:00"
+    },
+    {
+      "id": "task_017",
+      "title": "IC Amplifier Knowledge Base - Biomedical/Chopper Focus",
+      "description": "Massive deep research on IC amplifier topologies for biomedical/neural applications. Focus: 5T OTA, Miller op-amp, Fully Differential OTAs, Chopper amplifiers for EEG/biopotential. Constrained to Cadence DCOP parameters. Requirements: 200+ sources, design methodology, topology pros/cons, metric prediction equations, low-power techniques. Build comprehensive Obsidian knowledge base.",
+      "status": "in_progress",
+      "priority": "high",
+      "subtasks": [],
+      "comments": [],
+      "createdAt": "2026-02-04T16:50:39.038589+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T16:42:34.887823+00:00"
+  "lastUpdated": "2026-02-04T16:50:39.038605+00:00"
 }
