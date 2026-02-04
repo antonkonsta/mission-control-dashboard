@@ -327,7 +327,7 @@
         {
           "id": "sub_012",
           "title": "Add Token Tracking nav link to all pages in Activity Monitor",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_013",
@@ -413,7 +413,7 @@
         }
       ],
       "createdAt": "2026-02-04T18:37:44.067755+00:00",
-      "updated": "2026-02-04T19:05:59.375418+00:00"
+      "updated": "2026-02-04T19:06:00.048820+00:00"
     },
     {
       "id": "task_016",
@@ -521,5 +521,5 @@
       "updated": "2026-02-04T19:05:15.913723+00:00"
     }
   ],
-  "lastUpdated": "2026-02-04T19:05:59.375434+00:00"
+  "lastUpdated": "2026-02-04T19:06:00.048838+00:00"
 }
