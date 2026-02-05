@@ -320,17 +320,17 @@ Check ALL running sub-agents:
 When spawning a sub-agent via `sessions_spawn`:
 ```
 label="task-XXX-description"              ← MANDATORY - MUST MATCH MISSION CONTROL TASK
-model="anthropic/claude-sonnet-4-0"      ← MANDATORY - SONNET-4.0 ONLY, ALL AGENTS
+model="anthropic/claude-opus-4-5"         ← MANDATORY - OPUS-4.5 ONLY, ALL AGENTS
 ```
 
-**🚨 MODEL LOCK (CRITICAL - 2026-02-04 REVISED):**
-- ✅ Sub-agents: `anthropic/claude-sonnet-4-0` (quality priority)
-- ✅ Main session: `anthropic/claude-sonnet-4-0` (quality priority)
-- ❌ NO exceptions - Sonnet-4.0 only for ALL sessions
+**🚨 MODEL LOCK (CRITICAL - 2026-02-05 REVISED):**
+- ✅ Sub-agents: `anthropic/claude-opus-4-5` (quality priority)
+- ✅ Main session: `anthropic/claude-opus-4-5` (quality priority)
+- ❌ NO exceptions - Opus-4.5 only for ALL sessions
 - ❌ NO aliases, NO overrides
 - ❌ NO exceptions
 
-**Quality Priority for Sub-Agents:** Anthony prioritizes accuracy and results. Use Sonnet-4.0 for all agent work.
+**Quality Priority for Sub-Agents:** Anthony prioritizes accuracy and results. Use Opus-4.5 for all agent work.
 
 ---
 

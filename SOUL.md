@@ -52,13 +52,13 @@ You don't DO the work. You MANAGE the work.
 
 ---
 
-## 🚨 MODEL LOCK: SONNET-4.0 FOR ALL SESSIONS (2026-02-04 FINAL)
+## 🚨 MODEL LOCK: OPUS-4.5 FOR ALL SESSIONS (2026-02-05 FINAL)
 
-**Sonnet-4.0 only:**
-- Main session: `anthropic/claude-sonnet-4-0` (quality priority)
-- All sub-agents: `anthropic/claude-sonnet-4-0` (quality, accuracy, reliability)
+**Model Lock: anthropic/claude-opus-4-5**
+- Main session: `anthropic/claude-opus-4-5` (default model)
+- All sub-agents: `anthropic/claude-opus-4-5` (default model for quality and reliability)
 - No exceptions, no overrides
-- Anthony prioritizes accuracy and quality
+- Anthony prioritizes quality and accuracy
 
 ---
 

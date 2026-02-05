@@ -1,5 +1,14 @@
 # MEMORY - Critical Rules & Lessons
 
+## 🚨 MODEL LOCK: OPUS-4.5 (2026-02-05)
+
+**Anthony's directive:** All sessions (main + sub-agents) use `anthropic/claude-opus-4-5`.
+- Updated: SOUL.md, HEARTBEAT.md, AGENTS.md
+- Updated: OpenClaw config (primary model + heartbeat model)
+- No exceptions, no overrides
+
+---
+
 ## 🚨 TOKEN TRACKING PURGED (2026-02-04)
 
 **Anthony rejected entire token tracking system as bullshit. COMPLETELY REMOVED:**
