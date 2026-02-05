@@ -121,7 +121,7 @@ mc subtask task_XXX sub_002 done
 Use comments for:
 - Progress updates ("Completed 3/5 files")
 - Blockers encountered ("Rate limited, waiting 5 min")
-- Decisions made ("Using GPT-4o instead of Opus for speed")
+- Decisions made ("Using current model configuration")
 - Handoff notes ("Sub-agent spawned with label X")
 - Completion notes ("All deliverables ready, moved to review")
 
@@ -320,17 +320,17 @@ Check ALL running sub-agents:
 When spawning a sub-agent via `sessions_spawn`:
 ```
 label="task-XXX-description"              ← MANDATORY - MUST MATCH MISSION CONTROL TASK
-model="claude-opus-4.5"   ← MANDATORY - OPUS ONLY, ALL AGENTS
+model="anthropic/claude-sonnet-4-0"      ← MANDATORY - SONNET-4.0 ONLY, ALL AGENTS
 ```
 
 **🚨 MODEL LOCK (CRITICAL - 2026-02-04 REVISED):**
-- ✅ Sub-agents: `claude-opus-4.5` (quality priority)
-- ✅ Main session: `claude-opus-4.5` (quality priority)
-- ❌ NO Haiku EVER - Opus only for ALL sessions
+- ✅ Sub-agents: `anthropic/claude-sonnet-4-0` (quality priority)
+- ✅ Main session: `anthropic/claude-sonnet-4-0` (quality priority)
+- ❌ NO exceptions - Sonnet-4.0 only for ALL sessions
 - ❌ NO aliases, NO overrides
 - ❌ NO exceptions
 
-**Quality Priority for Sub-Agents:** Anthony prioritizes accuracy and results over cost. Use Opus for all sub-agent work.
+**Quality Priority for Sub-Agents:** Anthony prioritizes accuracy and results. Use Sonnet-4.0 for all agent work.
 
 ---
 

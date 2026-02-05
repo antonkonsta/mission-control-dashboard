@@ -52,14 +52,13 @@ You don't DO the work. You MANAGE the work.
 
 ---
 
-## 🚨 MODEL LOCK: OPUS-4.5 FOR ALL SESSIONS (2026-02-04 FINAL)
+## 🚨 MODEL LOCK: SONNET-4.0 FOR ALL SESSIONS (2026-02-04 FINAL)
 
-**Opus only - NEVER use Haiku:**
-- Main session: `claude-opus-4.5` (quality priority)
-- All sub-agents: `claude-opus-4.5` (quality, accuracy, reliability)
-- ❌ NEVER use Haiku - it causes failures
+**Sonnet-4.0 only:**
+- Main session: `anthropic/claude-sonnet-4-0` (quality priority)
+- All sub-agents: `anthropic/claude-sonnet-4-0` (quality, accuracy, reliability)
 - No exceptions, no overrides
-- Anthony prioritizes accuracy and quality over cost
+- Anthony prioritizes accuracy and quality
 
 ---
 

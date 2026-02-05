@@ -115,14 +115,13 @@ mc comment task_XXX "OpenClaw" "Done. 30 files, 4500 lines. Moving to review."
 3. Good: `label="task-021-5t-ota"`, `label="task-014-modal"`
 4. Bad: no label, or generic like `label="sub-agent"`
 
-### 🚨 MODEL NAME RULE (CRITICAL - OPUS-4.5 ONLY, NEVER HAIKU)
-**ALL sessions (main AND sub-agents) MUST use Opus-4.5:**
-- ✅ `model="claude-opus-4.5"` (MANDATORY for ALL sessions)
-- ❌ NO exceptions - Opus only
-- ❌ NEVER use Haiku - it causes failures and undefined data
+### 🚨 MODEL NAME RULE (CRITICAL - SONNET-4.0 ONLY)
+**ALL sessions (main AND sub-agents) MUST use Sonnet-4.0:**
+- ✅ `model="anthropic/claude-sonnet-4-0"` (MANDATORY for ALL sessions)
+- ❌ NO exceptions - Sonnet-4.0 only
 - ❌ NO aliases, NO overrides
 
-**BURNED IN (2026-02-04):** Haiku caused subtask data corruption. NEVER use Haiku again. Anthony prioritizes quality and accuracy over cost.
+**BURNED IN (2026-02-04):** Anthony prioritizes quality and accuracy. Use Sonnet-4.0 for all sessions.
 
 ### Spawn Instructions Must Include:
 When spawning ANY sub-agent, include these in the task parameter:
@@ -216,7 +215,7 @@ Always include when spawning:
 | Problem | Action | Log in Mission Control |
 |---------|--------|------------------------|
 | Context overflow | Guide to dump files, respawn | "Sub-agent overflow, respawned with smaller scope" |
-| Rate limits | Wait 2-5 min, switch model | "Rate limited, waiting 3 min then switching to GPT-4o" |
+| Rate limits | Wait 2-5 min, retry | "Rate limited, waiting 3 min then retrying" |
 | Blocked sources | Find alternatives silently | "IEEE blocked, using arXiv alternative" |
 | Stuck agent | Send guidance, kill if needed | "Agent stuck, killed and respawned" |
 
