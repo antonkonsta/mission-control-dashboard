@@ -735,10 +735,15 @@
           "author": "OpenClaw",
           "text": "Sub-agent stuck/failed. Taking over directly to rebuild Activity Monitor with multi-pane sub-agent view and token tracker.",
           "timestamp": "2026-02-05T14:29:46.156153+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "Directed sub-agent to continue Activity Monitor rebuild. Model switched to Kimi K2.",
+          "timestamp": "2026-02-05T14:31:27.018090+00:00"
         }
       ],
       "createdAt": "2026-02-05T13:44:22.930186+00:00"
     }
   ],
-  "lastUpdated": "2026-02-05T14:29:46.156168+00:00"
+  "lastUpdated": "2026-02-05T14:31:27.018105+00:00"
 }
