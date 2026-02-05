@@ -763,59 +763,79 @@
       "subtasks": [
         {
           "id": "sub_001",
-          "title": "Research naming options to avoid confusion with existing monitors",
+          "title": "Research: Inventory existing data sources (actions.jsonl, activity-stream.jsonl, sessions.json, transcript files)",
           "done": false
         },
         {
           "id": "sub_002",
-          "title": "Design architecture for real-time data pipeline",
+          "title": "Research: Analyze existing monitor_server.py and activity_logger.py implementation",
           "done": false
         },
         {
           "id": "sub_003",
-          "title": "Research existing logs and system information sources",
+          "title": "Design: Create unique naming/branding distinct from Activity Monitor and Task Monitor",
           "done": false
         },
         {
           "id": "sub_004",
-          "title": "Design web interface layout and components",
+          "title": "Design: Architecture for real-time data pipeline using existing actions.jsonl and SSE/WebSocket streaming",
           "done": false
         },
         {
           "id": "sub_005",
-          "title": "Implement backend data collection from agent sessions",
+          "title": "Design: Web interface layout with live tool call stream, session selector, and detail view",
           "done": false
         },
         {
           "id": "sub_006",
-          "title": "Implement frontend dashboard with real-time updates",
+          "title": "Implement: Extend monitor_server.py with /api/stream endpoint for real-time events",
           "done": false
         },
         {
           "id": "sub_007",
-          "title": "Add tool call/command/response visibility features",
+          "title": "Implement: Backend parser for actions.jsonl to extract tool calls, commands, responses",
           "done": false
         },
         {
           "id": "sub_008",
-          "title": "Test and verify real-time functionality",
+          "title": "Implement: Frontend dashboard.html with live event feed, filtering by session, and auto-scroll",
           "done": false
         },
         {
           "id": "sub_009",
-          "title": "Deploy and validate with Anthony",
+          "title": "Implement: Tool call detail view showing tool name, parameters, result, timestamp, duration",
+          "done": false
+        },
+        {
+          "id": "sub_010",
+          "title": "Implement: Main session vs sub-agent distinction with color coding",
+          "done": false
+        },
+        {
+          "id": "sub_011",
+          "title": "Test: Verify real-time updates when agent executes tools",
+          "done": false
+        },
+        {
+          "id": "sub_012",
+          "title": "Deploy: Start server on dedicated port and validate with Anthony",
           "done": false
         }
       ],
       "comments": [
         {
           "author": "OpenClaw",
-          "text": "Added 9 subtasks showing execution plan. Task remains in backlog per Anthony's instruction - will not start work until explicitly told to move to in_progress.",
-          "timestamp": "2026-02-05T16:05:00+00:00"
+          "text": "RESEARCH COMPLETE. Found data sources: 1) /root/.openclaw/workspace/data/actions.jsonl - streaming events with sessionKey, type, content, 2) /root/.openclaw/workspace/logs/activity-stream.jsonl - activity logs (tool_call, decision, file_op, git), 3) openclaw sessions list --json - live session data with tokens/models, 4) transcript files (file_*.json) - session transcripts. Existing infrastructure: monitor_server.py (Flask, port 3001) with basic routes, activity_logger.py (unused), templates/dashboard.html exists but minimal.",
+          "timestamp": "2026-02-05T16:20:00+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "REWRITING SUBTASKS based on research. New plan: Research data sources first, then design unique branding, extend existing Flask server (monitor_server.py) with SSE streaming from actions.jsonl, build live tool call feed with session filtering. 12 specific subtasks replacing 9 generic ones.",
+          "timestamp": "2026-02-05T16:21:00+00:00"
         }
       ],
       "createdAt": "2026-02-05T15:40:25.595844+00:00",
-      "updated": "2026-02-05T16:05:00+00:00"
+      "updated": "2026-02-05T16:21:00+00:00"
     }
   ],
   "lastUpdated": "2026-02-05T16:05:00+00:00"
