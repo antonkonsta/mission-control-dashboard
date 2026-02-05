@@ -665,10 +665,15 @@
           "author": "OpenClaw",
           "text": "FAILURE - Anthony reports this is not the correct dashboard. Missing: agent chat window, token tracker, multi-pane agent activity monitor. Need to find the ORIGINAL version.",
           "timestamp": "2026-02-05T13:48:52.459297+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "Found the real Activity Monitor: /root/.openclaw/workspace/skills/task-monitor/server.js (Node.js, port 3030). Checking if it's running.",
+          "timestamp": "2026-02-05T13:49:10.165798+00:00"
         }
       ],
       "createdAt": "2026-02-05T13:44:22.930186+00:00"
     }
   ],
-  "lastUpdated": "2026-02-05T13:48:52.459314+00:00"
+  "lastUpdated": "2026-02-05T13:49:10.165814+00:00"
 }
