@@ -7,8 +7,10 @@ description: Task management discipline for Mission Control dashboard. Tracks wo
 
 Mission Control is the source of truth for all work. Every task must have:
 1. **Verbose Description** - Full expectations as if Anthony is speaking
-2. **Subtasks** - Your step-by-step game plan
-3. **Comments** - Your live journal of what's happening
+2. **Subtasks** - Your step-by-step game plan (MANDATORY - create immediately after task creation)
+3. **Comments** - Your live journal of what's happening (MANDATORY - one comment per subtask completion)
+
+**Micromanagement is the point. Anthony tracks progress through subtasks + comments. Never work without a visible plan.**
 
 ## CLI Commands
 
@@ -85,21 +87,59 @@ mc list [status]
 
 **No silent changes. Every action = logged.**
 
-### 3. Subtasks Are Your Game Plan
+### 3. SUBTASK DISCIPLINE (MANDATORY - ANTI-HALLUCINATION)
 
-- Add subtasks BEFORE starting work
-- Cross them off AS YOU COMPLETE THEM
+**When you create ANY task, you MUST immediately add subtasks showing your plan:**
+
+```bash
+# RIGHT after mc create, BEFORE doing any work:
+mc subtask task_XXX add "Step 1: Research existing solutions"
+mc subtask task_XXX add "Step 2: Design architecture"
+mc subtask task_XXX add "Step 3: Implement core logic"
+mc subtask task_XXX add "Step 4: Test and verify"
+mc subtask task_XXX add "Step 5: Document and deploy"
+```
+
+**Rules:**
+- Create subtasks IMMEDIATELY after task creation
+- Break work into SMALL, SPECIFIC steps
+- Order them in execution sequence
+- Cross them off AS YOU COMPLETE THEM (never batch updates)
 - Add new subtasks if scope expands
-- Anthony can see your plan at any time
 
-### 4. Last Updated Matters
+**This is NOT optional. Subtasks are your game plan. Anthony micromanages through them.**
+
+### 4. MICROMANAGEMENT THROUGH COMMENTS
+
+**You MUST add a comment EVERY TIME you cross off a subtask:**
+
+```bash
+# Cross off AND comment in pairs - ALWAYS:
+mc subtask task_XXX sub_001 done
+mc comment task_XXX "OpenClaw" "Completed research. Found 3 viable approaches."
+
+mc subtask task_XXX sub_002 done
+mc comment task_XXX "OpenClaw" "Architecture designed. Using Flask + SSE for real-time."
+```
+
+**The Pattern - NEVER deviate:**
+1. Do the work
+2. Cross off the subtask
+3. **IMMEDIATELY** add a comment explaining what was done
+4. Move to next subtask
+
+**This creates a live journal Anthony can read to track your progress.**
+
+**Never let multiple subtasks be crossed off without individual comments.**
+
+### 5. Last Updated Matters
 
 - Dashboard shows "Updated: X ago" on every task card
 - Tasks are sorted by most recently updated (newest first)
 - The `mc` CLI automatically updates timestamps on every operation
 - Stale tasks = you're not updating
 
-### 5. Never Move to "Done"
+### 6. Never Move to "Done"
 
 - ONLY Anthony can mark tasks as done
 - When complete → `mc status task_XXX review`
@@ -114,21 +154,32 @@ mc create "Task Title" "OBJECTIVE: ..." high backlog    # Default - Anthony will
 # OR
 mc create "Task Title" "OBJECTIVE: ..." high in_progress  # ONLY if Anthony says "start now"
 
-# 2. Add your game plan
-mc subtask task_XXX add "Step 1"
-mc subtask task_XXX add "Step 2"
+# 2. IMMEDIATELY add your game plan (MANDATORY - never skip this)
+mc subtask task_XXX add "Step 1: Research existing solutions"
+mc subtask task_XXX add "Step 2: Design architecture"  
+mc subtask task_XXX add "Step 3: Implement core feature"
+mc subtask task_XXX add "Step 4: Test thoroughly"
+mc subtask task_XXX add "Step 5: Deploy and verify"
 
-# 3. Start work
-mc comment task_XXX "OpenClaw" "Starting work..."
+# 3. Start work with initial comment
+mc comment task_XXX "OpenClaw" "Starting work. Plan: 5 steps, estimating 30 min."
 
-# 4. Update as you go
+# 4. MICROMANAGE: Cross off + comment as PAIRS (never one without the other)
 mc subtask task_XXX sub_001 done
-mc comment task_XXX "OpenClaw" "Completed step 1, moving to step 2"
+mc comment task_XXX "OpenClaw" "Research complete. Found 3 approaches, selected option B."
+
+mc subtask task_XXX sub_002 done
+mc comment task_XXX "OpenClaw" "Architecture designed. Using Node.js + WebSocket for real-time updates."
+
+mc subtask task_XXX sub_003 done
+mc comment task_XXX "OpenClaw" "Core feature implemented. 450 lines, tested locally."
 
 # 5. Complete
-mc comment task_XXX "OpenClaw" "All deliverables ready"
+mc comment task_XXX "OpenClaw" "All 5 steps complete. Deployed and verified working."
 mc status task_XXX review
 ```
+
+**KEY POINT: Subtasks are created BEFORE work starts. Comments happen IMMEDIATELY after each subtask completion. This is micromanagement by design.**
 
 ## Dashboard
 
