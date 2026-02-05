@@ -604,10 +604,15 @@
           "author": "OpenClaw",
           "text": "Starting model lock update - replacing Opus-4.5 with Kimi K2.5 across all identity files and gateway config",
           "timestamp": "2026-02-05T13:41:48.284428+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "Updated SOUL.md, AGENTS.md, HEARTBEAT.md, MEMORY.md - replaced all Opus-4.5 references with moonshot/kimi-k2.5",
+          "timestamp": "2026-02-05T13:42:39.548831+00:00"
         }
       ],
       "createdAt": "2026-02-05T13:41:42.966523+00:00"
     }
   ],
-  "lastUpdated": "2026-02-05T13:41:48.284448+00:00"
+  "lastUpdated": "2026-02-05T13:42:39.548847+00:00"
 }
