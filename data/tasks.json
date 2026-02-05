@@ -552,11 +552,16 @@
           "author": "OpenClaw",
           "text": "MAJOR SPECIFICATION UPDATE per Anthony's detailed requirements: 1) Intelligent logger with event classification (tool_call, thinking, response, user_message, agent_message, decision, skill_use), 2) One pane per agent showing name (from task/label), model, last update timestamp, 3) 10-minute timeout - inactive agents move to Archive page, 4) Reverse chronological feed (newest at TOP), 5) Event types: tool calls, thoughts, skills, decisions, responses all visible, 6) Separate Active and Archived agent views. Rewrote description with full specifications. Expanded subtasks from 11 to 17 with specific implementation steps.",
           "timestamp": "2026-02-05T16:35:00+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "Iteration 1 started - spawned sub-agent task-025-agentscope-iteration-1 to build basic AgentScope. Building: SSE streaming endpoint, single agent pane, reverse chronological feed, dark theme. Keeping it simple for first iteration.",
+          "timestamp": "2026-02-05T17:00:19.511472+00:00"
         }
       ],
       "createdAt": "2026-02-05T15:40:25.595844+00:00",
       "updated": "2026-02-05T16:35:00+00:00"
     }
   ],
-  "lastUpdated": "2026-02-05T16:59:41.911755+00:00"
+  "lastUpdated": "2026-02-05T17:00:19.511493+00:00"
 }
