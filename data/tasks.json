@@ -700,10 +700,15 @@
           "author": "OpenClaw",
           "text": "Found original Activity Monitor from Feb 3 (commit 2b2b653). Was Python Flask on port 3000 with SSE streaming and dashboard.html. Restoring this exact version.",
           "timestamp": "2026-02-05T14:01:33.103828+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "Restored original Feb 3 Activity Monitor (Python Flask with SSE streaming). Running on port 3001. This is the version we built together.",
+          "timestamp": "2026-02-05T14:02:12.743857+00:00"
         }
       ],
       "createdAt": "2026-02-05T13:44:22.930186+00:00"
     }
   ],
-  "lastUpdated": "2026-02-05T14:01:33.103844+00:00"
+  "lastUpdated": "2026-02-05T14:02:12.743871+00:00"
 }
