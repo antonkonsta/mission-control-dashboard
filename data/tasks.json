@@ -73,7 +73,7 @@
       "comments": [
         {
           "author": "OpenClaw",
-          "text": "Removed Done column from Mission Control dashboard. Workflow is now: backlog \u2192 in_progress \u2192 review \u2192 archive. Tasks in Review now have an Archive button instead of Done.",
+          "text": "Removed Done column from Mission Control dashboard. Workflow is now: backlog → in_progress → review → archive. Tasks in Review now have an Archive button instead of Done.",
           "timestamp": "2026-02-04T04:13:12.571334+00:00"
         }
       ],
@@ -115,7 +115,7 @@
         },
         {
           "author": "OpenClaw",
-          "text": "Sub-agent completed. Added model display: blue badges in card headers showing model name, plus brain emoji tags (\ud83e\udde0 claude-opus-4.5) under task items. CSS styled and fallback to 'unknown' if missing.",
+          "text": "Sub-agent completed. Added model display: blue badges in card headers showing model name, plus brain emoji tags (🧠 claude-opus-4.5) under task items. CSS styled and fallback to 'unknown' if missing.",
           "timestamp": "2026-02-04T04:32:37.456533+00:00"
         },
         {
@@ -144,7 +144,7 @@
     {
       "id": "task_007",
       "title": "Activity Monitor: Agent Communication View",
-      "description": "Research and implement a view to watch main agent \u2194 sub-agent communication in real-time. Like 'stalking their text messages' - see the actual chat/instructions flowing between agents.",
+      "description": "Research and implement a view to watch main agent ↔ sub-agent communication in real-time. Like 'stalking their text messages' - see the actual chat/instructions flowing between agents.",
       "status": "done",
       "priority": "medium",
       "subtasks": [],
@@ -192,7 +192,7 @@
         },
         {
           "author": "OpenClaw",
-          "text": "Anthony feedback: Needs redesign. Current layout not right. Requirements: (1) Main session on RIGHT, sub-agent on LEFT like text messages (2) Vertical rectangular cards like the Active Agents view - one card per sub-agent conversation (3) Newest messages at BOTTOM, scrollable history (4) Show main\u2194sub-agent dialogue, not user\u2194assistant. Spawning sub-agent to fix.",
+          "text": "Anthony feedback: Needs redesign. Current layout not right. Requirements: (1) Main session on RIGHT, sub-agent on LEFT like text messages (2) Vertical rectangular cards like the Active Agents view - one card per sub-agent conversation (3) Newest messages at BOTTOM, scrollable history (4) Show main↔sub-agent dialogue, not user↔assistant. Spawning sub-agent to fix.",
           "timestamp": "2026-02-04T04:49:11.741198+00:00"
         },
         {
@@ -263,94 +263,6 @@
       "updated": "2026-02-04T18:53:55.419220+00:00"
     },
     {
-      "id": "task_016",
-      "title": "Mission Control: Last Updated Timestamps + Auto-Sort by Recent",
-      "description": "OBJECTIVE: Show last updated time on task cards and sort by most recently updated\n\nEXPECTATIONS FROM ANTHONY:\n- Every task card on dashboard shows \"Updated: X time ago\" or \"Updated: 1:45 PM\" BEFORE opening\n- When ANY change happens to a task (subtask added/crossed off, comment added, status change), timestamp updates\n- Tasks within each column (backlog, in_progress, review) sorted by MOST RECENTLY UPDATED at top\n- I can see at a glance which tasks are being actively worked on\n- Agent MUST add a comment whenever crossing off subtasks, adding subtasks, or making any change\n- This behavior must be HARDCODED into identity files (HEARTBEAT.md, AGENTS.md, SOUL.md)\n- Must create a SKILL that enforces this behavior for future reference\n\nCONSTRAINTS:\n- Must work with existing Mission Control dashboard\n- Must update in real-time with auto-refresh\n- Sorting must be per-column (not global)\n\nDELIVERABLES:\n1. Dashboard update: Show \"Updated: [timestamp]\" on each task card (visible without clicking)\n2. Dashboard update: Sort tasks within each column by lastUpdated descending (newest first)\n3. mc CLI update: Ensure every operation updates the lastUpdated field\n4. Identity file updates: HEARTBEAT.md, AGENTS.md, SOUL.md - hardcode the rule to always add comments on changes\n5. Create skill or script that documents/enforces this behavior\n6. Auto-comment on subtask changes (when crossing off, adding, or modifying subtasks)\n\nSUCCESS CRITERIA:\n- Anthony can see which tasks were updated most recently without opening them\n- Most recently updated tasks float to top of each column\n- Every subtask change triggers a comment explaining what changed\n- Agent behavior is hardcoded - never forgets to update timestamps and add comments",
-      "status": "backlog",
-      "priority": "high",
-      "subtasks": [
-        {
-          "id": "sub_001",
-          "title": "Add lastUpdated display to task cards in dashboard HTML",
-          "done": true
-        },
-        {
-          "id": "sub_002",
-          "title": "Implement per-column sorting by lastUpdated (newest first)",
-          "done": true
-        },
-        {
-          "id": "sub_003",
-          "title": "Update mc CLI to set lastUpdated on every operation",
-          "done": true
-        },
-        {
-          "id": "sub_004",
-          "title": "Update HEARTBEAT.md - add rule to always comment on changes",
-          "done": true
-        },
-        {
-          "id": "sub_005",
-          "title": "Update AGENTS.md - add rule to always comment on changes",
-          "done": true
-        },
-        {
-          "id": "sub_006",
-          "title": "Update SOUL.md - add rule to always comment on changes",
-          "done": true
-        },
-        {
-          "id": "sub_007",
-          "title": "Create skill/script documenting this behavior",
-          "done": true
-        },
-        {
-          "id": "sub_008",
-          "title": "Test: verify subtask changes trigger comments and timestamp updates",
-          "done": true
-        },
-        {
-          "id": "sub_009",
-          "title": "Test: mc CLI now updates lastUpdated on every operation",
-          "done": true
-        }
-      ],
-      "comments": [
-        {
-          "author": "OpenClaw",
-          "text": "Task created with 8 subtasks. Core requirement: show last updated time on cards, sort by recent, hardcode comment-on-change behavior into identity files.",
-          "timestamp": "2026-02-04T18:46:11.827061+00:00"
-        },
-        {
-          "author": "OpenClaw",
-          "text": "Moving to in_progress. Starting work on dashboard updates for lastUpdated display and sorting.",
-          "timestamp": "2026-02-04T18:47:47.963219+00:00"
-        },
-        {
-          "author": "OpenClaw",
-          "text": "Completed sub_001 and sub_002: Dashboard now shows \"Updated: X ago\" on each task card and sorts by most recently updated first within each column. Uses getLastUpdated() to check updated field, last comment timestamp, or createdAt.",
-          "timestamp": "2026-02-04T18:49:00.397611+00:00"
-        },
-        {
-          "author": "OpenClaw",
-          "text": "Completed sub_003 and sub_009: Updated mc CLI to set task['updated'] on every operation (create, comment, subtask add/update, status change). Also added 'mc subtask add' command for adding new subtasks. Moving to identity file updates next.",
-          "timestamp": "2026-02-04T18:50:26.034800+00:00"
-        },
-        {
-          "author": "OpenClaw",
-          "text": "Completed sub_004, sub_005, sub_006: Updated HEARTBEAT.md, AGENTS.md, SOUL.md, IDENTITY.md with COMMENT ON EVERY CHANGE mandatory rule. All identity files now enforce: every subtask change, status change, progress, blocker, or decision requires a Mission Control comment. Creating skill documentation next.",
-          "timestamp": "2026-02-04T18:51:17.663125+00:00"
-        },
-        {
-          "author": "OpenClaw",
-          "text": "All subtasks complete. Summary: (1) Dashboard shows 'Updated: X ago' on cards, (2) Tasks sorted by most recent per column, (3) mc CLI updates 'updated' field on every operation, (4) Added 'mc subtask add' command, (5) HEARTBEAT/AGENTS/SOUL/IDENTITY all have COMMENT ON EVERY CHANGE rule, (6) Created mission-control skill. Moving to review.",
-          "timestamp": "2026-02-04T18:51:57.767828+00:00"
-        }
-      ],
-      "createdAt": "2026-02-04T18:46:11.827090+00:00",
-      "updated": "2026-02-04T18:52:01.179072+00:00"
-    },
-    {
       "id": "task_017",
       "title": "Google Calendar Integration via gcalcli",
       "description": "OBJECTIVE: Set up Google Calendar integration using gcalcli OAuth\n\nEXPECTATIONS FROM ANTHONY:\n- Be able to view all events, meetings, tasks from university Google Calendar\n- Help with scheduling and reminders\n- Check conflicts before scheduling\n\nCONSTRAINTS:\n- University Google Workspace account (may have IT restrictions)\n- Use gcalcli OAuth flow (Option 1 - simplest)\n\nDELIVERABLES:\n1. gcalcli installed and authenticated\n2. Verify read access to calendar events\n3. Document any limitations from university IT\n\nSUCCESS CRITERIA:\n- Can list upcoming events\n- Can create/modify events\n- Calendar data accessible to OpenClaw",
@@ -366,49 +278,6 @@
       ],
       "createdAt": "2026-02-04T19:05:10.585695+00:00",
       "updated": "2026-02-04T19:05:15.913723+00:00"
-    },
-    {
-      "id": "task_018",
-      "title": "Improve model rate display clarity",
-      "description": "OBJECTIVE: Make model rate display clearer and more intuitive\n\nEXPECTATIONS FROM ANTHONY:\n- Current format '$5/$25' is confusing\n- Need clearer labeling that explains what the numbers mean\n- Should be immediately understandable at a glance\n\nCONSTRAINTS:\n- Keep it compact (fits in agent card)\n\nDELIVERABLES:\n- Updated format that clearly shows input/output cost per million tokens\n- Example: '$5 in / $25 out per M' or similar\n\nSUCCESS CRITERIA:\n- Anthony can understand the pricing at a glance without explanation",
-      "status": "backlog",
-      "priority": "high",
-      "subtasks": [
-        {
-          "id": "sub_001",
-          "title": "Update dashboard.html rate display format",
-          "done": true
-        },
-        {
-          "id": "sub_002",
-          "title": "Update history.html rate display format",
-          "done": true
-        },
-        {
-          "id": "sub_003",
-          "title": "Update tokens.html rate display if applicable",
-          "done": true
-        }
-      ],
-      "comments": [
-        {
-          "author": "OpenClaw",
-          "text": "Spawned task-018-rate-clarity (Sonnet) to improve rate display. Will change from confusing '$5/$25' to clearer format like '$5/M in \u00b7 $25/M out'",
-          "timestamp": "2026-02-04T19:25:45.477462+00:00"
-        },
-        {
-          "author": "OpenClaw",
-          "text": "sub_001, sub_002 done. Format changed from '$5/$25' to '$5/M in \u00b7 $25/M out'. Clear units and direction labels.",
-          "timestamp": "2026-02-04T19:26:11.223973+00:00"
-        },
-        {
-          "author": "OpenClaw",
-          "text": "All subtasks complete. Rate display now shows clear format: '$5/M in \u00b7 $25/M out' - moved to review.",
-          "timestamp": "2026-02-04T19:26:16.477974+00:00"
-        }
-      ],
-      "createdAt": "2026-02-04T19:25:25.813437+00:00",
-      "updated": "2026-02-04T19:26:16.477989+00:00"
     },
     {
       "id": "task_020",
@@ -433,26 +302,9 @@
       "updated": "2026-02-04T19:46:49.078174+00:00"
     },
     {
-      "id": "task_021",
-      "title": "Lock All Sessions to Haiku Model",
-      "description": "OBJECTIVE: Update all configuration and identity files to enforce github-copilot/claude-haiku-4.5 for main session and all sub-agents\n\nEXPECTATIONS FROM ANTHONY:\n- Main session: always use haiku\n- All sub-agents: always spawn with haiku\n- Gateway config: default model set to haiku\n- No overrides, no exceptions\n- Cost control priority\n\nCONSTRAINTS:\n- Use FULL model name: github-copilot/claude-haiku-4.5 (never alias)\n- Update: HEARTBEAT.md, SOUL.md, AGENTS.md, gateway config, session defaults\n\nDELIVERABLES:\n- All identity files updated with haiku as mandatory default\n- Gateway config patched with haiku as default_model\n- Sub-agent spawn rules updated to force haiku model\n\nSUCCESS CRITERIA:\n- Every new sub-agent spawns with haiku automatically\n- Main session locked to haiku\n- No manual override possible",
-      "status": "backlog",
-      "priority": "high",
-      "subtasks": [],
-      "comments": [
-        {
-          "author": "OpenClaw",
-          "text": "COMPLETE: All identity files and gateway config locked to haiku-4.5. SOUL.md updated, AGENTS.md spawning rules locked, HEARTBEAT.md sub-agent spawn rules locked, gateway primary model set to github-copilot/claude-haiku-4.5, heartbeat model set to haiku. Gateway restarted (SIGUSR1). All future sessions will default to Haiku.",
-          "timestamp": "2026-02-04T19:54:20.529826+00:00"
-        }
-      ],
-      "createdAt": "2026-02-04T19:53:44.042424+00:00",
-      "updated": "2026-02-04T19:54:23.124206+00:00"
-    },
-    {
       "id": "task_022",
       "title": "Local LLM + OpenClaw Migration: Self-Hosted Infrastructure",
-      "description": "OBJECTIVE: Comprehensive research, planning, and instruction manual for complete migration from GitHub Copilot VPS to self-hosted OpenClaw on existing gaming PC with local LLMs. Produce step-by-step beginner-friendly implementation guide covering OS installation through fully operational system on consumer hardware.\n\nANTHONY'S HARDWARE SPECS:\n- Gaming PC (Windows 10 or 11)\n- GPU: NVIDIA GTX 1050 Ti\n- RAM: 8-16GB (need to determine minimum for different LLM models)\n- Storage: 256-500GB (need to assess model storage requirements)\n- Currently: No Linux experience, no LLM setup experience, no local deployment experience\n\nEXPECTATIONS FROM ANTHONY:\n- COMPLETE end-to-end beginner's guide (Anthony has zero Linux/LLM experience)\n- ALL local LLM options researched and compared\n- Hardware compatibility analysis for GTX 1050 Ti (NVIDIA driver/CUDA support)\n- Step-by-step instructions for EVERY option (not just best - all viable paths)\n- Complete research of all primary documentation:\n  * OpenClaw Linux installation & deployment docs\n  * Linux installation guides (Ubuntu 20.04, 22.04, 24.04)\n  * NVIDIA CUDA/driver documentation for 1050 Ti\n  * Ollama documentation & setup guides\n  * vLLM documentation & deployment guides\n  * LocalAI documentation & guides\n  * LM Studio & alternatives\n- Clear instruction manual for absolute beginner\n- All options compared with pros/cons\n- Hardware implications analyzed for Anthony's specs\n- Cost analysis: hardware ownership vs GitHub Copilot subscription\n\nCONSTRAINTS:\n- Consumer-grade hardware (not enterprise)\n- Anthony is complete beginner (needs very detailed instructions)\n- Must preserve all existing VPS data & skills\n- Step-by-step must be so detailed a beginner can follow\n- Research phase ONLY - no implementation yet\n\nDELIVERABLES:\n\n1. Hardware Analysis Report\n   - GTX 1050 Ti capabilities & CUDA support\n   - NVIDIA driver installation guide for Linux\n   - RAM implications for different LLM model sizes (7B, 13B, 30B, 70B)\n   - Storage requirements analysis\n   - Whether 8GB vs 16GB changes what's possible\n   - Whether 256GB vs 500GB storage affects model options\n   - Cooling/power supply considerations for 1050 Ti\n\n2. Linux Installation Guide (Beginner-Friendly)\n   - Step-by-step Windows \u2192 Linux migration\n   - Creating USB boot media (detailed for Windows user)\n   - BIOS/UEFI settings for boot\n   - Ubuntu 20.04 vs 22.04 vs 24.04 comparison for gaming PC\n   - Installation walkthrough with screenshots/references\n   - Post-install system optimization for LLM workloads\n   - Desktop environment recommendations (lightweight vs full)\n\n3. NVIDIA Driver & CUDA Setup Guide\n   - Driver version compatibility for 1050 Ti\n   - CUDA toolkit installation on Linux\n   - Verification procedures\n   - Troubleshooting common issues\n   - Performance tuning for inference\n\n4. Local LLM Platform Research Report\n   - Ollama: setup, model availability, beginner-friendliness, performance on 1050 Ti\n   - vLLM: deployment options, advantages, learning curve, hardware requirements\n   - LocalAI: capabilities, setup difficulty, model support\n   - LM Studio: GUI vs CLI, ease of use, performance\n   - Hugging Face local inference options\n   - Which models available locally vs cloud-only\n   - Performance benchmarks (latency, throughput)\n   - Recommended models for Anthropic Opus-equivalent capability\n   - Model quantization options (GGUF, GPTQ, etc.) and their trade-offs\n\n5. Anthropic Opus Equivalent Analysis\n   - Can true Opus run locally? (License check)\n   - Best open-source alternatives:\n     * Llama 2 (70B, 13B, 7B variants)\n     * Mistral models (7B, 8x7B MoE)\n     * Dolphin series\n     * Other strong alternatives\n   - Performance/capability comparison matrix\n   - Which work on 1050 Ti with 8GB/16GB RAM\n   - Quantization impact on quality\n\n6. OpenClaw Linux Deployment Guide\n   - OpenClaw installation on Ubuntu\n   - Configuration for local LLM backends\n   - Model switching strategies\n   - Session management on consumer hardware\n   - Memory optimization for finite resources\n   - Testing & verification procedures\n\n7. Complete Step-by-Step Installation Manuals (for each option)\n   Option A: Ollama + OpenClaw\n   Option B: vLLM + OpenClaw\n   Option C: LocalAI + OpenClaw\n   Option D: LM Studio + OpenClaw\n   \n   Each manual includes:\n   - Prerequisite checks\n   - Exact commands to run\n   - Expected output examples\n   - Common errors & solutions\n   - Testing procedures\n   - Performance optimization tips\n\n8. VPS \u2192 Desktop Migration Guide\n   - What data exists on current VPS\n   - Backup procedures\n   - Transfer methods (SCP, rsync, etc.)\n   - Database migration strategy\n   - Skill preservation & transfer\n   - Configuration migration\n   - Testing & validation on new system\n\n9. Hardware Optimization Guide\n   - Linux kernel tuning for LLM inference\n   - GPU memory management\n   - CPU affinity settings\n   - Thermal management (cooling)\n   - Power consumption optimization\n   - 24/7 operation considerations\n\n10. Troubleshooting & Recovery Guide\n    - Common issues during OS installation\n    - Driver problems & solutions\n    - LLM model loading errors\n    - OpenClaw startup issues\n    - Data loss prevention\n    - Rollback procedures\n\n11. Cost Analysis & ROI\n    - Hardware ownership cost (5-year lifecycle)\n    - Electricity costs (24/7 operation estimate)\n    - Comparison vs GitHub Copilot subscription (annual cost)\n    - Break-even analysis\n\n12. Final Comparison Matrix\n    - All options compared side-by-side\n    - Pros/cons of each approach\n    - Recommendation for Anthony's hardware\n    - Alternative approaches if primary fails\n    - Timeline estimates for each step\n\nSUCCESS CRITERIA:\n- Anthony understands complete process from Windows \u2192 working OpenClaw with local LLM\n- Step-by-step guides are so detailed beginner can follow without Linux experience\n- All primary documentation has been reviewed (OpenClaw, Linux, LLM, driver docs)\n- Hardware compatibility fully understood for GTX 1050 Ti + 8/16GB RAM\n- All viable options clearly compared with recommendations\n- Anthony ready to begin implementation phase with clear roadmap",
+      "description": "OBJECTIVE: Comprehensive research, planning, and instruction manual for complete migration from GitHub Copilot VPS to self-hosted OpenClaw on existing gaming PC with local LLMs. Produce step-by-step beginner-friendly implementation guide covering OS installation through fully operational system on consumer hardware.\n\nANTHONY'S HARDWARE SPECS:\n- Gaming PC (Windows 10 or 11)\n- GPU: NVIDIA GTX 1050 Ti\n- RAM: 8-16GB (need to determine minimum for different LLM models)\n- Storage: 256-500GB (need to assess model storage requirements)\n- Currently: No Linux experience, no LLM setup experience, no local deployment experience\n\nEXPECTATIONS FROM ANTHONY:\n- COMPLETE end-to-end beginner's guide (Anthony has zero Linux/LLM experience)\n- ALL local LLM options researched and compared\n- Hardware compatibility analysis for GTX 1050 Ti (NVIDIA driver/CUDA support)\n- Step-by-step instructions for EVERY option (not just best - all viable paths)\n- Complete research of all primary documentation:\n  * OpenClaw Linux installation & deployment docs\n  * Linux installation guides (Ubuntu 20.04, 22.04, 24.04)\n  * NVIDIA CUDA/driver documentation for 1050 Ti\n  * Ollama documentation & setup guides\n  * vLLM documentation & deployment guides\n  * LocalAI documentation & guides\n  * LM Studio & alternatives\n- Clear instruction manual for absolute beginner\n- All options compared with pros/cons\n- Hardware implications analyzed for Anthony's specs\n- Cost analysis: hardware ownership vs GitHub Copilot subscription\n\nCONSTRAINTS:\n- Consumer-grade hardware (not enterprise)\n- Anthony is complete beginner (needs very detailed instructions)\n- Must preserve all existing VPS data & skills\n- Step-by-step must be so detailed a beginner can follow\n- Research phase ONLY - no implementation yet\n\nDELIVERABLES:\n\n1. Hardware Analysis Report\n   - GTX 1050 Ti capabilities & CUDA support\n   - NVIDIA driver installation guide for Linux\n   - RAM implications for different LLM model sizes (7B, 13B, 30B, 70B)\n   - Storage requirements analysis\n   - Whether 8GB vs 16GB changes what's possible\n   - Whether 256GB vs 500GB storage affects model options\n   - Cooling/power supply considerations for 1050 Ti\n\n2. Linux Installation Guide (Beginner-Friendly)\n   - Step-by-step Windows → Linux migration\n   - Creating USB boot media (detailed for Windows user)\n   - BIOS/UEFI settings for boot\n   - Ubuntu 20.04 vs 22.04 vs 24.04 comparison for gaming PC\n   - Installation walkthrough with screenshots/references\n   - Post-install system optimization for LLM workloads\n   - Desktop environment recommendations (lightweight vs full)\n\n3. NVIDIA Driver & CUDA Setup Guide\n   - Driver version compatibility for 1050 Ti\n   - CUDA toolkit installation on Linux\n   - Verification procedures\n   - Troubleshooting common issues\n   - Performance tuning for inference\n\n4. Local LLM Platform Research Report\n   - Ollama: setup, model availability, beginner-friendliness, performance on 1050 Ti\n   - vLLM: deployment options, advantages, learning curve, hardware requirements\n   - LocalAI: capabilities, setup difficulty, model support\n   - LM Studio: GUI vs CLI, ease of use, performance\n   - Hugging Face local inference options\n   - Which models available locally vs cloud-only\n   - Performance benchmarks (latency, throughput)\n   - Recommended models for Anthropic Opus-equivalent capability\n   - Model quantization options (GGUF, GPTQ, etc.) and their trade-offs\n\n5. Anthropic Opus Equivalent Analysis\n   - Can true Opus run locally? (License check)\n   - Best open-source alternatives:\n     * Llama 2 (70B, 13B, 7B variants)\n     * Mistral models (7B, 8x7B MoE)\n     * Dolphin series\n     * Other strong alternatives\n   - Performance/capability comparison matrix\n   - Which work on 1050 Ti with 8GB/16GB RAM\n   - Quantization impact on quality\n\n6. OpenClaw Linux Deployment Guide\n   - OpenClaw installation on Ubuntu\n   - Configuration for local LLM backends\n   - Model switching strategies\n   - Session management on consumer hardware\n   - Memory optimization for finite resources\n   - Testing & verification procedures\n\n7. Complete Step-by-Step Installation Manuals (for each option)\n   Option A: Ollama + OpenClaw\n   Option B: vLLM + OpenClaw\n   Option C: LocalAI + OpenClaw\n   Option D: LM Studio + OpenClaw\n   \n   Each manual includes:\n   - Prerequisite checks\n   - Exact commands to run\n   - Expected output examples\n   - Common errors & solutions\n   - Testing procedures\n   - Performance optimization tips\n\n8. VPS → Desktop Migration Guide\n   - What data exists on current VPS\n   - Backup procedures\n   - Transfer methods (SCP, rsync, etc.)\n   - Database migration strategy\n   - Skill preservation & transfer\n   - Configuration migration\n   - Testing & validation on new system\n\n9. Hardware Optimization Guide\n   - Linux kernel tuning for LLM inference\n   - GPU memory management\n   - CPU affinity settings\n   - Thermal management (cooling)\n   - Power consumption optimization\n   - 24/7 operation considerations\n\n10. Troubleshooting & Recovery Guide\n    - Common issues during OS installation\n    - Driver problems & solutions\n    - LLM model loading errors\n    - OpenClaw startup issues\n    - Data loss prevention\n    - Rollback procedures\n\n11. Cost Analysis & ROI\n    - Hardware ownership cost (5-year lifecycle)\n    - Electricity costs (24/7 operation estimate)\n    - Comparison vs GitHub Copilot subscription (annual cost)\n    - Break-even analysis\n\n12. Final Comparison Matrix\n    - All options compared side-by-side\n    - Pros/cons of each approach\n    - Recommendation for Anthony's hardware\n    - Alternative approaches if primary fails\n    - Timeline estimates for each step\n\nSUCCESS CRITERIA:\n- Anthony understands complete process from Windows → working OpenClaw with local LLM\n- Step-by-step guides are so detailed beginner can follow without Linux experience\n- All primary documentation has been reviewed (OpenClaw, Linux, LLM, driver docs)\n- Hardware compatibility fully understood for GTX 1050 Ti + 8/16GB RAM\n- All viable options clearly compared with recommendations\n- Anthony ready to begin implementation phase with clear roadmap",
       "status": "backlog",
       "priority": "high",
       "subtasks": [
@@ -478,7 +330,7 @@
         },
         {
           "id": "sub_005",
-          "description": "Create beginner-friendly Windows \u2192 Linux migration guide",
+          "description": "Create beginner-friendly Windows → Linux migration guide",
           "completed": false
         },
         {
@@ -528,7 +380,7 @@
         },
         {
           "id": "sub_015",
-          "description": "Create VPS \u2192 desktop migration & backup procedures",
+          "description": "Create VPS → desktop migration & backup procedures",
           "completed": false
         },
         {
@@ -585,174 +437,12 @@
         },
         {
           "author": "OpenClaw",
-          "text": "FULLY EXPANDED FOR ANTHONY'S HARDWARE (FINAL UPDATE). Task now includes: (1) GTX 1050 Ti GPU analysis with CUDA compatibility, (2) 8GB vs 16GB RAM implications for different LLM model sizes, (3) 256GB vs 500GB storage assessment, (4) Complete Windows \u2192 Linux beginner guide, (5) Ubuntu version comparison for gaming PC, (6) NVIDIA driver setup guide, (7) Detailed setup guides for Ollama, vLLM, LocalAI, LM Studio on consumer hardware, (8) OpenClaw Linux deployment, (9) Anthropic Opus alternatives (Llama, Mistral, Dolphin), (10) Quantization strategies, (11) VPS data migration, (12) Kernel optimization for LLM workloads, (13) Thermal/GPU management, (14) Troubleshooting guide, (15) 4 complete installation manuals (one per LLM platform), (16) ROI analysis. 21 subtasks covering all research areas. Ready for Anthony's approval to begin deep research of ALL documentation (OpenClaw docs, Linux docs, NVIDIA docs, LLM provider docs).",
+          "text": "FULLY EXPANDED FOR ANTHONY'S HARDWARE (FINAL UPDATE). Task now includes: (1) GTX 1050 Ti GPU analysis with CUDA compatibility, (2) 8GB vs 16GB RAM implications for different LLM model sizes, (3) 256GB vs 500GB storage assessment, (4) Complete Windows → Linux beginner guide, (5) Ubuntu version comparison for gaming PC, (6) NVIDIA driver setup guide, (7) Detailed setup guides for Ollama, vLLM, LocalAI, LM Studio on consumer hardware, (8) OpenClaw Linux deployment, (9) Anthropic Opus alternatives (Llama, Mistral, Dolphin), (10) Quantization strategies, (11) VPS data migration, (12) Kernel optimization for LLM workloads, (13) Thermal/GPU management, (14) Troubleshooting guide, (15) 4 complete installation manuals (one per LLM platform), (16) ROI analysis. 21 subtasks covering all research areas. Ready for Anthony's approval to begin deep research of ALL documentation (OpenClaw docs, Linux docs, NVIDIA docs, LLM provider docs).",
           "timestamp": "2026-02-04T20:41:19.725124+00:00"
         }
       ],
       "createdAt": "2026-02-04T20:27:12.205259+00:00",
       "updated": "2026-02-04T20:31:26.895320+00:00"
-    },
-    {
-      "id": "task_023",
-      "title": "Lock All Sessions to Kimi K2.5",
-      "description": "OBJECTIVE: Update all configuration and identity files to enforce moonshot/kimi-k2.5 for main session and all sub-agents\n\nEXPECTATIONS FROM ANTHONY:\n- Main session: always use kimi-k2.5\n- All sub-agents: always spawn with kimi-k2.5\n- Gateway config: default model set to kimi-k2.5\n- No overrides, no exceptions\n- Replace all references to Opus-4.5/Haiku with Kimi K2.5\n\nCONSTRAINTS:\n- Use FULL model name: moonshot/kimi-k2.5 (never alias)\n- Update: HEARTBEAT.md, SOUL.md, AGENTS.md, MEMORY.md, gateway config, session defaults\n- Remove all old Opus/Haiku model locks\n\nDELIVERABLES:\n- All identity files updated with kimi-k2.5 as mandatory default\n- Gateway config patched with kimi-k2.5 as default_model\n- Sub-agent spawn rules updated to force kimi-k2.5 model\n- MEMORY.md updated to reflect new model lock\n\nSUCCESS CRITERIA:\n- Every new sub-agent spawns with kimi-k2.5 automatically\n- Main session locked to kimi-k2.5\n- No manual override possible",
-      "status": "backlog",
-      "priority": "high",
-      "subtasks": [],
-      "comments": [
-        {
-          "author": "OpenClaw",
-          "text": "Starting model lock update - replacing Opus-4.5 with Kimi K2.5 across all identity files and gateway config",
-          "timestamp": "2026-02-05T13:41:48.284428+00:00"
-        },
-        {
-          "author": "OpenClaw",
-          "text": "Updated SOUL.md, AGENTS.md, HEARTBEAT.md, MEMORY.md - replaced all Opus-4.5 references with moonshot/kimi-k2.5",
-          "timestamp": "2026-02-05T13:42:39.548831+00:00"
-        },
-        {
-          "author": "OpenClaw",
-          "text": "Gateway config patched: primary model = moonshot/kimi-k2.5, heartbeat model = moonshot/kimi-k2.5. Gateway restarting (SIGUSR1).",
-          "timestamp": "2026-02-05T13:42:54.476684+00:00"
-        }
-      ],
-      "createdAt": "2026-02-05T13:41:42.966523+00:00"
-    },
-    {
-      "id": "task_024",
-      "title": "Activity Monitor Dashboard Restoration",
-      "description": "OBJECTIVE: Restore the full Activity Monitor dashboard with all pages that were previously working\n\nEXPECTATIONS FROM ANTHONY:\n- The Activity Monitor at https://ubuntu-s-2vcpu-4gb-120gb-intel-atl1-01.tailb52a5a.ts.net/ used to have a nice multi-page dashboard\n- Now it's loading a very old, barely working page\n- Need to restore the full dashboard with all previously built pages:\n  - Active Agents view with model badges\n  - Agent Chats page (iMessage-style conversations)\n  - History view\n  - Any other pages that were part of the dashboard\n- All features should work: auto-refresh, live/dead indicators, model display, etc.\n\nCONSTRAINTS:\n- The correct server file is /root/.openclaw/workspace/logs/monitor_server.py (Flask)\n- Previous updates were incorrectly made to task-monitor/server.js instead\n- Need to verify which version is running and restore the correct one\n\nDELIVERABLES:\n- Investigate what's currently running at the URL\n- Restore full multi-page dashboard\n- Verify all pages load and work correctly\n- Ensure auto-refresh and all features operational\n\nSUCCESS CRITERIA:\n- Anthony sees the full dashboard he had before\n- All pages accessible and working\n- Model badges, agent chats, history all functional",
-      "status": "backlog",
-      "priority": "high",
-      "subtasks": [],
-      "comments": [
-        {
-          "author": "OpenClaw",
-          "text": "Investigating what's currently running at the activity monitor URL",
-          "timestamp": "2026-02-05T13:44:28.466553+00:00"
-        },
-        {
-          "author": "OpenClaw",
-          "text": "Found the problem: monitor_server.py is outdated (only 2.1K, from Feb 4 15:17). Missing all the routes we built: /chats, full /history, /api/agents, /api/chats. Templates exist (chats.html, history.html updated Feb 4) but server doesn't serve them. Need to rebuild server with all routes.",
-          "timestamp": "2026-02-05T13:44:56.856127+00:00"
-        },
-        {
-          "author": "OpenClaw",
-          "text": "Spawned sub-agent task-024-restore-monitor (Kimi K2.5) to rebuild monitor_server.py with all routes and features",
-          "timestamp": "2026-02-05T13:45:00.832442+00:00"
-        },
-        {
-          "author": "OpenClaw",
-          "text": "\u26a0\ufe0f CRITICAL: Kimi K2.5 account suspended (insufficient balance). Sub-agent fell back to Sonnet and is working on restoration.",
-          "timestamp": "2026-02-05T13:45:43.805017+00:00"
-        },
-        {
-          "author": "OpenClaw",
-          "text": "Sub-agent stuck - taking over directly to restore monitor_server.py",
-          "timestamp": "2026-02-05T13:46:31.262390+00:00"
-        },
-        {
-          "author": "OpenClaw",
-          "text": "Restored monitor_server.py (7.5KB, all routes). Service restarted and running on port 3001. Dashboard should now show all pages.",
-          "timestamp": "2026-02-05T13:47:00.972666+00:00"
-        },
-        {
-          "author": "OpenClaw",
-          "text": "Heartbeat check: Sub-agent idle for 2 min, work already completed by main session. Cleaning up.",
-          "timestamp": "2026-02-05T13:47:23.272162+00:00"
-        },
-        {
-          "author": "OpenClaw",
-          "text": "FAILURE - Anthony reports this is not the correct dashboard. Missing: agent chat window, token tracker, multi-pane agent activity monitor. Need to find the ORIGINAL version.",
-          "timestamp": "2026-02-05T13:48:52.459297+00:00"
-        },
-        {
-          "author": "OpenClaw",
-          "text": "Found the real Activity Monitor: /root/.openclaw/workspace/skills/task-monitor/server.js (Node.js, port 3030). Checking if it's running.",
-          "timestamp": "2026-02-05T13:49:10.165798+00:00"
-        },
-        {
-          "author": "OpenClaw",
-          "text": "SUCCESS - Real Activity Monitor (Node.js task-monitor skill) now running on port 3030. This has the multi-pane layout, agent chats, and token tracker Anthony expects.",
-          "timestamp": "2026-02-05T13:49:31.062102+00:00"
-        },
-        {
-          "author": "OpenClaw",
-          "text": "Server running on 3030 locally but Tailscale URL can't connect to :3030. Checking if reverse proxy/nginx is configured to forward that port.",
-          "timestamp": "2026-02-05T13:50:40.274401+00:00"
-        },
-        {
-          "author": "OpenClaw",
-          "text": "SUCCESS - Real task-monitor (Node.js) now running on port 3001. Tailscale URL should now show the correct multi-pane dashboard.",
-          "timestamp": "2026-02-05T13:51:38.357011+00:00"
-        },
-        {
-          "author": "OpenClaw",
-          "text": "FAILURE - Anthony confirms this is still wrong. Need to find the EXACT original dashboard. Searching git history and backups.",
-          "timestamp": "2026-02-05T13:53:23.164336+00:00"
-        },
-        {
-          "author": "OpenClaw",
-          "text": "Node.js Task Monitor IS running and showing at URL. Anthony says FAILURE - still not the right dashboard. Need to ask Anthony specifically what features/pages he expects to see.",
-          "timestamp": "2026-02-05T13:53:46.308317+00:00"
-        },
-        {
-          "author": "OpenClaw",
-          "text": "Found original Activity Monitor from Feb 3 (commit 2b2b653). Was Python Flask on port 3000 with SSE streaming and dashboard.html. Restoring this exact version.",
-          "timestamp": "2026-02-05T14:01:33.103828+00:00"
-        },
-        {
-          "author": "OpenClaw",
-          "text": "Restored original Feb 3 Activity Monitor (Python Flask with SSE streaming). Running on port 3001. This is the version we built together.",
-          "timestamp": "2026-02-05T14:02:12.743857+00:00"
-        },
-        {
-          "author": "OpenClaw",
-          "text": "FAILURE - Anthony says Feb 3 version is WRONG. Searching all git history for the actual Activity Monitor he remembers.",
-          "timestamp": "2026-02-05T14:07:25.854558+00:00"
-        },
-        {
-          "author": "OpenClaw",
-          "text": "FOUND IT: chats.html + history.html + dashboard.html exist (Feb 4), but monitor_server.py is missing routes for /chats and /history pages. Fixing now.",
-          "timestamp": "2026-02-05T14:08:05.247778+00:00"
-        },
-        {
-          "author": "OpenClaw",
-          "text": "Anthony describes: multi-pane layout showing EACH sub-agent in separate panes, built-in token tracker, agent chat page, bluish/dark interface. We BUILT it ourselves (not a skill). Need to find the version with token tracker + multi-pane sub-agent view.",
-          "timestamp": "2026-02-05T14:24:44.750457+00:00"
-        },
-        {
-          "author": "OpenClaw",
-          "text": "Rebuilding complete Activity Monitor with: multi-pane sub-agent view, built-in token tracker, agent chats, dark/bluish interface as Anthony described.",
-          "timestamp": "2026-02-05T14:25:30.734161+00:00"
-        },
-        {
-          "author": "OpenClaw",
-          "text": "Sub-agent silent 2 min - checking status",
-          "timestamp": "2026-02-05T14:28:16.633557+00:00"
-        },
-        {
-          "author": "OpenClaw",
-          "text": "Sub-agent stuck/failed. Taking over directly to rebuild Activity Monitor with multi-pane sub-agent view and token tracker.",
-          "timestamp": "2026-02-05T14:29:46.156153+00:00"
-        },
-        {
-          "author": "OpenClaw",
-          "text": "Directed sub-agent to continue Activity Monitor rebuild. Model switched to Kimi K2.",
-          "timestamp": "2026-02-05T14:31:27.018090+00:00"
-        },
-        {
-          "author": "OpenClaw",
-          "text": "Built complete Activity Monitor: multi-pane sub-agent grid, token tracker with bars, bluish dark theme. Server running on port 3001.",
-          "timestamp": "2026-02-05T14:32:27.095815+00:00"
-        },
-        {
-          "author": "OpenClaw",
-          "text": "Deleted Activity Monitor - Anthony said it looks terrible",
-          "timestamp": "2026-02-05T14:41:35.040380+00:00"
-        }
-      ],
-      "createdAt": "2026-02-05T13:44:22.930186+00:00"
     },
     {
       "id": "task_025",
