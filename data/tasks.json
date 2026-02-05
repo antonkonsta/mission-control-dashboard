@@ -371,7 +371,7 @@
       "id": "task_018",
       "title": "Improve model rate display clarity",
       "description": "OBJECTIVE: Make model rate display clearer and more intuitive\n\nEXPECTATIONS FROM ANTHONY:\n- Current format '$5/$25' is confusing\n- Need clearer labeling that explains what the numbers mean\n- Should be immediately understandable at a glance\n\nCONSTRAINTS:\n- Keep it compact (fits in agent card)\n\nDELIVERABLES:\n- Updated format that clearly shows input/output cost per million tokens\n- Example: '$5 in / $25 out per M' or similar\n\nSUCCESS CRITERIA:\n- Anthony can understand the pricing at a glance without explanation",
-      "status": "review",
+      "status": "backlog",
       "priority": "high",
       "subtasks": [
         {
@@ -838,5 +838,5 @@
       "updated": "2026-02-05T16:21:00+00:00"
     }
   ],
-  "lastUpdated": "2026-02-05T16:23:03.042095+00:00"
+  "lastUpdated": "2026-02-05T16:23:03.785069+00:00"
 }
