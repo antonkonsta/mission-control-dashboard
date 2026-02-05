@@ -725,10 +725,15 @@
           "author": "OpenClaw",
           "text": "Rebuilding complete Activity Monitor with: multi-pane sub-agent view, built-in token tracker, agent chats, dark/bluish interface as Anthony described.",
           "timestamp": "2026-02-05T14:25:30.734161+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "Sub-agent silent 2 min - checking status",
+          "timestamp": "2026-02-05T14:28:16.633557+00:00"
         }
       ],
       "createdAt": "2026-02-05T13:44:22.930186+00:00"
     }
   ],
-  "lastUpdated": "2026-02-05T14:25:30.734178+00:00"
+  "lastUpdated": "2026-02-05T14:28:16.633572+00:00"
 }
