@@ -13,7 +13,7 @@ Mission Control is the source of truth for all work. Every task must have:
 ## CLI Commands
 
 ```bash
-# Create a task with verbose description
+# Create a task with verbose description (ALWAYS defaults to backlog)
 mc create "Title" "OBJECTIVE: ...
 EXPECTATIONS FROM ANTHONY:
 - Requirement 1
@@ -21,7 +21,11 @@ EXPECTATIONS FROM ANTHONY:
 DELIVERABLES:
 - Output 1
 SUCCESS CRITERIA:
-- How to judge complete" priority
+- How to judge complete" priority [status]
+
+# Create in specific status (ONLY when Anthony explicitly says)
+mc create "Title" "Description..." high in_progress   # ONLY if Anthony says "start this now"
+mc create "Title" "Description..." high backlog       # Default, use when Anthony says "add to backlog"
 
 # Add subtasks (your game plan)
 mc subtask task_XXX add "Step 1: Research"
@@ -49,7 +53,25 @@ mc list [status]
 
 ## 🚨 MANDATORY RULES
 
-### 1. Comment on Every Change
+### 1. RESPECT ANTHONY'S STATUS INSTRUCTIONS (CRITICAL)
+
+**When Anthony says "put this in backlog" → Task MUST be created in `backlog` status**
+**When Anthony says "start this now" → Task can be created in `in_progress` status**
+
+**The Rule:**
+- Default for ALL new tasks: `backlog`
+- ONLY create in `in_progress` if Anthony EXPLICITLY says to start working on it
+- If unsure → ALWAYS use `backlog`
+- NEVER assume Anthony wants work started - he will tell you
+
+**Examples:**
+- "Add this to the backlog" → `mc create "Title" "Desc" high backlog`
+- "Put this in backlog" → `mc create "Title" "Desc" high backlog`
+- "Start working on this" → `mc create "Title" "Desc" high in_progress`
+
+**This rule exists to counteract LLM hallucination. FOLLOW IT EXACTLY.**
+
+### 2. Comment on Every Change
 
 **You MUST add a Mission Control comment whenever you:**
 - Cross off a subtask → what was completed
@@ -63,21 +85,21 @@ mc list [status]
 
 **No silent changes. Every action = logged.**
 
-### 2. Subtasks Are Your Game Plan
+### 3. Subtasks Are Your Game Plan
 
 - Add subtasks BEFORE starting work
 - Cross them off AS YOU COMPLETE THEM
 - Add new subtasks if scope expands
 - Anthony can see your plan at any time
 
-### 3. Last Updated Matters
+### 4. Last Updated Matters
 
 - Dashboard shows "Updated: X ago" on every task card
 - Tasks are sorted by most recently updated (newest first)
 - The `mc` CLI automatically updates timestamps on every operation
 - Stale tasks = you're not updating
 
-### 4. Never Move to "Done"
+### 5. Never Move to "Done"
 
 - ONLY Anthony can mark tasks as done
 - When complete → `mc status task_XXX review`
@@ -87,8 +109,10 @@ mc list [status]
 ## Workflow
 
 ```bash
-# 1. Create task with full expectations
-mc create "Task Title" "OBJECTIVE: ..." high
+# 1. Create task with full expectations (use explicit status!)
+mc create "Task Title" "OBJECTIVE: ..." high backlog    # Default - Anthony will tell you when to start
+# OR
+mc create "Task Title" "OBJECTIVE: ..." high in_progress  # ONLY if Anthony says "start now"
 
 # 2. Add your game plan
 mc subtask task_XXX add "Step 1"
