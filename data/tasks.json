@@ -617,7 +617,17 @@
         }
       ],
       "createdAt": "2026-02-05T13:41:42.966523+00:00"
+    },
+    {
+      "id": "task_024",
+      "title": "Activity Monitor Dashboard Restoration",
+      "description": "OBJECTIVE: Restore the full Activity Monitor dashboard with all pages that were previously working\n\nEXPECTATIONS FROM ANTHONY:\n- The Activity Monitor at https://ubuntu-s-2vcpu-4gb-120gb-intel-atl1-01.tailb52a5a.ts.net/ used to have a nice multi-page dashboard\n- Now it's loading a very old, barely working page\n- Need to restore the full dashboard with all previously built pages:\n  - Active Agents view with model badges\n  - Agent Chats page (iMessage-style conversations)\n  - History view\n  - Any other pages that were part of the dashboard\n- All features should work: auto-refresh, live/dead indicators, model display, etc.\n\nCONSTRAINTS:\n- The correct server file is /root/.openclaw/workspace/logs/monitor_server.py (Flask)\n- Previous updates were incorrectly made to task-monitor/server.js instead\n- Need to verify which version is running and restore the correct one\n\nDELIVERABLES:\n- Investigate what's currently running at the URL\n- Restore full multi-page dashboard\n- Verify all pages load and work correctly\n- Ensure auto-refresh and all features operational\n\nSUCCESS CRITERIA:\n- Anthony sees the full dashboard he had before\n- All pages accessible and working\n- Model badges, agent chats, history all functional",
+      "status": "in_progress",
+      "priority": "high",
+      "subtasks": [],
+      "comments": [],
+      "createdAt": "2026-02-05T13:44:22.930186+00:00"
     }
   ],
-  "lastUpdated": "2026-02-05T13:42:55.064029+00:00"
+  "lastUpdated": "2026-02-05T13:44:22.930202+00:00"
 }
