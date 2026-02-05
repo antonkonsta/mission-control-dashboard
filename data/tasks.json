@@ -454,12 +454,12 @@
         {
           "id": "sub_001",
           "title": "Research: Analyze actions.jsonl schema to identify event types (streaming, tool calls, messages, thinking)",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_002",
           "title": "Research: Analyze session transcript files (.jsonl) structure for message types and metadata",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_003",
@@ -484,7 +484,7 @@
         {
           "id": "sub_007",
           "title": "Implement: AgentScope backend event classifier/parser for actions.jsonl and session transcripts",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_008",
@@ -494,7 +494,7 @@
         {
           "id": "sub_009",
           "title": "Implement: AgentScope backend SSE endpoint /api/agents/stream for real-time event streaming",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_010",
@@ -504,17 +504,17 @@
         {
           "id": "sub_011",
           "title": "Implement: AgentScope frontend agent pane component with reverse chronological feed (newest at top)",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_012",
           "title": "Implement: AgentScope frontend event type visual indicators (color coding for tool_call, thinking, response, etc.)",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_013",
           "title": "Implement: AgentScope frontend Active Agents main view with grid of agent panes",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_014",
@@ -524,7 +524,7 @@
         {
           "id": "sub_015",
           "title": "Test: AgentScope - verify real-time event classification and display with live agent activity",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_016",
@@ -534,7 +534,7 @@
         {
           "id": "sub_017",
           "title": "Deploy: AgentScope - start server on dedicated port and validate with Anthony",
-          "done": false
+          "done": true
         }
       ],
       "comments": [
