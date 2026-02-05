@@ -756,8 +756,8 @@
     },
     {
       "id": "task_025",
-      "title": "New Agent Activity Monitor - Real-Time Execution Dashboard",
-      "description": "OBJECTIVE: Build a comprehensive, real-time web dashboard to monitor ALL agent activity - every execution, tool call, command, response, and internal thought process from both main session and sub-agents.\n\nEXPECTATIONS FROM ANTHONY:\n- Web interface accessible via browser\n- Very live/real-time updates (not stale data)\n- Shows EVERYTHING agents are doing:\n  * Every tool execution\n  * Every command run\n  * Every response generated\n  * Thinking/reasoning processes\n  * Internal workings and details\n  * Main session activity\n  * All sub-agent activity\n- Uses existing logs and system information where possible\n- Similar in concept to previous Activity Monitors but distinct and improved\n- Needs a unique name to avoid confusion with existing monitors\n\nCONSTRAINTS:\n- Start in BACKLOG only - do NOT move to in_progress without explicit approval\n- Research and design phase first before implementation\n- Must integrate with existing OpenClaw infrastructure\n- Should be performant even with high-frequency updates\n\nDELIVERABLES:\n1. Unique naming/branding for this monitor (distinct from existing Activity Monitor, Task Monitor, etc.)\n2. Architecture design document\n3. Web dashboard implementation\n4. Real-time data pipeline from agent sessions\n5. Comprehensive logging integration\n\nSUCCESS CRITERIA:\n- Anthony can open web interface and see live agent activity\n- Every tool call, command, and response is visible\n- Updates in real-time without manual refresh\n- Clear distinction between main session and sub-agents\n- Historical view of past activity available",
+      "title": "AgentScope - Real-Time Agent Activity Monitor",
+      "description": "OBJECTIVE: Build AgentScope - a comprehensive, real-time web dashboard to monitor ALL agent activity. AgentScope shows every execution, tool call, command, response, and internal thought process from both main session and sub-agents.\n\nEXPECTATIONS FROM ANTHONY:\n- Web interface accessible via browser\n- Very live/real-time updates (not stale data)\n- Shows EVERYTHING agents are doing:\n  * Every tool execution\n  * Every command run\n  * Every response generated\n  * Thinking/reasoning processes\n  * Internal workings and details\n  * Main session activity\n  * All sub-agent activity\n- Uses existing logs and system information where possible\n- AgentScope is distinct from existing Activity Monitor and Task Monitor\n\nCONSTRAINTS:\n- Start in BACKLOG only - do NOT move to in_progress without explicit approval\n- Research and design phase first before implementation\n- Must integrate with existing OpenClaw infrastructure\n- Should be performant even with high-frequency updates\n\nDELIVERABLES:\n1. Architecture design document for AgentScope\n2. Web dashboard implementation\n3. Real-time data pipeline from agent sessions\n4. Comprehensive logging integration\n\nSUCCESS CRITERIA:\n- Anthony can open AgentScope web interface and see live agent activity\n- Every tool call, command, and response is visible\n- Updates in real-time without manual refresh\n- Clear distinction between main session and sub-agents\n- Historical view of past activity available",
       "status": "backlog",
       "priority": "high",
       "subtasks": [
@@ -773,52 +773,47 @@
         },
         {
           "id": "sub_003",
-          "title": "Design: Create unique naming/branding distinct from Activity Monitor and Task Monitor",
-          "done": false
-        },
-        {
-          "id": "sub_004",
-          "title": "Design: Architecture for real-time data pipeline using existing actions.jsonl and SSE/WebSocket streaming",
+          "title": "Design: AgentScope architecture for real-time data pipeline using existing actions.jsonl and SSE/WebSocket streaming",
           "done": false
         },
         {
           "id": "sub_005",
-          "title": "Design: Web interface layout with live tool call stream, session selector, and detail view",
+          "title": "Design: AgentScope web interface layout with live tool call stream, session selector, and detail view",
           "done": false
         },
         {
           "id": "sub_006",
-          "title": "Implement: Extend monitor_server.py with /api/stream endpoint for real-time events",
+          "title": "Implement: AgentScope backend - extend monitor_server.py with /api/stream endpoint for real-time events",
           "done": false
         },
         {
           "id": "sub_007",
-          "title": "Implement: Backend parser for actions.jsonl to extract tool calls, commands, responses",
+          "title": "Implement: AgentScope backend parser for actions.jsonl to extract tool calls, commands, responses",
           "done": false
         },
         {
           "id": "sub_008",
-          "title": "Implement: Frontend dashboard.html with live event feed, filtering by session, and auto-scroll",
+          "title": "Implement: AgentScope frontend dashboard.html with live event feed, filtering by session, and auto-scroll",
           "done": false
         },
         {
           "id": "sub_009",
-          "title": "Implement: Tool call detail view showing tool name, parameters, result, timestamp, duration",
+          "title": "Implement: AgentScope tool call detail view showing tool name, parameters, result, timestamp, duration",
           "done": false
         },
         {
           "id": "sub_010",
-          "title": "Implement: Main session vs sub-agent distinction with color coding",
+          "title": "Implement: AgentScope main session vs sub-agent distinction with color coding",
           "done": false
         },
         {
           "id": "sub_011",
-          "title": "Test: Verify real-time updates when agent executes tools",
+          "title": "Test: AgentScope - verify real-time updates when agent executes tools",
           "done": false
         },
         {
           "id": "sub_012",
-          "title": "Deploy: Start server on dedicated port and validate with Anthony",
+          "title": "Deploy: AgentScope - start server on dedicated port and validate with Anthony",
           "done": false
         }
       ],
@@ -832,10 +827,15 @@
           "author": "OpenClaw",
           "text": "REWRITING SUBTASKS based on research. New plan: Research data sources first, then design unique branding, extend existing Flask server (monitor_server.py) with SSE streaming from actions.jsonl, build live tool call feed with session filtering. 12 specific subtasks replacing 9 generic ones.",
           "timestamp": "2026-02-05T16:21:00+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "NAME DECISION: AgentScope selected. Removed subtask for naming/branding (sub_003). Updated task title and all subtasks to reference AgentScope. Task now has 11 subtasks (was 12).",
+          "timestamp": "2026-02-05T16:24:00+00:00"
         }
       ],
       "createdAt": "2026-02-05T15:40:25.595844+00:00",
-      "updated": "2026-02-05T16:21:00+00:00"
+      "updated": "2026-02-05T16:24:00+00:00"
     }
   ],
   "lastUpdated": "2026-02-05T16:23:08.568993+00:00"
