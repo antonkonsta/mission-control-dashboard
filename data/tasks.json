@@ -609,10 +609,15 @@
           "author": "OpenClaw",
           "text": "Updated SOUL.md, AGENTS.md, HEARTBEAT.md, MEMORY.md - replaced all Opus-4.5 references with moonshot/kimi-k2.5",
           "timestamp": "2026-02-05T13:42:39.548831+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "Gateway config patched: primary model = moonshot/kimi-k2.5, heartbeat model = moonshot/kimi-k2.5. Gateway restarting (SIGUSR1).",
+          "timestamp": "2026-02-05T13:42:54.476684+00:00"
         }
       ],
       "createdAt": "2026-02-05T13:41:42.966523+00:00"
     }
   ],
-  "lastUpdated": "2026-02-05T13:42:39.548847+00:00"
+  "lastUpdated": "2026-02-05T13:42:54.476700+00:00"
 }
