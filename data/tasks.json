@@ -757,62 +757,92 @@
     {
       "id": "task_025",
       "title": "AgentScope - Real-Time Agent Activity Monitor",
-      "description": "OBJECTIVE: Build AgentScope - a comprehensive, real-time web dashboard to monitor ALL agent activity. AgentScope shows every execution, tool call, command, response, and internal thought process from both main session and sub-agents.\n\nEXPECTATIONS FROM ANTHONY:\n- Web interface accessible via browser\n- Very live/real-time updates (not stale data)\n- Shows EVERYTHING agents are doing:\n  * Every tool execution\n  * Every command run\n  * Every response generated\n  * Thinking/reasoning processes\n  * Internal workings and details\n  * Main session activity\n  * All sub-agent activity\n- Uses existing logs and system information where possible\n- AgentScope is distinct from existing Activity Monitor and Task Monitor\n\nCONSTRAINTS:\n- Start in BACKLOG only - do NOT move to in_progress without explicit approval\n- Research and design phase first before implementation\n- Must integrate with existing OpenClaw infrastructure\n- Should be performant even with high-frequency updates\n\nDELIVERABLES:\n1. Architecture design document for AgentScope\n2. Web dashboard implementation\n3. Real-time data pipeline from agent sessions\n4. Comprehensive logging integration\n\nSUCCESS CRITERIA:\n- Anthony can open AgentScope web interface and see live agent activity\n- Every tool call, command, and response is visible\n- Updates in real-time without manual refresh\n- Clear distinction between main session and sub-agents\n- Historical view of past activity available",
+      "description": "OBJECTIVE: Build AgentScope - a comprehensive, real-time web dashboard to monitor ALL agent activity with intelligent classification and agent-specific panes.\n\nAGENTSCOPE SPECIFICATIONS:\n\n1. INTELLIGENT LOGGER & CLASSIFICATION:\n   - Captures EVERYTHING: tool calls, internal thinking messages, Telegram responses, user messages, agent-to-agent messages\n   - Auto-classifies each event type:\n     * tool_call - when agent executes a tool\n     * thinking - internal reasoning/thought process\n     * response - message sent to Telegram/user\n     * user_message - message received from user\n     * agent_message - message from other agents\n     * decision - agent makes a decision\n     * skill_use - agent uses a skill\n   - Each event shows: timestamp, session ID, event type, content summary\n\n2. AGENT PANES (One per spawned agent):\n   - Main session agent always visible\n   - One pane for each active sub-agent\n   - Each pane header shows:\n     * Agent name (derived from task/project/label)\n     * Model being used (e.g., kimi-k2.5, claude-opus)\n     * Last update timestamp (e.g., '2 min ago')\n     * Live/dead status indicator\n\n3. 10-MINUTE TIMEOUT & ARCHIVING:\n   - Active agents: last activity within 10 minutes\n   - After 10 min of inactivity → moved to 'Archived Agents' page\n   - Separate page/view for archived/dead agents\n   - Main dashboard only shows ACTIVE agents\n\n4. REVERSE CHRONOLOGICAL FEED (Newest at TOP):\n   - Unlike typical chat (oldest at top), AgentScope shows NEWEST events at top\n   - Each agent pane displays its event stream\n   - Events shown:\n     * Tool calls (tool name, params, result preview)\n     * Thinking messages (reasoning process)\n     * Skills being used\n     * Decisions being made\n     * Responses being sent\n     * User messages received\n   - Auto-scroll to keep newest visible\n\n5. DATA SOURCES TO INTEGRATE:\n   - /root/.openclaw/workspace/data/actions.jsonl - streaming events\n   - /root/.openclaw/agents/main/sessions/*.jsonl - session transcripts\n   - openclaw sessions list --json - live session metadata\n   - /root/.openclaw/workspace/logs/activity-stream.jsonl - activity logs\n\n6. VISUAL DESIGN:\n   - Dark theme (distinct from previous monitors)\n   - Color-coded event types\n   - Collapsible/expandable agent panes\n   - Responsive layout (grid of agent cards)\n   - Main session highlighted prominently\n\nCONSTRAINTS:\n- Start in BACKLOG only - do NOT move to in_progress without explicit approval\n- Must handle high-frequency updates efficiently\n- Must not impact agent performance\n- Use existing Flask server (monitor_server.py) as base\n\nDELIVERABLES:\n1. AgentScope architecture with event classification system\n2. Backend event aggregator/parser from multiple sources\n3. Real-time SSE streaming endpoint\n4. Frontend with agent panes and reverse chronological feeds\n5. Active/Archived agent management with 10-min timeout\n6. Deployment and validation\n\nSUCCESS CRITERIA:\n- Anthony sees live AgentScope with all agent panes\n- Every tool call, thought, response visible and classified\n- Newest events appear at top of each pane\n- Agents auto-archive after 10 min inactivity\n- Main session and all sub-agents visible with names, models, timestamps",
       "status": "backlog",
       "priority": "high",
       "subtasks": [
         {
           "id": "sub_001",
-          "title": "Research: Inventory existing data sources (actions.jsonl, activity-stream.jsonl, sessions.json, transcript files)",
+          "title": "Research: Analyze actions.jsonl schema to identify event types (streaming, tool calls, messages, thinking)",
           "done": false
         },
         {
           "id": "sub_002",
-          "title": "Research: Analyze existing monitor_server.py and activity_logger.py implementation",
+          "title": "Research: Analyze session transcript files (.jsonl) structure for message types and metadata",
           "done": false
         },
         {
           "id": "sub_003",
-          "title": "Design: AgentScope architecture for real-time data pipeline using existing actions.jsonl and SSE/WebSocket streaming",
+          "title": "Research: Design event classification system (tool_call, thinking, response, user_message, agent_message, decision, skill_use)",
+          "done": false
+        },
+        {
+          "id": "sub_004",
+          "title": "Design: AgentScope backend architecture - event aggregator from multiple sources with unified schema",
           "done": false
         },
         {
           "id": "sub_005",
-          "title": "Design: AgentScope web interface layout with live tool call stream, session selector, and detail view",
+          "title": "Design: AgentScope agent pane system - one pane per agent with header (name, model, last update, status)",
           "done": false
         },
         {
           "id": "sub_006",
-          "title": "Implement: AgentScope backend - extend monitor_server.py with /api/stream endpoint for real-time events",
+          "title": "Design: AgentScope 10-minute timeout logic for active vs archived agent classification",
           "done": false
         },
         {
           "id": "sub_007",
-          "title": "Implement: AgentScope backend parser for actions.jsonl to extract tool calls, commands, responses",
+          "title": "Implement: AgentScope backend event classifier/parser for actions.jsonl and session transcripts",
           "done": false
         },
         {
           "id": "sub_008",
-          "title": "Implement: AgentScope frontend dashboard.html with live event feed, filtering by session, and auto-scroll",
+          "title": "Implement: AgentScope backend agent metadata extractor (name from label/task, model, last activity)",
           "done": false
         },
         {
           "id": "sub_009",
-          "title": "Implement: AgentScope tool call detail view showing tool name, parameters, result, timestamp, duration",
+          "title": "Implement: AgentScope backend SSE endpoint /api/agents/stream for real-time event streaming",
           "done": false
         },
         {
           "id": "sub_010",
-          "title": "Implement: AgentScope main session vs sub-agent distinction with color coding",
+          "title": "Implement: AgentScope backend 10-minute timeout detector for archive classification",
           "done": false
         },
         {
           "id": "sub_011",
-          "title": "Test: AgentScope - verify real-time updates when agent executes tools",
+          "title": "Implement: AgentScope frontend agent pane component with reverse chronological feed (newest at top)",
           "done": false
         },
         {
           "id": "sub_012",
+          "title": "Implement: AgentScope frontend event type visual indicators (color coding for tool_call, thinking, response, etc.)",
+          "done": false
+        },
+        {
+          "id": "sub_013",
+          "title": "Implement: AgentScope frontend Active Agents main view with grid of agent panes",
+          "done": false
+        },
+        {
+          "id": "sub_014",
+          "title": "Implement: AgentScope frontend Archived Agents separate page for 10+ min inactive agents",
+          "done": false
+        },
+        {
+          "id": "sub_015",
+          "title": "Test: AgentScope - verify real-time event classification and display with live agent activity",
+          "done": false
+        },
+        {
+          "id": "sub_016",
+          "title": "Test: AgentScope - verify 10-minute timeout moves agents to archive page",
+          "done": false
+        },
+        {
+          "id": "sub_017",
           "title": "Deploy: AgentScope - start server on dedicated port and validate with Anthony",
           "done": false
         }
@@ -825,17 +855,17 @@
         },
         {
           "author": "OpenClaw",
-          "text": "REWRITING SUBTASKS based on research. New plan: Research data sources first, then design unique branding, extend existing Flask server (monitor_server.py) with SSE streaming from actions.jsonl, build live tool call feed with session filtering. 12 specific subtasks replacing 9 generic ones.",
-          "timestamp": "2026-02-05T16:21:00+00:00"
+          "text": "NAME DECISION: AgentScope selected. Updated task title and all subtasks to reference AgentScope.",
+          "timestamp": "2026-02-05T16:24:00+00:00"
         },
         {
           "author": "OpenClaw",
-          "text": "NAME DECISION: AgentScope selected. Removed subtask for naming/branding (sub_003). Updated task title and all subtasks to reference AgentScope. Task now has 11 subtasks (was 12).",
-          "timestamp": "2026-02-05T16:24:00+00:00"
+          "text": "MAJOR SPECIFICATION UPDATE per Anthony's detailed requirements: 1) Intelligent logger with event classification (tool_call, thinking, response, user_message, agent_message, decision, skill_use), 2) One pane per agent showing name (from task/label), model, last update timestamp, 3) 10-minute timeout - inactive agents move to Archive page, 4) Reverse chronological feed (newest at TOP), 5) Event types: tool calls, thoughts, skills, decisions, responses all visible, 6) Separate Active and Archived agent views. Rewrote description with full specifications. Expanded subtasks from 11 to 17 with specific implementation steps.",
+          "timestamp": "2026-02-05T16:35:00+00:00"
         }
       ],
       "createdAt": "2026-02-05T15:40:25.595844+00:00",
-      "updated": "2026-02-05T16:24:00+00:00"
+      "updated": "2026-02-05T16:35:00+00:00"
     }
   ],
   "lastUpdated": "2026-02-05T16:23:08.568993+00:00"
