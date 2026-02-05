@@ -7,10 +7,10 @@ description: Task management discipline for Mission Control dashboard. Tracks wo
 
 Mission Control is the source of truth for all work. Every task must have:
 1. **Verbose Description** - Full expectations as if Anthony is speaking
-2. **Subtasks** - Your step-by-step game plan (MANDATORY - create immediately after task creation)
+2. **Subtasks** - Your researched step-by-step game plan (MANDATORY - research FIRST, then create specific steps)
 3. **Comments** - Your live journal of what's happening (MANDATORY - one comment per subtask completion)
 
-**Micromanagement is the point. Anthony tracks progress through subtasks + comments. Never work without a visible plan.**
+**Research comes FIRST. Subtasks are your researched plan, not generic guesses. Anthony tracks progress through subtasks + comments. Never work without a visible, researched plan.**
 
 ## CLI Commands
 
@@ -87,12 +87,20 @@ mc list [status]
 
 **No silent changes. Every action = logged.**
 
-### 3. SUBTASK DISCIPLINE (MANDATORY - ANTI-HALLUCINATION)
+### 3. SUBTASK DISCIPLINE (MANDATORY - RESEARCH FIRST)
 
-**When you create ANY task, you MUST immediately add subtasks showing your plan:**
+**When you create ANY task, you MUST do research BEFORE adding subtasks:**
 
 ```bash
-# RIGHT after mc create, BEFORE doing any work:
+# RESEARCH PHASE (do this FIRST before adding subtasks):
+# 1. Read existing code/docs related to the task
+# 2. Search codebase for relevant files, functions, patterns
+# 3. Look at similar implementations
+# 4. Understand what files need to be created/modified
+# 5. Identify dependencies, blockers, prerequisites
+# 6. Estimate actual effort based on research
+
+# THEN add specific, researched subtasks:
 mc subtask task_XXX add "Step 1: Research existing solutions"
 mc subtask task_XXX add "Step 2: Design architecture"
 mc subtask task_XXX add "Step 3: Implement core logic"
@@ -101,13 +109,16 @@ mc subtask task_XXX add "Step 5: Document and deploy"
 ```
 
 **Rules:**
-- Create subtasks IMMEDIATELY after task creation
-- Break work into SMALL, SPECIFIC steps
+- **RESEARCH FIRST**: Investigate codebase, docs, existing solutions BEFORE creating subtasks
+- Subtasks must reflect ACTUAL implementation steps, not generic summaries
+- Look at files, understand what needs to change, then document the plan
+- Break work into SMALL, SPECIFIC, RESEARCHED steps
 - Order them in execution sequence
 - Cross them off AS YOU COMPLETE THEM (never batch updates)
-- Add new subtasks if scope expands
+- **UPDATE subtasks as you learn**: Add new ones, modify existing ones when discovery happens
+- Research is part of the work - document what you found in comments
 
-**This is NOT optional. Subtasks are your game plan. Anthony micromanages through them.**
+**This is NOT optional. Subtasks are your researched game plan. Anthony micromanages through them.**
 
 ### 4. MICROMANAGEMENT THROUGH COMMENTS
 
@@ -154,32 +165,67 @@ mc create "Task Title" "OBJECTIVE: ..." high backlog    # Default - Anthony will
 # OR
 mc create "Task Title" "OBJECTIVE: ..." high in_progress  # ONLY if Anthony says "start now"
 
-# 2. IMMEDIATELY add your game plan (MANDATORY - never skip this)
-mc subtask task_XXX add "Step 1: Research existing solutions"
-mc subtask task_XXX add "Step 2: Design architecture"  
-mc subtask task_XXX add "Step 3: Implement core feature"
-mc subtask task_XXX add "Step 4: Test thoroughly"
-mc subtask task_XXX add "Step 5: Deploy and verify"
+# 2. RESEARCH PHASE (MANDATORY - do this before adding subtasks)
+#    - Read existing code in relevant directories
+#    - Search for similar implementations
+#    - Understand current architecture
+#    - Identify what files need changes
+#    - Look at docs, skills, examples
+# mc comment task_XXX "OpenClaw" "Researching codebase. Found monitor_server.py, 
+#    existing logs in /var/log/openclaw/, and transcript files in sessions/."
 
-# 3. Start work with initial comment
-mc comment task_XXX "OpenClaw" "Starting work. Plan: 5 steps, estimating 30 min."
+# 3. THEN add researched game plan (specific steps based on research)
+mc subtask task_XXX add "Step 1: Read existing Activity Monitor implementation"
+mc subtask task_XXX add "Step 2: Analyze log file formats and data structures"
+mc subtask task_XXX add "Step 3: Design new data collection endpoint"
+mc subtask task_XXX add "Step 4: Implement real-time SSE streaming"
+mc subtask task_XXX add "Step 5: Build frontend dashboard components"
+mc subtask task_XXX add "Step 6: Test with live agent sessions"
+mc comment task_XXX "OpenClaw" "Research complete. Plan based on existing Flask server 
+    in monitor_server.py. Will extend with SSE and new routes."
 
 # 4. MICROMANAGE: Cross off + comment as PAIRS (never one without the other)
 mc subtask task_XXX sub_001 done
-mc comment task_XXX "OpenClaw" "Research complete. Found 3 approaches, selected option B."
+mc comment task_XXX "OpenClaw" "Read monitor_server.py (7.5KB). Found /api/agents and 
+    /api/chats routes. Will add /api/executions for tool call visibility."
 
 mc subtask task_XXX sub_002 done
-mc comment task_XXX "OpenClaw" "Architecture designed. Using Node.js + WebSocket for real-time updates."
+mc comment task_XXX "OpenClaw" "Log format analyzed. Transcripts in 
+    ~/.openclaw/transcripts/. Each entry has timestamp, tool name, args, result."
 
 mc subtask task_XXX sub_003 done
-mc comment task_XXX "OpenClaw" "Core feature implemented. 450 lines, tested locally."
+mc comment task_XXX "OpenClaw" "New endpoint designed: /api/executions returns tool 
+    calls with session key, tool name, args, timestamp, duration."
 
-# 5. Complete
-mc comment task_XXX "OpenClaw" "All 5 steps complete. Deployed and verified working."
+mc subtask task_XXX sub_004 done
+mc comment task_XXX "OpenClaw" "SSE streaming implemented. Updates every 2 seconds 
+    from tail -f on transcript files."
+
+mc subtask task_XXX sub_005 done
+mc comment task_XXX "OpenClaw" "Dashboard built. Shows live tool execution table 
+    with filter by session."
+
+mc subtask task_XXX sub_006 done
+mc comment task_XXX "OpenClaw" "Tested with main session. Tool calls appearing in 
+    real-time. Latency <500ms."
+
+# 5. UPDATE subtasks when discovery happens
+mc subtask task_XXX add "Step 7: Add tool execution filtering by type"
+mc comment task_XXX "OpenClaw" "Discovered need for filtering during testing. 
+    Adding subtask for filter feature."
+
+# 6. Complete
+mc comment task_XXX "OpenClaw" "All steps complete. Added filtering feature 
+    discovered during testing. Deployed and verified."
 mc status task_XXX review
 ```
 
-**KEY POINT: Subtasks are created BEFORE work starts. Comments happen IMMEDIATELY after each subtask completion. This is micromanagement by design.**
+**KEY POINTS:**
+- **Research comes FIRST**: Understand the codebase before planning
+- **Subtasks are SPECIFIC**: Based on actual files, functions, patterns found
+- **Comments show DISCOVERY**: What you learned, what changed, what you found
+- **UPDATE as you learn**: Add/modify subtasks when reality differs from plan
+- **This is micromanagement by design - Anthony sees your thinking process.**
 
 ## Dashboard
 
