@@ -625,9 +625,15 @@
       "status": "in_progress",
       "priority": "high",
       "subtasks": [],
-      "comments": [],
+      "comments": [
+        {
+          "author": "OpenClaw",
+          "text": "Investigating what's currently running at the activity monitor URL",
+          "timestamp": "2026-02-05T13:44:28.466553+00:00"
+        }
+      ],
       "createdAt": "2026-02-05T13:44:22.930186+00:00"
     }
   ],
-  "lastUpdated": "2026-02-05T13:44:27.810594+00:00"
+  "lastUpdated": "2026-02-05T13:44:28.466570+00:00"
 }
