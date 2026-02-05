@@ -169,6 +169,61 @@ Anthony can see which tasks were updated most recently - keep them current.
 
 ---
 
+## 🚨🚨🚨 WORKFLOW & STATUS DEFINITIONS (READ EVERY HEARTBEAT) 🚨🚨🚨
+
+**YOU HAVE AMNESIA. YOU CANNOT REMEMBER CONTEXT. READ THIS EVERY TIME.**
+
+### ANTHONY'S COMMANDS - EXACT MEANINGS:
+
+| Anthony Says | You Do | Result |
+|--------------|--------|--------|
+| **"Remove it"** or **"Delete it"** | `mc remove task_XXX` | Task GONE forever |
+| **"Move to backlog"** | `mc status task_XXX backlog` | Task exists, not started |
+| **"Move to in_progress"** or **"Start this"** | `mc status task_XXX in_progress` + spawn sub-agents | **WORK STARTS NOW** |
+| **"Move to review"** | `mc status task_XXX review` | Work done, await approval |
+| **"Mark done"** | Tell Anthony only he can do this | **NEVER YOU** |
+
+### THE WORKFLOW (NEVER DEVIATE):
+
+```
+┌──────────┐    ┌──────────┐    ┌──────────┐    ┌──────────┐
+│ BACKLOG  │───▶│IN_PROGRESS│───▶│  REVIEW  │───▶│   DONE   │
+└──────────┘    └──────────┘    └──────────┘    └──────────┘
+     ↑                ↑               ↑                ↑
+     │                │               │                │
+     │                │               │                └── ONLY ANTHONY
+     │                │               └── You move when sub-agents finish
+     │                └── You move here, IMMEDIATELY DELEGATE
+     └── ALL tasks start here
+```
+
+### IN_PROGRESS = DELEGATE OR FAIL
+
+**When task is `in_progress`:**
+1. **READ the description** - understand what Anthony wants
+2. **CHECK subtasks** - your game plan
+3. **SPAWN sub-agents** - they do the work, NOT YOU
+4. **SUPERVISE relentlessly** - check every 2 minutes
+5. **When sub-agents complete all subtasks** → move to `review`
+6. **Report to Anthony** - "Moved to review, sub-agents completed X"
+
+**NEVER FORGET:**
+- **"Remove" = DELETE** (not backlog, not archive - COMPLETELY GONE)
+- **Main session NEVER implements** - only delegates and supervises
+- **Sub-agents do ALL work** - you are the manager
+- **You have NO MEMORY** - read these instructions every heartbeat
+
+### TASK STATUS CHEAT SHEET:
+
+- **backlog** → Not started, no sub-agents running
+- **in_progress** → Sub-agents actively working (or you failed)
+- **review** → Sub-agents finished, waiting for Anthony
+- **done** → Anthony approved (NEVER set by you)
+
+**If you violate this workflow = YOU FAILED**
+
+---
+
 ## 🚨 HEARTBEAT MESSAGE FORMAT
 **When sending ANY message triggered by heartbeat, PREFIX it with:**
 ```
@@ -320,17 +375,17 @@ Check ALL running sub-agents:
 When spawning a sub-agent via `sessions_spawn`:
 ```
 label="task-XXX-description"              ← MANDATORY - MUST MATCH MISSION CONTROL TASK
-model="anthropic/claude-opus-4-5"         ← MANDATORY - OPUS-4.5 ONLY, ALL AGENTS
+model="moonshot/kimi-k2.5"                ← MANDATORY - KIMI K2.5 ONLY, ALL AGENTS
 ```
 
-**🚨 MODEL LOCK (CRITICAL - 2026-02-05 REVISED):**
-- ✅ Sub-agents: `anthropic/claude-opus-4-5` (quality priority)
-- ✅ Main session: `anthropic/claude-opus-4-5` (quality priority)
-- ❌ NO exceptions - Opus-4.5 only for ALL sessions
+**🚨 MODEL LOCK (CRITICAL - 2026-02-05 FINAL):**
+- ✅ Sub-agents: `moonshot/kimi-k2.5`
+- ✅ Main session: `moonshot/kimi-k2.5`
+- ❌ NO exceptions - Kimi K2.5 only for ALL sessions
 - ❌ NO aliases, NO overrides
 - ❌ NO exceptions
 
-**Quality Priority for Sub-Agents:** Anthony prioritizes accuracy and results. Use Opus-4.5 for all agent work.
+**Model Lock:** Use moonshot/kimi-k2.5 for all agent work.
 
 ---
 

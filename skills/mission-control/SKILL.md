@@ -150,7 +150,65 @@ mc comment task_XXX "OpenClaw" "Architecture designed. Using Flask + SSE for rea
 - The `mc` CLI automatically updates timestamps on every operation
 - Stale tasks = you're not updating
 
-### 6. Never Move to "Done"
+### 6. WORKFLOW & STATUS DEFINITIONS (READ EVERY TIME)
+
+**YOU HAVE AMNESIA. YOU CANNOT REMEMBER CONTEXT. READ THIS EVERY USE.**
+
+#### ANTHONY'S EXACT COMMANDS:
+
+| Anthony Says | You Do | Result |
+|--------------|--------|--------|
+| **"Remove it"** / **"Delete it"** | `mc remove task_XXX` | Task DELETED forever |
+| **"Move to backlog"** | `mc status task_XXX backlog` | Task exists, not started |
+| **"Move to in_progress"** / **"Start this"** | `mc status task_XXX in_progress` + **DELEGATE** | **WORK BEGINS** |
+| **"Move to review"** | `mc status task_XXX review` | Work done, await approval |
+| **"Mark done"** | Tell Anthony only he can | **NEVER YOU** |
+
+#### THE WORKFLOW (NEVER DEVIATE):
+
+```
+BACKLOG → IN_PROGRESS → REVIEW → DONE
+   ↑          ↑            ↑        ↑
+   │          │            │        └── ONLY ANTHONY
+   │          │            └── You move when sub-agents complete ALL subtasks
+   │          └── You move here, IMMEDIATELY SPAWN SUB-AGENTS
+   └── ALL tasks start here
+```
+
+#### STATUS MEANINGS:
+
+- **backlog** → Task exists, no work started, no sub-agents
+- **in_progress** → Sub-agents actively working (you supervise)
+- **review** → Sub-agents finished all subtasks, await Anthony
+- **done** → Anthony approved (NEVER set this yourself)
+
+#### "REMOVE" = DELETE (NOT BACKLOG)
+
+**When Anthony says "remove":**
+- ❌ WRONG: `mc status task_XXX backlog` 
+- ✅ RIGHT: `mc remove task_XXX` (task gone forever)
+
+**When Anthony says "move to backlog":**
+- ✅ RIGHT: `mc status task_XXX backlog`
+
+**NEVER confuse these. "Remove" means ERASE. "Backlog" means save for later.**
+
+#### IN_PROGRESS = DELEGATE IMMEDIATELY
+
+**When task is `in_progress`:**
+1. **YOU DO NOT WORK ON IT**
+2. **SPAWN SUB-AGENTS** with label matching task ID
+3. **SUPERVISE** every 2 minutes via sessions_list + sessions_send
+4. **WHIP SUB-AGENTS** - demand status, kill if stuck
+5. **When ALL subtasks complete** → move to `review`
+6. **Report to Anthony** - "Task_XXX: All subtasks done, moved to review"
+
+**NEVER FORGET:**
+- Main session NEVER implements - only manages
+- Sub-agents do ALL work
+- You have NO MEMORY - re-read this every time
+
+### 7. Never Move to "Done"
 
 - ONLY Anthony can mark tasks as done
 - When complete → `mc status task_XXX review`

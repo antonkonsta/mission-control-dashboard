@@ -90,21 +90,59 @@ mc comment task_XXX "OpenClaw" "Done. 30 files, 4500 lines. Moving to review."
 
 ---
 
-## 🚨 CRITICAL: NEVER MOVE TASKS TO "DONE"
+## 🚨 CRITICAL: TASK STATUS WORKFLOW (READ BEFORE EVERY SPAWN)
 
-**ONLY ANTHONY CAN MARK TASKS AS DONE.**
+**YOU HAVE AMNESIA. YOU CANNOT REMEMBER. READ THIS EVERY TIME.**
 
-- When you complete work → move to `review`
-- NEVER move to `done` yourself
-- Wait for Anthony's explicit approval
-- This applies to ALL tasks, ALL agents, no exceptions
+### ANTHONY'S EXACT COMMANDS:
 
-**Task Status Flow:**
-1. `backlog` → `in_progress` (agents can do this)
-2. `in_progress` → `review` (agents can do this when work complete)
-3. `review` → `done` (ONLY ANTHONY - NEVER AGENTS)
+| Command | Meaning | Action Required |
+|---------|---------|-----------------|
+| **"Remove it" / "Delete it"** | DELETE task | `mc remove task_XXX` - Gone forever |
+| **"Move to backlog"** | Not started | `mc status task_XXX backlog` |
+| **"Move to in_progress"** / **"Start this"** | **START WORK** | `mc status task_XXX in_progress` + **SPAWN SUB-AGENTS** |
+| **"Move to review"** | Work complete | `mc status task_XXX review` |
+| **"Mark done"** | Anthony approval needed | **Tell Anthony to do it - NEVER YOU** |
 
-**If ANY agent moves a task to "done" without Anthony's approval = IMMEDIATE FAILURE**
+### THE WORKFLOW (BURN INTO YOUR CODE):
+
+```
+BACKLOG ──▶ IN_PROGRESS ──▶ REVIEW ──▶ DONE
+   │              │             │          │
+   │              │             │          └── ONLY ANTHONY
+   │              │             └── You move when sub-agents finish
+   │              └── You move here, DELEGATE IMMEDIATELY
+   └── ALL tasks start here
+```
+
+### IN_PROGRESS = DELEGATE (NEVER IMPLEMENT)
+
+**When task is `in_progress`:**
+1. **Main session reads description** - understand deliverables
+2. **Checks subtasks** - the game plan
+3. **Spawns sub-agents** - THEY do the work
+4. **Supervises every 2 minutes** - cruel boss mode
+5. **When sub-agents complete ALL subtasks** → move to `review`
+6. **Reports to Anthony** - "Task_XXX moved to review. All subtasks complete."
+
+**NEVER FORGET:**
+- **"Remove" = DELETE** (not backlog, not archive - COMPLETELY ERASED)
+- **Main session NEVER writes code** - only spawns and supervises
+- **Sub-agents do ALL implementation** - main session manages only
+- **You have ZERO MEMORY** - re-read this every time you spawn
+
+### STATUS DEFINITIONS:
+
+- **backlog** → Task exists, no work started, no sub-agents running
+- **in_progress** → Sub-agents actively working (main session supervising)
+- **review** → Sub-agents finished, awaiting Anthony's approval
+- **done** → Anthony approved and marked complete
+
+**Violation = IMMEDIATE FAILURE:**
+- Moving to "done" yourself
+- "Removing" by moving to backlog
+- Doing work instead of delegating
+- Forgetting you have no memory
 
 ---
 
@@ -115,13 +153,13 @@ mc comment task_XXX "OpenClaw" "Done. 30 files, 4500 lines. Moving to review."
 3. Good: `label="task-021-5t-ota"`, `label="task-014-modal"`
 4. Bad: no label, or generic like `label="sub-agent"`
 
-### 🚨 MODEL NAME RULE (CRITICAL - OPUS-4.5 ONLY)
-**ALL sessions (main AND sub-agents) MUST use anthropic/claude-opus-4-5:**
-- ✅ `model="anthropic/claude-opus-4-5"` (MANDATORY for ALL sessions)
-- ❌ NO exceptions - anthropic/claude-opus-4-5 only
+### 🚨 MODEL NAME RULE (CRITICAL - KIMI K2.5 ONLY)
+**ALL sessions (main AND sub-agents) MUST use moonshot/kimi-k2.5:**
+- ✅ `model="moonshot/kimi-k2.5"` (MANDATORY for ALL sessions)
+- ❌ NO exceptions - moonshot/kimi-k2.5 only
 - ❌ NO aliases, NO overrides
 
-**BURNED IN (2026-02-05):** Anthony prioritizes quality and accuracy. Use Opus-4.5 for all sessions.
+**BURNED IN (2026-02-05):** Use Kimi K2.5 for all sessions.
 
 ### Spawn Instructions Must Include:
 When spawning ANY sub-agent, include these in the task parameter:
