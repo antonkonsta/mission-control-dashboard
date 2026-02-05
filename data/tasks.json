@@ -640,10 +640,15 @@
           "author": "OpenClaw",
           "text": "Spawned sub-agent task-024-restore-monitor (Kimi K2.5) to rebuild monitor_server.py with all routes and features",
           "timestamp": "2026-02-05T13:45:00.832442+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "\u26a0\ufe0f CRITICAL: Kimi K2.5 account suspended (insufficient balance). Sub-agent fell back to Sonnet and is working on restoration.",
+          "timestamp": "2026-02-05T13:45:43.805017+00:00"
         }
       ],
       "createdAt": "2026-02-05T13:44:22.930186+00:00"
     }
   ],
-  "lastUpdated": "2026-02-05T13:45:00.832464+00:00"
+  "lastUpdated": "2026-02-05T13:45:43.805035+00:00"
 }
