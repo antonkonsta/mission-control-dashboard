@@ -635,10 +635,15 @@
           "author": "OpenClaw",
           "text": "Found the problem: monitor_server.py is outdated (only 2.1K, from Feb 4 15:17). Missing all the routes we built: /chats, full /history, /api/agents, /api/chats. Templates exist (chats.html, history.html updated Feb 4) but server doesn't serve them. Need to rebuild server with all routes.",
           "timestamp": "2026-02-05T13:44:56.856127+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "Spawned sub-agent task-024-restore-monitor (Kimi K2.5) to rebuild monitor_server.py with all routes and features",
+          "timestamp": "2026-02-05T13:45:00.832442+00:00"
         }
       ],
       "createdAt": "2026-02-05T13:44:22.930186+00:00"
     }
   ],
-  "lastUpdated": "2026-02-05T13:44:56.856144+00:00"
+  "lastUpdated": "2026-02-05T13:45:00.832464+00:00"
 }
