@@ -760,10 +760,63 @@
       "description": "OBJECTIVE: Build a comprehensive, real-time web dashboard to monitor ALL agent activity - every execution, tool call, command, response, and internal thought process from both main session and sub-agents.\n\nEXPECTATIONS FROM ANTHONY:\n- Web interface accessible via browser\n- Very live/real-time updates (not stale data)\n- Shows EVERYTHING agents are doing:\n  * Every tool execution\n  * Every command run\n  * Every response generated\n  * Thinking/reasoning processes\n  * Internal workings and details\n  * Main session activity\n  * All sub-agent activity\n- Uses existing logs and system information where possible\n- Similar in concept to previous Activity Monitors but distinct and improved\n- Needs a unique name to avoid confusion with existing monitors\n\nCONSTRAINTS:\n- Start in BACKLOG only - do NOT move to in_progress without explicit approval\n- Research and design phase first before implementation\n- Must integrate with existing OpenClaw infrastructure\n- Should be performant even with high-frequency updates\n\nDELIVERABLES:\n1. Unique naming/branding for this monitor (distinct from existing Activity Monitor, Task Monitor, etc.)\n2. Architecture design document\n3. Web dashboard implementation\n4. Real-time data pipeline from agent sessions\n5. Comprehensive logging integration\n\nSUCCESS CRITERIA:\n- Anthony can open web interface and see live agent activity\n- Every tool call, command, and response is visible\n- Updates in real-time without manual refresh\n- Clear distinction between main session and sub-agents\n- Historical view of past activity available",
       "status": "backlog",
       "priority": "high",
-      "subtasks": [],
-      "comments": [],
-      "createdAt": "2026-02-05T15:40:25.595844+00:00"
+      "subtasks": [
+        {
+          "id": "sub_001",
+          "title": "Research naming options to avoid confusion with existing monitors",
+          "done": false
+        },
+        {
+          "id": "sub_002",
+          "title": "Design architecture for real-time data pipeline",
+          "done": false
+        },
+        {
+          "id": "sub_003",
+          "title": "Research existing logs and system information sources",
+          "done": false
+        },
+        {
+          "id": "sub_004",
+          "title": "Design web interface layout and components",
+          "done": false
+        },
+        {
+          "id": "sub_005",
+          "title": "Implement backend data collection from agent sessions",
+          "done": false
+        },
+        {
+          "id": "sub_006",
+          "title": "Implement frontend dashboard with real-time updates",
+          "done": false
+        },
+        {
+          "id": "sub_007",
+          "title": "Add tool call/command/response visibility features",
+          "done": false
+        },
+        {
+          "id": "sub_008",
+          "title": "Test and verify real-time functionality",
+          "done": false
+        },
+        {
+          "id": "sub_009",
+          "title": "Deploy and validate with Anthony",
+          "done": false
+        }
+      ],
+      "comments": [
+        {
+          "author": "OpenClaw",
+          "text": "Added 9 subtasks showing execution plan. Task remains in backlog per Anthony's instruction - will not start work until explicitly told to move to in_progress.",
+          "timestamp": "2026-02-05T16:05:00+00:00"
+        }
+      ],
+      "createdAt": "2026-02-05T15:40:25.595844+00:00",
+      "updated": "2026-02-05T16:05:00+00:00"
     }
   ],
-  "lastUpdated": "2026-02-05T15:43:31.874065+00:00"
+  "lastUpdated": "2026-02-05T16:05:00+00:00"
 }
