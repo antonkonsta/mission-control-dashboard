@@ -660,10 +660,15 @@
           "author": "OpenClaw",
           "text": "Heartbeat check: Sub-agent idle for 2 min, work already completed by main session. Cleaning up.",
           "timestamp": "2026-02-05T13:47:23.272162+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "FAILURE - Anthony reports this is not the correct dashboard. Missing: agent chat window, token tracker, multi-pane agent activity monitor. Need to find the ORIGINAL version.",
+          "timestamp": "2026-02-05T13:48:52.459297+00:00"
         }
       ],
       "createdAt": "2026-02-05T13:44:22.930186+00:00"
     }
   ],
-  "lastUpdated": "2026-02-05T13:47:23.272180+00:00"
+  "lastUpdated": "2026-02-05T13:48:52.459314+00:00"
 }
