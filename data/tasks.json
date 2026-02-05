@@ -562,11 +562,16 @@
           "author": "OpenClaw",
           "text": "Iteration 1 COMPLETE. Basic AgentScope running on port 3001. Features: SSE streaming from actions.jsonl, single agent pane, reverse chronological feed (newest at top), dark theme, event type icons. Accessible at http://localhost:3001/agentscope",
           "timestamp": "2026-02-05T17:03:08.611424+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "Spawned sub-agent task-025-agentscope-multi-agent for iteration 3: Multi-agent panes. Building side-by-side agent cards for main + sub-agents with 10-min activity window.",
+          "timestamp": "2026-02-05T18:46:44.716033+00:00"
         }
       ],
       "createdAt": "2026-02-05T15:40:25.595844+00:00",
       "updated": "2026-02-05T16:35:00+00:00"
     }
   ],
-  "lastUpdated": "2026-02-05T17:03:08.611441+00:00"
+  "lastUpdated": "2026-02-05T18:46:44.716048+00:00"
 }
