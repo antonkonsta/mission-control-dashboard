@@ -582,11 +582,16 @@
           "author": "OpenClaw",
           "text": "Spawned sub-agent for countdown timer feature. Adding 'Archive in: Xm Xs' countdown to each agent card on Live View.",
           "timestamp": "2026-02-05T19:12:52.934686+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "Countdown timer complete. Each agent card now shows 'Archive in: Xm Xs' with color coding (green\u2192yellow\u2192red). Updates every second. expiresAt timestamp sent via SSE.",
+          "timestamp": "2026-02-05T19:16:31.360587+00:00"
         }
       ],
       "createdAt": "2026-02-05T15:40:25.595844+00:00",
       "updated": "2026-02-05T16:35:00+00:00"
     }
   ],
-  "lastUpdated": "2026-02-05T19:12:52.934707+00:00"
+  "lastUpdated": "2026-02-05T19:16:31.360603+00:00"
 }
