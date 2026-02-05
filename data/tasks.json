@@ -680,10 +680,15 @@
           "author": "OpenClaw",
           "text": "Server running on 3030 locally but Tailscale URL can't connect to :3030. Checking if reverse proxy/nginx is configured to forward that port.",
           "timestamp": "2026-02-05T13:50:40.274401+00:00"
+        },
+        {
+          "author": "OpenClaw",
+          "text": "SUCCESS - Real task-monitor (Node.js) now running on port 3001. Tailscale URL should now show the correct multi-pane dashboard.",
+          "timestamp": "2026-02-05T13:51:38.357011+00:00"
         }
       ],
       "createdAt": "2026-02-05T13:44:22.930186+00:00"
     }
   ],
-  "lastUpdated": "2026-02-05T13:50:40.274422+00:00"
+  "lastUpdated": "2026-02-05T13:51:38.357027+00:00"
 }
