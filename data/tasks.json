@@ -596,7 +596,7 @@
       "id": "task_023",
       "title": "Lock All Sessions to Kimi K2.5",
       "description": "OBJECTIVE: Update all configuration and identity files to enforce moonshot/kimi-k2.5 for main session and all sub-agents\n\nEXPECTATIONS FROM ANTHONY:\n- Main session: always use kimi-k2.5\n- All sub-agents: always spawn with kimi-k2.5\n- Gateway config: default model set to kimi-k2.5\n- No overrides, no exceptions\n- Replace all references to Opus-4.5/Haiku with Kimi K2.5\n\nCONSTRAINTS:\n- Use FULL model name: moonshot/kimi-k2.5 (never alias)\n- Update: HEARTBEAT.md, SOUL.md, AGENTS.md, MEMORY.md, gateway config, session defaults\n- Remove all old Opus/Haiku model locks\n\nDELIVERABLES:\n- All identity files updated with kimi-k2.5 as mandatory default\n- Gateway config patched with kimi-k2.5 as default_model\n- Sub-agent spawn rules updated to force kimi-k2.5 model\n- MEMORY.md updated to reflect new model lock\n\nSUCCESS CRITERIA:\n- Every new sub-agent spawns with kimi-k2.5 automatically\n- Main session locked to kimi-k2.5\n- No manual override possible",
-      "status": "in_progress",
+      "status": "review",
       "priority": "high",
       "subtasks": [],
       "comments": [
@@ -619,5 +619,5 @@
       "createdAt": "2026-02-05T13:41:42.966523+00:00"
     }
   ],
-  "lastUpdated": "2026-02-05T13:42:54.476700+00:00"
+  "lastUpdated": "2026-02-05T13:42:55.064029+00:00"
 }
