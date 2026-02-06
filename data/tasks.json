@@ -469,7 +469,7 @@
         {
           "id": "sub_004",
           "title": "Design: AgentScope backend architecture - event aggregator from multiple sources with unified schema",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_005",
@@ -613,5 +613,5 @@
       "updated": "2026-02-05T16:35:00+00:00"
     }
   ],
-  "lastUpdated": "2026-02-06T09:15:13.280425+00:00"
+  "lastUpdated": "2026-02-06T09:15:13.949822+00:00"
 }
