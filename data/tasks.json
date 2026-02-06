@@ -479,7 +479,7 @@
         {
           "id": "sub_006",
           "title": "Design: AgentScope 10-minute timeout logic for active vs archived agent classification",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_007",
@@ -613,5 +613,5 @@
       "updated": "2026-02-05T16:35:00+00:00"
     }
   ],
-  "lastUpdated": "2026-02-06T09:15:14.625781+00:00"
+  "lastUpdated": "2026-02-06T09:15:15.270875+00:00"
 }
