@@ -464,7 +464,7 @@
         {
           "id": "sub_003",
           "title": "Research: Design event classification system (tool_call, thinking, response, user_message, agent_message, decision, skill_use)",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_004",
@@ -613,5 +613,5 @@
       "updated": "2026-02-05T16:35:00+00:00"
     }
   ],
-  "lastUpdated": "2026-02-06T09:11:53.003765+00:00"
+  "lastUpdated": "2026-02-06T09:15:13.280425+00:00"
 }
