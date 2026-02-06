@@ -489,7 +489,7 @@
         {
           "id": "sub_008",
           "title": "Implement: AgentScope backend agent metadata extractor (name from label/task, model, last activity)",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_009",
@@ -613,5 +613,5 @@
       "updated": "2026-02-05T16:35:00+00:00"
     }
   ],
-  "lastUpdated": "2026-02-06T09:15:15.270875+00:00"
+  "lastUpdated": "2026-02-06T09:15:15.922636+00:00"
 }
