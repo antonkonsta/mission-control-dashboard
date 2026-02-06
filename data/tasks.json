@@ -499,7 +499,7 @@
         {
           "id": "sub_010",
           "title": "Implement: AgentScope backend 10-minute timeout detector for archive classification",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_011",
@@ -613,5 +613,5 @@
       "updated": "2026-02-05T16:35:00+00:00"
     }
   ],
-  "lastUpdated": "2026-02-06T09:15:15.922636+00:00"
+  "lastUpdated": "2026-02-06T09:15:16.676764+00:00"
 }
