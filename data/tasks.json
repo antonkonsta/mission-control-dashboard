@@ -474,7 +474,7 @@
         {
           "id": "sub_005",
           "title": "Design: AgentScope agent pane system - one pane per agent with header (name, model, last update, status)",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_006",
@@ -613,5 +613,5 @@
       "updated": "2026-02-05T16:35:00+00:00"
     }
   ],
-  "lastUpdated": "2026-02-06T09:15:13.949822+00:00"
+  "lastUpdated": "2026-02-06T09:15:14.625781+00:00"
 }
