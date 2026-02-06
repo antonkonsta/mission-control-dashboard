@@ -519,7 +519,7 @@
         {
           "id": "sub_014",
           "title": "Implement: AgentScope frontend Archived Agents separate page for 10+ min inactive agents",
-          "done": false
+          "done": true
         },
         {
           "id": "sub_015",
@@ -613,5 +613,5 @@
       "updated": "2026-02-05T16:35:00+00:00"
     }
   ],
-  "lastUpdated": "2026-02-06T09:15:16.676764+00:00"
+  "lastUpdated": "2026-02-06T09:15:17.302602+00:00"
 }
